@@ -9,6 +9,7 @@
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public -b gh-pages",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing \""
   },
   "dependencies": {
@@ -37,7 +38,7 @@
     "@emotion/styled": "^10.0.27",
     "babel-preset-gatsby": "^0.5.5",
     "gatsby-plugin-emotion": "^4.3.10",
-    "postcss-preset-env": "^6.7.0",
+    "gh-pages": "^3.1.0",
     "prettier": "^2.0.5",
     "tailwindcss": "^1.7.2",
     "twin.macro": "^1.7.0"
