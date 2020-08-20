@@ -8,6 +8,7 @@ import Navigator from "../components/Navigator"
 import Divider from "../components/Divider"
 import TableOfContents from "../components/TableOfContents"
 import Layout from "../components/Layout"
+import Utterances from "../components/Utterances"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 const NAV_OFFSET_Y = 36
@@ -79,6 +80,7 @@ export default ({ data, pageContext }) => {
         <Wrapper>
           <Navigator pageContext={pageContext} />
           <Profile />
+          <Utterances repo={"JaeSeoKim/jaeseokim.github.io"} />
         </Wrapper>
       </Layout>
     </>
