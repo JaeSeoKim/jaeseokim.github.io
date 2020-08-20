@@ -44,8 +44,8 @@ const Navigator = ({ pageContext }) => {
               <p
                 css={css`
                   color: ${isDarkMode
-                    ? darkModeColor.mainColor2
-                    : whiteModeColor.mainColor2};
+                    ? darkModeColor.textColor1
+                    : whiteModeColor.textColor1};
                 `}
               >
                 이전 포스트

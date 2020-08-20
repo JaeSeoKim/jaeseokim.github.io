@@ -11,6 +11,7 @@ const DarkmodeToggle = () => {
   return (
     <Wrapper>
       <Button
+        title={isDarkMode ? "change to lightmode": "change to darkmode"}
         onClick={toggleThemMode}
         _css={css`
           ${tw`flex content-end`}
@@ -50,6 +51,7 @@ const DarkmodeToggle = () => {
         )}
       </Button>
       <Button
+        title={"top page"}
         _css={css`
           ${tw`ml-2 my-auto`}
           z-index: 100;

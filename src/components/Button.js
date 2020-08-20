@@ -2,10 +2,11 @@ import React, { useContext } from "react"
 import tw, { css } from "twin.macro"
 import ThemeContext from "../lib/context/ThemContext"
 
-const Button = ({ children, onClick, _css }) => {
+const Button = ({ children, onClick, _css, title }) => {
   const { isDarkMode } = useContext(ThemeContext)
   return (
     <button
+      title={title}
       css={[
         css`
           box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.15);

@@ -26,8 +26,8 @@ const Profile = () => {
               ${isDarkMode ? tw`bg-gray-800` : tw`bg-gray-200`}
                 color: ${
                   isDarkMode
-                    ? darkModeColor.mainColor1
-                    : whiteModeColor.mainColor1
+                    ? darkModeColor.textColor1
+                    : whiteModeColor.textColor1
                 };
               `}
           >
@@ -43,6 +43,7 @@ const Profile = () => {
         css={css`
           display: inline-block;
         `}
+        title={"github Link"}
         href={`https://github.com/JaeSeoKim`}
       >
         <FaGithub
@@ -60,6 +61,7 @@ const Profile = () => {
         css={css`
           display: inline-block;
         `}
+        title={"facebook Link"}
         href={`https://www.facebook.com/profile.php?id=100009150322038`}
       >
         <FaFacebook
