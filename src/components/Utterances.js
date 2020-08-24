@@ -24,9 +24,11 @@ const Utterances = ({ repo }) => {
     Object.keys(utterancesConfig).forEach((configKey) => {
       utterances.setAttribute(configKey, utterancesConfig[configKey])
     })
-    rootElm.current.innerHTML = '';
-    rootElm.current.appendChild(utterances)
-  }, [isDarkMode])
+    if (rootElm.current) {
+      rootElm.current.innerHTML = ""
+      rootElm.current.appendChild(utterances)
+    }
+  }, [isDarkMode, rootElm, repo])
 
   return <div className="utterances" ref={rootElm} />
 }

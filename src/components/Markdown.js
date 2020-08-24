@@ -78,7 +78,7 @@ const Markdown = ({ html }) => {
     blockquote {
       padding: 0.5rem;
       background-color: ${isDarkMode ? "#333" : "#eee"};
-      border-radius: 0.25rem;
+      border-radius: 0.1rem;
       margin: 0.3rem;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
@@ -119,9 +119,17 @@ const Markdown = ({ html }) => {
       margin-bottom: 1.5rem;
     }
 
-    not(pre) code {
-      padding: 0.1rem;
+    p > code {
+      padding-right: 0.1rem;
+      padding-left: 0.1rem;
+      border-width: 1px;
+      border-color: ${isDarkMode
+        ? darkModeColor.mainColor2
+        : whiteModeColor.mainColor2};
       border-radius: 0.25rem;
+      color : ${isDarkMode
+        ? darkModeColor.textColor1
+        : whiteModeColor.textColor1};
       background-color: ${isDarkMode ? "#404040" : "#eee"};
       white-space: pre-line;
     }

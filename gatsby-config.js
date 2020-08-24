@@ -1,10 +1,16 @@
+const metaConfig = require("./gatsby-meta-config")
+const { whiteModeColor } = require("./them-color")
+
 module.exports = {
-  siteMetadata: {
-    title: `JaeSeoKim's Blog`,
-    description: `Develop, Security, It, Etc...`,
-    author: `JaeSeoKim`,
-  },
+  siteMetadata: metaConfig,
   plugins: [
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/assets`,
+        name: `assets`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -51,8 +57,28 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: metaConfig.ga,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: metaConfig.title,
+        short_name: metaConfig.title,
+        start_url: `/`,
+        background_color: `#ffffff`,
+        theme_color: `#3F4145`,
+        display: `minimal-ui`,
+        icon: metaConfig.icon,
+      },
+    },
+    `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
+    `gatsby-plugin-sitemap`,
   ],
 }

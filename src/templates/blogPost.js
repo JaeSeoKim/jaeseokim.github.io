@@ -80,7 +80,9 @@ export default ({ data, pageContext }) => {
         <Wrapper>
           <Navigator pageContext={pageContext} />
           <Profile />
-          <Utterances repo={"JaeSeoKim/jaeseokim.github.io"} />
+          <div css={tw`mx-2`}>
+            <Utterances repo={"JaeSeoKim/jaeseokim.github.io"} />
+          </div>
         </Wrapper>
       </Layout>
     </>

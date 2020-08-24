@@ -3,9 +3,10 @@ import tw, { css } from "twin.macro"
 import ThemeContext from "../lib/context/ThemContext"
 import { whiteModeColor, darkModeColor } from "../../them-color"
 import { Link } from "gatsby"
+import { AiOutlineSearch } from "react-icons/ai"
 
 const Wrapper = tw.nav`
-flex items-center justify-between flex-wrap p-5
+flex items-center justify-between flex-wrap max-w-screen-xl mx-auto p-5
 `
 
 var old_windows_Scrolly = 0
@@ -35,11 +36,14 @@ const Nav = () => {
 
   const Content = () => {
     return (
-      <div css={tw`w-full max-w-screen-xl mx-auto`}>
+      <>
         <Link css={tw`text-xl text-white font-bold`} to={"/"}>
           JaeSeoKim's Blog
         </Link>
-      </div>
+        <Link to={`/search`}>
+          <AiOutlineSearch css={tw`text-white my-auto w-8 h-8`} />
+        </Link>
+      </>
     )
   }
 
@@ -52,10 +56,12 @@ const Nav = () => {
 
   return (
     <>
-      <Wrapper css={backgroundCSS}>
-        <Content />
-      </Wrapper>
-      <Wrapper
+      <div css={backgroundCSS}>
+        <Wrapper>
+          <Content />
+        </Wrapper>
+      </div>
+      <div
         css={[
           backgroundCSS,
           tw`fixed w-full shadow`,
@@ -66,8 +72,10 @@ const Nav = () => {
           `,
         ]}
       >
-        <Content />
-      </Wrapper>
+        <Wrapper>
+          <Content />
+        </Wrapper>
+      </div>
     </>
   )
 }
