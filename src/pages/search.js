@@ -102,7 +102,7 @@ export default ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO title="Page Not Found" />
+      <SEO title="Search" />
       <Wrapper>
         <Search
           value={state.query}
