@@ -1,6 +1,8 @@
 ---
 title: 'HackCTF - WEB - Cookie'
 date: 2020-04-05 21:04:76
+tags: ["web", "HackCTF", "ctf"]
+draft: true
 ---
 # HackCTF - WEB - Cookie
 

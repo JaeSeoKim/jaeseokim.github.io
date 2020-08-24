@@ -1,68 +1,102 @@
-import React, { useState, useEffect, useCallback } from "react"
+import React, { useState, useEffect, useCallback, useMemo } from "react"
 import tw from "twin.macro"
 import SEO from "../components/seo"
 import Layout from "../components/Layout"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import queryString from "query-string"
 import Search from "../components/Search"
 import Post from "../components/Post"
+import Tags from "../components/Tags"
+import Tag from "../components/Tag"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 
 export default ({ data, location }) => {
+  const posts = data.allMarkdownRemark.edges ? data.allMarkdownRemark.edges : []
+  const tags = useMemo(() => {
+    var result = []
+    posts.map(({ node }) => (result = [...result, ...node.frontmatter.tags]))
+    for (var i = 0; i < result.length; ++i) {
+      for (var j = i + 1; j < result.length; ++j) {
+        if (result[i] === result[j]) result.splice(j--, 1)
+      }
+    }
+    return result
+  }, [posts])
+
   const [state, setState] = useState({
     query: "",
+    tag: "ALL",
     filteredData: [],
   })
+
+  const onTagClick = (tag) => {
+    if (state.query !== "") {
+      navigate(`?query=${state.query}&tag=${tag}`)
+    } else {
+      navigate(`?tag=${tag}`)
+    }
+    searchPost(state.query, tag)
+  }
 
   const handleChange = (query) => {
     if (query.trim() === state.query.trim()) {
       setState({
+        ...state,
         query,
-        filteredData: state.filteredData,
       })
       return
     }
-    searchPost(query)
+    searchPost(query, state.tag)
   }
 
   const searchPost = useCallback(
-    (query) => {
+    (query, tag) => {
       if (query.trim() === "") {
         setState({
           query,
+          tag,
           filteredData: [],
         })
         return
       }
-      const posts = data.allMarkdownRemark.edges || []
 
       const filteredData = posts.filter((post) => {
         const searchQuery = query.toLowerCase().trim()
         const {
           rawMarkdownBody,
-          frontmatter: { title },
+          frontmatter: { title, tags },
         } = post.node
-        return (
-          (rawMarkdownBody &&
-            rawMarkdownBody.toLowerCase().includes(searchQuery)) ||
-          (title && title.toLowerCase().includes(searchQuery))
-        )
+        if (tag === "ALL") {
+          return (
+            (rawMarkdownBody &&
+              rawMarkdownBody.toLowerCase().includes(searchQuery)) ||
+            (title && title.toLowerCase().includes(searchQuery))
+          )
+        }
+        if (tags.includes(tag))
+          return (
+            (rawMarkdownBody &&
+              rawMarkdownBody.toLowerCase().includes(searchQuery)) ||
+            (title && title.toLowerCase().includes(searchQuery))
+          )
       })
+
       setState({
-        query,
-        filteredData,
+        tag: tag,
+        query: query,
+        filteredData: filteredData,
       })
     },
-    [data.allMarkdownRemark.edges]
+    [posts]
   )
 
   useEffect(() => {
     if (location.href) {
       const {
-        query: { query },
+        query: { query, tag },
       } = queryString.parseUrl(location.href)
-      searchPost(query ? query : "")
+      searchPost(query ? query : "", tag ? tag : "ALL")
     }
   }, [searchPost, location.href])
 
@@ -75,9 +109,18 @@ export default ({ data, location }) => {
           onChange={(e) => handleChange(e.target.value)}
           location={location}
         />
-        {state.filteredData.map((post, index) => {
-          return <Post post={post} key={`post_${index}`} />
-        })}
+        <div css={tw`mx-4 mt-4`}>
+          <Tag
+            tag={"ALL"}
+            selectedTag={state.tag}
+            index={"default"}
+            onClick={onTagClick}
+          />
+          <Tags tags={tags.sort()} onClick={onTagClick} tag={state.tag} />
+        </div>
+        {state.filteredData.map((post, index) => (
+          <Post post={post} key={`post_${index}`} />
+        ))}
       </Wrapper>
     </Layout>
   )
@@ -85,7 +128,10 @@ export default ({ data, location }) => {
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter: { draft: { eq: false } } }
+    ) {
       edges {
         node {
           excerpt(pruneLength: 200, truncate: true)
@@ -96,6 +142,7 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD YYYY")
             title
+            tags
           }
         }
       }

@@ -1,15 +1,13 @@
 import React from "react"
 import tw from "twin.macro"
+import Image from "gatsby-image"
 
-const PhotoFrame = ({ img = "", alt = "profileImg", _css }) => {
+const PhotoFrame = ({ fixed, alt = "profileImg", _css }) => {
   return (
-    <img
-      src={img}
-      onError={(e) => {
-        e.target.src = "/img/profile.png"
-      }}
+    <Image
+      fixed={fixed}
       alt={alt}
-      css={[tw`rounded-full border border-purple-300 h-40 w-40`, _css]}
+      css={[tw`rounded-full border border-purple-300`, _css]}
     />
   )
 }

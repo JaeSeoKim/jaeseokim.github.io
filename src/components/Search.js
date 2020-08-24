@@ -1,5 +1,6 @@
 import React from "react"
 import tw from "twin.macro"
+import queryString from "query-string"
 import { AiOutlineSearch } from "react-icons/ai"
 import Divider from "./Divider"
 import { navigate } from "gatsby"
@@ -12,8 +13,15 @@ const Search = ({ value, onChange, location }) => {
   }
 
   const handleBlur = (e) => {
-    if (location.search !== `?query=${value.trim()}`)
-      navigate(`?query=${value.trim()}`)
+    const {
+      query: { query, tag },
+    } = queryString.parseUrl(location.href)
+    if (query !== value.trim())
+      if (tag && tag !== "ALL") {
+        navigate(`?query=${value.trim()}&tag=${tag}`)
+      } else {
+        navigate(`?query=${value.trim()}`)
+      }
   }
 
   return (

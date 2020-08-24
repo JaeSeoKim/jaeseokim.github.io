@@ -17,7 +17,7 @@ const Button = ({ children, onClick, _css, title }) => {
             background-color: ${isDarkMode ? "#52575c" : "#404040"};
             color: ${isDarkMode ? "#D9D9D9" : "#FFFFFF"};
           }
-          ${tw`text-xs px-2 py-2 rounded-full transform hover:scale-105 cursor-pointer`}
+          ${tw`text-xs px-2 py-2 rounded-full transform hover:scale-105 cursor-pointer focus:outline-none`}
         `,
         _css,
       ]}

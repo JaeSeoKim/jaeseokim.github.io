@@ -1,8 +1,36 @@
+/*global FB*/
 import "tailwindcss/dist/base.min.css"
+
+// polyfill
+import "intersection-observer"
 
 import React, { useState, useEffect } from "react"
 import ThemeContext from "./src/lib/context/ThemContext"
-const metaConfig = require("./gatsby-meta-config")
+import metaConfig from "./gatsby-meta-config"
+
+export const onInitialClientRender = () => {
+  if (metaConfig.share.facebookAppId) {
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: metaConfig.share.facebookAppId,
+        xfbml: true,
+        version: "v3.2",
+      })
+      FB.AppEvents.logPageView()
+    }
+    ;(function (d, s, id) {
+      var js,
+        fjs = d.getElementsByTagName(s)[0]
+      if (d.getElementById(id)) {
+        return
+      }
+      js = d.createElement(s)
+      js.id = id
+      js.src = "https://connect.facebook.net/en_US/sdk.js"
+      fjs.parentNode.insertBefore(js, fjs)
+    })(document, "script", "facebook-jssdk")
+  }
+}
 
 const Wrapper = ({ element }) => {
   const [isDarkMode, setDarkMode] = useState(false)
@@ -38,27 +66,3 @@ const Wrapper = ({ element }) => {
 }
 
 export const wrapRootElement = ({ element }) => <Wrapper element={element} />
-
-export const onInitialClientRender = () => {
-  if (metaConfig.share.facebookAppId) {
-    window.fbAsyncInit = function () {
-      FB.init({
-        appId: metaConfig.share.facebookAppId,
-        xfbml: true,
-        version: "v3.2",
-      })
-      FB.AppEvents.logPageView()
-    }
-    ;(function (d, s, id) {
-      var js,
-        fjs = d.getElementsByTagName(s)[0]
-      if (d.getElementById(id)) {
-        return
-      }
-      js = d.createElement(s)
-      js.id = id
-      js.src = "https://connect.facebook.net/en_US/sdk.js"
-      fjs.parentNode.insertBefore(js, fjs)
-    })(document, "script", "facebook-jssdk")
-  }
-}

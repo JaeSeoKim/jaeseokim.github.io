@@ -1,5 +1,4 @@
 const metaConfig = require("./gatsby-meta-config")
-const { whiteModeColor } = require("./them-color")
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -75,10 +74,11 @@ module.exports = {
         icon: metaConfig.icon,
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-sitemap`,
   ],
 }

@@ -9,6 +9,7 @@ import Divider from "../components/Divider"
 import TableOfContents from "../components/TableOfContents"
 import Layout from "../components/Layout"
 import Utterances from "../components/Utterances"
+import Tags from "../components/Tags"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 const NAV_OFFSET_Y = 36
@@ -47,7 +48,6 @@ export default ({ data, pageContext }) => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
-
   return (
     <>
       <Layout>
@@ -55,13 +55,18 @@ export default ({ data, pageContext }) => {
         <div css={tw`mt-4 px-4`} className="blog-post-container">
           <div className="blog-post">
             <Wrapper>
-              <h1 css={tw`text-4xl md:text-5xl font-bold mb-4`}>
+              <h1
+                className="blog-title"
+                css={tw`text-4xl md:text-5xl font-bold mb-4`}
+              >
                 {frontmatter.title}
               </h1>
-              <h2 css={tw`text-base mb-4`}>
-                <span css={tw`font-semibold`}>JaeSeoKim</span> -{" "}
+              <h2 className="blog-date" css={tw`text-base mb-4`}>
                 {frontmatter.date}
               </h2>
+              <div className="blog-tags" css={tw`mb-4`}>
+                <Tags tags={frontmatter.tags} />
+              </div>
               <Divider color />
             </Wrapper>
             <div className={"blog-content"}>
@@ -89,7 +94,7 @@ export default ({ data, pageContext }) => {
   )
 }
 export const pageQuery = graphql`
-  query($slug: String!) {
+  query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       html
@@ -97,6 +102,7 @@ export const pageQuery = graphql`
       frontmatter {
         date(formatString: "MMMM DD YYYY")
         title
+        tags
       }
     }
   }

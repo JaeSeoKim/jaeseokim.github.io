@@ -2,13 +2,13 @@ module.exports = {
   title: `JaeSeoKim's Blog`,
   description: `Develop, Security, It, Etc...`,
   author: `JaeSeoKim`,
-  introduction: `I explain with words and code. I explain with words and code. I explain with words and code.`,
+  introduction: `보안과 개발을 좋아하는 학생 입니다~!`,
   siteUrl: `https://jaeseokim.github.io/`, // Your blog site url
   social: {
     twitter: ``, // Your Twitter account
     github: `JaeSeoKim`, // Your GitHub account
     medium: ``, // Your Medium account
-    facebook: ``, // Your Facebook account
+    facebook: `100009150322038`, // Your Facebook account
     linkedin: ``, // Your LinkedIn account
   },
   icon: `content/assets/icon.png`, // Add your favicon

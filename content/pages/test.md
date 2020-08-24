@@ -1,6 +1,8 @@
 ---
 title: 'test'
 date: 2020-04-05 21:04:76
+tags: ["markdown", "test"]
+draft: false
 ---
 ---
 __Advertisement :)__
