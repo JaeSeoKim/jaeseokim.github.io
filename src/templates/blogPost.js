@@ -88,7 +88,12 @@ export default ({ data, pageContext, location }) => {
               </Wrapper>
             </div>
             <Wrapper>
-              <ShareButtons url={location.href} />
+              <ShareButtons
+                url={location.href}
+                text={`
+              ${frontmatter.title} - ${metaData.author}\n
+              ${excerpt}`}
+              />
             </Wrapper>
           </div>
         </div>
@@ -107,6 +112,7 @@ export const pageQuery = graphql`
   query PostQuery($slug: String!) {
     site {
       siteMetadata {
+        author
         comment {
           utterances
         }
