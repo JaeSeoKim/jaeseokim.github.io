@@ -50,8 +50,8 @@ const Markdown = ({ html }) => {
 
     a {
       color: ${isDarkMode
-        ? darkModeColor.mainColor2
-        : whiteModeColor.mainColor2};
+        ? darkModeColor.textColor1
+        : whiteModeColor.textColor1};
     }
     a:hover {
       text-decoration: underline;

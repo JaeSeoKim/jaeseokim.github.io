@@ -111,7 +111,7 @@ const ShareButtons = ({ url, text }) => {
 
   return (
     <div>
-      <div css={tw`px-4 my-4`}>
+      <div css={tw`my-4`}>
         <Divider color margin />
       </div>
       <div css={tw`flex flex-wrap justify-end mt-4 px-2`}>

@@ -71,9 +71,7 @@ const Profile = () => {
           <div css={tw`text-sm font-normal mb-2`}>{introduction}</div>
         </div>
       </ProfileContainer>
-      <div css={tw`px-2`}>
-        <Divider color margin />
-      </div>
+      <Divider color margin />
       {social.github && (
         <a
           css={css`
