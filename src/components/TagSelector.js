@@ -41,7 +41,12 @@ const TagSelector = ({ onTagClick, state, tags }) => {
         border-color: ${isDarkMode
           ? darkModeColor.mainColor2
           : whiteModeColor.mainColor2};
-        ${tw`flex flex-no-wrap content-center mx-4 mt-8 py-2 pl-2 overflow-hidden`}
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        ${tw`flex flex-no-wrap content-center mx-4 mt-8 py-2 pl-2 overflow-scroll`}
       `}
     >
       <Tag
