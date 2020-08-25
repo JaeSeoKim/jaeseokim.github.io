@@ -16,6 +16,7 @@ jobs:
           node-version: '12.x'
       - name: build
         run: |
+          npm install
           npm run build
       - uses: peaceiris/actions-gh-pages@v2
         env:
