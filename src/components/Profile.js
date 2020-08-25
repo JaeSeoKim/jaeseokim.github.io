@@ -4,7 +4,13 @@ import PhotoFrame from "./PhotoFrame"
 import Divider from "./Divider"
 import ThemeContext from "../lib/context/ThemContext"
 import { whiteModeColor, darkModeColor } from "../../them-color"
-import { FaFacebook, FaGithub, FaTwitter, FaMedium, FaLinkedin } from "react-icons/fa"
+import {
+  FaFacebook,
+  FaGithub,
+  FaTwitter,
+  FaMedium,
+  FaLinkedin,
+} from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Wrapper = tw.div`w-full max-w-screen-md px-4 md:px-0 mx-auto pt-8 md:pt-12`

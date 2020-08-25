@@ -88,7 +88,7 @@ export default ({ data, pageContext, location }) => {
               </Wrapper>
             </div>
             <Wrapper>
-              <ShareButtons url={location.href}/>
+              <ShareButtons url={location.href} />
             </Wrapper>
           </div>
         </div>
