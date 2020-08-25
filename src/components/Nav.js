@@ -40,7 +40,7 @@ const Nav = () => {
         <Link css={tw`text-xl text-white font-bold`} to={"/"}>
           JaeSeoKim's Blog
         </Link>
-        <Link to={`/search`}>
+        <Link to={`/search`} aria-label={`search page`}>
           <AiOutlineSearch css={tw`text-white my-auto w-8 h-8`} />
         </Link>
       </>

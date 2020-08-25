@@ -4,7 +4,7 @@ import PhotoFrame from "./PhotoFrame"
 import Divider from "./Divider"
 import ThemeContext from "../lib/context/ThemContext"
 import { whiteModeColor, darkModeColor } from "../../them-color"
-import { FaFacebook, FaGithub } from "react-icons/fa"
+import { FaFacebook, FaGithub, FaTwitter, FaMedium, FaLinkedin } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 
 const Wrapper = tw.div`w-full max-w-screen-md px-4 md:px-0 mx-auto pt-8 md:pt-12`
@@ -104,6 +104,66 @@ const Profile = () => {
               }
             `}
           ></FaFacebook>
+        </a>
+      )}
+      {social.twitter && (
+        <a
+          css={css`
+            display: inline-block;
+          `}
+          title={"twitter Link"}
+          href={`https://twitter.com/${social.twitter}`}
+        >
+          <FaTwitter
+            css={css`
+              ${tw`w-8 h-8 mt-4 ml-4`}
+              transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+              color: #888;
+              &:hover {
+                color: ${isDarkMode ? "#fff" : "#000"};
+              }
+            `}
+          ></FaTwitter>
+        </a>
+      )}
+      {social.medium && (
+        <a
+          css={css`
+            display: inline-block;
+          `}
+          title={"medium Link"}
+          href={`https://medium.com/${social.medium}`}
+        >
+          <FaMedium
+            css={css`
+              ${tw`w-8 h-8 mt-4 ml-4`}
+              transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+              color: #888;
+              &:hover {
+                color: ${isDarkMode ? "#fff" : "#000"};
+              }
+            `}
+          ></FaMedium>
+        </a>
+      )}
+      {social.linkedin && (
+        <a
+          css={css`
+            display: inline-block;
+          `}
+          title={"linkedin Link"}
+          href={`https://www.linkedin.com/in/${social.linkedin}`}
+        >
+          <FaLinkedin
+            css={css`
+              ${tw`w-8 h-8 mt-4 ml-4`}
+              transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
+              color: #888;
+              &:hover {
+                color: ${isDarkMode ? "#fff" : "#000"};
+              }
+            `}
+          ></FaLinkedin>
         </a>
       )}
     </Wrapper>

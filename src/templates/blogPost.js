@@ -10,11 +10,13 @@ import TableOfContents from "../components/TableOfContents"
 import Layout from "../components/Layout"
 import Utterances from "../components/Utterances"
 import Tags from "../components/Tags"
+import ShareButtons from "../components/ShareButtons"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 const NAV_OFFSET_Y = 36
 
-export default ({ data, pageContext }) => {
+export default ({ data, pageContext, location }) => {
+  const metaData = data.site.siteMetadata
   const { markdownRemark } = data
   const { frontmatter, html, tableOfContents, excerpt } = markdownRemark
 
@@ -85,13 +87,16 @@ export default ({ data, pageContext }) => {
                 <Markdown html={html} />
               </Wrapper>
             </div>
+            <Wrapper>
+              <ShareButtons url={location.href}/>
+            </Wrapper>
           </div>
         </div>
         <Wrapper>
           <Navigator pageContext={pageContext} />
           <Profile />
-          <div css={tw`mx-2`}>
-            <Utterances repo={"JaeSeoKim/jaeseokim.github.io"} />
+          <div css={tw`mt-5 mx-2`}>
+            <Utterances repo={metaData.comment.utterances} />
           </div>
         </Wrapper>
       </Layout>
@@ -100,6 +105,13 @@ export default ({ data, pageContext }) => {
 }
 export const pageQuery = graphql`
   query PostQuery($slug: String!) {
+    site {
+      siteMetadata {
+        comment {
+          utterances
+        }
+      }
+    }
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 200, truncate: true)
       html
