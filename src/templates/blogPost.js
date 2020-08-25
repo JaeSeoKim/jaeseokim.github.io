@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react"
 import { graphql, navigate } from "gatsby"
 import SEO from "../components/seo"
 import Profile from "../components/Profile"
-import tw from "twin.macro"
+import tw, { css } from "twin.macro"
 import Markdown from "../components/Markdown"
 import Navigator from "../components/Navigator"
 import Divider from "../components/Divider"
@@ -94,6 +94,26 @@ export default ({ data, pageContext, location }) => {
               ${frontmatter.title} - ${metaData.author}\n
               ${excerpt}`}
               />
+              {metaData.sponsor.buyMeACoffeeId && (
+                <div css={tw`flex justify-end px-2`}>
+                  <a
+                    css={css`
+                      ${tw`flex px-3 py-1 my-2 rounded text-white focus:outline-none`}
+                      background-color: #FF813E;
+                    `}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={`https://www.buymeacoffee.com/${metaData.sponsor.buyMeACoffeeId}`}
+                  >
+                    <img
+                      css={tw`mr-2`}
+                      src="https://www.buymeacoffee.com/assets/img/BMC-btn-logo.svg"
+                      alt="Buy me a coffee"
+                    />
+                    <span>Buy me a coffee</span>
+                  </a>
+                </div>
+              )}
             </Wrapper>
           </div>
         </div>
@@ -115,6 +135,9 @@ export const pageQuery = graphql`
         author
         comment {
           utterances
+        }
+        sponsor {
+          buyMeACoffeeId
         }
       }
     }

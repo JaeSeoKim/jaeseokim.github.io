@@ -5,7 +5,7 @@ import ThemeContext from "../lib/context/ThemContext"
 import { darkModeColor, whiteModeColor } from "../../them-color"
 import { AiOutlineArrowRight, AiOutlineArrowLeft } from "react-icons/ai"
 
-const Wrapper = tw.div`flex flex-wrap-reverse mx-2 mt-16 md:flex-no-wrap md:justify-between`
+const Wrapper = tw.div`flex flex-wrap-reverse mx-2 mt-4 md:flex-no-wrap md:justify-between`
 
 const Button = tw.div`w-full md:w-1/2 m-2 md:m-4`
 
