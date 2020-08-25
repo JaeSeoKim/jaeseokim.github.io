@@ -19,7 +19,7 @@ const Profile = () => {
       siteMetadata: { author, introduction, social },
     },
   } = useStaticQuery(graphql`
-    query ProfileQuery{
+    query ProfileQuery {
       avatar: file(absolutePath: { regex: "/profile.jpg/" }) {
         childImageSharp {
           fixed(width: 128, height: 128) {

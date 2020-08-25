@@ -11,7 +11,7 @@ const DarkmodeToggle = () => {
   return (
     <Wrapper>
       <Button
-        title={isDarkMode ? "change to lightmode": "change to darkmode"}
+        title={isDarkMode ? "change to lightmode" : "change to darkmode"}
         onClick={toggleThemMode}
         _css={css`
           ${tw`flex content-end`}

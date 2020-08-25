@@ -1,9 +1,10 @@
 ---
-title: 'HackCTF - WEB - Home'
+title: "HackCTF - WEB - Home"
 date: 2020-04-05 21:04:76
 tags: ["web", "HackCTF", "ctf"]
 draft: false
 ---
+
 # HackCTF - WEB - Home
 
 일단 문제 사이트에 접근을 하면 아래와 같은 화면으로 IP 주소에 대해 검증을 하여 접근 제한을 하는 모습을 볼 수 있습니다.

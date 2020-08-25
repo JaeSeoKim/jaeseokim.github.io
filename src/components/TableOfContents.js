@@ -40,7 +40,8 @@ const TableOfContents = ({ toc, currentHeaderUrl }) => {
             fontsize: 1rem;
             display: flex;
             border-left-width: 4px;
-            border-image: linear-gradient(180deg,
+            border-image: linear-gradient(
+              180deg,
               ${isDarkMode
                 ? darkModeColor.mainColor1 +
                   "," +

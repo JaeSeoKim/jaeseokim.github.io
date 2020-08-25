@@ -38,9 +38,9 @@ const TagSelector = ({ onTagClick, state, tags }) => {
         margin-top: 0.5rem;
         margin-bottom: 0.5rem;
         border-left-width: 4px;
-        border-color: ${
-          isDarkMode ? darkModeColor.mainColor2 : whiteModeColor.mainColor2
-        };
+        border-color: ${isDarkMode
+          ? darkModeColor.mainColor2
+          : whiteModeColor.mainColor2};
         ${tw`flex flex-no-wrap content-center mx-4 mt-8 py-2 pl-2 overflow-hidden`}
       `}
     >

@@ -127,7 +127,7 @@ const Markdown = ({ html }) => {
         ? darkModeColor.mainColor2
         : whiteModeColor.mainColor2};
       border-radius: 0.25rem;
-      color : ${isDarkMode
+      color: ${isDarkMode
         ? darkModeColor.textColor1
         : whiteModeColor.textColor1};
       background-color: ${isDarkMode ? "#404040" : "#eee"};
