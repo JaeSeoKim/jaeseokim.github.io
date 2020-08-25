@@ -6,8 +6,7 @@ import { graphql, navigate } from "gatsby"
 import queryString from "query-string"
 import Search from "../components/Search"
 import Post from "../components/Post"
-import Tags from "../components/Tags"
-import Tag from "../components/Tag"
+import TagSelector from "../components/TagSelector"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 
@@ -64,22 +63,21 @@ export default ({ data, location }) => {
       const filteredData = posts.filter((post) => {
         const searchQuery = query.toLowerCase().trim()
         const {
-          rawMarkdownBody,
+          excerpt,
           frontmatter: { title, tags },
         } = post.node
         if (tag === "ALL") {
           return (
-            (rawMarkdownBody &&
-              rawMarkdownBody.toLowerCase().includes(searchQuery)) ||
+            (excerpt && excerpt.toLowerCase().includes(searchQuery)) ||
             (title && title.toLowerCase().includes(searchQuery))
           )
         }
         if (tags.includes(tag))
           return (
-            (rawMarkdownBody &&
-              rawMarkdownBody.toLowerCase().includes(searchQuery)) ||
+            (excerpt && excerpt.toLowerCase().includes(searchQuery)) ||
             (title && title.toLowerCase().includes(searchQuery))
           )
+        return []
       })
 
       setState({
@@ -109,15 +107,7 @@ export default ({ data, location }) => {
           onChange={(e) => handleChange(e.target.value)}
           location={location}
         />
-        <div css={tw`mx-4 mt-4`}>
-          <Tag
-            tag={"ALL"}
-            selectedTag={state.tag}
-            index={"default"}
-            onClick={onTagClick}
-          />
-          <Tags tags={tags.sort()} onClick={onTagClick} tag={state.tag} />
-        </div>
+        <TagSelector tags={tags} onTagClick={onTagClick} state={state} />
         {state.filteredData.map((post, index) => (
           <Post post={post} key={`post_${index}`} />
         ))}
@@ -135,7 +125,6 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 200, truncate: true)
-          rawMarkdownBody
           fields {
             slug
           }

@@ -1,18 +1,12 @@
 import tw from "twin.macro"
-import React, {
-  useMemo,
-  useState,
-  useEffect,
-  useCallback,
-} from "react"
+import React, { useMemo, useState, useEffect, useCallback } from "react"
 import SEO from "../components/seo"
 import Profile from "../components/Profile"
 import Post from "../components/Post"
 import Layout from "../components/Layout"
 import { graphql, navigate } from "gatsby"
 import queryString from "query-string"
-import Tags from "../components/Tags"
-import Tag from "../components/Tag"
+import TagSelector from "../components/TagSelector"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 
@@ -74,15 +68,7 @@ export default ({ data, location }) => {
       <SEO title="Home" />
       <Wrapper>
         <Profile />
-        <div css={tw`mx-4 mt-4`}>
-          <Tag
-            tag={"ALL"}
-            selectedTag={state.tag}
-            index={"default"}
-            onClick={onTagClick}
-          />
-          <Tags tags={tags.sort()} onClick={onTagClick} tag={state.tag} />
-        </div>
+        <TagSelector tags={tags} onTagClick={onTagClick} state={state} />
         {state.filteredPosts.map((post, index) => {
           return <Post post={post} key={`post_${index}`} />
         })}

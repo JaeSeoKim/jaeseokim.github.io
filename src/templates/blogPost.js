@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { graphql } from "gatsby"
+import { graphql, navigate } from "gatsby"
 import SEO from "../components/seo"
 import Profile from "../components/Profile"
 import tw from "twin.macro"
@@ -16,11 +16,15 @@ const NAV_OFFSET_Y = 36
 
 export default ({ data, pageContext }) => {
   const { markdownRemark } = data
-  const { frontmatter, html, tableOfContents } = markdownRemark
+  const { frontmatter, html, tableOfContents, excerpt } = markdownRemark
 
   const [currentHeaderUrl, setCurrentHeaderUrl] = useState(undefined)
 
   const isTOCVisible = tableOfContents?.length > 0
+
+  const handleTagClick = (tag) => {
+    navigate(`/?tag=${tag}`)
+  }
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,10 +52,11 @@ export default ({ data, pageContext }) => {
       window.removeEventListener("scroll", handleScroll)
     }
   }, [])
+
   return (
     <>
       <Layout>
-        <SEO title={frontmatter.title} />
+        <SEO title={frontmatter.title} description={excerpt} />
         <div css={tw`mt-4 px-4`} className="blog-post-container">
           <div className="blog-post">
             <Wrapper>
@@ -64,8 +69,8 @@ export default ({ data, pageContext }) => {
               <h2 className="blog-date" css={tw`text-base mb-4`}>
                 {frontmatter.date}
               </h2>
-              <div className="blog-tags" css={tw`mb-4`}>
-                <Tags tags={frontmatter.tags} />
+              <div className="blog-tags" css={tw`mb-2`}>
+                <Tags tags={frontmatter.tags} onClick={handleTagClick} />
               </div>
               <Divider color />
             </Wrapper>
@@ -96,7 +101,7 @@ export default ({ data, pageContext }) => {
 export const pageQuery = graphql`
   query PostQuery($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      id
+      excerpt(pruneLength: 200, truncate: true)
       html
       tableOfContents
       frontmatter {
