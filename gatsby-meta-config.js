@@ -16,9 +16,9 @@ module.exports = {
   comment: {
     utterances: "JaeSeoKim/jaeseokim.github.io", // Your repository for archive comment
   },
-  //   configs: {
-  //     countOfInitialPost: 10, // Config your initial count of post
-  //   },
+  configs: {
+    countOfInitialPost: 10, // Config your initial count of post
+  },
   sponsor: {
     buyMeACoffeeId: "jaeseokim",
   },

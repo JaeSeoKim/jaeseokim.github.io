@@ -1,5 +1,5 @@
 import tw from "twin.macro"
-import React, { useMemo, useState, useEffect, useCallback } from "react"
+import React, { useMemo, useState, useEffect, useCallback, useRef } from "react"
 import SEO from "../components/seo"
 import Profile from "../components/Profile"
 import Post from "../components/Post"
@@ -7,11 +7,17 @@ import Layout from "../components/Layout"
 import { graphql, navigate } from "gatsby"
 import queryString from "query-string"
 import TagSelector from "../components/TagSelector"
+import useInfiniteScroll from "../lib/hooks/useInfiniteScroll"
+import useCount from "../lib/hooks/useCount"
 
 const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 
 export default ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
+  const { countOfInitialPost } = data.site.siteMetadata.configs
+  const [count, countRef, increaseCount] = useCount()
+  const bottomRef = useRef()
+
   const [state, setState] = useState({
     tag: "ALL",
     filteredPosts: posts,
@@ -30,6 +36,7 @@ export default ({ data, location }) => {
 
   const setFilteredPosts = useCallback(
     (tag) => {
+      if (tag === undefined) tag = state.tag
       if (tag === "ALL") {
         setState({
           tag: tag,
@@ -44,8 +51,15 @@ export default ({ data, location }) => {
         })
       }
     },
-    [posts]
+    [posts, state.tag]
   )
+
+  useInfiniteScroll(() => {
+    if (posts.length > countRef.current * countOfInitialPost) {
+      increaseCount()
+      setFilteredPosts()
+    }
+  }, bottomRef)
 
   const onTagClick = (tag) => {
     navigate(`?tag=${tag}`)
@@ -69,16 +83,26 @@ export default ({ data, location }) => {
       <Wrapper>
         <Profile />
         <TagSelector tags={tags} onTagClick={onTagClick} state={state} />
-        {state.filteredPosts.map((post, index) => {
-          return <Post post={post} key={`post_${index}`} />
-        })}
+        {state.filteredPosts
+          .slice(0, count * countOfInitialPost)
+          .map((post, index) => {
+            return <Post post={post} key={`post_${index}`} />
+          })}
       </Wrapper>
+      <div ref={bottomRef} />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query PostsQuery {
+    site {
+      siteMetadata {
+        configs {
+          countOfInitialPost
+        }
+      }
+    }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { draft: { eq: false } } }

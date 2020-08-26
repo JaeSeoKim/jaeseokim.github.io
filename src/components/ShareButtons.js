@@ -138,7 +138,7 @@ const ShareButtons = ({ url, text }) => {
         <div
           css={css`
         animation: ${isCopy.end ? leftOut : leftIn} 500ms;
-        ${tw`fixed my-auto top-0 left-0 ml-4 mt-24`}
+        ${tw`fixed my-auto top-0 left-0 ml-4 mt-4`}
         ${tw`inline-flex shadow items-center rounded text-white text-sm font-bold px-4 py-3`}
           background-color: ${
             isDarkMode ? darkModeColor.mainColor2 : whiteModeColor.mainColor2

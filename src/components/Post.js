@@ -3,12 +3,22 @@ import tw, { css } from "twin.macro"
 import { Link } from "gatsby"
 import Tags from "./Tags"
 import Divider from "./Divider"
+import { keyframes } from "@emotion/core"
 
 const Post = ({ post }) => {
+  const fadein = keyframes`
+  from {
+    opacity:0;
+  }
+  to {
+    opacity:1;
+  }
+  `
   return (
     <>
       <div
         css={css`
+          animation: ${fadein} 500ms;
           transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
           &:hover {
             --transform-scale-x: 1.02;

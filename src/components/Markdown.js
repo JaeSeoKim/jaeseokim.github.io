@@ -78,7 +78,6 @@ const Markdown = ({ html }) => {
     blockquote {
       padding: 0.5rem;
       background-color: ${isDarkMode ? "#333" : "#eee"};
-      border-radius: 0.1rem;
       margin: 0.3rem;
       margin-top: 0.5rem;
       margin-bottom: 0.5rem;
