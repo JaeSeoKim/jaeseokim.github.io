@@ -48,7 +48,7 @@ draft: false
 
 ![image-20200608171247302](image/첫-GitHub-Contribution-feat-react-simplemde-editor/image-20200608171247302.png)
 
-![image-20200608171421239](image/%EC%B2%AB-GitHub-Contribution-feat-react-simplemde-editor/image-20200608171421239.png)
+![image-20200608171421239](image/첫-GitHub-Contribution-feat-react-simplemde-edito/image-20200608171421239.png)
 
 ![image-20200608171440920](image/첫-GitHub-Contribution-feat-react-simplemde-editor/image-20200608171440920.png)
 

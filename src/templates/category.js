@@ -16,9 +16,8 @@ const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 export default ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   const { countOfInitialPost } = data.site.siteMetadata.configs
-  const categoryTitle = decodeURI(
-    location.pathname.replace("/", " ").trim().replace(" ", "/")
-  )
+  const categoryTitle = String(location.pathname).split("/").join(" ").trim()
+
   const [count, countRef, increaseCount] = useCount(categoryTitle)
   const bottomRef = useRef()
 

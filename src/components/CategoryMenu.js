@@ -44,33 +44,32 @@ const CategoryMenu = ({ path }) => {
           </button>
           {isVisible && (
             <div>
-              {nodes.map((category) => {
+              {nodes.map((category, index) => {
                 if (category.relativePath !== "") {
                   return (
-                    <>
-                      <li
-                        css={css`
-                          transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-                          ${tw`text-gray-500 text-base mx-2`}
-                          ${path &&
-                          decodeURI(path) === `/${category.relativePath}/` &&
-                          `
+                    <li
+                      key={`categorylist_${index}`}
+                      css={css`
+                        transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+                        ${tw`text-gray-500 text-base mx-2`}
+                        ${path &&
+                        decodeURI(path) === `/${category.relativePath}/` &&
+                        `
                         font-size: 0.95rem;
                         color: ${isDarkMode ? "#DDDDDD" : "#555555"};
                         `}
                         &:hover {
-                            color: ${isDarkMode ? "#DDDDDD" : "#555555"};
-                          }
-                        `}
-                      >
-                        <Link to={`/${category.relativePath}/`}>
-                          {category.relativePath
-                            .replace("/", " ")
-                            .trim()
-                            .replace(" ", "/")}
-                        </Link>
-                      </li>
-                    </>
+                          color: ${isDarkMode ? "#DDDDDD" : "#555555"};
+                        }
+                      `}
+                    >
+                      <Link to={`/${category.relativePath}/`}>
+                        {category.relativePath
+                          .replace("/", " ")
+                          .trim()
+                          .replace(" ", "/")}
+                      </Link>
+                    </li>
                   )
                 }
                 return ""
@@ -140,33 +139,32 @@ const CategoryMenu = ({ path }) => {
           >
             <Link to={`/`}>Categories</Link>
           </h3>
-          {nodes.map((category) => {
+          {nodes.map((category, index) => {
             if (category.relativePath !== "") {
               return (
-                <>
-                  <li
-                    css={css`
-                      transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-                      ${tw`text-gray-500 text-sm`}
-                      ${path &&
-                      decodeURI(path) === `/${category.relativePath}/` &&
-                      `
+                <li
+                  key={`category_${index}`}
+                  css={css`
+                    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+                    ${tw`text-gray-500 text-sm`}
+                    ${path &&
+                    decodeURI(path) === `/${category.relativePath}/` &&
+                    `
                         font-size: 0.95rem;
                         color: ${isDarkMode ? "#DDDDDD" : "#555555"};
                         `}
                         &:hover {
-                        color: ${isDarkMode ? "#DDDDDD" : "#555555"};
-                      }
-                    `}
-                  >
-                    <Link to={`/${category.relativePath}/`}>
-                      {category.relativePath
-                        .replace("/", " ")
-                        .trim()
-                        .replace(" ", "/")}
-                    </Link>
-                  </li>
-                </>
+                      color: ${isDarkMode ? "#DDDDDD" : "#555555"};
+                    }
+                  `}
+                >
+                  <Link to={`/${category.relativePath}/`}>
+                    {category.relativePath
+                      .replace("/", " ")
+                      .trim()
+                      .replace(" ", "/")}
+                  </Link>
+                </li>
               )
             }
             return ""

@@ -20,7 +20,7 @@ draft: false
 
 그리고 api.php에 대해 소스 파일을 제공하는데 일단 확인 합니다.
 
-```php+HTML
+```php
 <?php
 require_once 'config.php';
 
@@ -70,7 +70,7 @@ foreach($apis as $s) {
 
 get 방식으로 `q` 와 `sig` 두 개의 인자를 받아들이고 그다음 q을 base64 decoding을 한 다음 이것을 salt와 연결하여 md5 hash을 돌린 값이 sig와 동일 한지 검증을 합니다. 이때 `md5($salt.$api_string)` 의 방식은 `Length extension attack` 을 이용하여 공격이 가능하여 보입니다.
 
-```php+HTML
+```php
 <?php
 if(md5($salt.$api_string) !== $sig){
     die("??");
@@ -116,7 +116,7 @@ found()
 
 이제 `CSP` 을 우회해서 script을 작동 시키는 방법을 찾아 봅니다.
 
-```php+HTML
+```php
 <?php
 if ($n === "header") {
         if(strlen($p1) > 10)
