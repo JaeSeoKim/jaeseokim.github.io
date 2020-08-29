@@ -29,55 +29,53 @@ const CategoryMenu = ({ path }) => {
   return (
     <>
       <Wrapper>
-        <ul css={tw`mx-4 mt-2`}>
-          <button
-            css={css`
-              transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-              ${tw`font-bold mb-2 text-lg`}
-              ${isDarkMode ? tw`text-gray-400` : tw`text-gray-700`};
-            `}
-            onClick={() => {
-              setIsVisible(!isVisible)
-            }}
-          >
-            Categories List {isVisible ? "▲" : "▼"}
-          </button>
-          <div>
-            {nodes.map((category, index) => {
-              if (category.relativePath !== "") {
-                return (
-                  <li
-                    key={`categorylist_${index}`}
-                    css={css`
-                      transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-                      ${tw`text-gray-500 text-base mx-2`}
-                      ${path &&
-                      decodeURI(path) === `/${category.relativePath}/` &&
-                      `
+        <button
+          css={css`
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            ${tw`mx-4 mt-2 font-bold mb-2 text-lg`}
+            ${isDarkMode ? tw`text-gray-400` : tw`text-gray-700`};
+          `}
+          onClick={() => {
+            setIsVisible(!isVisible)
+          }}
+        >
+          Categories List {isVisible ? "▲" : "▼"}
+        </button>
+        <ul
+          css={css`
+              ${tw`mx-4 mt-2`}
+              display: ${isVisible ? "block" : "none"};
+              `}
+        >
+          {nodes.map((category, index) => {
+            if (category.relativePath !== "") {
+              return (
+                <li
+                  key={`categorylist_${index}`}
+                  css={css`
+                    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+                    ${tw`text-gray-500 text-base mx-2`}
+                    ${path &&
+                    decodeURI(path) === `/${category.relativePath}/` &&
+                    `
                         font-size: 0.95rem;
                         color: ${isDarkMode ? "#DDDDDD" : "#555555"};
                         `}
                         &:hover {
-                        color: ${isDarkMode ? "#DDDDDD" : "#555555"};
-                      }
-                    `}
-                  >
-                    <Link
-                      to={`/${category.relativePath}/`}
-                      css={css`
-                        display: ${isVisible ? "block" : "none"};
-                      `}
-                    >
-                      {category.relativePath
-                        .replace("/", " ")
-                        .trim()
-                        .replace(" ", "/")}
-                    </Link>
-                  </li>
-                )
-              }
-            })}
-          </div>
+                      color: ${isDarkMode ? "#DDDDDD" : "#555555"};
+                    }
+                  `}
+                >
+                  <Link to={`/${category.relativePath}/`}>
+                    {category.relativePath
+                      .replace("/", " ")
+                      .trim()
+                      .replace(" ", "/")}
+                  </Link>
+                </li>
+              )
+            }
+          })}
         </ul>
       </Wrapper>
       <div
@@ -111,7 +109,7 @@ const CategoryMenu = ({ path }) => {
             word-break: break-word;
             max-height: calc(100vh - 200px);
             fontsize: 1rem;
-            display: flex;
+            display: block;
             border-left-width: 4px;
             border-image: linear-gradient(
               180deg,
@@ -131,16 +129,16 @@ const CategoryMenu = ({ path }) => {
           }
         `}
       >
+        <h3
+          css={css`
+            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+            ${tw`mx-4 mt-2 font-bold mb-2 text-lg`}
+            ${isDarkMode ? tw`text-gray-400` : tw`text-gray-700`};
+          `}
+        >
+          <Link to={`/`}>Categories</Link>
+        </h3>
         <ul css={tw`mx-4 mt-2`}>
-          <h3
-            css={css`
-              transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-              ${tw`font-bold mb-2 text-lg`}
-              ${isDarkMode ? tw`text-gray-400` : tw`text-gray-700`};
-            `}
-          >
-            <Link to={`/`}>Categories</Link>
-          </h3>
           {nodes.map((category, index) => {
             if (category.relativePath !== "") {
               return (
