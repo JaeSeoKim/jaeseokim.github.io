@@ -65,11 +65,12 @@ export default ({ data, location }) => {
         const searchQuery = query.toLowerCase().trim()
         const {
           excerpt,
-          frontmatter: { title },
+          frontmatter: { title, tags },
         } = post.node
         return (
           (excerpt && excerpt.toLowerCase().includes(searchQuery)) ||
-          (title && title.toLowerCase().includes(searchQuery))
+          (title && title.toLowerCase().includes(searchQuery)) ||
+          (tags && tags.includes(searchQuery))
         )
       })
 

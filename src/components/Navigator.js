@@ -51,7 +51,11 @@ const Navigator = ({ pageContext }) => {
               >
                 이전 포스트
               </p>
-              <p>{previous.frontmatter.title}</p>
+              <p>
+                {previous.frontmatter.title.length > 60
+                  ? `${previous.frontmatter.title.substring(0, 57)}...`
+                  : previous.frontmatter.title}
+              </p>
             </div>
           </Link>
         )}
@@ -90,7 +94,11 @@ const Navigator = ({ pageContext }) => {
               >
                 다음 포스트
               </p>
-              <p>{next.frontmatter.title}</p>
+              <p>
+                {next.frontmatter.title.length > 60
+                  ? `${next.frontmatter.title.substring(0, 57)}...`
+                  : next.frontmatter.title}
+              </p>
             </div>
             <div css={tw`inline-flex content-center mr-4 ml-2 h-full`}>
               <AiOutlineArrowRight css={tw`w-8 h-8 my-auto`} />
