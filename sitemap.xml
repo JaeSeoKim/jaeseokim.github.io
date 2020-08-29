@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://jaeseokim.github.io/develop/gatsby-blog-개발-후기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/react/첫-GitHub-Contribution-feat-react-simplemde-editor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/react/React-Nextjs-useSWR-Hook-알아보기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
