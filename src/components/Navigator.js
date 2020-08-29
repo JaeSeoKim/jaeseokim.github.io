@@ -18,7 +18,8 @@ const Navigator = ({ pageContext }) => {
         {previous && (
           <Link
             css={css`
-              display: inline-block;
+              display: flex;
+              justify-content: flex-start;
               transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
               text-align: left;
               width: 100%;
@@ -37,8 +38,8 @@ const Navigator = ({ pageContext }) => {
             to={previous.fields.slug}
             rel="prev"
           >
-            <div css={tw`mr-4 ml-2 inline-block`}>
-              <AiOutlineArrowLeft css={tw`block w-8 h-8`} />
+            <div css={tw`inline-flex content-center mr-4 ml-2 h-full`}>
+              <AiOutlineArrowLeft css={tw`w-8 h-8 my-auto`} />
             </div>
             <div css={tw`inline-block my-2`}>
               <p
@@ -59,7 +60,8 @@ const Navigator = ({ pageContext }) => {
         {next && (
           <Link
             css={css`
-              display: inline-block;
+              display: flex;
+              justify-content: flex-end;
               transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
               text-align: right;
               width: 100%;
@@ -90,8 +92,8 @@ const Navigator = ({ pageContext }) => {
               </p>
               <p>{next.frontmatter.title}</p>
             </div>
-            <div css={tw`ml-4 mr-2 inline-block`}>
-              <AiOutlineArrowRight css={tw`block w-8 h-8`} />
+            <div css={tw`inline-flex content-center mr-4 ml-2 h-full`}>
+              <AiOutlineArrowRight css={tw`w-8 h-8 my-auto`} />
             </div>
           </Link>
         )}

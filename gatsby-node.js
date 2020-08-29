@@ -13,11 +13,12 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPostTemplate = require.resolve(`./src/templates/blogPost.js`)
+  const categoryTemplate = require.resolve(`./src/templates/category.js`)
 
   return graphql(
     `
       {
-        allMarkdownRemark(
+        postsRemark: allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           filter: { frontmatter: { draft: { eq: false } } }
         ) {
@@ -32,6 +33,14 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        categories: allDirectory(
+          filter: { absolutePath: { regex: "/^((?!image).)*$/" } }
+        ) {
+          nodes {
+            relativePath
+          }
+          totalCount
+        }
       }
     `
   ).then((result) => {
@@ -39,13 +48,11 @@ exports.createPages = ({ graphql, actions }) => {
       throw result.errors
     }
 
-    result.data.allMarkdownRemark.edges.forEach((post, index) => {
-      const previous =
-        index === result.data.allMarkdownRemark.edges.length - 1
-          ? null
-          : result.data.allMarkdownRemark.edges[index + 1].node
-      const next =
-        index === 0 ? null : result.data.allMarkdownRemark.edges[index - 1].node
+    const posts = result.data.postsRemark.edges
+
+    posts.forEach((post, index) => {
+      const previous = index === posts.length - 1 ? null : posts[index + 1].node
+      const next = index === 0 ? null : posts[index - 1].node
 
       createPage({
         path: post.node.fields.slug,
@@ -56,6 +63,22 @@ exports.createPages = ({ graphql, actions }) => {
           next,
         },
       })
+    })
+
+    const categories = result.data.categories.nodes
+
+    categories.forEach((category) => {
+      if (category.relativePath !== "") {
+        console.log(`${__dirname}` + `/category/${category.relativePath}/`)
+        createPage({
+          // path: `/category/${category.relativePath}/`,
+          path: `/${category.relativePath}/`,
+          component: categoryTemplate,
+          context: {
+            categoryRegex: `/^(${__dirname}\/content\/posts\/)(${category.relativePath}\/)([^\/]*\.md$)/`,
+          },
+        })
+      }
     })
   })
 }

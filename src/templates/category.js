@@ -16,7 +16,10 @@ const Wrapper = tw.div`w-full max-w-screen-md mx-auto`
 export default ({ data, location }) => {
   const posts = data.allMarkdownRemark.edges
   const { countOfInitialPost } = data.site.siteMetadata.configs
-  const [count, countRef, increaseCount] = useCount("index")
+  const categoryTitle = decodeURI(
+    location.pathname.replace("/", " ").trim().replace(" ", "/")
+  )
+  const [count, countRef, increaseCount] = useCount(categoryTitle)
   const bottomRef = useRef()
 
   const [state, setState] = useState({
@@ -80,13 +83,19 @@ export default ({ data, location }) => {
 
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title={categoryTitle} />
       <Wrapper>
         <Profile />
+        <h1 className="category-title" css={tw`mt-4 px-4 text-4xl font-bold`}>
+          #{categoryTitle}
+        </h1>
       </Wrapper>
-      <CategoryMenu />
+      <CategoryMenu path={location.pathname} />
       <Wrapper>
         <TagSelector tags={tags} onTagClick={onTagClick} state={state} />
+        {state.filteredPosts.length === 0 && (
+          <div css={tw`mx-4 text-xl`}>no post..</div>
+        )}
         {state.filteredPosts
           .slice(0, count * countOfInitialPost)
           .map((post, index) => {
@@ -99,7 +108,7 @@ export default ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query PostsQuery {
+  query($categoryRegex: String) {
     site {
       siteMetadata {
         configs {
@@ -109,7 +118,10 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { eq: false } } }
+      filter: {
+        fileAbsolutePath: { regex: $categoryRegex }
+        frontmatter: { draft: { eq: false } }
+      }
     ) {
       edges {
         node {

@@ -13,7 +13,7 @@ import {
 } from "react-icons/fa"
 import { graphql, useStaticQuery } from "gatsby"
 
-const Wrapper = tw.div`w-full max-w-screen-md px-4 md:px-0 mx-auto pt-8 md:pt-12`
+const Wrapper = tw.div`w-full max-w-screen-md px-4 md:px-0 mx-auto pt-8 md:pt-12 mt-2 mb-4`
 const ProfileContainer = tw.div`md:flex items-center px-2`
 
 const Profile = () => {

@@ -27,7 +27,7 @@ const TableOfContents = ({ toc, currentHeaderUrl }) => {
           scrollbar-width: thin;
           scrollbar-color: gray transparent;
           display: none;
-          @media screen and (min-width: 1200px) {
+          @media screen and (min-width: 1280px) {
             float: right;
             position: sticky;
             top: 100px;
@@ -58,9 +58,18 @@ const TableOfContents = ({ toc, currentHeaderUrl }) => {
           }
         `}
       >
-        <div
-          css={css`
-          ul {
+        <div css={tw`mx-4`}>
+          <h3
+            css={css`
+              ${tw`font-bold mb-2 text-lg mb-2`}
+              ${isDarkMode ? tw`text-gray-400` : tw`text-gray-700`};
+            `}
+          >
+            TOC
+          </h3>
+          <div
+            css={css`
+          ul:not(:first-child) {
             margin-left: 13px;
           }
           ul > li a:hover {
@@ -75,8 +84,9 @@ const TableOfContents = ({ toc, currentHeaderUrl }) => {
             color: ${isDarkMode ? "#DDDDDD" : "#555555"};
           }
         `}
-          dangerouslySetInnerHTML={{ __html: toc }}
-        ></div>
+            dangerouslySetInnerHTML={{ __html: toc }}
+          ></div>
+        </div>
       </div>
     </>
   ) : null

@@ -46,7 +46,7 @@ const TagSelector = ({ onTagClick, state, tags }) => {
         &::-webkit-scrollbar {
           display: none;
         }
-        ${tw`flex flex-no-wrap content-center mx-4 mt-8 py-2 pl-2 overflow-scroll`}
+        ${tw`flex flex-no-wrap content-center mx-4 py-2 pl-2 overflow-scroll`}
       `}
     >
       <Tag
