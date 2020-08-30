@@ -1,7 +1,7 @@
 ---
 title: "[React, Next.js] - useSWR Hook 알아보기!"
 date: 2020-05-05 19:01:27
-tags: ["fetch", "react", "react hook", "Next.js", "swr"]
+tags: ["react", "react hook", "Next.js", "swr"]
 draft: false
 ---
 

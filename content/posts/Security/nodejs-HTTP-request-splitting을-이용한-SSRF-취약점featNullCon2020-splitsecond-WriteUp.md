@@ -1,7 +1,7 @@
 ---
 title: "[node.js] : HTTP request splitting을 이용한 SSRF 취약점(feat.NullCon_2020-split_second WriteUp)"
 date: 2020-03-01 23:57:09
-tags: ["SSRF", "HTTP request split attack", "CVE-2018-12116"]
+tags: ["SSRF", "CVE"]
 draft: false
 ---
 

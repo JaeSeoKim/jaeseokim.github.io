@@ -1,14 +1,7 @@
 ---
 title: "XPS 13 7390 ubuntu 20.04 Update! 세팅 기록용"
 date: 2020-04-26 13:14:39
-tags:
-  [
-    "ubuntu 설정",
-    "Dell XPS 13 7390",
-    "Ubuntu 20.04",
-    "focal fossa",
-    "Wine KakaoTalk",
-  ]
+tags: ["Dell XPS 13 7390", "Ubuntu 20.04"]
 draft: false
 ---
 

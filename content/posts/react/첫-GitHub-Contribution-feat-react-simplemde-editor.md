@@ -1,7 +1,7 @@
 ---
 title: "첫 GitHub Contribution!! (feat. react-simplemde-editor)"
 date: 2020-06-08 17:20:16
-tags: ["오픈소스", "Contribution", "GitHub", "react-simplemde-editor"]
+tags: ["open source", "github"]
 draft: false
 ---
 
