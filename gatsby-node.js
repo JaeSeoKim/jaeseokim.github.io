@@ -69,7 +69,6 @@ exports.createPages = ({ graphql, actions }) => {
 
     categories.forEach((category) => {
       if (category.relativePath !== "") {
-        console.log(`${__dirname}` + `/category/${category.relativePath}/`)
         createPage({
           // path: `/category/${category.relativePath}/`,
           path: `/${category.relativePath}/`,

@@ -75,6 +75,7 @@ const CategoryMenu = ({ path }) => {
                 </li>
               )
             }
+            return ""
           })}
         </ul>
       </Wrapper>
