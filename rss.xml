@@ -1,4 +1,265 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog RSS Feed]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 31 Aug 2020 18:34:34 GMT</lastBuildDate><item><title><![CDATA[gatsby를 이용한 Github blog 개발후기]]></title><description><![CDATA[intro 최근 블로그를 관리와 글 작성을 소홀히 하고 있는 내 모습을 어느 순간 발견하게 되었다. 42서울 본 과정도 코로나로 인하여 지연이 되고 나태해 지는 자신을 반성하고자 블로그를 다시 제대로 하기로 마음을 먹게 되었다. 블로그를 제대로 다시 하기 위하여 일단 기존 Tistory 블로그에 작성된 글을 읽어보니 틀린 내용과 어설프게 작성된 내용들이 …]]></description><link>https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</guid><pubDate>Sat, 29 Aug 2020 19:23:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog RSS Feed]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>http://github.com/dylang/node-rss</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Sep 2020 10:52:22 GMT</lastBuildDate><item><title><![CDATA[[TypeScript] Hello TypeScript! with Deno🦕]]></title><description><![CDATA[TypeScript? TypeScript에 대해서 처음 관심을 가지게 된 것은 React를 공부하며 개발을 하다 중간 중간 Type에 대해 제대로 체크를 안하고 그냥 사용을 하다 런타임에서 문제가 발생한다는 것을 눈으로 보고 수정을 하는 경우가 많았는데 이러한 문제를 원천 차단 할 수 있는 JavaScript 의 SuperSet 언어인 TypeScript…]]></description><link>https://jaeseokim.github.io/typescript/hello-typescript-with-deno/</link><guid isPermaLink="false">https://jaeseokim.github.io/typescript/hello-typescript-with-deno/</guid><pubDate>Mon, 31 Aug 2020 23:41:00 GMT</pubDate><content:encoded>&lt;p align=&quot;center&quot;&gt;
+&lt;img style=&quot;display: inline;  witdh: 100px; height: 100px;&quot; src=&quot;/8b2e5c6e1cc3e8b93d2d81597d1f4b69/logo.svg&quot;&gt;
+&lt;span style=&quot;font-size: 50px;&quot;&gt;&amp;#x2764;&lt;/span&gt;
+&lt;img style=&quot;display: inline; witdh: 100px; height: 100px;&quot; src=&quot;/c87187cad0ab07cb31c76fb8facda1e1/Typescript_logo_2020.svg&quot;&gt;
+&lt;/p&gt;
+&lt;h1 id=&quot;typescript&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#typescript&quot; aria-label=&quot;typescript permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://www.typescriptlang.org/&quot;&gt;TypeScript?&lt;/a&gt;&lt;/h1&gt;
+&lt;p&gt;TypeScript에 대해서 처음 관심을 가지게 된 것은 React를 공부하며 개발을 하다 중간 중간 &lt;code&gt;Type&lt;/code&gt;에 대해 제대로 체크를 안하고 그냥 사용을 하다 런타임에서 문제가 발생한다는 것을 눈으로 보고 수정을 하는 경우가 많았는데 이러한 문제를 원천 차단 할 수 있는 &lt;code&gt;JavaScript&lt;/code&gt; 의 &lt;code&gt;SuperSet&lt;/code&gt; 언어인 &lt;code&gt;TypeScript&lt;/code&gt;가 있다는 것을 알게 되고 관심을 가지게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;TypeScript&lt;/code&gt;가 위에서 설명한 문제를 원천 차단 할 수 있다는 이유는 JS와 달리 컴파일 과정에서 &lt;code&gt;TypeChecker&lt;/code&gt;를 통해 예를 들어 숫자와 문자를 곱하고 있는지 와 같은 행위를 발견하고 미리 경고를 함으로써 개발자는 실수를 줄이고 원하는 형태로 정상적으로 나오게 될 수 있다.&lt;/p&gt;
+&lt;p&gt;처음 &lt;code&gt;TypeScript&lt;/code&gt;에 대해 알았을 때 &lt;strong&gt;컴파일&lt;/strong&gt;을 해 준다고?? &lt;code&gt;JavaScript&lt;/code&gt;는 &lt;strong&gt;인터프리터&lt;/strong&gt; 언어인데? 하면서 의문점이 생겼다.&lt;/p&gt;
+&lt;p&gt;이때 &lt;code&gt;TypeScript&lt;/code&gt;는 위에서 말한 것과 같이 &lt;code&gt;JavaScript&lt;/code&gt;의 SuperSet으로 &lt;code&gt;TypeScript&lt;/code&gt;는 결과물을 &lt;code&gt;JavaScript&lt;/code&gt;로 만들어 준다.&lt;/p&gt;
+&lt;p&gt;그 과정에서 타입에 대해 체크를 해주기 때문에 런타임이 아닌 컴파일 시점에서 타입에 대해 잘못된 부분을 알게 되는 것이다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;yml&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;TS&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;타입스크립트 소스 -&amp;gt; 타입스크립트 AST&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;타입 검사기가 AST를 확인&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;타입스크립트 AST -&amp;gt; 자바스크립트 소스&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;JS&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;자바스크립트 소스 -&amp;gt; 자바스크립트 AST&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;AST -&amp;gt; 바이트코드&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;런타임이 바이트코드를 평가&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위와 같은 단계를 거치면서 TypeScript가 JavaScript 소스로 생성하여 브라우저 기타 엔진에 의해서 자바스크립트가 실행이 된다.&lt;/p&gt;
+&lt;p&gt;그리고 &lt;code&gt;Node.js&lt;/code&gt; 에서 &lt;code&gt;TypeScript&lt;/code&gt;를 사용하기 위해서는 &lt;code&gt;typescript tslint @types/node&lt;/code&gt; 등의 추가적인 모듈이 요구가 되는데 &lt;code&gt;deno&lt;/code&gt; 라는 새로운 엔진을 사용해서 추가적인 모듈이 없이 작동이 가능하게 된다.&lt;/p&gt;
+&lt;h1 id=&quot;deno&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#deno&quot; aria-label=&quot;deno permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://deno.land/&quot;&gt;Deno?&lt;/a&gt;&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&quot;deno-is-a-simple-modern-and-secure-runtime-for-javascript-and-typescript-that-uses-v8-and-is-built-in-rust&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#deno-is-a-simple-modern-and-secure-runtime-for-javascript-and-typescript-that-uses-v8-and-is-built-in-rust&quot; aria-label=&quot;deno is a simple modern and secure runtime for javascript and typescript that uses v8 and is built in rust permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Deno is a simple, modern and secure runtime for JavaScript and TypeScript that uses V8 and is built in Rust.&lt;/h2&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;Deno&lt;/code&gt;의 공식 사이트에 들어가게 되면 위와 같이 설명을 하고 있는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Deno&lt;/code&gt;는 &lt;code&gt;Node.js&lt;/code&gt;의 개발자가 기존 &lt;code&gt;Node.JS&lt;/code&gt;를 만들었던 상황과 지금의 JavaScript의 생태계가 변화됨으로써 근본적으로 가지고 있었던 단점들을 개선한 프로젝트 이다.&lt;/p&gt;
+&lt;p&gt;기존 &lt;code&gt;Node.js&lt;/code&gt;와의 차이점을 아래의 리스트로 정리해보았다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;Node.js&lt;/th&gt;
+&lt;th&gt;Deno&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Engine&lt;/td&gt;
+&lt;td&gt;V8&lt;/td&gt;
+&lt;td&gt;V8&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Language&lt;/td&gt;
+&lt;td&gt;C++, javascript&lt;/td&gt;
+&lt;td&gt;rust, typescript&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Package manager&lt;/td&gt;
+&lt;td&gt;NPM&lt;/td&gt;
+&lt;td&gt;URLs or file paths&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Modules import&lt;/td&gt;
+&lt;td&gt;CommonJs&lt;/td&gt;
+&lt;td&gt;ES Modules&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Security&lt;/td&gt;
+&lt;td&gt;full access&lt;/td&gt;
+&lt;td&gt;explicit permissions&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TypeScript Support&lt;/td&gt;
+&lt;td&gt;not built in&lt;/td&gt;
+&lt;td&gt;built in&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;async actions return value&lt;/td&gt;
+&lt;td&gt;return undefined or promise&lt;/td&gt;
+&lt;td&gt;return promise&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;Node.js&lt;/code&gt;와 &lt;code&gt;Deno&lt;/code&gt;는 위와 같은 차이를 가지고 있다. 하지만 아직 개발이 &lt;code&gt;Node.js&lt;/code&gt; 와 달리 초기인 점을 고려하여서 사용을 고려해야 한다.&lt;/p&gt;
+&lt;p&gt;기존 &lt;code&gt;Node.js&lt;/code&gt; 는 TypeScript를 쓰기 위해 추가적인 모듈을 사용 해야 하고 복잡한 설정이 필요하지만 Deno는 자체적으로 TypeScript를 지원하기 때문에 이번 기회에 같이 공부하고자 이렇게 정리 글을 작성하게 되었다.&lt;/p&gt;
+&lt;h1 id=&quot;hello-typescript-with-deno🦕&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hello-typescript-with-deno%F0%9F%A6%95&quot; aria-label=&quot;hello typescript with deno🦕 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Hello TypeScript! with Deno🦕&lt;/h1&gt;
+&lt;p&gt;이제 한번 Deno를 설치하여서 &lt;code&gt;Hello TypeScript! - with 🦕&lt;/code&gt; 문구를 출력 해본다!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h2 id=&quot;installation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#installation&quot; aria-label=&quot;installation permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Installation&lt;/h2&gt;
+&lt;p&gt;Deno works on macOS, Linux, and Windows. Deno is a single binary executable. It has no external dependencies.&lt;/p&gt;
+&lt;p&gt;Using Shell (macOS and Linux):&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;curl -fsSL https://deno.land/x/install/install.sh | sh&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using PowerShell (Windows):&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;iwr https://deno.land/x/install/install.ps1 -useb | iex&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;a href=&quot;https://scoop.sh/&quot;&gt;Scoop&lt;/a&gt; (Windows):&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;3&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;scoop install deno&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;a href=&quot;https://chocolatey.org/packages/deno&quot;&gt;Chocolatey&lt;/a&gt; (Windows):&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;4&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;choco install deno&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;a href=&quot;https://formulae.brew.sh/formula/deno&quot;&gt;Homebrew&lt;/a&gt; (macOS):&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;5&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;brew install deno&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Using &lt;a href=&quot;https://crates.io/crates/deno&quot;&gt;Cargo&lt;/a&gt; (Windows, macOS, Linux):&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;6&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;cargo install deno&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Deno에서 제공하는 설치 방법을 통해 설치를 진행 한다.&lt;/p&gt;
+&lt;p&gt;이제 &lt;code&gt;hello.ts&lt;/code&gt; 라는 간단한 파일을 만들고 아래와 같은 내용으로 작성을 해본다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;ts&quot; data-index=&quot;7&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;Hello TypeScript! - with 🦕&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;그리고 &lt;code&gt;deno run hello.ts&lt;/code&gt; 명령어를 통해 결과물을 확인 해본다!&lt;/p&gt;
+&lt;p&gt;이제 TypeScript의 장점인 &lt;code&gt;TypeChecker&lt;/code&gt;가 동작하는 지 확인한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;ts&quot; data-index=&quot;8&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위와 같이 작성된 파일을 보게 되면 아래와 같은 경고가 바로 출력 되는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 13.999999999999998%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAAAsSAAALEgHS3X78AAAAiUlEQVQI12WLURKCMAxEOYtU20IDpJTSKjgy3v9Ma9px/MCPNy+7SZqBM652gtIDjPVwxDA0ojWEy82h1VRRhn5zRXZKnzqhif5AXDPGkODjjpCeMmd0QwBNEcQrLM3oJRdb56t1z/XGlCyYL01Y7uC4gcVpf4OWFzreMM6l28UPaFceC8uJ/+4DIJRcWu+tw84AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200901025605633&quot;
+        title=&quot;image-20200901025605633&quot;
+        src=&quot;/static/8692931e711745303208781662c902eb/5a190/image-20200901025605633.png&quot;
+        srcset=&quot;/static/8692931e711745303208781662c902eb/772e8/image-20200901025605633.png 200w,
+/static/8692931e711745303208781662c902eb/e17e5/image-20200901025605633.png 400w,
+/static/8692931e711745303208781662c902eb/5a190/image-20200901025605633.png 800w,
+/static/8692931e711745303208781662c902eb/c1b63/image-20200901025605633.png 1200w,
+/static/8692931e711745303208781662c902eb/afa26/image-20200901025605633.png 1258w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이번에는 &lt;code&gt;annotation&lt;/code&gt;를 사용하여 변수의 Type를 지정 하였을 때 어떤 식으로 작동하는지 확인 한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;ts&quot; data-index=&quot;9&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;10&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;number&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;test&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk11&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;num&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;*&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;word&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 711px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAAAsSAAALEgHS3X78AAAA5klEQVQY032PyXLDIBBE9SnZbC2ghWUGCYQiOc4h//9BnUFV9i05vOoaoLuHSvENFDY0A0EJo1rgLMFYgzl4EDm8fCi8XTXe6x6vF3VqmS/t8Dwrc9GqsRtoOSRgRaMlkDPaaUHvs5QE9GaG5YR5PRDzFywlTD5CTwwfstwH1J2BHgm1MhLYEzoxJvcDpgOUv8HrHZzv6GiHjRlzvon5E45L+S5Gh2tnBXPqYy5aNdqjk1DvVwSOcLSISjsxRuMxOEZ5c2nNk2L8izOwlQ1D3GSLBB12hGWVoIQYE4xPaPpw/uJB+w+/qCqdJkrntcUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200901025947806&quot;
+        title=&quot;image-20200901025947806&quot;
+        src=&quot;/static/2bc7e8aeaa855cf41b1bbd84f140b41b/a8e5b/image-20200901025947806.png&quot;
+        srcset=&quot;/static/2bc7e8aeaa855cf41b1bbd84f140b41b/772e8/image-20200901025947806.png 200w,
+/static/2bc7e8aeaa855cf41b1bbd84f140b41b/e17e5/image-20200901025947806.png 400w,
+/static/2bc7e8aeaa855cf41b1bbd84f140b41b/a8e5b/image-20200901025947806.png 711w&quot;
+        sizes=&quot;(max-width: 711px) 100vw, 711px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위와 같이 타입에 대하여 정의를 통해 개발자가 할 수 있는 타입에 대한 실수가 사라지게 된다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;한번 간단하게 TypeScript와 Deno에 대해서 글을 해보았는데 Deno의 장점과 왜 TypeScript를 사용해야 하는지에 대해 좀 더 알아가게 된 것 같다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .mtk4 { color: #E06C75; }
+  .one-dark-pro .mtk1 { color: #ABB2BF; }
+  .one-dark-pro .mtk7 { color: #D19A66; }
+  .one-dark-pro .mtk6 { color: #98C379; }
+  .one-dark-pro .mtk11 { color: #E5C07B; }
+  .one-dark-pro .mtk3 { color: #61AFEF; }
+  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk8 { color: #56B6C2; }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[gatsby를 이용한 Github blog 개발후기]]></title><description><![CDATA[intro 최근 블로그를 관리와 글 작성을 소홀히 하고 있는 내 모습을 어느 순간 발견하게 되었다. 42서울 본 과정도 코로나로 인하여 지연이 되고 나태해 지는 자신을 반성하고자 블로그를 다시 제대로 하기로 마음을 먹게 되었다. 블로그를 제대로 다시 하기 위하여 일단 기존 Tistory 블로그에 작성된 글을 읽어보니 틀린 내용과 어설프게 작성된 내용들이 …]]></description><link>https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</guid><pubDate>Sat, 29 Aug 2020 19:23:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
 &lt;p&gt;최근 블로그를 관리와 글 작성을 소홀히 하고 있는 내 모습을 어느 순간 발견하게 되었다.&lt;/p&gt;
 &lt;p&gt;42서울 본 과정도 코로나로 인하여 지연이 되고 나태해 지는 자신을 반성하고자 블로그를 다시 제대로 하기로 마음을 먹게 되었다.&lt;/p&gt;
 &lt;p&gt;블로그를 제대로 다시 하기 위하여 일단 기존 &lt;code&gt;Tistory&lt;/code&gt; 블로그에 작성된 글을 읽어보니 틀린 내용과 어설프게 작성된 내용들이 너무 많이 보이고 그리고 무분별한 카테고리를 통해 엉망으로 되어 있는 모습을 보게 되었다.&lt;/p&gt;
