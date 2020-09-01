@@ -2,13 +2,13 @@
 title: "[TypeScript] Hello TypeScript! with Deno🦕"
 date: 2020-08-31 23:41
 tags: ["TypeScript", "Deno"]
-draft: true
+draft: false
 ---
 
 <p align="center">
-<img  style="display: inline;  witdh: 100px; height: 100px;" src="./image/hello-typescript-with-deno/logo.svg" />
+<img  style="display: inline;  witdh: 100px; height: 100px;" src="image/hello-typescript-with-deno/logo.svg" />
 <span style="font-size: 50px;">❤</span>
-<img style="display: inline; witdh: 100px; height: 100px;" src="./image/hello-typescript-with-deno/Typescript_logo_2020.svg" />
+<img style="display: inline; witdh: 100px; height: 100px;" src="image/hello-typescript-with-deno/Typescript_logo_2020.svg" />
 </p>
 
 # [TypeScript?](https://www.typescriptlang.org/)
@@ -17,7 +17,7 @@ TypeScript에 대해서 처음 관심을 가지게 된 것은 React를 공부하
 
 `TypeScript`가 위에서 설명한 문제를 원천 차단 할 수 있다는 이유는 JS와 달리 컴파일 과정에서 `TypeChecker`를 통해 예를 들어 숫자와 문자를 곱하고 있는지 와 같은 행위를 발견하고 미리 경고를 함으로써 개발자는 실수를 줄이고 원하는 형태로 정상적으로 나오게 될 수 있다.
 
-이쯤에서 의문점이 생기는 점이 있을 것이다. 처음 `TypeScript`에 대해 알았을 때 **컴파일**을 해 준다고?? `JavaScript`는 **인터프리터** 언어인데? 하면서 의문점이 생겼다.
+처음 `TypeScript`에 대해 알았을 때 **컴파일**을 해 준다고?? `JavaScript`는 **인터프리터** 언어인데? 하면서 의문점이 생겼다.
 
 이때 `TypeScript`는 위에서 말한 것과 같이 `JavaScript`의 SuperSet으로 `TypeScript`는 결과물을 `JavaScript`로 만들어 준다.
 
@@ -36,7 +36,7 @@ JS:
 
 위와 같은 단계를 거치면서 TypeScript가 JavaScript 소스로 생성하여 브라우저 기타 엔진에 의해서 자바스크립트가 실행이 된다.
 
-이때 `Node.js` 에서 `TypeScript`를 사용하기 위해서는 `typescript tslint @types/node` 등의 추가적인 모듈이 요구가 되는데 `deno` 라는 새로운 엔진을 사용해서 추가적인 모듈이 없이 작동이 가능하게 된다.
+그리고 `Node.js` 에서 `TypeScript`를 사용하기 위해서는 `typescript tslint @types/node` 등의 추가적인 모듈이 요구가 되는데 `deno` 라는 새로운 엔진을 사용해서 추가적인 모듈이 없이 작동이 가능하게 된다.
 
 # [Deno?](https://deno.land/)
 
@@ -142,14 +142,6 @@ console.log(num * word)
 
 위와 같이 타입에 대하여 정의를 통해 개발자가 할 수 있는 타입에 대한 실수가 사라지게 된다.
 
-# TypeScript Basic Types
+---
 
-JavaScript와 달리 TypeScript는 여러가지 타입을 가지고 있기 때문에 다양한 타입에 대해서 정리를 해보았다.
-
-## any
-
-any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다.
-
-만약 any타입을 남발해서 사용을 하게 된다면 TypeChecker가 동작하지 않게 되고 기존 JavaScript와 다른 점이 없어지게 되므로 TypeScript에서 오는 장점이 사라지니 이것을 남발해서는 안된다.
-
-## unknown
+한번 간단하게 TypeScript와 Deno에 대해서 글을 해보았는데 Deno의 장점과 왜 TypeScript를 사용해야 하는지에 대해 좀 더 알아가게 된 것 같다.

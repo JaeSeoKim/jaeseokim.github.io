@@ -28,7 +28,9 @@ const Utterances = ({ repo }) => {
       rootElm.current.innerHTML = ""
       rootElm.current.appendChild(utterances)
     }
-  }, [isDarkMode, rootElm, repo])
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isDarkMode])
 
   return <div className="utterances" ref={rootElm} />
 }
