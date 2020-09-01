@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://jaeseokim.github.io/TIL/2020-09-01/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/typescript/hello-typescript-with-deno/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/react/첫-GitHub-Contribution-feat-react-simplemde-editor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -10,6 +11,7 @@
 <url> <loc>https://jaeseokim.github.io/Security/nodejs-HTTP-request-splitting을-이용한-SSRF-취약점featNullCon2020-splitsecond-WriteUp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/writeup/CodeGate-writeup-csp_web/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/TIL/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/etc/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
