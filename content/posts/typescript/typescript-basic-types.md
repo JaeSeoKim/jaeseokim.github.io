@@ -21,15 +21,15 @@ a = 42
 let b: any[] = [a, "test", 42, true]
 ```
 
-위와 같이 컴파일 시간에서 확실하게 알수 없거나 동적으로 변하는 상황에서 사용할 수 있다.
+위와 같이 컴파일 시간에서 확실하게 알 수 없거나 동적으로 변하는 상황에서 사용할 수 있다.
 
 ## unknown
 
 unknown은 말 그대로 타입에 대해서 알 수 없는 값이 있을 때 사용된다.
 
-위에서 설명했던 any처럼 모든 값에 대해서 들어 올 수 있다. 이때 unknown의 장점은 타입을 검사하여 정제(refine) 하기 전까지는 타입스크립트가 unknown 타입의 값을 사용할 수 없게 강제 할 수 있다.
+위에서 설명했던 any처럼 모든 값에 대해서 들어 올 수 있다. 이때 unknown의 장점은 타입을 검사하여 정제(refine) 하기 전까지는 타입 스크립트가 unknown 타입의 값을 사용할 수 없게 강제 할 수 있다.
 
-즉 타입에 대해 미리 알수 없는 값이 들어올때 any 대신에 unknown을 사용 할 수 있다.
+즉 타입에 대해 미리 알 수 없는 값이 들어올 때 any 대신에 unknown을 사용 할 수 있다.
 
 ```ts
 let a: unknown = 30 // unknown
@@ -47,12 +47,3 @@ if (typeof a === "number") {
 # boolean
 
 boolean 타입은 true, false 두 개의 값을 가지고 있다.
-
-```ts
-let a = true // boolean
-var b = false // boolean
-const c = true // true
-let d: boolean = true // boolean
-let e: true = true // true
-let f: true = false // Type 'false' is not assignable to type 'true'.ts(2322)
-```
