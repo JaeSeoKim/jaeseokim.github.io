@@ -58,6 +58,8 @@ const Markdown = ({ html }) => {
     }
     p {
       margin: 0.3rem;
+      margin-top: 0.75rem;
+      margin-bottom: 0.75rem;
     }
     ul,
     ol {

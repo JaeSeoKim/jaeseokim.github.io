@@ -47,3 +47,44 @@ if (typeof a === "number") {
 # boolean
 
 boolean 타입은 true, false 두 개의 값을 가지고 있다.
+
+# number
+
+number 타입은 모든 숫자(정수, 소수, 양수, 음수, Infinity, NaN 등)의 집합이다.
+
+# bigint
+
+bitint는 JavaScript와 TypeScript에 새로 추가된 타입으로 number 타입의 2<sup>53</sup> - 1 까지의 정수보다 더 큰 수를 표현 할 때 사용이 가능합니다.
+
+아직 모든 엔진이 bigint를 지원하지 않으므로 대상 플랫폼이 지원을 하는지에 대해 확인이 필요하다.
+
+```ts
+let a = 1234n			// bigint
+const b = 5678n			// 5678n
+let c: bigint = 123n	// bigint
+let d = BigInt("123")	// bigint
+let e = BigInt(123n)	// bigint
+let f = 12.34n			// A bigint literal must be an integer.ts(1353)
+let g: bigint = 100     // Type '100' is not assignable to type 'bigint'.ts(2322)
+```
+
+# symbol
+
+symbol은 ES2015에서 새로 추가된 기능이다.
+
+symbol은 변경 불가능한 원시 타입의 값이다. symbol은 주로 이름의 충돌 위험이 없는 유일한 객체의 프로퍼티 키(property key)를 만들기 위해 사용한다.
+
+symbol을 만들기 위해 `Symbol([description])` 를 통해 생성을 한다. 이때 들어가는 인자는 디버깅 용도를 위한 **description**으로 사용된다.
+
+```ts
+let a = Symbol("a") // symbol
+let b = Symbol("a") // symbol
+console.log(a === b) // output: false
+
+const c = Symbol("c") // unique symbol
+let d: unique symbol = Symbol("d") // A variable whose type is a 'unique symbol' type must be 'const'.ts(1332)
+```
+
+# object
+
+object 타입은 객체의 형태(shape)를 정의한다.

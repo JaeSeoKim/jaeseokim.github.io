@@ -32,7 +32,13 @@ export default ({ data, pageContext, location }) => {
     const handleScroll = () => {
       let aboveHeaderUrl
       const currentOffsetY = window.pageYOffset
-      const headerElements = document.querySelectorAll(".toc-header")
+      const headerElements = Array.prototype.slice
+        .call(document.querySelectorAll(".toc-header"))
+        .filter(function (el) {
+          return !el.closest("blockqoute > h1,h2,h3,h4,h5,h6")
+        })
+
+      console.log(headerElements)
       for (const elem of headerElements) {
         const { top } = elem.getBoundingClientRect()
         const elemTop = top + currentOffsetY
