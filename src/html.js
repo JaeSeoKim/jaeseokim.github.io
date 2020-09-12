@@ -25,8 +25,8 @@ export default class HTML extends React.Component {
                 ${tw`fixed bottom-0 left-0 ml-2 mb-2`}
                 ${tw`inline-flex shadow items-center rounded text-white text-sm font-bold px-4 py-3`}
                   background-color: ${whiteModeColor.mainColor2};
-                  z-index: 9999;
-                `}
+                z-index: 9999;
+              `}
             >
               <FaInfo css={tw`fill-current w-6 h-6 mr-2`} />
               <div css={tw`ml-2`}>

@@ -43,9 +43,9 @@ const CategoryMenu = ({ path }) => {
         </button>
         <ul
           css={css`
-              ${tw`mx-4 mt-2`}
-              display: ${isVisible ? "block" : "none"};
-              `}
+            ${tw`mx-4 mt-2`}
+            display: ${isVisible ? "block" : "none"};
+          `}
         >
           {nodes.map((category, index) => {
             if (category.relativePath !== "") {

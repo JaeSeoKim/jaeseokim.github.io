@@ -69,21 +69,21 @@ const TableOfContents = ({ toc, currentHeaderUrl }) => {
           </h3>
           <div
             css={css`
-          ul:not(:first-child) {
-            margin-left: 13px;
-          }
-          ul > li a:hover {
-            color: ${isDarkMode ? "#DDDDDD" : "#555555"};
-          }
-          ul > li a {
-            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            ${tw`text-gray-500 text-sm`}
-          }
-          ul > li a[href="${currentHeaderUrl}"] {
-            font-size: 0.95rem;
-            color: ${isDarkMode ? "#DDDDDD" : "#555555"};
-          }
-        `}
+              ul:not(:first-child) {
+                margin-left: 13px;
+              }
+              ul > li a:hover {
+                color: ${isDarkMode ? "#DDDDDD" : "#555555"};
+              }
+              ul > li a {
+                transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+                ${tw`text-gray-500 text-sm`}
+              }
+              ul > li a[href="${currentHeaderUrl}"] {
+                font-size: 0.95rem;
+                color: ${isDarkMode ? "#DDDDDD" : "#555555"};
+              }
+            `}
             dangerouslySetInnerHTML={{ __html: toc }}
           ></div>
         </div>

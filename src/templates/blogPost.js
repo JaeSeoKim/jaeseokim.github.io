@@ -35,7 +35,7 @@ export default ({ data, pageContext, location }) => {
       const headerElements = Array.prototype.slice
         .call(document.querySelectorAll(".toc-header"))
         .filter(function (el) {
-          return !el.closest("blockqoute > h1,h2,h3,h4,h5,h6")
+          return !el.closest("blockqoute > h1 h2 h3 h4 h5 h6")
         })
 
       console.log(headerElements)

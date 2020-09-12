@@ -58,13 +58,13 @@ const Profile = () => {
           <p
             css={css`
               ${tw`inline-block text-xl font-bold rounded-full mb-2 px-3`}
-              ${isDarkMode ? tw`bg-gray-800` : tw`bg-gray-200`}
-                color: ${
-                  isDarkMode
-                    ? darkModeColor.textColor1
-                    : whiteModeColor.textColor1
-                };
-              `}
+              ${isDarkMode
+                ? tw`bg-gray-800`
+                : tw`bg-gray-200`}
+                color: ${isDarkMode
+                ? darkModeColor.textColor1
+                : whiteModeColor.textColor1};
+            `}
           >
             @{author}
           </p>

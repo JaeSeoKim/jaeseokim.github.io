@@ -12,8 +12,8 @@ const ShareButton = ({ color, icon, target, onClick }) => {
   return (
     <button
       css={css`
-      ${tw`flex px-3 py-1 my-2 ml-2 rounded text-white focus:outline-none`}
-      background-color: ${color}
+        ${tw`flex px-3 py-1 my-2 ml-2 rounded text-white focus:outline-none`}
+        background-color: ${color}
       `}
       onClick={onClick}
     >
@@ -137,14 +137,14 @@ const ShareButtons = ({ url, text }) => {
       {isCopy.visible && (
         <div
           css={css`
-        animation: ${isCopy.end ? leftOut : leftIn} 500ms;
-        ${tw`fixed my-auto top-0 left-0 ml-4 mt-4`}
-        ${tw`inline-flex shadow items-center rounded text-white text-sm font-bold px-4 py-3`}
-          background-color: ${
-            isDarkMode ? darkModeColor.mainColor2 : whiteModeColor.mainColor2
-          };
-          z-index: 9999;
-        `}
+            animation: ${isCopy.end ? leftOut : leftIn} 500ms;
+            ${tw`fixed my-auto top-0 left-0 ml-4 mt-4`}
+            ${tw`inline-flex shadow items-center rounded text-white text-sm font-bold px-4 py-3`}
+          background-color: ${isDarkMode
+              ? darkModeColor.mainColor2
+              : whiteModeColor.mainColor2};
+            z-index: 9999;
+          `}
         >
           <FaInfo css={tw`fill-current mr-2`} />
           <div css={tw`ml-2`}>링크가 복사 되었습니다.</div>
