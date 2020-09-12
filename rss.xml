@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 03 Sep 2020 14:20:35 GMT</lastBuildDate><item><title><![CDATA[[TIL] 2020-09-01]]></title><description><![CDATA[오늘 공부한 목록 TypeScript 어제부터 작성 하던 "TypeScript Hello TypeScript! with Deno🦕" 글을 마무리 지었다, 타입스크립트 프로그래밍 책을 읽으면서 TypeScript default types…]]></description><link>https://jaeseokim.github.io/TIL/2020-09-01/</link><guid isPermaLink="false">https://jaeseokim.github.io/TIL/2020-09-01/</guid><pubDate>Tue, 01 Sep 2020 21:31:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;오늘-공부한-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%EA%B3%B5%EB%B6%80%ED%95%9C-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;오늘 공부한 목록 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 공부한 목록&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 12 Sep 2020 16:37:34 GMT</lastBuildDate><item><title><![CDATA[[TIL] 2020-09-01]]></title><description><![CDATA[오늘 공부한 목록 TypeScript 어제부터 작성 하던 "TypeScript Hello TypeScript! with Deno🦕" 글을 마무리 지었다, 타입스크립트 프로그래밍 책을 읽으면서 TypeScript default types…]]></description><link>https://jaeseokim.github.io/TIL/2020-09-01/</link><guid isPermaLink="false">https://jaeseokim.github.io/TIL/2020-09-01/</guid><pubDate>Tue, 01 Sep 2020 21:31:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;오늘-공부한-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%EA%B3%B5%EB%B6%80%ED%95%9C-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;오늘 공부한 목록 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 공부한 목록&lt;/h1&gt;
 &lt;h2 id=&quot;typescript&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#typescript&quot; aria-label=&quot;typescript permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TypeScript&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;어제부터 작성 하던 &quot;[TypeScript] Hello TypeScript! with Deno🦕&quot; 글을 마무리 지었다,&lt;/li&gt;
@@ -4878,6 +4878,561 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[dnspy - 사용법 (.Net assembly-editor, debugger, decompiler)]]></title><description><![CDATA[dnspy란? dnspy - github 주소 Debug .NET and Unity assemblies Edit .NET and Unity assemblies
+ dnspy 설치 방법 github에서 직접 소스를 다운받아 build…]]></description><link>https://jaeseokim.github.io/Security/dnspy-사용법-Net-assembly-editor-debugger-decompiler/</link><guid isPermaLink="false">https://jaeseokim.github.io/Security/dnspy-사용법-Net-assembly-editor-debugger-decompiler/</guid><pubDate>Mon, 23 Dec 2019 23:06:08 GMT</pubDate><content:encoded>&lt;h2 id=&quot;dnspy란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy%EB%9E%80&quot; aria-label=&quot;dnspy란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dnspy란?&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/0xd4d/dnSpy&quot;&gt;dnspy - github 주소&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Debug .NET and Unity assemblies&lt;/li&gt;
+&lt;li&gt;Edit .NET and Unity assemblies
+&lt;img src=&quot;/65530597147396bbc91cf18546c136aa/IOPXEtyVd7fcbernrrQWhkimg.gif&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;dnspy-설치-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;dnspy 설치 방법 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dnspy 설치 방법&lt;/h2&gt;
+&lt;p&gt;github에서 직접 소스를 다운받아 build를 하여 설치가 가능하다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;git clone --recursive https://github.com/0xd4d/dnSpy.git&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;cd dnSpy&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;# or dotnet build&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;./build.ps1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;또는 &lt;a href=&quot;https://github.com/0xd4d/dnSpy/releases&quot;&gt;releases&lt;/a&gt; 된 파일을 받아서 사용이 가능하다.&lt;/p&gt;
+&lt;h2 id=&quot;dnspy-간단-사용법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy-%EA%B0%84%EB%8B%A8-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;dnspy 간단 사용법 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dnspy 간단 사용법&lt;/h2&gt;
+&lt;h3 id=&quot;debug용-단축키-설명&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#debug%EC%9A%A9-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%84%A4%EB%AA%85&quot; aria-label=&quot;debug용 단축키 설명 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Debug용 단축키 설명&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;단축키&lt;/th&gt;
+&lt;th&gt;기능&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;F5&lt;/td&gt;
+&lt;td&gt;Start Debugging&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + F5&lt;/td&gt;
+&lt;td&gt;Start without debugging&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;F9&lt;/td&gt;
+&lt;td&gt;BreakPoint&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Shift + F5&lt;/td&gt;
+&lt;td&gt;Restart&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt + Num *&lt;/td&gt;
+&lt;td&gt;현재 작동중인 위치로 이동&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;F10&lt;/td&gt;
+&lt;td&gt;Step Over&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;F11&lt;/td&gt;
+&lt;td&gt;Step Into&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Shift + F11&lt;/td&gt;
+&lt;td&gt;Step Out&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Shift + F9&lt;/td&gt;
+&lt;td&gt;Delect All BreakPoint&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Alt + P&lt;/td&gt;
+&lt;td&gt;Attach to Process&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Alt + C&lt;/td&gt;
+&lt;td&gt;View Call Stack&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Alt + H&lt;/td&gt;
+&lt;td&gt;View Threads&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Alt + U&lt;/td&gt;
+&lt;td&gt;View Modules&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Alt + Z&lt;/td&gt;
+&lt;td&gt;View Processes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + 6&lt;/td&gt;
+&lt;td&gt;View Memory 1&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt + 4&lt;/td&gt;
+&lt;td&gt;View Locals&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;editer용-단축키-설명&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#editer%EC%9A%A9-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%84%A4%EB%AA%85&quot; aria-label=&quot;editer용 단축키 설명 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Editer용 단축키 설명&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;단축키&lt;/th&gt;
+&lt;th&gt;기능&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + F&lt;/td&gt;
+&lt;td&gt;Find&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + Shift + K&lt;/td&gt;
+&lt;td&gt;Find Assembiles&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ctr + X&lt;/td&gt;
+&lt;td&gt;Open Hex Editor&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Del (커서가 함수를 가르키고 있을 때)&lt;/td&gt;
+&lt;td&gt;Delete Function&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Alt + Enter (커서가 함수를 가르키고 있을 때)&lt;/td&gt;
+&lt;td&gt;Edit Method&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&quot;dnspy-간단-사용-예제---x-mas-lapland-mission&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy-%EA%B0%84%EB%8B%A8-%EC%82%AC%EC%9A%A9-%EC%98%88%EC%A0%9C---x-mas-lapland-mission&quot; aria-label=&quot;dnspy 간단 사용 예제   x mas lapland mission permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;/writeup/X-MAS-CTF-2019-Lapland-Mission/&quot;&gt;dnspy 간단 사용 예제 - X-MAS: Lapland Mission&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;dnspy-간단-사용-예제---codeengn-rce-basic-13번&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy-%EA%B0%84%EB%8B%A8-%EC%82%AC%EC%9A%A9-%EC%98%88%EC%A0%9C---codeengn-rce-basic-13%EB%B2%88&quot; aria-label=&quot;dnspy 간단 사용 예제   codeengn rce basic 13번 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dnspy 간단 사용 예제 - CodeEngn RCE basic 13번&lt;/h2&gt;
+&lt;p&gt;문제를 보면 C#으로 짜여진 문제 인데 이때 dnspy를 통해 간단하게 디버깅으로 해결이 가능하다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACZ0lEQVQ4y21UW3LcIBDce3iFBBIICb3Qa3e9duxKPnyEJFdJ5SM37/SwtmNX5aOrAUEzPTPosKw7tv2ClbzsV8R5S/Ph9IxufUB/+ophWrFuO2JcMfQT+n4kpg8YMQwR3jc4bBSa4oIuDOj4sQsdpv0B+vtvqB9/YH7+QsNLfBhRhwku8Zj4I+RbVVNw7CKcrVGWFaqqSlzXnlwiMyVKV6JqHUyooWuHXBsoVUDlBfJck3UaCxda49C0Lax1FLPv3HiuuRqKh42nWCMoYRwPVRrGksuc4gq5UVzLoQqOVY5DXDeczjsCrYqYQHJh6xrHPIdhtIZzU5WwFNHiwDNaIxEqRnZDpjLOKXh+fML14R7jOMLQ4j9Bj4wbClOlnMUYUTuHsRHUcLygKsX+LTLhoihwmC9ndNOMIJUbB5S07cUyBZUWex5hXHC5XDBT9DSP6BoPzW8i8BGydrg+XbE9v+D67QXL5TFVeGb7iOBRbi4MmmFiO0WE1qOt6cBZlEYniwIRE06Cly9PON/fY15WhK5D24bUOpa2JYealXd9h0Jssii+KtA0DTwRQuD+Fh3Pydh7j0O/bWhouZ8ilm2BYzFq5+GSoNxMO6WlGIVZ3UA01qBihNbcbGdZlpCKYqVdKvfeMtKHDcVc0yIrdEq4VFYuMCyCzjOYIn8thkosyDJ1E6xEyNpPfZiqTNxxg+JGpQt2QAGb36XINAUrrgkfj8dX3KULDiLyEW+N3bLqJV+QRFozRzE4TF2LnuOOeR4kb2TH9MgjsGQ5+19BT5H9dMUYN0zz6RPGyLc/7xjnG7+tx+WMlv+Dv68Lm0sgtuquAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;vnzyrXJiVJqwM2q3ohEwz1img&quot;
+        title=&quot;vnzyrXJiVJqwM2q3ohEwz1img&quot;
+        src=&quot;/static/98b55daf3aa8d5a34ddd2e2e57f7e40b/5a190/vnzyrXJiVJqwM2q3ohEwz1img.png&quot;
+        srcset=&quot;/static/98b55daf3aa8d5a34ddd2e2e57f7e40b/772e8/vnzyrXJiVJqwM2q3ohEwz1img.png 200w,
+/static/98b55daf3aa8d5a34ddd2e2e57f7e40b/e17e5/vnzyrXJiVJqwM2q3ohEwz1img.png 400w,
+/static/98b55daf3aa8d5a34ddd2e2e57f7e40b/5a190/vnzyrXJiVJqwM2q3ohEwz1img.png 800w,
+/static/98b55daf3aa8d5a34ddd2e2e57f7e40b/c1b63/vnzyrXJiVJqwM2q3ohEwz1img.png 1200w,
+/static/98b55daf3aa8d5a34ddd2e2e57f7e40b/5c744/vnzyrXJiVJqwM2q3ohEwz1img.png 1206w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;F5&lt;/code&gt; 를 눌러 디버깅을 시작한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 625px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABlElEQVQoz42Ry27bMBBF9R3dtJVliRQfEinRUvSwJTnOaxE0KIoCXRTd9v8/4HY4QYxk18XBkEPyzp1h4g8j2n6GCyNK27yjharCf1ESzgdk93+QeOdQ1w5VVV+jNRWMNihygTwvPlC8i6IQTFFIaFHg8+kHknma0N8MsLZisWGYcDwu6PsbKGUoX78WsTXfMQRHYyFEyRRErTXS7ReSxjdwzmO3y7Df55jnhQRXDONMoiOW5Yzz+Y644HRasa63HKfpSMKOMcTBt8jvfiMJbWAHb4JSaqYsDTsUQl2RUvFZzCtlyWXN2MpD7DN8Gr4hGYcRXdcjhAMLT9OJWx7JYdcN5GbDtt1iJafReTxzrr26i2gSDdQpO2y8pyqGHCmqqkm4Q0fz83RBa0sf5Zk4lqpyvC4lzS1+iJCvkGurFL4sP2PLLSfTdMctR6GmaaFJPI4hy/Ycec17GoumudUtpHGQ1L5vDvDWUssvSNKvKT+KYvyYhKP4W+4DlMuLEmG+x+XpO8J0QTdueHx8xsPlAf7lL/4Bq44Zj3ywCPoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;KTkjAKgMUAYz6XVajpacHKimg&quot;
+        title=&quot;KTkjAKgMUAYz6XVajpacHKimg&quot;
+        src=&quot;/static/66e1478310cbdf006d7e59187b4e2087/80d71/KTkjAKgMUAYz6XVajpacHKimg.png&quot;
+        srcset=&quot;/static/66e1478310cbdf006d7e59187b4e2087/772e8/KTkjAKgMUAYz6XVajpacHKimg.png 200w,
+/static/66e1478310cbdf006d7e59187b4e2087/e17e5/KTkjAKgMUAYz6XVajpacHKimg.png 400w,
+/static/66e1478310cbdf006d7e59187b4e2087/80d71/KTkjAKgMUAYz6XVajpacHKimg.png 625w&quot;
+        sizes=&quot;(max-width: 625px) 100vw, 625px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그러면 시작 할때 Break 지점도 설정이 가능한데 이때 Entry Point로 설정을 하고 실행을 해본다.&lt;/p&gt;
+&lt;p&gt;그러면 프로그램이 어디에서 동작하고 있는지 그리고 밑에 있는 창을 통해 변수값을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 71.50000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAAB70lEQVQ4y4VT7Y6bMBDkPRLAxjYYDDYfIVwS5e5U9Uf7AFVV9f2fYzomzbWKktyP0dpmPTuzXpJx8FBliTSX2C09fvx6w8/f7/j6pUdRGNRNA1fXUIWElBJCiKdIuraF1JqEOWxjcXrb49v3E+Z9gLcVltCiqUrUpSFp8Tmha1oIQ4VZhlRoKBswjjM632P0DsFZpGmKzXaLLRHX/8fr+rpPhmlGri4K80LDDROm3YSeZM5SGdVZqpPyubKc91eFvvMQ2mBLhQWtm7aBdDW0VaiNIKFB23Wo2UfvAxr21HsP59waW7YsIu475tGyo+VqVSgEG0/7WhfQKiehRKMljCpWaD5MVBLtZRQQcbtOnPvbw1wgSzMIZVDZGiXt6iJDpfJ/lojr5UdYFeYkjJbTLauJHFIpyGyDPOOeVXNC8Pv6CJsN42MkHXtoXAdd1VTWoGSBy+xVaNmXprkgOimZY0oLE2Nl7yIZOCL75YjQzxh3LximBcO4oJ9e0DOueyKup/nw8X3g9/EOEtcGLIczavZNs3+G9u9BcxJCv0MYBoTQoSqr9ew2Lymtw3R4x7LfrwlFoaA4l7eI56Xr+Vh8MP6q93IiVsJxOeP19cx56j4hDFBPin4Q9vMJp+MR87xn9eruhXjWhh6+93SiHxL+Abs5lRCnOFmHAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;vJ4TrkufEbM8mho90PJTZ0img&quot;
+        title=&quot;vJ4TrkufEbM8mho90PJTZ0img&quot;
+        src=&quot;/static/799153508ed6d467c65a04fb7790b6a9/5a190/vJ4TrkufEbM8mho90PJTZ0img.png&quot;
+        srcset=&quot;/static/799153508ed6d467c65a04fb7790b6a9/772e8/vJ4TrkufEbM8mho90PJTZ0img.png 200w,
+/static/799153508ed6d467c65a04fb7790b6a9/e17e5/vJ4TrkufEbM8mho90PJTZ0img.png 400w,
+/static/799153508ed6d467c65a04fb7790b6a9/5a190/vJ4TrkufEbM8mho90PJTZ0img.png 800w,
+/static/799153508ed6d467c65a04fb7790b6a9/cec12/vJ4TrkufEbM8mho90PJTZ0img.png 1187w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;F10&lt;/code&gt; 를 통해 한줄씩 프로그램을 진행 시킬 수 있다.&lt;/p&gt;
+&lt;p&gt;진행을 하다 보면 비교를 해야하는 암호문인 text의 값이 그대로 보이는 것을 알 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAAAsSAAALEgHS3X78AAAA/0lEQVQoz42Tza6DIBBG3QvIn2hirBoTE+PW9v3f7CtD6S2WXtvFyQCSMzNxKK63G5ZlwTzP2LYN0zSh6zoopSClDPFBuj6itQ6x73sU+75jXVeM4xikTdPAGANrrb9owpqgdbo/YkPyy2VAQdXUdY22bQPOOS91ISNjHJzzv/iE9jnMSxUKqoiEKSSljC8BOwg/8RDKl5AkxFHIIIQ4lTyTfRTmFfrLJ8KsQqXOhVmrcS8i6dlPFabthCiqiDjA6cx/V9r+WmGMb+2Lt5aVn8evwpT0R4R9si7L8rxlY/z0ywqaXssX6I6sBFpX50JHUhqhcBbHKRmr/6CXNQwD7urbIYTa00z6AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;kfvhIBJYYtHBaAGSvaOkXkimg&quot;
+        title=&quot;kfvhIBJYYtHBaAGSvaOkXkimg&quot;
+        src=&quot;/static/f741a49d40620ca50226f6e16cc71d8e/5a190/kfvhIBJYYtHBaAGSvaOkXkimg.png&quot;
+        srcset=&quot;/static/f741a49d40620ca50226f6e16cc71d8e/772e8/kfvhIBJYYtHBaAGSvaOkXkimg.png 200w,
+/static/f741a49d40620ca50226f6e16cc71d8e/e17e5/kfvhIBJYYtHBaAGSvaOkXkimg.png 400w,
+/static/f741a49d40620ca50226f6e16cc71d8e/5a190/kfvhIBJYYtHBaAGSvaOkXkimg.png 800w,
+/static/f741a49d40620ca50226f6e16cc71d8e/c1b63/kfvhIBJYYtHBaAGSvaOkXkimg.png 1200w,
+/static/f741a49d40620ca50226f6e16cc71d8e/fe8a7/kfvhIBJYYtHBaAGSvaOkXkimg.png 1223w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[X-MAS CTF 2019 : Lapland Mission]]></title><description><![CDATA[X-MAS: Lapland Mission X - MAS의 Lapland Mission 문제를 다운 받아보면 아래와 같이 Unitity로 만들어진 것을 파악할 수 있다.  이제 이 파일을 실행 해보면 아래처럼 FPS…]]></description><link>https://jaeseokim.github.io/writeup/X-MAS-CTF-2019-Lapland-Mission/</link><guid isPermaLink="false">https://jaeseokim.github.io/writeup/X-MAS-CTF-2019-Lapland-Mission/</guid><pubDate>Mon, 23 Dec 2019 22:57:13 GMT</pubDate><content:encoded>&lt;h2 id=&quot;x-mas-lapland-mission&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#x-mas-lapland-mission&quot; aria-label=&quot;x mas lapland mission permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://xmas.htsp.ro/challenge?id=28&quot;&gt;X-MAS: Lapland Mission&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;X - MAS의 Lapland Mission 문제를 다운 받아보면 아래와 같이 Unitity로 만들어진 것을 파악할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 70%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACKElEQVQ4y5WSy2sTURjFR9BdF4IggqDgyn/Av0QquBMEcSMuiqiVqrVoEbqTLnQj6sbiQny00Vi76EoEH1jTTl5NYjKvPGia17zz885Mo1MSwV44nPOde+fMvd+9klzUqBsquqZi6BqNmkHV0Om0mthmD3yXvueAF3AEX9QBe64TznmOhWub2JaJNP44w+knBc483eTc8xLjgi+8KHH2WY7zC0UuvtS4/Frj0iuNK4s6E291brw3uJ4wuLdSYyppcOtDlenlGnOrdaR9V1NI12SBDcZuCp5IcXgmw/5JmUPTaQ5MivqOzNjUBkdm0hy8LXNyLsvRu2lOPchzfDbDsdk0J+5nQl+aT3zjYeIL84tfeZRcY+FTkTffFd5tNPmYbbMssLLDQb2S65Bcb7D0syb8FktrVRJCL/7QWS10kbAbWNtVzO2G6JcN2HQbJRp6BafbZPTwoe9EMuAArug3LpLleJG/s7RnORTLKtl8nmqtTrdn4vn9EK6AiKLZ3EbVDBzX41e5QrmikM3mUFQdyXGiP/X7UaTjupiWhWma9Ho9LKEHcwEHyvM8bNsOa9uyQx2sc8W3Q4GBOdDxEQ/96w03Y2Sg7/vRbnYhasywvxv/DBzeTezYMcS9Pe7w/zAycK8j3ktpEBAPHNzwSJiOmLfCWw0QP01w+9LW1hadTod2ux1yq9VC13UURUFV1ZD/QLyzcv4zhc0sqdQ6cloWukCpVAqhiPW/AbLxDZHyh13VAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;k2R0GSfrRqRB7b6Wxmmqokimg&quot;
+        title=&quot;k2R0GSfrRqRB7b6Wxmmqokimg&quot;
+        src=&quot;/static/e9631273a7d804d5cbf18b7dd35f13c8/5a190/k2R0GSfrRqRB7b6Wxmmqokimg.png&quot;
+        srcset=&quot;/static/e9631273a7d804d5cbf18b7dd35f13c8/772e8/k2R0GSfrRqRB7b6Wxmmqokimg.png 200w,
+/static/e9631273a7d804d5cbf18b7dd35f13c8/e17e5/k2R0GSfrRqRB7b6Wxmmqokimg.png 400w,
+/static/e9631273a7d804d5cbf18b7dd35f13c8/5a190/k2R0GSfrRqRB7b6Wxmmqokimg.png 800w,
+/static/e9631273a7d804d5cbf18b7dd35f13c8/5b587/k2R0GSfrRqRB7b6Wxmmqokimg.png 1010w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이제 이 파일을 실행 해보면 아래처럼 FPS 게임과 같은 형식인 것을 볼 수 있는데 게임을 클리어를 불가능 하게 만들어진 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/9c60152c2c964914da4629c5643273aa/OK7BiJi3tSfJUqTwRksGokimg.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;이때 dnspy를 통해 분석을 하고 게임을 수정하여 게임을 클리어를 해본다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAA/0lEQVQoz52TYXKDIBCFvYaamVoRFCMsWtv+6yTNCZr73+WVpTXoNCSZ/vhm1X37XFjIxtMXzPEMfTjDvn3AkYOxDoNxIPcCa0cMA8H49xRLnmhCJucD6vkTT/MJ2r3DGvoV/RivC26ZcWQyJWrI5yrQd/1KRBfRuuCWKZMp1aGRKtD3QyxOFNzDG7ZoGhlYGz5q8LDh9SVSgtjExlDr/cbsPwRDyXvoDXmq0/QajsrSFR8F5+bw7T5T7FA2Cm2rfZd9+IEQwtOA852f/rKKFKxl3cWQY1VVKPIcZVlitytDDBRFfL4Ca4siR12L7ZKtJVh/O/Zm/LPp6YHEPNGIb4O3SiFJaBEQAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;hLc5UoY4hXf89NCfzpuqI0img&quot;
+        title=&quot;hLc5UoY4hXf89NCfzpuqI0img&quot;
+        src=&quot;/static/1c8f2a08b801f791e5564f1b28ea9b99/5a190/hLc5UoY4hXf89NCfzpuqI0img.png&quot;
+        srcset=&quot;/static/1c8f2a08b801f791e5564f1b28ea9b99/772e8/hLc5UoY4hXf89NCfzpuqI0img.png 200w,
+/static/1c8f2a08b801f791e5564f1b28ea9b99/e17e5/hLc5UoY4hXf89NCfzpuqI0img.png 400w,
+/static/1c8f2a08b801f791e5564f1b28ea9b99/5a190/hLc5UoY4hXf89NCfzpuqI0img.png 800w,
+/static/1c8f2a08b801f791e5564f1b28ea9b99/c1b63/hLc5UoY4hXf89NCfzpuqI0img.png 1200w,
+/static/1c8f2a08b801f791e5564f1b28ea9b99/29007/hLc5UoY4hXf89NCfzpuqI0img.png 1600w,
+/static/1c8f2a08b801f791e5564f1b28ea9b99/29114/hLc5UoY4hXf89NCfzpuqI0img.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;dnspy를 실행을 해보면 위와 같은 화면이 보이는데 이때 &lt;code&gt;X-MAS_Data\Managed\&lt;/code&gt; 아래에 있는 DLL 파일들을 불러와서 분석을 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACMUlEQVQ4y4VSSW/qYAzMgUIB8XqoVJWyJPAgBFLCEhK2sKgsId3PPfL//8PUY70gbu8wsr/FY49to1QqIZfLolC4RT5fQLFYVNze8pyX+4L6vMtms4pcLnexNzc3yGQyyIq9u/sDo1KpwnUdDPoO2m0bbq+Hfr8vfhuO46AnZ/q8q9VqikajAcuy1F78Vgdmsw2Dnwnr6vHx8RHlcllx7fPNNE08PZVRqVSU3JLz32YTthegbj/D6E1CmPJwf3+P4XCI8/mMJDnhdDrh9fUVh8MB+/1e7ff3N76+vuQtRhzH//yT+vFxj/UqgvE8jTAeDi4Zf35+8PH5qWTb7RZBECAkwlBJiePxiMVioTZJEiUNp1PYnQ4M1xuh3Wrh4eFBZSVCtFwulYjyUslMOB6PFaPRCE2R6fu+/gsmE1SrVYWxOb6h13VQleoY9PKykyD/EtjtdhXpYDzPU7SkiMFgoH9G0ir2VwnDbYyh10dDMrKat/d3rNcbRNESs/lcgjx0RAoJtJogVGvbNqYiczabqeVA6/W69HAcoGGZqIs8yoilH+knEqWrYUoFqWRfwIopOQynmoCxbJHRl7IZSLiui40MgoSUwx3kHfeRknhHpJIpN20NyWo1qdAXCV3pIfeQBJwcp8spskpOl6C/Xq8vYDtWq5X+5RZQBYsy5vOFVhRF0WXnuFdcBe7jZrPRQIJ/CPpcq4+Pd10b/mfcXJIYzHwNkv8PDDwJEUlJtNvtFEz+C5oJj+5pwNL/AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;OqhuzBkDKlLmErkKKLYTbkimg&quot;
+        title=&quot;OqhuzBkDKlLmErkKKLYTbkimg&quot;
+        src=&quot;/static/ddf43dbaa62bddcfb2372d5419c8e569/5a190/OqhuzBkDKlLmErkKKLYTbkimg.png&quot;
+        srcset=&quot;/static/ddf43dbaa62bddcfb2372d5419c8e569/772e8/OqhuzBkDKlLmErkKKLYTbkimg.png 200w,
+/static/ddf43dbaa62bddcfb2372d5419c8e569/e17e5/OqhuzBkDKlLmErkKKLYTbkimg.png 400w,
+/static/ddf43dbaa62bddcfb2372d5419c8e569/5a190/OqhuzBkDKlLmErkKKLYTbkimg.png 800w,
+/static/ddf43dbaa62bddcfb2372d5419c8e569/966a0/OqhuzBkDKlLmErkKKLYTbkimg.png 944w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이때 대부분 시스템 관련 DLL 파일이거나 UNITY 관련 DLL 파일로 보이는데 가장 기본적인 &lt;code&gt;Assembly-CSharp.dll&lt;/code&gt; 만을 가지고 분석을 한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABWElEQVQoz5VT7XKDIBD0NTRRI6gIooAf1Rin7fu/1PYg7UwmyWTSHzvg3bksd0u0rhumacHgRvTLN8ywoustdO9g3YTeDNCdQ/cCIU/1xo6I1mXDednR6Q61mcFVC1ZWKHgFVtW0r8P+FXzNiZUQSiMyxmK7bKTGQdSUqE7IWYY0PSI9vok0xeGQoKb/IyUl5s8V7rKikQpMclJZIMszZNn7OBKxEAJRqxTGbcawn9FqjYIIWVOEU/9LWFVeYUMK9wXz1w5NhHlZoKBrp1kWSN/BHyHnJaJxGLHuE4YPC6Uk9SR9VPeGWt/zkoYZjeMEawx0q2DM1SreArqzAd42xv7G+qs9nsFbJ9jG39szl7QKISFlS9MSQb6PC9HQsNrQn1fwtX6ogZBzHgJ5fkIcx2SBww0SJElyF3tEksRgjCNy9EKmaYa1AxyhJ9nXl2FuYO++zdO8b9kPlns9RdHdbbMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;C2VRfEwijI7mZqbQxquq91img&quot;
+        title=&quot;C2VRfEwijI7mZqbQxquq91img&quot;
+        src=&quot;/static/5b93a100610861d9c2b5698b7427c20e/5a190/C2VRfEwijI7mZqbQxquq91img.png&quot;
+        srcset=&quot;/static/5b93a100610861d9c2b5698b7427c20e/772e8/C2VRfEwijI7mZqbQxquq91img.png 200w,
+/static/5b93a100610861d9c2b5698b7427c20e/e17e5/C2VRfEwijI7mZqbQxquq91img.png 400w,
+/static/5b93a100610861d9c2b5698b7427c20e/5a190/C2VRfEwijI7mZqbQxquq91img.png 800w,
+/static/5b93a100610861d9c2b5698b7427c20e/c1b63/C2VRfEwijI7mZqbQxquq91img.png 1200w,
+/static/5b93a100610861d9c2b5698b7427c20e/29007/C2VRfEwijI7mZqbQxquq91img.png 1600w,
+/static/5b93a100610861d9c2b5698b7427c20e/29114/C2VRfEwijI7mZqbQxquq91img.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;열어서 보면 이렇게 Bot, Bullet, PlayerControl 등 다양한 함수가 존재 하는 것을 볼 수 있는데 &lt;code&gt;CTL+SHIFT+K&lt;/code&gt; 를 이용하여 Assemblies를 검색하여 함수 변수등을 찾아본다. 일단 가장 간단하게 문제를 해결하는 방법으로 사용자가 죽을때에 대해 작동하는 함수를 무효화 시키는 방법, 또는 Bot이 공격을 안하게 하는 방법등 다양하게 해결하는 방법이 존재 한다. 여기서는 간단하게 죽었을 때에 대해 처리를 아무것도 안함으로 해결해본다.!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 54.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABm0lEQVQoz42T226dMBBF+RAwNtjcbXM316NUUZWn/P/n7I4556SVmqR9WBpA9mIPHoJ13THNK4ZugD3eUN/eoXWLRnew7QBtOjSNv/+G5rHeDgiGvsf6Y4e7rWjPnwjbA6kqILMSQirw1CPBE4n4Af+EWKTXnsDNC5zrMU0tvcGCxQxSKVS5hFICacoITps4Es6IGJxzMMaI6FEZoiiElBLBNDrM0w5DkWttEVOaJEkgqUovEvwSxASP44v4E7xUqQyB1hpuzFGVlKoxYF6W5UhIyAQjIS2mVD55FEUfPJM9CcOQhAqBb/P1lNgmeSWMhICSNUxpUFDLV7ovUv2dkITGGJxbhnFQaIwFp4NQBZElSGQKkQqqAiK5y7/CSzPqLKirGnZfUB8b3LKTtIfpRmg/MvY+Nk+aP/j9vP2oxvYkLCt024L2OOBoHptaI89LFEX1PbSvLO/XY0/nsFTQAwmrosS0j5hpDt26otTmIfw/Mpq93tY4T+p0dX5sJhyvLxhuN2wLJW2760+pa0N/wL/x6yx9+2216NyMXwLkRVspCyYzAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;pWEarEeswafPUK7lKA0tJ0img&quot;
+        title=&quot;pWEarEeswafPUK7lKA0tJ0img&quot;
+        src=&quot;/static/2784398c068700748eb71298d8900c8a/5a190/pWEarEeswafPUK7lKA0tJ0img.png&quot;
+        srcset=&quot;/static/2784398c068700748eb71298d8900c8a/772e8/pWEarEeswafPUK7lKA0tJ0img.png 200w,
+/static/2784398c068700748eb71298d8900c8a/e17e5/pWEarEeswafPUK7lKA0tJ0img.png 400w,
+/static/2784398c068700748eb71298d8900c8a/5a190/pWEarEeswafPUK7lKA0tJ0img.png 800w,
+/static/2784398c068700748eb71298d8900c8a/c1b63/pWEarEeswafPUK7lKA0tJ0img.png 1200w,
+/static/2784398c068700748eb71298d8900c8a/29007/pWEarEeswafPUK7lKA0tJ0img.png 1600w,
+/static/2784398c068700748eb71298d8900c8a/29114/pWEarEeswafPUK7lKA0tJ0img.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;검색을 통해 찾아보니 PlayerControl 쪽에 die() 함수가 정의 되어서 deathScreen object를 true로 처리하고 dead 변수를 true로 처리하는 등 죽었을 때에 대해 처리를 하는 것을 볼 수가 있는데 이제 이것을 &lt;code&gt;CTL+SHIFT+E&lt;/code&gt; 단축기를 통해 수정을 한다.&lt;/p&gt;
+&lt;p&gt;Die() 함수 내부 내용을 모두 지워준 다음 Complie를 하고 &lt;code&gt;CTR+SHIFT+S&lt;/code&gt; 를 이용하여 수정하 모듈을 전부 저장 한다. 이제 다시 문제로 돌아가 보면 플레이어가 죽음에 대한 작동을 안하는 모습과 이때 봇을 전부 죽이면 클리어 화면이 나오는 것을 볼 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABZElEQVQoz7WSW0tCQRSF9xzLvHYqUTGPl+Pt6PESphaZmVmhqPlYLwUFEUVC9hAEWdkP6CXwH/Q/V+M59mJlCPWwWGv2zGw+9gwREX4UY1zC1zxZhD/WeIHpLhhg8oVgTxdgdHpg9ochrhYxIy6OiIXpCRcKZUQf3+CoNBG8ekDseQAxV5qOUKeJwCTJsIQTcOy0IOa3YFOzmM+saZRDWnMwitkl5y8N+eAd5TrkzhPU13f4z++g9AeQTjqQjq/hO7vF8tGFRhobkWuPNZHQE4A5rMKiZGCNr2g+5w3Cyt0UVHiWYRvWQ3EY3dJkQgPj4i5wsW/m87k3Xh+eFZguirgIh3nCywGh1yCcFhlu9hgqcYZaiqHfZujydSnKcLnNa0mGTZ57TYZOlaGRItzXCd1dQtrLG7rnCVkfoZ4k7CcIGyHdkx49tzOEmkpYlwlVRb+UC5DWaHiuHCW00np22f/hY38AErEJH/gPMg8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;yiIClssdws0j5TVvY0NURkimg&quot;
+        title=&quot;yiIClssdws0j5TVvY0NURkimg&quot;
+        src=&quot;/static/fdaf42e10a8cb2b56e6780b441395eb9/5a190/yiIClssdws0j5TVvY0NURkimg.png&quot;
+        srcset=&quot;/static/fdaf42e10a8cb2b56e6780b441395eb9/772e8/yiIClssdws0j5TVvY0NURkimg.png 200w,
+/static/fdaf42e10a8cb2b56e6780b441395eb9/e17e5/yiIClssdws0j5TVvY0NURkimg.png 400w,
+/static/fdaf42e10a8cb2b56e6780b441395eb9/5a190/yiIClssdws0j5TVvY0NURkimg.png 800w,
+/static/fdaf42e10a8cb2b56e6780b441395eb9/c1b63/yiIClssdws0j5TVvY0NURkimg.png 1200w,
+/static/fdaf42e10a8cb2b56e6780b441395eb9/29007/yiIClssdws0j5TVvY0NURkimg.png 1600w,
+/static/fdaf42e10a8cb2b56e6780b441395eb9/29114/yiIClssdws0j5TVvY0NURkimg.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python urllib, BeautifulSoup를 이용한 다음 날씨 크롤링!]]></title><description><![CDATA[평소 requests에만 너무 의존을 하는 것 같아 한번 urllib라는 python…]]></description><link>https://jaeseokim.github.io/python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</link><guid isPermaLink="false">https://jaeseokim.github.io/python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</guid><pubDate>Mon, 25 Nov 2019 15:17:50 GMT</pubDate><content:encoded>&lt;p&gt;평소 requests에만 너무 의존을 하는 것 같아 한번 urllib라는 python 기본 제공 라이브러리를 이용해서 크롤링 스크립트를 만들었습니다.&lt;/p&gt;
 &lt;p&gt;크롤링 대상은 다음 홈페이지의 메인 포털 상단 오른쪽의 지역별 날씨 항목을 가져와 크롤링 했습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
