@@ -18,7 +18,7 @@ draft: false
 
 github에서 직접 소스를 다운받아 build를 하여 설치가 가능하다.
 
-```
+```sh
 git clone --recursive https://github.com/0xd4d/dnSpy.git
 cd dnSpy
 # or dotnet build
