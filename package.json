@@ -52,7 +52,7 @@
     "husky": "^4.3.0",
     "prettier": "^2.1.1",
     "tailwindcss": "^1.8.8",
-    "twin.macro": "^1.8.1"
+    "twin.macro": "^1.9.0"
   },
   "husky": {
     "hooks": {
