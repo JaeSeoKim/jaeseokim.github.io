@@ -1,4 +1,295 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Sep 2020 13:34:41 GMT</lastBuildDate><item><title><![CDATA[[TIL] 2020-09-01]]></title><description><![CDATA[오늘 공부한 목록 TypeScript 어제부터 작성 하던 "TypeScript Hello TypeScript! with Deno🦕" 글을 마무리 지었다, 타입스크립트 프로그래밍 책을 읽으면서 TypeScript default types…]]></description><link>https://jaeseokim.github.io/TIL/2020-09-01/</link><guid isPermaLink="false">https://jaeseokim.github.io/TIL/2020-09-01/</guid><pubDate>Tue, 01 Sep 2020 21:31:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;오늘-공부한-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%EA%B3%B5%EB%B6%80%ED%95%9C-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;오늘 공부한 목록 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 공부한 목록&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 13 Sep 2020 15:02:02 GMT</lastBuildDate><item><title><![CDATA[[Github] Codespaces Beta 후기]]></title><description><![CDATA[이번에 Github의 새로운 feature 기능인 Codespaces의 베타에 당첨되어 한번 글을 작성하게 되었습니다. Codespaces 란? Codespaces는 Github에서 새롭게 지원하게 되는 기능 중 하나입니다. 기존 Github…]]></description><link>https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</guid><pubDate>Thu, 22 Oct 2020 19:13:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://github.com/features/codespaces&quot;&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 43%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABj0lEQVQoz22S207CQBCG+/jeeOG9FyZqEBCiJkYvjBqB+AYqSDUKWxSDWrbbPXX7O7vIKTrpZE+z3/w7nQhkZVku3Llybe3NWrOYr+6vxs094jwLkFWbX5jPp2mKr8kEUuTQUkFkOTKhYHQBrSwsja4oYY1F1Dw6wcXlFdqdWxw2j3B6do5Wu4NKtY7rmxaKwgZQYYqFe4iUhrJRRv8igsGB9jWiaq2B/UoVjeYxaodN7O0foE5j/PSMLBPIpYTM5e9l+qyDJSBPBSk1UAS22oZ9ReojxgYYjRhYMsCQJcEHQwbOBfzLM0FQDySYV+JsAZVzfLwlEHxK6jmtp6Rcz4AvTOI1kXhhOQwFz805UkLrKdVYUuAS6ILid0pslQqxvq5GmRlwY1tgc0dgazeHVP5d5dpPkcoX3/xmmUH9E0fDBOknp7rN6urPAnDZBn9bIGTXmmolSIElsA1KeMqRsDek35zOJCnUAerjov/aZb0HLRhj6PV66Pfj4A8PXdzd3aPb7ZL36OwRcRxj/D7GD5r2rwv24DRoAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913223241920&quot;
+        title=&quot;image-20200913223241920&quot;
+        src=&quot;/static/e4ee394be439944ddb7121826d6f224d/5a190/image-20200913223241920.png&quot;
+        srcset=&quot;/static/e4ee394be439944ddb7121826d6f224d/772e8/image-20200913223241920.png 200w,
+/static/e4ee394be439944ddb7121826d6f224d/e17e5/image-20200913223241920.png 400w,
+/static/e4ee394be439944ddb7121826d6f224d/5a190/image-20200913223241920.png 800w,
+/static/e4ee394be439944ddb7121826d6f224d/c1b63/image-20200913223241920.png 1200w,
+/static/e4ee394be439944ddb7121826d6f224d/29007/image-20200913223241920.png 1600w,
+/static/e4ee394be439944ddb7121826d6f224d/baa75/image-20200913223241920.png 1746w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;이번에 Github의 새로운 feature 기능인 Codespaces의 베타에 당첨되어 한번 글을 작성하게 되었습니다.&lt;/p&gt;
+&lt;h1 id=&quot;codespaces-란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#codespaces-%EB%9E%80&quot; aria-label=&quot;codespaces 란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Codespaces 란?&lt;/h1&gt;
+&lt;p&gt;Codespaces는 Github에서 새롭게 지원하게 되는 기능 중 하나입니다.&lt;/p&gt;
+&lt;p&gt;기존 Github는 웹상에서 코드에 대해 수정은 가능하지만 코드를 직접 실행하거나 디버깅을 하는 것은 거의 불가능에 가까웠는데 이번에 새롭게 추가된 Codespaces를 통하여 브라우저만 있다면 어디서든 github에서 바로 개발과 디버깅이 가능하게 됩니다.&lt;/p&gt;
+&lt;p&gt;Codespaces는 &lt;code&gt;Visual Studio Code&lt;/code&gt;를 기반으로 만들어졌기 때문에 기존 VSCode와 같은 환경으로 사용이 가능하게 됩니다. 즉 extension를 통하여 커스텀도 가능합니다.&lt;/p&gt;
+&lt;p&gt;또한 베타 기준(정식 서비스시 요금제에 따라 성능이 달라질 수 있습니다.) 아래의 스펙을 가지고 있기 때문에 간단한 개발 작업이 충분히 가능합니다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;SPEC&lt;/th&gt;
+&lt;th&gt;INFO&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;OS&lt;/td&gt;
+&lt;td&gt;Debian GNU/Linux 9.13 (stretch) x86_64&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Kernel&lt;/td&gt;
+&lt;td&gt;5.4.0-1025-azure&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;CPU&lt;/td&gt;
+&lt;td&gt;Intel Xeon Platinum 8168 (2) @ 2.6GHz&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Memory&lt;/td&gt;
+&lt;td&gt;4096MB&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SSD&lt;/td&gt;
+&lt;td&gt;64gb&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h1 id=&quot;codespaces-사용하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#codespaces-%EC%82%AC%EC%9A%A9%ED%95%98%EA%B8%B0&quot; aria-label=&quot;codespaces 사용하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Codespaces 사용하기!&lt;/h1&gt;
+&lt;p&gt;github에서 repo에 들어간 다음 &lt;code&gt;code&lt;/code&gt; 버튼을 눌러보면 기존에 없던 새로운 버튼이 생긴 것을 볼 수 있습니다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 567px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 82.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAAAsSAAALEgHS3X78AAACbklEQVQ4y41Uu47UUAzNh0KBaKnoEFoJKgoKCn4AiS3pgK0olpJmhRAV2nnsZJJJMpm8M3nn4ONMhsnuIu2VnHuv4xzbx3YMyOr7fiKn6/ZdNPjfoq1B+wFoULZtizCKEEUx/F2ARu5FWcLzfLjbLboG+ONd4+XFK7z59hbvvr/Hiy9n+Pz7Qr83Bo9DZF3Xo64bWLYDc21hZVqoqhpJmuJ6tsBytUKR1/hp/sLj86d49uk5zr6+xqOPT/Dhx/kAWHVA2YrUnUbXdd0kjbquJzql4CTrpu3HmNTOWDkR5tYOfpRKWh5m87lEZmK+WMA011gub7C8WaGUtG+vVvzs0g5h1qJuGrkLoBfuYfsJorRAlmUIglD5i5NEONzJOdLd87b6LgiCg82g551RNwSUDI1DtKJoNQoWJMtzJAIYhpHyR3DudBQKAO88Z1mOQGz2RalgCsi8KeSKChqnEimB41jOaTYAhUPkidiFEiGd8ZsoTsU+/wfI6AjIaj5kVVdXaGYzPfO7sU/ZHa2QavBBMtlvtr1Rz/ZmA096zrJtOI4rLbSGLXsuUVaXl+iralJ1UqVFISDDppIe9vu9vkySVHgpkAuXlDiOlVM6HWfldLKY6jHCcToqAS4EhJ54pqOyrMRJoTt1dFjL+b5RnQCSC17YczupIvvQdV2sLUt1vFuWjYWcfd+/d8abMWVy5jqeVvAhaxjRTsd07JCRMgUcK0wFyWd7sDgUFoXTcvePc3cdIxx/CuSI/cdixFIU9iCFzUtnR2mGnQVqD1RRGJTO8kgsPVCpBZB9lFJapJBJmIh0Agdg6wfw2eRCF22J8xfKqh7VBSK7/AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913232858291&quot;
+        title=&quot;image-20200913232858291&quot;
+        src=&quot;/static/d4ada0b83583b4e9cfbcf5e90ec37b48/8710b/image-20200913232858291.png&quot;
+        srcset=&quot;/static/d4ada0b83583b4e9cfbcf5e90ec37b48/772e8/image-20200913232858291.png 200w,
+/static/d4ada0b83583b4e9cfbcf5e90ec37b48/e17e5/image-20200913232858291.png 400w,
+/static/d4ada0b83583b4e9cfbcf5e90ec37b48/8710b/image-20200913232858291.png 567w&quot;
+        sizes=&quot;(max-width: 567px) 100vw, 567px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이미 저는 한번 생성을 하여서 목록에 기존에 사용을 하던 Codespace가 하나 보입니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 452px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 64.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAAB30lEQVQ4y41T227TQBDd70LigQcknkBIPPSZBz4I8VJEAakCivgORKVepDZ1czGJCzS+1Glsx/fL7mFnkjiuFFBHOtrZ0fh45sysUEphCcC2HYxGJobmGOZ4grKqUWkMdey814cx6CNNC9iBiydvn+Hhm8d4/mEHL7+8woPXj/B07wWElBKEum6QpCnCMEK0iBlFWaIsK4TRokWeF1ikMT4ff8W7Hx/x/nAfn44OsPt9Dwcn3yDKWnKFRNo1XTDWP+sa3xX+aSJJc0RRhJ+6xcFg2BLQTzbs6s6d/EY2d6EaVE0NEWtCpUmqqtLtldhoqriQNdHab+/dvBWapoHIi2pdRNt6N2Gpb936hLwo2k6kVAwyJiy06NbVFXoXBozLPkamySfhwrjExLL0aeDsvIfxZKJh4fjklIe3rHZJ5s9ueSNEqVsNggCu5zHm8zlufB+O48J1Pcx0Yqg1ntq2/mgG359xjM4gDNv2syznTRGk3f9MbZloV8/uJnDLVCZplKSZ3r2FXtwMcZwgThKOUdK2AWwfioQgMtLxdh7C+vUb11OHT3op1/rl1JrwvkaVsoZURTtR9iXf6xUaKVexDbrbQFOmkzUsihJplnF79wXlR1EM2/HwZ2rD8W7Yp/hfjO3jRZCmBAcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913232943403&quot;
+        title=&quot;image-20200913232943403&quot;
+        src=&quot;/static/d4689517ca4b43d7fad0c4decfabc1a4/fcb94/image-20200913232943403.png&quot;
+        srcset=&quot;/static/d4689517ca4b43d7fad0c4decfabc1a4/772e8/image-20200913232943403.png 200w,
+/static/d4689517ca4b43d7fad0c4decfabc1a4/e17e5/image-20200913232943403.png 400w,
+/static/d4689517ca4b43d7fad0c4decfabc1a4/fcb94/image-20200913232943403.png 452w&quot;
+        sizes=&quot;(max-width: 452px) 100vw, 452px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;눌러서 실행을 해보면 아래와 같이 로딩을 진행하고 브라우저 상에서 &lt;code&gt;VScode&lt;/code&gt;를 볼 수 있습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABgUlEQVQoz42Sy04CMRSG5zEEQQhIeA8X7lya6MaEhfEpXJm48z2MgsGhXIS5yIDER/ESEOUy187vaQeDIiIn+dLTnp5//k6rlCtlqJcl3DINrFZHrd6AqqpgrEJ5Dc3mHeVVqBUGVq2hWLrB1XURFRbNRa1aZWhQH1MZFFC8jW2MJg5CRBFw4muyJGzH/bOmTG0HTy99PL8OMBiOMJk6cKjBdT34vo8gCH7gC/wIj+oC/xuK6/nok9BwNMFIiJHQfGMAzjnCUNgN5RjlkPOlDj1qeh9PJeLYDn2A81AKzZmL/YcUHJOzie3KUTgWBb6iSfoLVzhcFIwafm9eFFzq0HFdfMjj2nIUNyiOuXgZ6yKfDZ/9Yr7iqawbimaYaFtdWB0LRreHzmMPvd4DWi2d0KBpOkzDgKEbMhdrzRktiQ6daqZ5j3bbgpLJ5rBbKGDn8AD7p2c4ujjH3skxNuNJxGIJJJMp5LMZbKczSCXSiNH6Bq0LRD0epz1baWRJJ5fL4xOwOBXYoRg/ygAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913233147369&quot;
+        title=&quot;image-20200913233147369&quot;
+        src=&quot;/static/70f4e5fffa35a3420cffe23fc6624064/5a190/image-20200913233147369.png&quot;
+        srcset=&quot;/static/70f4e5fffa35a3420cffe23fc6624064/772e8/image-20200913233147369.png 200w,
+/static/70f4e5fffa35a3420cffe23fc6624064/e17e5/image-20200913233147369.png 400w,
+/static/70f4e5fffa35a3420cffe23fc6624064/5a190/image-20200913233147369.png 800w,
+/static/70f4e5fffa35a3420cffe23fc6624064/c1b63/image-20200913233147369.png 1200w,
+/static/70f4e5fffa35a3420cffe23fc6624064/29007/image-20200913233147369.png 1600w,
+/static/70f4e5fffa35a3420cffe23fc6624064/29114/image-20200913233147369.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB8UlEQVQoz31Sy47TQBD0jyRZO3Zsz4zt8Txtx07iZEFabnBAQnDiAELiwC9w4cCNLy7aTrIQ7cKh1FLbXVVdPcF2PGJvd9DNCdp1GPYjDuMI1zSwriU0KKUBLxR4eQtRaQiqVW2gDf1XGQTd/gFud49KtWClRSYsGnOE1z2c3aLWHfLCYsPUEyRz1XMtZItSdQhqv4OwDcKYYRmlSLnFYF5gUHv4nnDsUVpPQuaf2HCNsp42aRAo28N6jziTCBOOXLiZ8KD3cN0O7f0A1bXgcnKvSfAW114hHUXgEGjXo++bea1oI6g6OH2AVVtI30O2pEwbsMpeCJ53mU9xFebsUGlFZAVW64yGDOV3QOO30HaA1URMObLSg5HYJJxdIeyF0M5zk2BQ0YD1HQRZXqfksHRENBLhgK7dzYcR5E5QvyKwi6NpWFBmgo7BK0//+FkskNM1abVK02EShpSsMzMgkx0KcpVehm9zO/cmgr8x9QPlRxginFSiRCBJJTZ5fQ77P5edSa/gf0SD0+tvGB/ewtAj1tsTXZQOYTzWlOmajhRTDGleYJMSspLenURC9RF5iYzX5HB67OQw4wqvPn3Gyw/v8e77D3z89RNvvn7BahlisbhDGEbgaYIsThCHMZarCIvl3YwlYbUKEa3pe8bAGMdvpgRZiV2VST0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913233328242&quot;
+        title=&quot;image-20200913233328242&quot;
+        src=&quot;/static/8695b6235853da85e2b9fd5504fd7936/5a190/image-20200913233328242.png&quot;
+        srcset=&quot;/static/8695b6235853da85e2b9fd5504fd7936/772e8/image-20200913233328242.png 200w,
+/static/8695b6235853da85e2b9fd5504fd7936/e17e5/image-20200913233328242.png 400w,
+/static/8695b6235853da85e2b9fd5504fd7936/5a190/image-20200913233328242.png 800w,
+/static/8695b6235853da85e2b9fd5504fd7936/c1b63/image-20200913233328242.png 1200w,
+/static/8695b6235853da85e2b9fd5504fd7936/29007/image-20200913233328242.png 1600w,
+/static/8695b6235853da85e2b9fd5504fd7936/29114/image-20200913233328242.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;여기서 처음에 들었던 의문은 블로그repo를 대상으로 실행을 하였으니 실제 개발을 할때 웹서버를 띄어 두고 확인을 해야 하는데 이때 어떤 형태로 포트 포워딩이 되는지에 대해 의문이 있었는데 한번 개발 서버를 띄어 두고 Remote Explorer에 있는 Port Forwarding를 추가 하니 아래와 같이 Powarding이 정상적으로 동작 하는 것을 확인 하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 392px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 69.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAAAsSAAALEgHS3X78AAACCElEQVQ4y42T63LaMBCFeY+WAMGAMRhfJOti+cLNkDbTZqYlk2Gm/GqnfYG+XJ/udKU0aQihzY8zklarT2fXcourFYZBgrfdodMbq84A7d7oMWbnnf74rC5IbdJowtDiaomIGSRZAWWWyKs1TN0gUzVUsYQu124ezAQm0alsPI4lZKowtMBycY0s36C5vsNu/w37ww/cffmOj58OuN1/dbGbzwckYgWmGqRq7UY3l2vEpEV1haZ+B5/gLV29R5DUZDvEjFdQ5ZYcl+D5ykkW9vASothAV1vk9RVUtQHTK8ybDy42TQ280MAPJVrWXRAZtLseIq6hizkSriDzCkwYMGkgdUnrmuIanNZM5BC0tjmK8oMwgTdmBCSH1eoGPgEvLkeYUR+UWSCikUkLmUPQOi+XyHSNmIBJliMVhdtPaS4oPplx9Mf8HijMFmPrsDekBnMqceFutwczVcIQLOI5fU2fcny6+FhtUofMPAJdyXEBzw8RJtLBhKZSDEFlQdDCOYmZRn8UousF6A0mR+p64ycOCWgdDoIQUyaoPwU4QTQ5s2WFsaCL7BPhuBxOXwGkkv2ZQT+YYCoyV2aUavcWtZn/LY8e7gPsOfQIyPXalWz70O0HLtnq4S84dfMfh3WzI4f3TX+e6PTnghf3XgLe/vyFET3Ic0Dn+B+wE6Ca79xHOevwFXoK/A2iXLQ283tEigAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913233735461&quot;
+        title=&quot;image-20200913233735461&quot;
+        src=&quot;/static/6519869fe4ab05ba7c608db468871440/0acb4/image-20200913233735461.png&quot;
+        srcset=&quot;/static/6519869fe4ab05ba7c608db468871440/772e8/image-20200913233735461.png 200w,
+/static/6519869fe4ab05ba7c608db468871440/0acb4/image-20200913233735461.png 392w&quot;
+        sizes=&quot;(max-width: 392px) 100vw, 392px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAACKElEQVQoz52QTU8TQRjH9xsQFF9aLGJC6jfw4NmLBy5GTyaetKQh0CJNaWtCYgymCZLiy9kgRTAQGk94sLVfwUQE0ldiNQq0u9ttu92d2d2/M1NaCdx8kt8+z3/mmWf+O5LP/xZB3xJCkY8ITCfhDyQxHlzB+FQSE6H3mAyvYiy4jIeBJTyaegff9DJ8oSTGwivwR9fgj61icnYNE7PriD7/ACmfp9jNmfj2XUOxbKFQsvB1u47tvRZ2cm3s5A3sFU3slUzsFlldJoJcxULpNwTlA6D4B/glAxJYWDYFoQarnGMIg/Kd48y0Q07sd7FPwLRNIDks6yaFbhCxRqmFalXB4ZEMWdGgMDStgXpdYxfzg6zN6WDbzj+YJpR2HDoOX+w2Ozg4rDNUHFU11OQmDMNAu92GrusicyilvX4Oj1arxR12RDe41rQ6c6Si2WwIFEWFqqrCpS4GGuwS88zARqPRGXgaYlFh3yQEhklYZrXJIT0syz4zkLuW+MeyrB5c7+//QKFQRKVSEfxk1Go14VJRFMiyLH6fP1P3HK9N0+y84engz2M7+K+Q4vE4EokEXi4uYOHVayTeLGJu7hnC4RlEIlHEYjFEIxG8mJ9HajOF9Y0NbKZS2Nr6hEzmCyODdPoz0ixns1lIFy+5cPPeXdwYHcXtxzO48/QJbj24j/7+AfT1ncPA+QvwuC5jyDWIYc8w3IOeHi7XFbjdHgxdvYaRES+83uv4Czyn95qTrxH2AAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200913233743790&quot;
+        title=&quot;image-20200913233743790&quot;
+        src=&quot;/static/3028c07fae38a24b0c648f847e2c010f/5a190/image-20200913233743790.png&quot;
+        srcset=&quot;/static/3028c07fae38a24b0c648f847e2c010f/772e8/image-20200913233743790.png 200w,
+/static/3028c07fae38a24b0c648f847e2c010f/e17e5/image-20200913233743790.png 400w,
+/static/3028c07fae38a24b0c648f847e2c010f/5a190/image-20200913233743790.png 800w,
+/static/3028c07fae38a24b0c648f847e2c010f/c1b63/image-20200913233743790.png 1200w,
+/static/3028c07fae38a24b0c648f847e2c010f/29007/image-20200913233743790.png 1600w,
+/static/3028c07fae38a24b0c648f847e2c010f/29114/image-20200913233743790.png 1920w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;기존 goormide를 사용하였을 때에는 Code Syntax와 Code intellisense 기능이 무언가 부족하여서 사용하기 불편함이 조금 있었는데 &lt;code&gt;VScode&lt;/code&gt; 기반으로 작동을 하니 기존 개발 환경과 유사하게 사용할 수 있다는 점이 매우 맘에 들었습니다!&lt;/p&gt;
+&lt;p&gt;실제 스마트폰만 들고다니다 삼성스마트폰의 dex기능을 통해 codespace로 들어가 바로 개발을 한다던가 아니면 태블릿으로 개발을 편하게 할 수 있다는 점이 강점인 것 같습니다.&lt;/p&gt;
+&lt;p&gt;아직 베타 서비스라 몇 extension를 설치시에 오류가 발생하는 모습도 보였지만 이러한 자잘한 문제만 해결이 된다면 충분히 구독하고 사용할 만한 가치가 있다고 생각됩니다!&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[TIL] 2020-09-01]]></title><description><![CDATA[오늘 공부한 목록 TypeScript 어제부터 작성 하던 "TypeScript Hello TypeScript! with Deno🦕" 글을 마무리 지었다, 타입스크립트 프로그래밍 책을 읽으면서 TypeScript default types…]]></description><link>https://jaeseokim.github.io/TIL/2020-09-01/</link><guid isPermaLink="false">https://jaeseokim.github.io/TIL/2020-09-01/</guid><pubDate>Tue, 01 Sep 2020 21:31:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;오늘-공부한-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%EA%B3%B5%EB%B6%80%ED%95%9C-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;오늘 공부한 목록 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 공부한 목록&lt;/h1&gt;
 &lt;h2 id=&quot;typescript&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#typescript&quot; aria-label=&quot;typescript permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TypeScript&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;어제부터 작성 하던 &quot;[TypeScript] Hello TypeScript! with Deno🦕&quot; 글을 마무리 지었다,&lt;/li&gt;
@@ -218,7 +509,7 @@
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[TypeScript] Basic Types]]></title><description><![CDATA[TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다. any any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다. 만약 any…]]></description><link>https://jaeseokim.github.io/typescript/typescript-basic-types/</link><guid isPermaLink="false">https://jaeseokim.github.io/typescript/typescript-basic-types/</guid><pubDate>Tue, 01 Sep 2020 19:40:00 GMT</pubDate><content:encoded>&lt;p&gt;TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[TypeScript] Basic Types]]></title><description><![CDATA[TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다. any any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다. 만약 any…]]></description><link>https://jaeseokim.github.io/Typescript/typescript-basic-types/</link><guid isPermaLink="false">https://jaeseokim.github.io/Typescript/typescript-basic-types/</guid><pubDate>Tue, 01 Sep 2020 19:40:00 GMT</pubDate><content:encoded>&lt;p&gt;TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다.&lt;/p&gt;
 &lt;h2 id=&quot;any&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#any&quot; aria-label=&quot;any permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;any&lt;/h2&gt;
 &lt;p&gt;any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다.&lt;/p&gt;
 &lt;p&gt;만약 any타입을 남발해서 사용을 하게 된다면 TypeChecker가 동작하지 않게 되고 기존 JavaScript와 다른 점이 없어지게 되므로 TypeScript에서 오는 장점이 사라지니 이것을 남발해서는 안된다.&lt;/p&gt;
@@ -376,7 +667,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[TypeScript] Hello TypeScript! with Deno🦕]]></title><description><![CDATA[TypeScript? TypeScript에 대해서 처음 관심을 가지게 된 것은 React를 공부하며 개발을 하다 중간 중간 Type…]]></description><link>https://jaeseokim.github.io/typescript/hello-typescript-with-deno/</link><guid isPermaLink="false">https://jaeseokim.github.io/typescript/hello-typescript-with-deno/</guid><pubDate>Mon, 31 Aug 2020 23:41:00 GMT</pubDate><content:encoded>&lt;p align=&quot;center&quot;&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[TypeScript] Hello TypeScript! with Deno🦕]]></title><description><![CDATA[TypeScript? TypeScript에 대해서 처음 관심을 가지게 된 것은 React를 공부하며 개발을 하다 중간 중간 Type…]]></description><link>https://jaeseokim.github.io/Typescript/hello-typescript-with-deno/</link><guid isPermaLink="false">https://jaeseokim.github.io/Typescript/hello-typescript-with-deno/</guid><pubDate>Mon, 31 Aug 2020 23:41:00 GMT</pubDate><content:encoded>&lt;p align=&quot;center&quot;&gt;
 &lt;img style=&quot;display: inline;  witdh: 100px; height: 100px;&quot; src=&quot;/8b2e5c6e1cc3e8b93d2d81597d1f4b69/logo.svg&quot;&gt;
 &lt;span style=&quot;font-size: 50px;&quot;&gt;&amp;#x2764;&lt;/span&gt;
 &lt;img style=&quot;display: inline; witdh: 100px; height: 100px;&quot; src=&quot;/c87187cad0ab07cb31c76fb8facda1e1/Typescript_logo_2020.svg&quot;&gt;
@@ -637,7 +928,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[gatsby를 이용한 Github blog 개발후기]]></title><description><![CDATA[intro 최근 블로그를 관리와 글 작성을 소홀히 하고 있는 내 모습을 어느 순간 발견하게 되었다. 4…]]></description><link>https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</guid><pubDate>Sat, 29 Aug 2020 19:23:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[gatsby를 이용한 Github blog 개발후기]]></title><description><![CDATA[intro 최근 블로그를 관리와 글 작성을 소홀히 하고 있는 내 모습을 어느 순간 발견하게 되었다. 4…]]></description><link>https://jaeseokim.github.io/React/gatsby-blog-개발-후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/React/gatsby-blog-개발-후기/</guid><pubDate>Sat, 29 Aug 2020 19:23:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
 &lt;p&gt;최근 블로그를 관리와 글 작성을 소홀히 하고 있는 내 모습을 어느 순간 발견하게 되었다.&lt;/p&gt;
 &lt;p&gt;42서울 본 과정도 코로나로 인하여 지연이 되고 나태해 지는 자신을 반성하고자 블로그를 다시 제대로 하기로 마음을 먹게 되었다.&lt;/p&gt;
 &lt;p&gt;블로그를 제대로 다시 하기 위하여 일단 기존 &lt;code&gt;Tistory&lt;/code&gt; 블로그에 작성된 글을 읽어보니 틀린 내용과 어설프게 작성된 내용들이 너무 많이 보이고 그리고 무분별한 카테고리를 통해 엉망으로 되어 있는 모습을 보게 되었다.&lt;/p&gt;
@@ -967,7 +1258,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[첫 GitHub Contribution!! (feat. react-simplemde-editor)]]></title><description><![CDATA[게시판 기능을 구현을 하면서  react-simplemde-editor 를 사용하여 이미지 업로드 기능까지 구현을 하였는데 문제를 발견한 부분이 Drag & Drop 으로 이미지를 삽입시 추가된 IMG 내용을 onChange…]]></description><link>https://jaeseokim.github.io/react/첫-GitHub-Contribution-feat-react-simplemde-editor/</link><guid isPermaLink="false">https://jaeseokim.github.io/react/첫-GitHub-Contribution-feat-react-simplemde-editor/</guid><pubDate>Mon, 08 Jun 2020 17:20:16 GMT</pubDate><content:encoded>&lt;p&gt;게시판 기능을 구현을 하면서 &lt;strong&gt;&lt;a href=&quot;https://github.com/RIP21/react-simplemde-editor&quot;&gt; react-simplemde-editor&lt;/a&gt;&lt;/strong&gt; 를 사용하여 이미지 업로드 기능까지 구현을 하였는데 문제를 발견한 부분이 Drag &amp;#x26; Drop 으로 이미지를 삽입시 추가된 IMG 내용을 &lt;code&gt;onChange&lt;/code&gt; 으로 전달을 하지 않아 Drag &amp;#x26; Drop 이미지 삽입후 즉시 저장시 이미지 업로드 내용을 반영하지 않아서 한번 소스 코드를 분석 하게 되었습니다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[첫 GitHub Contribution!! (feat. react-simplemde-editor)]]></title><description><![CDATA[게시판 기능을 구현을 하면서  react-simplemde-editor 를 사용하여 이미지 업로드 기능까지 구현을 하였는데 문제를 발견한 부분이 Drag & Drop 으로 이미지를 삽입시 추가된 IMG 내용을 onChange…]]></description><link>https://jaeseokim.github.io/React/첫-GitHub-Contribution-feat-react-simplemde-editor/</link><guid isPermaLink="false">https://jaeseokim.github.io/React/첫-GitHub-Contribution-feat-react-simplemde-editor/</guid><pubDate>Mon, 08 Jun 2020 17:20:16 GMT</pubDate><content:encoded>&lt;p&gt;게시판 기능을 구현을 하면서 &lt;strong&gt;&lt;a href=&quot;https://github.com/RIP21/react-simplemde-editor&quot;&gt; react-simplemde-editor&lt;/a&gt;&lt;/strong&gt; 를 사용하여 이미지 업로드 기능까지 구현을 하였는데 문제를 발견한 부분이 Drag &amp;#x26; Drop 으로 이미지를 삽입시 추가된 IMG 내용을 &lt;code&gt;onChange&lt;/code&gt; 으로 전달을 하지 않아 Drag &amp;#x26; Drop 이미지 삽입후 즉시 저장시 이미지 업로드 내용을 반영하지 않아서 한번 소스 코드를 분석 하게 되었습니다.&lt;/p&gt;
 &lt;p&gt;소스 부분을 분석하다 보니 Events를 등록하는 부분이 있어서 한번 분석을 하게 되었습니다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;js&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;addEvents&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; () &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;elementWrapperRef&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;simpleMde&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -1187,7 +1478,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[React, Next.js] - useSWR Hook 알아보기!]]></title><description><![CDATA[Next.js를 공부하다 Client 단에서 Data Fetch할 때 자주 사용 되는 swr 에 대해서 알게 되어 한번 정리를 해보았습니다. ⭐ 혹시 잘못 이해해서 잘못된 부분이 있다면 댓글로 알려주세요.! ⭐  useSWR 이란? SWR…]]></description><link>https://jaeseokim.github.io/react/React-Nextjs-useSWR-Hook-알아보기/</link><guid isPermaLink="false">https://jaeseokim.github.io/react/React-Nextjs-useSWR-Hook-알아보기/</guid><pubDate>Tue, 05 May 2020 19:01:27 GMT</pubDate><content:encoded>&lt;p&gt;Next.js를 공부하다 Client 단에서 Data Fetch할 때 자주 사용 되는 &lt;code&gt;swr&lt;/code&gt; 에 대해서 알게 되어 한번 정리를 해보았습니다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[React, Next.js] - useSWR Hook 알아보기!]]></title><description><![CDATA[Next.js를 공부하다 Client 단에서 Data Fetch할 때 자주 사용 되는 swr 에 대해서 알게 되어 한번 정리를 해보았습니다. ⭐ 혹시 잘못 이해해서 잘못된 부분이 있다면 댓글로 알려주세요.! ⭐  useSWR 이란? SWR…]]></description><link>https://jaeseokim.github.io/React/React-Nextjs-useSWR-Hook-알아보기/</link><guid isPermaLink="false">https://jaeseokim.github.io/React/React-Nextjs-useSWR-Hook-알아보기/</guid><pubDate>Tue, 05 May 2020 19:01:27 GMT</pubDate><content:encoded>&lt;p&gt;Next.js를 공부하다 Client 단에서 Data Fetch할 때 자주 사용 되는 &lt;code&gt;swr&lt;/code&gt; 에 대해서 알게 되어 한번 정리를 해보았습니다.&lt;/p&gt;
 &lt;p&gt;⭐ &lt;strong&gt;혹시 잘못 이해해서 잘못된 부분이 있다면 댓글로 알려주세요.!&lt;/strong&gt; ⭐&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -2000,7 +2291,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[XPS 13 7390 ubuntu 20.04 Update! 세팅 기록용]]></title><description><![CDATA[이전 18.04 lts 세팅을 하였던 것을 기반으로 이번에 20.04를 설치하고 세팅하면서 다시 작성합니다. https://jaeseokim.tistory.com/97 chrome 설치 https://www.google.com/chrome…]]></description><link>https://jaeseokim.github.io/etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</link><guid isPermaLink="false">https://jaeseokim.github.io/etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</guid><pubDate>Sun, 26 Apr 2020 13:14:39 GMT</pubDate><content:encoded>&lt;p&gt;이전 18.04 lts 세팅을 하였던 것을 기반으로 이번에 20.04를 설치하고 세팅하면서 다시 작성합니다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[XPS 13 7390 ubuntu 20.04 Update! 세팅 기록용]]></title><description><![CDATA[이전 18.04 lts 세팅을 하였던 것을 기반으로 이번에 20.04를 설치하고 세팅하면서 다시 작성합니다. https://jaeseokim.tistory.com/97 chrome 설치 https://www.google.com/chrome…]]></description><link>https://jaeseokim.github.io/Etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</guid><pubDate>Sun, 26 Apr 2020 13:14:39 GMT</pubDate><content:encoded>&lt;p&gt;이전 18.04 lts 세팅을 하였던 것을 기반으로 이번에 20.04를 설치하고 세팅하면서 다시 작성합니다.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://jaeseokim.tistory.com/97&quot;&gt;https://jaeseokim.tistory.com/97&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;chrome-설치&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#chrome-%EC%84%A4%EC%B9%98&quot; aria-label=&quot;chrome 설치 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;chrome 설치&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://www.google.com/chrome/&quot;&gt;https://www.google.com/chrome/&lt;/a&gt; 에서 ubuntu/debian용 deb 패키지를 다운 받습니다.&lt;/p&gt;
@@ -3038,7 +3329,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[React JS] - 공적 마스크맵 개발 후기(feat. Kakaomap)]]></title><description><![CDATA[이번에 React JS에 대해 공부를 하면서 "나도 한번 마스크맵, 재난문자 서비스를 개발 해보자!" 라는 생각이 가지게 되어서 급하게 바로 개발을 하기 시작 하게 되었다. 맨 처음 리액트의 컴포넌트 생명주기에서 골머리를 앓았는데 Hook…]]></description><link>https://jaeseokim.github.io/react/React-JS-공적-마스크맵-개발-후기feat-Kakaomap/</link><guid isPermaLink="false">https://jaeseokim.github.io/react/React-JS-공적-마스크맵-개발-후기feat-Kakaomap/</guid><pubDate>Wed, 18 Mar 2020 14:25:22 GMT</pubDate><content:encoded>&lt;p&gt;이번에 React JS에 대해 공부를 하면서 &quot;나도 한번 마스크맵, 재난문자 서비스를 개발 해보자!&quot; 라는 생각이 가지게 되어서 급하게 바로 개발을 하기 시작 하게 되었다. 맨 처음 리액트의 컴포넌트 생명주기에서 골머리를 앓았는데 &lt;code&gt;Hook&lt;/code&gt; 이라는 매우 좋은 기술을 알게 되어서 편하게 개발을 할 수 있었다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[React JS] - 공적 마스크맵 개발 후기(feat. Kakaomap)]]></title><description><![CDATA[이번에 React JS에 대해 공부를 하면서 "나도 한번 마스크맵, 재난문자 서비스를 개발 해보자!" 라는 생각이 가지게 되어서 급하게 바로 개발을 하기 시작 하게 되었다. 맨 처음 리액트의 컴포넌트 생명주기에서 골머리를 앓았는데 Hook…]]></description><link>https://jaeseokim.github.io/React/React-JS-공적-마스크맵-개발-후기feat-Kakaomap/</link><guid isPermaLink="false">https://jaeseokim.github.io/React/React-JS-공적-마스크맵-개발-후기feat-Kakaomap/</guid><pubDate>Wed, 18 Mar 2020 14:25:22 GMT</pubDate><content:encoded>&lt;p&gt;이번에 React JS에 대해 공부를 하면서 &quot;나도 한번 마스크맵, 재난문자 서비스를 개발 해보자!&quot; 라는 생각이 가지게 되어서 급하게 바로 개발을 하기 시작 하게 되었다. 맨 처음 리액트의 컴포넌트 생명주기에서 골머리를 앓았는데 &lt;code&gt;Hook&lt;/code&gt; 이라는 매우 좋은 기술을 알게 되어서 편하게 개발을 할 수 있었다.&lt;/p&gt;
 &lt;p&gt;그래서 맨 처음 만들어 낸 작품이 &lt;a href=&quot;http://msg.devjs.cf/&quot;&gt;재난문자 확인&lt;/a&gt; 이다. &lt;a href=&quot;https://github.com/JaeSeoKim/disaster_message&quot;&gt;깃허브 링크&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&quot;재난-문자-확인-사이트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%AC%EB%82%9C-%EB%AC%B8%EC%9E%90-%ED%99%95%EC%9D%B8-%EC%82%AC%EC%9D%B4%ED%8A%B8&quot; aria-label=&quot;재난 문자 확인 사이트 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;재난 문자 확인 사이트&lt;/h2&gt;
 &lt;p&gt;&lt;span
@@ -3680,7 +3971,7 @@
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[CodeGate - writeUp - csp(web)]]></title><description><![CDATA[CSP(Content Security Policy…]]></description><link>https://jaeseokim.github.io/writeup/CodeGate-writeup-csp_web/</link><guid isPermaLink="false">https://jaeseokim.github.io/writeup/CodeGate-writeup-csp_web/</guid><pubDate>Thu, 13 Feb 2020 19:34:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[CodeGate - writeUp - csp(web)]]></title><description><![CDATA[CSP(Content Security Policy…]]></description><link>https://jaeseokim.github.io/Writeup/CodeGate-writeup-csp_web/</link><guid isPermaLink="false">https://jaeseokim.github.io/Writeup/CodeGate-writeup-csp_web/</guid><pubDate>Thu, 13 Feb 2020 19:34:27 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;h2 id=&quot;cspcontent-security-policy란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cspcontent-security-policy%EB%9E%80&quot; aria-label=&quot;cspcontent security policy란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSP(Content Security Policy)란&lt;/h2&gt;
 &lt;p&gt;웹 브라우저에서 사용되는 콘텐츠에 대한 보호 정책입니다.&lt;/p&gt;
 &lt;p&gt;웹에서 사용되는 콘텐츠 즉 이미지, 동영상, 스크립트 등에 대해 사용을 허가를 하는지에 대해 정의를 하는 규칙 입니다.&lt;/p&gt;
@@ -4114,7 +4405,7 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[python] Selenium을 이용한 웹 크롤링 - Naver login 후 구독 Feed 크롤링]]></title><description><![CDATA[Selenium를 이용하여 naver 구독 Feed를 크롤링 하기 위해서는 일단 Naver Login를 처리해야 하고 그다음 피드 페이지의 내용을 불러와 크롤링을 해야 합니다. 여기서 2가지의 문제가 발생하는 데 일단 Naver Login…]]></description><link>https://jaeseokim.github.io/python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/</link><guid isPermaLink="false">https://jaeseokim.github.io/python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/</guid><pubDate>Tue, 28 Jan 2020 20:31:17 GMT</pubDate><content:encoded>&lt;p&gt;Selenium를 이용하여 naver 구독 Feed를 크롤링 하기 위해서는 일단 Naver Login를 처리해야 하고 그다음 피드 페이지의 내용을 불러와 크롤링을 해야 합니다. 여기서 2가지의 문제가 발생하는 데 일단 Naver Login의 captcha 우회가 필요하고 그 다음 피드 페이지의 내용을 스크롤 다운을 통해 불러와야 합니다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[python] Selenium을 이용한 웹 크롤링 - Naver login 후 구독 Feed 크롤링]]></title><description><![CDATA[Selenium를 이용하여 naver 구독 Feed를 크롤링 하기 위해서는 일단 Naver Login를 처리해야 하고 그다음 피드 페이지의 내용을 불러와 크롤링을 해야 합니다. 여기서 2가지의 문제가 발생하는 데 일단 Naver Login…]]></description><link>https://jaeseokim.github.io/Python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/</link><guid isPermaLink="false">https://jaeseokim.github.io/Python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/</guid><pubDate>Tue, 28 Jan 2020 20:31:17 GMT</pubDate><content:encoded>&lt;p&gt;Selenium를 이용하여 naver 구독 Feed를 크롤링 하기 위해서는 일단 Naver Login를 처리해야 하고 그다음 피드 페이지의 내용을 불러와 크롤링을 해야 합니다. 여기서 2가지의 문제가 발생하는 데 일단 Naver Login의 captcha 우회가 필요하고 그 다음 피드 페이지의 내용을 스크롤 다운을 통해 불러와야 합니다.&lt;/p&gt;
 &lt;h3 id=&quot;naver-login-처리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#naver-login-%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;naver login 처리 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Naver Login 처리&lt;/h3&gt;
 &lt;p&gt;일단 네이버 로그인을 하기위해 스크립트를 짜봅니다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;python&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10 mtki&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; time&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -4491,7 +4782,7 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[python] Selenium을 이용한 웹 크롤링 - 간단 사용법 및 예제]]></title><description><![CDATA[Selenium…]]></description><link>https://jaeseokim.github.io/python/python-Selenium을-이용한-웹-크롤링-간단-사용법-및-예제/</link><guid isPermaLink="false">https://jaeseokim.github.io/python/python-Selenium을-이용한-웹-크롤링-간단-사용법-및-예제/</guid><pubDate>Sun, 26 Jan 2020 22:39:18 GMT</pubDate><content:encoded>&lt;h2 id=&quot;selenium-이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#selenium-%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;selenium 이란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Selenium 이란?&lt;/h2&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[python] Selenium을 이용한 웹 크롤링 - 간단 사용법 및 예제]]></title><description><![CDATA[Selenium…]]></description><link>https://jaeseokim.github.io/Python/python-Selenium을-이용한-웹-크롤링-간단-사용법-및-예제/</link><guid isPermaLink="false">https://jaeseokim.github.io/Python/python-Selenium을-이용한-웹-크롤링-간단-사용법-및-예제/</guid><pubDate>Sun, 26 Jan 2020 22:39:18 GMT</pubDate><content:encoded>&lt;h2 id=&quot;selenium-이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#selenium-%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;selenium 이란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Selenium 이란?&lt;/h2&gt;
 &lt;p&gt;다양한 언어에서 웹 드라이버를 통한 웹 자동화 테스트를 지원하는 라이브러리 입니다.&lt;/p&gt;
 &lt;p&gt;여기서 웹 자동화 테스트에서만 국한 되는 것이 아닌 웹에서 자동화를 통한 다양한 작업을 할 수 있습니다.&lt;/p&gt;
 &lt;p&gt;글 제목에서 적혀 있듯이 웹 크롤링을 할 때에도 사용 합니다.&lt;/p&gt;
@@ -4888,10 +5179,10 @@ I made an simple echo service for my API practice. If you find bug, please tell 
 &lt;/ul&gt;
 &lt;h2 id=&quot;dnspy-설치-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;dnspy 설치 방법 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dnspy 설치 방법&lt;/h2&gt;
 &lt;p&gt;github에서 직접 소스를 다운받아 build를 하여 설치가 가능하다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;git clone --recursive https://github.com/0xd4d/dnSpy.git&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;cd dnSpy&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;# or dotnet build&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;./build.ps1&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;git clone --recursive https://github.com/0xd4d/dnSpy.git&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk8&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; dnSpy&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;# or dotnet build&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;./build.ps1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;또는 &lt;a href=&quot;https://github.com/0xd4d/dnSpy/releases&quot;&gt;releases&lt;/a&gt; 된 파일을 받아서 사용이 가능하다.&lt;/p&gt;
 &lt;h2 id=&quot;dnspy-간단-사용법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#dnspy-%EA%B0%84%EB%8B%A8-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;dnspy 간단 사용법 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;dnspy 간단 사용법&lt;/h2&gt;
 &lt;h3 id=&quot;debug용-단축키-설명&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#debug%EC%9A%A9-%EB%8B%A8%EC%B6%95%ED%82%A4-%EC%84%A4%EB%AA%85&quot; aria-label=&quot;debug용 단축키 설명 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Debug용 단축키 설명&lt;/h3&gt;
@@ -5190,11 +5481,15 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     background-color: #282c34;
     color: #abb2bf;
   }
+  .one-dark-pro .mtki { font-style: italic; }
+  .one-dark-pro .mtk1 { color: #ABB2BF; }
+  .one-dark-pro .mtk8 { color: #56B6C2; }
+  .one-dark-pro .mtk5 { color: #7F848E; }
   .one-dark-pro .grvsc-line-highlighted::before {
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[X-MAS CTF 2019 : Lapland Mission]]></title><description><![CDATA[X-MAS: Lapland Mission X - MAS의 Lapland Mission 문제를 다운 받아보면 아래와 같이 Unitity로 만들어진 것을 파악할 수 있다.  이제 이 파일을 실행 해보면 아래처럼 FPS…]]></description><link>https://jaeseokim.github.io/writeup/X-MAS-CTF-2019-Lapland-Mission/</link><guid isPermaLink="false">https://jaeseokim.github.io/writeup/X-MAS-CTF-2019-Lapland-Mission/</guid><pubDate>Mon, 23 Dec 2019 22:57:13 GMT</pubDate><content:encoded>&lt;h2 id=&quot;x-mas-lapland-mission&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#x-mas-lapland-mission&quot; aria-label=&quot;x mas lapland mission permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://xmas.htsp.ro/challenge?id=28&quot;&gt;X-MAS: Lapland Mission&lt;/a&gt;&lt;/h2&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[X-MAS CTF 2019 : Lapland Mission]]></title><description><![CDATA[X-MAS: Lapland Mission X - MAS의 Lapland Mission 문제를 다운 받아보면 아래와 같이 Unitity로 만들어진 것을 파악할 수 있다.  이제 이 파일을 실행 해보면 아래처럼 FPS…]]></description><link>https://jaeseokim.github.io/Writeup/X-MAS-CTF-2019-Lapland-Mission/</link><guid isPermaLink="false">https://jaeseokim.github.io/Writeup/X-MAS-CTF-2019-Lapland-Mission/</guid><pubDate>Mon, 23 Dec 2019 22:57:13 GMT</pubDate><content:encoded>&lt;h2 id=&quot;x-mas-lapland-mission&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#x-mas-lapland-mission&quot; aria-label=&quot;x mas lapland mission permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://xmas.htsp.ro/challenge?id=28&quot;&gt;X-MAS: Lapland Mission&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;X - MAS의 Lapland Mission 문제를 다운 받아보면 아래와 같이 Unitity로 만들어진 것을 파악할 수 있다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -5433,7 +5728,7 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python urllib, BeautifulSoup를 이용한 다음 날씨 크롤링!]]></title><description><![CDATA[평소 requests에만 너무 의존을 하는 것 같아 한번 urllib라는 python…]]></description><link>https://jaeseokim.github.io/python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</link><guid isPermaLink="false">https://jaeseokim.github.io/python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</guid><pubDate>Mon, 25 Nov 2019 15:17:50 GMT</pubDate><content:encoded>&lt;p&gt;평소 requests에만 너무 의존을 하는 것 같아 한번 urllib라는 python 기본 제공 라이브러리를 이용해서 크롤링 스크립트를 만들었습니다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python urllib, BeautifulSoup를 이용한 다음 날씨 크롤링!]]></title><description><![CDATA[평소 requests에만 너무 의존을 하는 것 같아 한번 urllib라는 python…]]></description><link>https://jaeseokim.github.io/Python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</link><guid isPermaLink="false">https://jaeseokim.github.io/Python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</guid><pubDate>Mon, 25 Nov 2019 15:17:50 GMT</pubDate><content:encoded>&lt;p&gt;평소 requests에만 너무 의존을 하는 것 같아 한번 urllib라는 python 기본 제공 라이브러리를 이용해서 크롤링 스크립트를 만들었습니다.&lt;/p&gt;
 &lt;p&gt;크롤링 대상은 다음 홈페이지의 메인 포털 상단 오른쪽의 지역별 날씨 항목을 가져와 크롤링 했습니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
@@ -5615,7 +5910,7 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python requests를 이용한 blind injecthion 스크립트 제작 (2편)]]></title><description><![CDATA[시작 하기에 앞서 이전 포스트 1편 을 보고 와주시면 감사하겠습니다. 이전 포스트에서 알아낸 ID을 가지고 password…]]></description><link>https://jaeseokim.github.io/python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</link><guid isPermaLink="false">https://jaeseokim.github.io/python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</guid><pubDate>Wed, 23 Oct 2019 23:44:31 GMT</pubDate><content:encoded>&lt;p&gt;시작 하기에 앞서 &lt;a href=&quot;/python/Python-requests%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-blind-injecthion-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%9C%EC%9E%91-1%ED%8E%B8/&quot;&gt;이전 포스트 1편&lt;/a&gt; 을 보고 와주시면 감사하겠습니다.&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python requests를 이용한 blind injecthion 스크립트 제작 (2편)]]></title><description><![CDATA[시작 하기에 앞서 이전 포스트 1편 을 보고 와주시면 감사하겠습니다. 이전 포스트에서 알아낸 ID을 가지고 password…]]></description><link>https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</link><guid isPermaLink="false">https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</guid><pubDate>Wed, 23 Oct 2019 23:44:31 GMT</pubDate><content:encoded>&lt;p&gt;시작 하기에 앞서 &lt;a href=&quot;/python/Python-requests%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-blind-injecthion-%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8-%EC%A0%9C%EC%9E%91-1%ED%8E%B8/&quot;&gt;이전 포스트 1편&lt;/a&gt; 을 보고 와주시면 감사하겠습니다.&lt;/p&gt;
 &lt;p&gt;이전 포스트에서 알아낸 ID을 가지고 password의 길이에 대해 알아내는 스크립트를 작성해봅니다/&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;python&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10 mtki&quot;&gt;import&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; requests&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
@@ -5794,7 +6089,7 @@ I made an simple echo service for my API practice. If you find bug, please tell 
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
   }
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python requests를 이용한 blind injecthion 스크립트 제작 (1편)]]></title><description><![CDATA[Python requests를 이용한 blind injecthion 스크립트 제작 일단 시작하기전에 앞서 Blind SQL Injecthion에 대해 모르신다면 이전 포스트 를 참조하세요. Python의 requests…]]></description><link>https://jaeseokim.github.io/python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</link><guid isPermaLink="false">https://jaeseokim.github.io/python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</guid><pubDate>Wed, 23 Oct 2019 14:05:42 GMT</pubDate><content:encoded>&lt;p&gt;Python requests를 이용한 blind injecthion 스크립트 제작&lt;/p&gt;
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Python requests를 이용한 blind injecthion 스크립트 제작 (1편)]]></title><description><![CDATA[Python requests를 이용한 blind injecthion 스크립트 제작 일단 시작하기전에 앞서 Blind SQL Injecthion에 대해 모르신다면 이전 포스트 를 참조하세요. Python의 requests…]]></description><link>https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</link><guid isPermaLink="false">https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</guid><pubDate>Wed, 23 Oct 2019 14:05:42 GMT</pubDate><content:encoded>&lt;p&gt;Python requests를 이용한 blind injecthion 스크립트 제작&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;일단 시작하기전에 앞서 Blind SQL Injecthion에 대해 모르신다면 &lt;a href=&quot;https://jaeseokim.tistory.com/20&quot;&gt;이전 포스트&lt;/a&gt; 를 참조하세요.&lt;/li&gt;
 &lt;/ul&gt;

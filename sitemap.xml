@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url> <loc>https://jaeseokim.github.io/typescript/hello-typescript-with-deno/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/react/gatsby-blog-개발-후기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/react/첫-GitHub-Contribution-feat-react-simplemde-editor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/react/React-Nextjs-useSWR-Hook-알아보기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Typescript/hello-typescript-with-deno/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/React/gatsby-blog-개발-후기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/React/첫-GitHub-Contribution-feat-react-simplemde-editor/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/React/React-Nextjs-useSWR-Hook-알아보기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Etc/XPS-13-7390-ubuntu-2004-Update-세팅-기록용/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/Ghostcatcve-2020-1938-CNVD-2020-10487-취약점-이란-톰캣-AJP-취약점-Feat-VolgaCTF-2020-Qualifier-NetCorp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/react/React-JS-공적-마스크맵-개발-후기feat-Kakaomap/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/React/React-JS-공적-마스크맵-개발-후기feat-Kakaomap/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/nodejs-HTTP-request-splitting을-이용한-SSRF-취약점featNullCon2020-splitsecond-WriteUp/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/writeup/CodeGate-writeup-csp_web/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/python/python-Selenium을-이용한-웹-크롤링-간단-사용법-및-예제/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Writeup/CodeGate-writeup-csp_web/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Python/python-Selenium을-이용한-웹-크롤링-간단-사용법-및-예제/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/dnspy-사용법-Net-assembly-editor-debugger-decompiler/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/writeup/X-MAS-CTF-2019-Lapland-Mission/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Writeup/X-MAS-CTF-2019-Lapland-Mission/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Python/Python-urllib-BeautifulSoup를-이용한-다음-날씨-크롤링/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Etc/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/React/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/TIL/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/etc/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/react/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/writeup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/Writeup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
