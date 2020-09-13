@@ -17,7 +17,7 @@ const Utterances = ({ repo }) => {
       theme: isDarkMode ? DARK_THEME : LIGHT_THEME,
       label: "💬Comment",
       async: true,
-      "issue-term": "pathname",
+      "issue-term": "title",
       crossorigin: "anonymous",
     }
 
