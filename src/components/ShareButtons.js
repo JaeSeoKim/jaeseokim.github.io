@@ -12,7 +12,7 @@ const ShareButton = ({ color, icon, target, onClick }) => {
   return (
     <button
       css={css`
-        ${tw`flex px-3 py-1 my-2 ml-2 rounded text-white focus:outline-none`}
+        ${tw`flex px-3 py-1 my-2 ml-2 rounded text-white`}
         background-color: ${color}
       `}
       onClick={onClick}

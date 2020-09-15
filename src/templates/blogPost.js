@@ -104,7 +104,7 @@ export default ({ data, pageContext, location }) => {
                 <div css={tw`flex justify-end px-2`}>
                   <a
                     css={css`
-                      ${tw`flex px-3 py-1 my-2 rounded text-white focus:outline-none`}
+                      ${tw`flex px-3 py-1 my-2 rounded text-white`}
                       background-color: #FF813E;
                     `}
                     target="_blank"

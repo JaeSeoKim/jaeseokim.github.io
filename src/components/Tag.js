@@ -24,7 +24,7 @@ const Tag = ({ onClick, tag, selectedTag, scrollToCenter }) => {
       css={css`
         white-space: nowrap;
         transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-        ${tw`text-base font-bold rounded-full mr-2 my-1 py-1 px-3 focus:outline-none`}
+        ${tw`text-base font-bold rounded-full mr-2 my-1 py-1 px-3`}
         ${selectedTag === tag
           ? "color"
           : "background-color"}:
