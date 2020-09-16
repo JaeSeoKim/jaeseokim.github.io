@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import tw, { css } from "twin.macro"
 import { whiteModeColor } from "../them-color"
 import { FaInfo } from "react-icons/fa"
+import { jennifer_front_id } from "../gatsby-meta-config"
 
 export default class HTML extends React.Component {
   render() {
@@ -15,6 +16,21 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0, user-scalable=0"
           />
+          {jennifer_front_id && (
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+              (function(j,en,ni,fer) {
+                j['dmndata']=[];j['jenniferFront']=function(args){window.dmndata.push(args)};
+                j['dmnaid']=fer;j['dmnatime']=new Date();j['dmnanocookie']=false;j['dmnajennifer']='JENNIFER_FRONT@INTG';
+                var b=Math.floor(new Date().getTime() / 60000) * 60000;var a=en.createElement(ni);
+                a.src='https://d-collect.jennifersoft.com/'+fer+'/demian.js?'+b;a.async=true;
+                en.getElementsByTagName(ni)[0].parentNode.appendChild(a);
+              }(window,document,'script','${jennifer_front_id}'));
+              `,
+              }}
+            />
+          )}
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
