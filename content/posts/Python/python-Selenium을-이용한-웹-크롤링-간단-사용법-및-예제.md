@@ -193,6 +193,4 @@ for i in range(int(driver.find_element_by_xpath('/html/body/div/div[2]/div/div/d
 driver.quit()
 ```
 
-## python을 이용한 웹 크롤링 -Naver login 후 구독 Feed 크롤링
-
-[link](/python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/)
+## [python을 이용한 웹 크롤링 -Naver login 후 구독 Feed 크롤링](/Python/python-Selenium을-이용한-웹-크롤링-Naver-login-후-구독-Feed-크롤링/)
