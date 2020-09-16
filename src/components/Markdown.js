@@ -132,6 +132,11 @@ const Markdown = ({ html }) => {
       background-color: ${isDarkMode ? "#333" : "#eee"};
       white-space: pre-line;
     }
+
+    pre.grvsc-container {
+      margin-top: 0.2rem;
+      margin-bottom: 0.2rem;
+    }
   `
   return (
     <div>
