@@ -134,8 +134,29 @@ const Markdown = ({ html }) => {
     }
 
     pre.grvsc-container {
-      margin-top: 0.2rem;
-      margin-bottom: 0.2rem;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
+    hr {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      height: 2px;
+      border: none;
+      background: linear-gradient(
+        270deg,
+        ${isDarkMode
+          ? darkModeColor.mainColor1 +
+            "," +
+            darkModeColor.mainColor2 +
+            "," +
+            darkModeColor.mainColor3
+          : whiteModeColor.mainColor1 +
+            "," +
+            whiteModeColor.mainColor2 +
+            "," +
+            whiteModeColor.mainColor3}
+      );
     }
   `
   return (

@@ -54,7 +54,7 @@ number 타입은 모든 숫자(정수, 소수, 양수, 음수, Infinity, NaN 등
 
 # Bigint
 
-bitint는 JavaScript와 TypeScript에 새로 추가된 타입으로 number 타입의 2<sup>53</sup> - 1 까지의 정수보다 더 큰 수를 표현 할 때 사용이 가능합니다.
+bitint는 JavaScript와 TypeScript에 새로 추가된 타입으로 number 타입의 2<sup>53</sup> - 1 까지의 정수보다 더 큰 수를 표현 할 때 사용이 가능하다.
 
 아직 모든 엔진이 bigint를 지원하지 않으므로 대상 플랫폼이 지원을 하는지에 대해 확인이 필요하다.
 
@@ -246,7 +246,7 @@ intersection Type은 위와 같이 A type, B type에 대해 모두 가지고 있
 
 보통 Intersection Type 보다는 Union Type이 자주 사용이 된다.
 
-예를 들어 아래와 같은 함수가 있을 때 정상적인 status code 라면 string으로 된 응답 값을 return 하고 200~299 사이의 status code가 아니라면 status code를 즉 number를 return 해야 할 때 사용이 가능합니다.
+예를 들어 아래와 같은 함수가 있을 때 정상적인 status code 라면 string으로 된 응답 값을 return 하고 200~299 사이의 status code가 아니라면 status code를 즉 number를 return 해야 할 때 사용이 가능하다.
 
 ```ts {numberLines}
 async function getData(url: string): Promise<string | number> {
@@ -262,7 +262,7 @@ async function getData(url: string): Promise<string | number> {
 
 # Array
 
-TypeScript의 Array는 JavaScript와 동일 하게 contcatenation, pushing, searching, slicing 등을 지원하는 특별한 객체입니다.
+TypeScript의 Array는 JavaScript와 동일 하게 contcatenation, pushing, searching, slicing 등을 지원하는 특별한 객체이다.
 
 ```ts {numberLines}
 let a: number[] = [1, 2, 3]
