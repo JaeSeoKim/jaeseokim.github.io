@@ -69,8 +69,8 @@ const TableOfContents = ({ toc, currentHeaderUrl }) => {
           </h3>
           <div
             css={css`
-              ul:not(:first-child) {
-                margin-left: 13px;
+              ul {
+                margin-left: 0.5rem;
               }
               ul > li a:hover {
                 color: ${isDarkMode ? "#DDDDDD" : "#555555"};

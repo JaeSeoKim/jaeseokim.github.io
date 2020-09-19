@@ -6,7 +6,7 @@ draft: false
 ---
 
 <p align="center">
-<img  style="display: inline;  witdh: 100px; height: 100px;" src="image/hello-typescript-with-deno/logo.svg" />
+<img  style="display: inline;  witdh: 100px; height: 100px; background-color: white;" src="image/hello-typescript-with-deno/logo.svg" />
 <span style="font-size: 50px;">❤</span>
 <img style="display: inline; witdh: 100px; height: 100px;" src="image/hello-typescript-with-deno/Typescript_logo_2020.svg" />
 </p>

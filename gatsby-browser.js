@@ -4,7 +4,7 @@ import "tailwindcss/dist/base.min.css"
 // polyfill
 import "intersection-observer"
 
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, useCallback } from "react"
 import ThemeContext from "./src/lib/context/ThemContext"
 import metaConfig from "./gatsby-meta-config"
 
@@ -44,6 +44,41 @@ const Wrapper = ({ element }) => {
     }
   }
 
+  const printCopyright = useCallback(() => {
+    console.log(
+      "%c%s",
+      `
+      background: linear-gradient(
+        90deg,
+        #7f7fd5, #86a8e7
+      );
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      color: #FFFFFF;
+      font-size: 2.25rem;
+      `,
+      "JaeSeoKim's blog"
+    )
+    console.log(
+      "%c%s",
+      `
+      padding: 0.25rem;
+      border-radius: 0.25rem;
+      background-color: #edf2f7;
+      color: #3737B9;
+      font-size: 1.5rem;
+      `,
+      "©JaeSeoKim"
+    )
+    console.log(
+      "%c%s",
+      `
+      font-size: 1.25rem;
+      `,
+      "https://github.com/JaeSeoKim"
+    )
+  }, [])
+
   useEffect(() => {
     if (window) {
       try {
@@ -56,6 +91,7 @@ const Wrapper = ({ element }) => {
       } catch (error) {
         localStorage.setItem("isDarkMode", "false")
       }
+      printCopyright()
     }
   }, [])
   return (
@@ -67,7 +103,7 @@ const Wrapper = ({ element }) => {
 
 export const wrapRootElement = ({ element }) => <Wrapper element={element} />
 
-export const onServiceWorkerUpdateReady = () => {
+export const onServiceWorkerUpdateFound = () => {
   const answer = window.confirm(
     `This application has been updated. ` +
       `Reload to display the latest version?`

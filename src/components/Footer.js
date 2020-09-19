@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer css={tw`text-center py-8 bottom-0`}>
       <a css={tw`text-xs font-bold`} href={`https://github.com/JaeSeoKim`}>
-        @JaeSeoKim
+        &copy;JaeSeoKim
       </a>
     </footer>
   )
