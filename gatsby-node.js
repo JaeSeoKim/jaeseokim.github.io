@@ -70,7 +70,6 @@ exports.createPages = ({ graphql, actions }) => {
     categories.forEach((category) => {
       if (category.relativePath !== "") {
         createPage({
-          // path: `/category/${category.relativePath}/`,
           path: `/${category.relativePath}/`,
           component: categoryTemplate,
           context: {

@@ -57,7 +57,7 @@ const TagSelector = ({ onTagClick, state, tags }) => {
         scrollToCenter={scrollToCenter}
       />
       <Tags
-        tags={tags.sort()}
+        tags={tags}
         onClick={onTagClick}
         tag={state.tag}
         scrollToCenter={scrollToCenter}

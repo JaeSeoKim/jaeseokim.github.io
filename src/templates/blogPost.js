@@ -40,7 +40,6 @@ export default ({ data, pageContext, location }) => {
           )
         })
 
-      // console.log(headerElements)
       for (const elem of headerElements) {
         const { top } = elem.getBoundingClientRect()
         const elemTop = top + currentOffsetY
@@ -154,7 +153,7 @@ export const pageQuery = graphql`
       html
       tableOfContents
       frontmatter {
-        date(formatString: "YYYY년 MM월 DD일 - hh:mm A")
+        date(formatString: "YYYY년 MM월 DD일")
         title
         tags
       }
