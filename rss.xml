@@ -1,4 +1,171 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 06 Oct 2020 11:46:08 GMT</lastBuildDate><item><title><![CDATA[[TypeScript] Basic Types]]></title><description><![CDATA[TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다. Any any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다. 만약 any…]]></description><link>https://jaeseokim.github.io/Typescript/typescript-basic-types/</link><guid isPermaLink="false">https://jaeseokim.github.io/Typescript/typescript-basic-types/</guid><pubDate>Sat, 19 Sep 2020 19:40:00 GMT</pubDate><content:encoded>&lt;p&gt;TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 06 Oct 2020 13:21:26 GMT</lastBuildDate><item><title><![CDATA[[C] variable argument 사용법에 대해 알아 보기!]]></title><description><![CDATA[Intro 42Seoul의 본 과정을 드디어 시작을 하여서 빠르게 Libft 프로젝트를 클리어 하여서 ft_printf 프로젝트를 풀기 위해 준비를 하게 되었다. 일단 함수의 proto type은 반드시 ft_printf(const char…]]></description><link>https://jaeseokim.github.io/C/C-variable-argument-사용법에-대해-알아-보기/</link><guid isPermaLink="false">https://jaeseokim.github.io/C/C-variable-argument-사용법에-대해-알아-보기/</guid><pubDate>Tue, 06 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Intro&lt;/h1&gt;
+&lt;p&gt;42Seoul의 본 과정을 드디어 시작을 하여서 빠르게 &lt;code&gt;Libft&lt;/code&gt; 프로젝트를 클리어 하여서 &lt;code&gt;ft_printf&lt;/code&gt; 프로젝트를 풀기 위해 준비를 하게 되었다.&lt;/p&gt;
+&lt;p&gt;일단 함수의 proto type은 반드시 &lt;code&gt;ft_printf(const char *, ...);&lt;/code&gt; 이여야 한다는 조건과 함께 &lt;code&gt;va_*&lt;/code&gt; 와 같은 함수들의 제약 조건이 해제 되어 있는 것을 보고 가변 길이 인자에 대해 공부가 필요 하다고 판단이 되어서 글을 작성하게 되었다.&lt;/p&gt;
+&lt;h1 id=&quot;variable-argument&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#variable-argument&quot; aria-label=&quot;variable argument permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;variable argument?&lt;/h1&gt;
+&lt;p&gt;variable argument(가변 인자)란? 말 그대로 인자에 대해서 가변적으로 작동을 한다는 의미입니다.
+대표적인 가변 인자 함수로써는 &lt;code&gt;printf&lt;/code&gt; &lt;code&gt;scanf&lt;/code&gt; 등이 있습니다..&lt;/p&gt;
+&lt;p&gt;기본적으로 variable argument는 고정적으로 사용되는 인자 &lt;code&gt;ex) const *char str&lt;/code&gt; 다음에 &lt;code&gt;...&lt;/code&gt; 를 인자로 작성하는 것으로 선언을 합니다.&lt;/p&gt;
+&lt;p&gt;가변 인자에 대한 함수가 선언이 된 헤더 &lt;code&gt;stdarg.h&lt;/code&gt; 를 include 하여 한번 간단하게 example code를 작성해봅니다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;c&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;1&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/* ************************************************************************** */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;2&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                                            */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;3&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                        :::      ::::::::   */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;4&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   test.c                                             :+:      :+:    :+:   */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;5&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                    +:+ +:+         +:+     */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;6&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   By: jaeskim &amp;lt;jaeskim@student.42seoul.kr&amp;gt;       +#+  +:+       +#+        */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;7&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                +#+#+#+#+#+   +#+           */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;8&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   Created: 2020/10/05 21:09:48 by jaeskim           #+#    #+#             */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;9&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   Updated: 2020/10/06 18:44:01 by jaeskim          ###   ########.fr       */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;10&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                                            */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;11&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/* ************************************************************************** */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;12&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;13&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#include&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;lt;stdio.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;14&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#include&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;lt;stdarg.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;15&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;16&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printNum&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;argc&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; ...&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;17&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;18&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    va_list ap;	&lt;/span&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;// 가변 인자를 저장하기 위한 변수 선언.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;19&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;20&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;va_start&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(ap, argc); &lt;/span&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;// 가변 인자의 시작 포인터 설정.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;21&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;while&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (argc&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;--&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;22&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;%d&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; &amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;va_arg&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(ap, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)); &lt;/span&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;// 가변 인자의 값을 return (2번째 인자에서 가져오는 type를 정의)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;23&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;va_end&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(ap); &lt;/span&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;// 사용후 va_list의 포인터 값을 null로 초기화!&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;24&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printf&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;25&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;26&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;27&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;     &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;28&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;29&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printNum&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;30&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printNum&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;31&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;printNum&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;32&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-gutter-pad&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-gutter grvsc-line-number&quot; aria-hidden=&quot;true&quot; data-content=&quot;33&quot;&gt;&lt;/span&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;실행을 해보게 되면 아래와 같이 결과물이 나오게 됩니다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;bash&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;❯ gcc test.c&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;❯ ./a.out&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;1 2&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;1 2 3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;이제 위에서 사용한 함수들을 정리해보게 되면 아래와 같이 정리가 됩니다.&lt;/p&gt;
+&lt;h2 id=&quot;va_list&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#va_list&quot; aria-label=&quot;va_list permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;va_list&lt;/h2&gt;
+&lt;p&gt;가변 인자의 Point를 저장하게 되는 Struct 입니다.&lt;/p&gt;
+&lt;h2 id=&quot;va_start&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#va_start&quot; aria-label=&quot;va_start permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;va_start&lt;/h2&gt;
+&lt;p&gt;가변 인자의 초기화를 담당하는 매크로 입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;va_start(ap, pN)&lt;/code&gt; 와 같은 형태로 사용을 하고 여기서 &lt;code&gt;ap&lt;/code&gt; 는 가변 인자를 저장하는 변수(va_list), &lt;code&gt;pN&lt;/code&gt; 은 마지막 고정 인수 입니다.&lt;/p&gt;
+&lt;p&gt;매크로 내부에서는 &lt;code&gt;pN&lt;/code&gt;를 기준으로 그 다음 메모리 pointer로 초기화 합니다.&lt;/p&gt;
+&lt;h2 id=&quot;va_arg&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#va_arg&quot; aria-label=&quot;va_arg permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;va_arg&lt;/h2&gt;
+&lt;p&gt;가변 인자를 값을 가져오는 매크로입니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;va_arg(ap, type)&lt;/code&gt; 와 같은 형태로 사용을 하고 &lt;code&gt;ap&lt;/code&gt; 는 가변 인자를 저장하는 변수(va_list), type은 가져오게 되는 변수의 Type 입니다!
+내부적으로 ap에서 type만큼의 값을 읽어 오고 ap에는 &lt;code&gt;sizeof(type)&lt;/code&gt; 만큼의 포인터를 이동하여 저장 시킵니다!&lt;/p&gt;
+&lt;h2 id=&quot;va_end&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#va_end&quot; aria-label=&quot;va_end permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;va_end&lt;/h2&gt;
+&lt;p&gt;ap(va&lt;em&gt;list)에 들어있는 포인터를 참조하여 초기화 시켜 주는 매크로입니다!
+대부분의 구현에서는 `#define va&lt;/em&gt;end(AP) ((void)0)` 형태로 아무 작업을 하지 않지만 일부 플랫폼에서는 문제가 발생하기 때문에 같이 사용하는 것이 권장 됩니다!&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .mtki { font-style: italic; }
+  .one-dark-pro .mtk5 { color: #7F848E; }
+  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk1 { color: #ABB2BF; }
+  .one-dark-pro .mtk6 { color: #98C379; }
+  .one-dark-pro .mtk3 { color: #61AFEF; }
+  .one-dark-pro .mtk4 { color: #E06C75; }
+  .one-dark-pro .mtk7 { color: #D19A66; }
+  .one-dark-pro .mtk8 { color: #56B6C2; }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[TypeScript] Basic Types]]></title><description><![CDATA[TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다. Any any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다. 만약 any…]]></description><link>https://jaeseokim.github.io/Typescript/typescript-basic-types/</link><guid isPermaLink="false">https://jaeseokim.github.io/Typescript/typescript-basic-types/</guid><pubDate>Sat, 19 Sep 2020 19:40:00 GMT</pubDate><content:encoded>&lt;p&gt;TypeScript는 다양한 타입을 가지고 있기 때문에 타입에 대해서 정리를 해보았다.&lt;/p&gt;
 &lt;h1 id=&quot;any&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#any&quot; aria-label=&quot;any permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Any&lt;/h1&gt;
 &lt;p&gt;any 타입은 어떤 타입이 와도 전부 허용을 한다는 타입이다. 하지만 이 타입을 사용할 때에는 주의를 기울어서 사용을 해야 한다.&lt;/p&gt;
 &lt;p&gt;만약 any타입을 남발해서 사용을 하게 된다면 TypeChecker가 동작하지 않게 되고 기존 JavaScript와 다른 점이 없어지게 되므로 TypeScript에서 오는 장점이 사라지니 이것을 남발해서는 안된다.&lt;/p&gt;
