@@ -27,7 +27,7 @@
     "gatsby-remark-emoji": "0.0.3",
     "gatsby-remark-images": "^3.3.30",
     "gatsby-remark-images-medium-zoom": "^1.7.0",
-    "gatsby-remark-vscode": "^3.0.1",
+    "gatsby-remark-vscode": "^3.1.0",
     "gatsby-source-filesystem": "^2.3.29",
     "gatsby-transformer-remark": "^2.8.37",
     "gatsby-transformer-sharp": "^2.5.14",
