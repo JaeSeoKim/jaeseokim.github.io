@@ -36,7 +36,7 @@
     "material-theme": "github:Binaryify/OneDark-Pro",
     "npm": "^6.14.8",
     "prop-types": "^15.7.2",
-    "query-string": "^6.13.5",
+    "query-string": "^6.13.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
