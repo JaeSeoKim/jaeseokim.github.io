@@ -1,7 +1,7 @@
 ---
 title: "[Javascript] 42-readme-stats 개발기(1)"
 date: 2020-10-17
-tags: ["readme badge", "Javascript", "42Seoul"]
+tags: ["Readme Badge", "Javascript", "42seoul"]
 draft: false
 ---
 
@@ -11,7 +11,7 @@ draft: false
 
 그리고 이번에 `ft_printf` 과제를 하다가 중간에 집중이 안되어서 기분 전환 겸으로 **토이 프로젝트**를 시작하였다.!
 
-# 🚀 [42-readme-stats](https://github.com/JaeSeoKim/42-readme-stats)
+# 🚀 [42-readme-stats](https://github.com/JaeSeoKim/badge42)
 
 바로 프로젝트 이름은 **`42-readme-stats`** 이다..! 🙌
 
@@ -142,7 +142,7 @@ export default async (user_data) => {
 
 ### 👷 개발 중 샘플 - (2020-10-17 02시 기준)
 
-_(응답으로 온 SVG를 저장하여 보여 주는 모습입니다. 개발되어 변경된 모습을 Live로 보고 싶다면 [github](https://github.com/JaeSeoKim/42-readme-stats)로 들어와 확인 해주세요!)_
+_(응답으로 온 SVG를 저장하여 보여 주는 모습입니다. 개발되어 변경된 모습을 Live로 보고 싶다면 [github](https://github.com/JaeSeoKim/badge42)로 들어와 확인 해주세요!)_
 
 (2020-10-17 기준)
 
