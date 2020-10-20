@@ -1,7 +1,136 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 17 Oct 2020 10:15:54 GMT</lastBuildDate><item><title><![CDATA[[Javascript] 42-readme-stats 개발기(1)]]></title><description><![CDATA[이번에 42Seoul에 합격하고 어느덧 3주가 넘어가는 시점이 되었다. 그동안 Libft, netwhat, get_next_line 과 같은 기본 서클 과제를 깨면서 Github에 올리고 그 정보를 readme.md…]]></description><link>https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</guid><pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이번에 &lt;code&gt;42Seoul&lt;/code&gt;에 합격하고 어느덧 3주가 넘어가는 시점이 되었다.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 20 Oct 2020 12:29:37 GMT</lastBuildDate><item><title><![CDATA[[Javascript] badge42 개발기(2) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 2편 입니다! 이전글 1편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전에 작성했던 글에서는 프로젝트 명을 42-readme-stats…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 2편 입니다!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/42-readme-stats-%EA%B0%9C%EB%B0%9C%EA%B8%B0_1/&quot;&gt;이전글 1편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;-badge42-aka-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-badge42-aka-42-readme-stats&quot; aria-label=&quot; badge42 aka 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📌 badge42! (aka. 42-readme-stats)&lt;/h1&gt;
+&lt;p&gt;이전에 작성했던 글에서는 프로젝트 명을 42-readme-stats로 명명 하였는데 이번에 구조를 개선하기 위하여 &lt;code&gt;Vercel&lt;/code&gt;에서 &lt;code&gt;Heroku&lt;/code&gt;로 이전을 하게 되면서 &lt;code&gt;Heroku&lt;/code&gt;의 도메인은 영어 소문자로 시작을 해야 한다는 제약 사항과 추가적인 기능에 대하여 표현을 하기 이름을 &lt;code&gt;badge42&lt;/code&gt;로 이름을 바꾸었다!&lt;/p&gt;
+&lt;p&gt;이전 개발 상황이랑 다른 점을 차례대로 소개를 해보겠습니다!&lt;/p&gt;
+&lt;h2 id=&quot;️-change-svg-render-system&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EF%B8%8F-change-svg-render-system&quot; aria-label=&quot;️ change svg render system permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;♻️ Change SVG Render System!&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;TL;DR :&lt;/strong&gt; return (PlainText) -&gt; return (React.renderToStaticMarkup)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;처음 개발을 시작 했을 때에는 SVG를 Text 형태로 완성하여 Return 하는 함수를 만들었는데 이 때 문제는 SVG를 만들 때 Ide의 기능(intellisense, Formatting 등)을 사용할 수 없기 때문에 개발할 때의 불편함이 있어서 &lt;code&gt;React&lt;/code&gt; 를 이용하는 방향으로 변경하였다!&lt;/p&gt;
+&lt;p&gt;SVG를 &lt;code&gt;component&lt;/code&gt; 형태로 개발을 하고 최종적으로 Server에서 Response를 할 때 &lt;code&gt;ReactDomServer.renderToStaticMarkup()&lt;/code&gt; 를 이용하여 정적으로 완성된 문자열을 Return하도록 수정을 하였다!&lt;/p&gt;
+&lt;h2 id=&quot;-svg-design&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-svg-design&quot; aria-label=&quot; svg design permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🎨 SVG Design!&lt;/h2&gt;
+&lt;p&gt;저번에 했던 디자인은 아직 미완성의 느낌 이였지만 이번에 &lt;code&gt;React&lt;/code&gt; Component 개발로 변경을 하고 빠르게 진행하여서 애니메이션을 제외한 기본적인 디자인을 완성 시켰다!&lt;/p&gt;
+&lt;h3 id=&quot;-개발-중-샘플---2020-10-20-기준&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EA%B0%9C%EB%B0%9C-%EC%A4%91-%EC%83%98%ED%94%8C---2020-10-20-%EA%B8%B0%EC%A4%80&quot; aria-label=&quot; 개발 중 샘플   2020 10 20 기준 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👷 개발 중 샘플 - (2020-10-20 기준)&lt;/h3&gt;
+&lt;p&gt;&lt;em&gt;(응답으로 온 SVG를 저장하여 보여 주는 모습입니다. 개발되어 변경된 모습을 Live로 보고 싶다면 &lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;github&lt;/a&gt;로 들어와 확인 해주세요!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/43432e6a3d337fc32477dec99a7c4489/jaeskim.svg&quot; alt=&quot;jaeskim_sample&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/a2e34e262325f547b2f6d2525bcdb571/hkwon.svg&quot; alt=&quot;hkwon_sample&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/dd17df11e0ba689a3a8d89e574960ef6/spark.svg&quot; alt=&quot;spark_sample&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/a485fc44cab39b4e76afa3c134ea1055/yjung.svg&quot; alt=&quot;yjung_sample&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-change-from-serverless-to-paas-platform&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-change-from-serverless-to-paas-platform&quot; aria-label=&quot; change from serverless to paas platform permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 Change From Serverless to Paas Platform!&lt;/h2&gt;
+&lt;p&gt;기존 개발을 시작을 할 때 &lt;code&gt;Next.js&lt;/code&gt; 를 이용하여 개발을 시작하여서 자연스럽게 &lt;code&gt;Vercel&lt;/code&gt; 를 이용하여 서비스를 하였다.&lt;/p&gt;
+&lt;p&gt;이때 문제점이 Serverless 형태로 동작을 하게 되는데 이번에 도입을 할려고 하는 &lt;code&gt;Memory Cache&lt;/code&gt; 기능을 사용을 할 수 없기 때문에 &lt;code&gt;Pass&lt;/code&gt; Platform인 &lt;code&gt;Heroku&lt;/code&gt; 로 이전을 하게 되었다!&lt;/p&gt;
+&lt;h2 id=&quot;-개발-방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EA%B0%9C%EB%B0%9C-%EB%B0%A9%ED%96%A5&quot; aria-label=&quot; 개발 방향 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚧 개발 방향!!&lt;/h2&gt;
+&lt;h3 id=&quot;개발-진행-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C-%EC%A7%84%ED%96%89-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;개발 진행 목록 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개발 진행 목록!&lt;/h3&gt;
+&lt;h4 id=&quot;느린-응답-속도-memory-cache-이용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8A%90%EB%A6%B0-%EC%9D%91%EB%8B%B5-%EC%86%8D%EB%8F%84-memory-cache-%EC%9D%B4%EC%9A%A9&quot; aria-label=&quot;느린 응답 속도 memory cache 이용 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;느린 응답 속도! (Memory-Cache 이용!)&lt;/h4&gt;
+&lt;p&gt;저번에 있었던 문제가 API를 순차적으로 비동기 형태로 4개를 호출하고 또 Img_url의 응답 값을 가져와 Base64로 채워야 하는 로직이 있었는데 비 동기적 으로 실행되다 보니 최종적으로 응답이 완료 되기 까지 약 10초 정도의 시간이 필요 하는 문제가 있었다.&lt;/p&gt;
+&lt;p&gt;이를 해결하기 위해 &lt;code&gt;Memory-cache&lt;/code&gt;를 사용하였는데 일단 공용으로 사용이 되는 &lt;code&gt;Token&lt;/code&gt; 에 대해서 응답 값으로 &lt;code&gt;expires_in&lt;/code&gt; 이라는 ttl Value를 주기 때문에 첫 Request 때 &lt;code&gt;cacheStore.set(&quot;token&quot;, token, expires_in);&lt;/code&gt; 하여서 그 다음 요청 때 Token이 메모리에 남아 있다면 요청을 하지 않고 메모리에 있는 값을 가져와 재 사용 하는 방향으로 API 호출 횟수를 줄였다.&lt;/p&gt;
+&lt;p&gt;그 다음으로 수정한 부분은 &lt;code&gt;logo&lt;/code&gt; 에 대한 부분인데 &lt;code&gt;SVG&lt;/code&gt; 내부에서 Image를 Import 하기 위해 내부에 Proxy를 사용하여 &lt;code&gt;https://cdn.intra.42.fr/&lt;/code&gt; 와 연결을 시켰지만 ㅠㅠ Github와 같은 서비스는 내부에서 &lt;code&gt;camo&lt;/code&gt; 라는 Image proxy를 사용하기 때문에 svg 내부의 Image 요청이 전달되지 않아 직접 Fetch를 하여 Base64 Encoding를 하여 SVG를 렌더링 하도록 하였다.&lt;/p&gt;
+&lt;p&gt;이 때에 대하여도 응답이 동일하게 이루어 지기 때문에 재 사용이 가능하도록 &lt;code&gt;cacheStore.set(user_data.image_url, logo, (86400 \* 14));&lt;/code&gt; TTL를 매우 길게 (14일)을 설정하여 사용하도록 하였다.&lt;/p&gt;
+&lt;p&gt;그리고 현재 유저 정보에 대하여 12시간 이라는 긴 TTL를 주어서 저장을 하도록 하였지만 이 부분은 사용자가 늘어나게 된다면 서버의 메모리 부족으로 이루어 질 수 있기 때문에 &lt;code&gt;Cache-Control&lt;/code&gt; 헤더를 좀 더 공부한 이후 제거 하는 방향으로 가기로 하였다.&lt;/p&gt;
+&lt;h3 id=&quot;개발-예정-목록&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EB%B0%9C-%EC%98%88%EC%A0%95-%EB%AA%A9%EB%A1%9D&quot; aria-label=&quot;개발 예정 목록 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개발 예정 목록!&lt;/h3&gt;
+&lt;h4 id=&quot;cusus-선택-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cusus-%EC%84%A0%ED%83%9D-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;cusus 선택 기능 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cusus 선택 기능!&lt;/h4&gt;
+&lt;p&gt;현재 API를 호출 하고 난 이후 &lt;code&gt;Cusus&lt;/code&gt; 에 대하여 배열로 된 응답을 하게 되는 데 현재 가장 첫번 째로 있는 Cusus의 값만 가져와 보여주는 기능을 하고 있다.
+이 부분을 get Parameter로 인자를 받아 들어서 선택이 가능하도록 수정을 할 예정을 가지고 있다!&lt;/p&gt;
+&lt;p&gt;또한 현재는 무조건 BlackHole Day를 보여 주고 있는데 만약 종료 된 Cusus라면 시작한 날짜와 종료된 날짜를 보여 주는 것으로 치환 하게 되는 것도 작업 예정이다!&lt;/p&gt;
+&lt;h4 id=&quot;project별-score-badge-기능&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project%EB%B3%84-score-badge-%EA%B8%B0%EB%8A%A5&quot; aria-label=&quot;project별 score badge 기능 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project별 Score Badge 기능!&lt;/h4&gt;
+&lt;p&gt;Project Score를 API별로 정보를 가져와 보여 주는 기능을 추가할 예정이다.&lt;/p&gt;
+&lt;h2 id=&quot;-마무리-하면서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%95%98%EB%A9%B4%EC%84%9C&quot; aria-label=&quot; 마무리 하면서 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🙈 마무리 하면서...&lt;/h2&gt;
+&lt;p&gt;개발을 시작하고 주변 42 동료들 한테 소개 이후 조금씩 사용하는 사람이 생기게 되어서 약간 기분이 신기해 졌다.&lt;/p&gt;
+&lt;p&gt;아직은 공식적으로 Slack에 이야기 하지는 않았지만 메인 홈페이지와 SVG 애니메이션을 추가한 이후 한번 Slack에 공개하여 실 사용자를 받고 개선 사항들을 받아 개선 발전해 나아가고 싶다!&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[Javascript] 42-readme-stats 개발기(1)]]></title><description><![CDATA[이번에 42Seoul에 합격하고 어느덧 3주가 넘어가는 시점이 되었다. 그동안 Libft, netwhat, get_next_line 과 같은 기본 서클 과제를 깨면서 Github에 올리고 그 정보를 readme.md…]]></description><link>https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</guid><pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이번에 &lt;code&gt;42Seoul&lt;/code&gt;에 합격하고 어느덧 3주가 넘어가는 시점이 되었다.&lt;/p&gt;
 &lt;p&gt;그동안 &lt;code&gt;Libft&lt;/code&gt;, &lt;code&gt;netwhat&lt;/code&gt;, &lt;code&gt;get_next_line&lt;/code&gt; 과 같은 기본 서클 과제를 깨면서 Github에 올리고 그 정보를 &lt;code&gt;readme.md&lt;/code&gt; 파일에 각 프로젝트에 대하여 설명을 작성을 하였는데 무언가 &lt;code&gt;Badge&lt;/code&gt; 나 &lt;code&gt;Status&lt;/code&gt;를 보여주는 &lt;code&gt;dynamic&lt;/code&gt; 한 &lt;code&gt;SVG&lt;/code&gt; 이미지를 제공해주는 서비스가 필요 하겠다고 생각을 하게 되었다.&lt;/p&gt;
 &lt;p&gt;그리고 이번에 &lt;code&gt;ft_printf&lt;/code&gt; 과제를 하다가 중간에 집중이 안되어서 기분 전환 겸으로 &lt;strong&gt;토이 프로젝트&lt;/strong&gt;를 시작하였다.!&lt;/p&gt;
-&lt;h1 id=&quot;-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-42-readme-stats&quot; aria-label=&quot; 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 &lt;a href=&quot;https://github.com/JaeSeoKim/42-readme-stats&quot;&gt;42-readme-stats&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id=&quot;-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-42-readme-stats&quot; aria-label=&quot; 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🚀 &lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;42-readme-stats&lt;/a&gt;&lt;/h1&gt;
 &lt;p&gt;바로 프로젝트 이름은 &lt;strong&gt;&lt;code&gt;42-readme-stats&lt;/code&gt;&lt;/strong&gt; 이다..! 🙌&lt;/p&gt;
 &lt;p&gt;아직은 개발을 시작 한지 2일 밖에 안되는 시점이라 어떤 방향으로 계획하고 있는지, 또한 어떻게 개발을 해보고 있는지에 대하여 작성을 해본다.&lt;/p&gt;
 &lt;h2 id=&quot;️-프로젝트-설명&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EF%B8%8F-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%84%A4%EB%AA%85&quot; aria-label=&quot;️ 프로젝트 설명 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✏️ 프로젝트 설명&lt;/h2&gt;
@@ -103,7 +232,7 @@
 &lt;p&gt;작성을 하다 보니 모든 SVG 디자인을 한 곳에서 몰아서 할 이유가 없기 때문에 각 Part 별로 함수를 분리하여서 제작을 하였다.&lt;/p&gt;
 &lt;p&gt;아직은 제작 중이지만 결과를 보면 아래와 같이 완성된 모습을 볼 수 있다.&lt;/p&gt;
 &lt;h3 id=&quot;-개발-중-샘플---2020-10-17-02시-기준&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EA%B0%9C%EB%B0%9C-%EC%A4%91-%EC%83%98%ED%94%8C---2020-10-17-02%EC%8B%9C-%EA%B8%B0%EC%A4%80&quot; aria-label=&quot; 개발 중 샘플   2020 10 17 02시 기준 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;👷 개발 중 샘플 - (2020-10-17 02시 기준)&lt;/h3&gt;
-&lt;p&gt;&lt;em&gt;(응답으로 온 SVG를 저장하여 보여 주는 모습입니다. 개발되어 변경된 모습을 Live로 보고 싶다면 &lt;a href=&quot;https://github.com/JaeSeoKim/42-readme-stats&quot;&gt;github&lt;/a&gt;로 들어와 확인 해주세요!)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;(응답으로 온 SVG를 저장하여 보여 주는 모습입니다. 개발되어 변경된 모습을 Live로 보고 싶다면 &lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;github&lt;/a&gt;로 들어와 확인 해주세요!)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;(2020-10-17 기준)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/d6c45910c543c56dc2cca04e9ebfbc1e/jaeskim.svg&quot; alt=&quot;sample_jaeskim&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/e6ec3edf0d9d9f418efb098d38f13516/hkwon.svg&quot; alt=&quot;sample_hkwon&quot;&gt;&lt;/p&gt;
