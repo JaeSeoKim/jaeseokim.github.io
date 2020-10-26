@@ -1,4 +1,291 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 23 Oct 2020 13:09:33 GMT</lastBuildDate><item><title><![CDATA[[Javascript] badge42 개발기(2) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 2편 입니다! 이전글 1편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전에 작성했던 글에서는 프로젝트 명을 42-readme-stats…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 2편 입니다!&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Oct 2020 10:45:55 GMT</lastBuildDate><item><title><![CDATA[[C] 유니코드(unicode)에 대해 알아보기! (feat. 42seoul{ft_printf})]]></title><description><![CDATA[intro 42Seoul에서 열심히 공부를 하면서 ft_print 서브젝트를 진행하면서 유니코드를 write() 함수로 직접 출력 해야 하는 부분이 있어서 공부를 하게 되었다. UNICODE? 유니코드(Unicode…]]></description><link>https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</link><guid isPermaLink="false">https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</guid><pubDate>Fri, 23 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
+&lt;p&gt;42Seoul에서 열심히 공부를 하면서 &lt;code&gt;ft_print&lt;/code&gt; 서브젝트를 진행하면서 유니코드를 write() 함수로 직접 출력 해야 하는 부분이 있어서 공부를 하게 되었다.&lt;/p&gt;
+&lt;h1 id=&quot;unicode&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#unicode&quot; aria-label=&quot;unicode permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;UNICODE?&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;유니코드(Unicode)는 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 산업 표준이며, 유니코드 협회(Unicode Consortium)가 제정한다. 또한 이 표준에는 ISO 10646 문자 집합, 문자 인코딩, 문자 정보 데이터베이스, 문자들을 다루기 위한 알고리즘 등을 포함하고 있다.
+&lt;a href=&quot;https://ko.wikipedia.org/wiki/%EC%9C%A0%EB%8B%88%EC%BD%94%EB%93%9C&quot;&gt;&lt;em&gt;- 출처 위키백과&lt;/em&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;기본적으로 유니코드의 탄생 과정은 기존 ASCII코드 (0~255) 1byte의 크기를 가지고 컴퓨터에서 문자에 대하여 표현을 하고 있었다.&lt;/p&gt;
+&lt;p&gt;하지만 Ascii는 기본적으로 영문자를 지원하기 때문에 각 나라에서는 이것을 해결하기 위하여 Ascii를 수정하여 자신의 나라의 언어로 배정하여 사용하는 등.. 다양한 방식으로 문자를 표현 하기 시작하였는데 이제 인터넷이 발달이 되면서 각 나라의 사람들이 동시에 같은 코드를 보게 되면 각기 다른 문자로 표현되는 일이 발생하였다.&lt;/p&gt;
+&lt;p&gt;이 점을 해결하기 위해 나온것이 유니코드 이다.&lt;/p&gt;
+&lt;p&gt;유니코드는 문자와 코드가 1대1로 매칭 되어 있는 코드표 이다.&lt;/p&gt;
+&lt;h1 id=&quot;utf-8하고-unicode는-어떤-차이&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#utf-8%ED%95%98%EA%B3%A0-unicode%EB%8A%94-%EC%96%B4%EB%96%A4-%EC%B0%A8%EC%9D%B4&quot; aria-label=&quot;utf 8하고 unicode는 어떤 차이 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;UTF-8하고 Unicode는 어떤 차이?&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;unicde&lt;/code&gt;는 위에서 말했던 것과 같이 전세계에서 공통으로 사용되는 규칙 이다.&lt;/p&gt;
+&lt;p&gt;하지만 이 규칙을 컴퓨터에서는 표현하는데 다양한 방법을 사용하는 데 그것을 인코딩이라고 한다.&lt;/p&gt;
+&lt;p&gt;그 중 UTF-8은 대표적인 인코딩 방식 중 하나이다.&lt;/p&gt;
+&lt;h1 id=&quot;utf-8&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#utf-8&quot; aria-label=&quot;utf 8 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;UTF-8&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;UTF-8&lt;/code&gt; 은 유니코드를 표현하기 위한 &lt;code&gt;가변 길이 문자 인코딩&lt;/code&gt; 방식 중 하나이다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;코드값의 자릿수&lt;/th&gt;
+&lt;th&gt;범위&lt;/th&gt;
+&lt;th&gt;첫 바이트&lt;/th&gt;
+&lt;th&gt;둘째 바이트&lt;/th&gt;
+&lt;th&gt;셋째 바이트&lt;/th&gt;
+&lt;th&gt;넷째 바이트&lt;/th&gt;
+&lt;th&gt;다섯째 바이트&lt;/th&gt;
+&lt;th&gt;여섯째 바이트&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;7비트&lt;/td&gt;
+&lt;td&gt;0 ~ 0x7F&lt;sup&gt;127&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;0xxxxxxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;11비트&lt;/td&gt;
+&lt;td&gt;0x80&lt;sup&gt;128&lt;/sup&gt; ~ 0x7FF&lt;sup&gt;2,047&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;110xxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;16비트&lt;/td&gt;
+&lt;td&gt;0x800&lt;sup&gt;2,048&lt;/sup&gt; ~ 0xFFFF&lt;sup&gt;65,535&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;1110xxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;21비트&lt;/td&gt;
+&lt;td&gt;0x10000&lt;sup&gt;65,536&lt;/sup&gt; ~ 0x1FFFFF&lt;sup&gt;2,097,151&lt;/sup&gt;&lt;/td&gt;
+&lt;td&gt;11110xxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;26비트&lt;/td&gt;
+&lt;td&gt;(미사용)&lt;/td&gt;
+&lt;td&gt;111110xx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;31비트&lt;/td&gt;
+&lt;td&gt;(미사용)&lt;/td&gt;
+&lt;td&gt;1111110x&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;td&gt;10xxxxxx&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;UTF-8&lt;/code&gt; 은 최소 1byte ~ 4byte 까지를 가변적으로 사용하게 되는 데 이때 각 표현이 가능한 문자열의 크기에 따라 정해 지게 된다.&lt;/p&gt;
+&lt;p&gt;예를 들어서 &lt;code&gt;☠&lt;/code&gt; 문자를 보면 unicode 값으로는 &lt;code&gt;9760&lt;/code&gt; 이다.
+아래와 같이 &lt;code&gt;UTF-8&lt;/code&gt; 인코딩 방식을 통해 3byte의 크기로 변환이 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/e2540de4eca4da20864d3ad2bbce127e/utf-8-encoding.drawio.svg&quot; alt=&quot;utf-8-encoding&quot;&gt;&lt;/p&gt;
+&lt;p&gt;이제 위 방법을 C로 구현을 해본다!&lt;/p&gt;
+&lt;h1 id=&quot;utf-8-encoding-with-c&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#utf-8-encoding-with-c&quot; aria-label=&quot;utf 8 encoding with c permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;UTF-8 Encoding with C!&lt;/h1&gt;
+&lt;p&gt;일단 헤더파일을 만든 후 아래와 같이 Define를 해둔다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;c&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#define&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;UTF8_1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;0x&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;7F&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#define&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;UTF8_2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;0x&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;7FF&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#define&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;UTF8_3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;0x&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;FFFF&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#define&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;UTF8_4&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;0x&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1FFFFF&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;위애서 Define를 한 값은 각 인코딩 되었을 때 바이트 별 최대 값이다.&lt;/p&gt;
+&lt;p&gt;이걸 이용 하여 Bit연산을 통해 몇 byte가 필요한지 구한다!&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;c&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/* ************************************************************************** */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                                            */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                        :::      ::::::::   */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   ft_putwchar_fd.c                                   :+:      :+:    :+:   */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                    +:+ +:+         +:+     */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   By: jaeskim &amp;lt;jaeskim@student.42seoul.kr&amp;gt;       +#+  +:+       +#+        */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                +#+#+#+#+#+   +#+           */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   Created: 2020/10/23 17:46:22 by jaeskim           #+#    #+#             */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*   Updated: 2020/10/23 21:27:57 by jaeskim          ###   ########.fr       */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/*                                                                            */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;/* ************************************************************************** */&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#include&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;lt;unistd.h&amp;gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;#include&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;ft_utf8.h&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_4&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;unicode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;unsigned&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; buf;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;unicode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;unsigned&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; buf;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;224&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;unicode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;unsigned&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; buf;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;192&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	buf &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; (unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;buf, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;static&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;unicode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;write&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(fd, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;unicode, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;void&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_putwchar_fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;unicode&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;{&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; ((unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_1) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_1)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(unicode, fd);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; ((unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_2) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_2)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_2&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(unicode, fd);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; ((unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_3) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_3)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_3&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(unicode, fd);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; ((unicode &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_4) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;==&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; UTF8_4)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_utf_4&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(unicode, fd);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;else&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;		&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;ft_putchar_fd&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(unicode, fd);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;각 코드에 대해 설명을 하자면 일단 &lt;code&gt;ft_putwchar_fd&lt;/code&gt; 에서 Define된 값을 이용하여 위에서 부터 1byte를 사용해야 할때 최대로 가질 수 있는 값과 or연산을 수행 후 그 값이 동일 하다면 그 범위안에 속한 것이기 때문에 1byte에 해당 하는 동작으로 넘어가게 된다!&lt;/p&gt;
+&lt;p&gt;이제 각 2byte, 3byte.. 등의 부분에서는 이제 쉬프트 연산을 통하여 각 첫 바이트에 들어가야 하는 부분을 가져와 and 연산을 통하여 정리후 or 연산으로 고정 비트를 추가 하여 write 한게 된다.&lt;/p&gt;
+&lt;p&gt;이 부분을 위에서 설명한  &lt;code&gt;☠(9760)&lt;/code&gt; 문자를 가지고 설명을 해본다!.&lt;/p&gt;
+&lt;p&gt;일단 처음 uncode로 값이 들어 왔을 때 &lt;code&gt;9760&lt;/code&gt; 이기 때문에 위에서부터 차례대로 내려오다 &lt;code&gt;ft_utf_3&lt;/code&gt; 함수로 넘어가게 돤다.&lt;/p&gt;
+&lt;p&gt;그 후 일단 &lt;code&gt;9760&lt;/code&gt; 를 2진수로 변환하여 생각 하였을 때 &lt;code&gt;0010 0110 0010 0000&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;p&gt;그리고 &lt;code&gt;buf = (unicode &gt;&gt; 12 &amp;#x26; 15) | 224;&lt;/code&gt; 부분에서 12를 shift 연산을 통해 이동하게되어 &lt;code&gt;1000 1000 0000 1001&lt;/code&gt; 가 되고 and 연산을 통해 &lt;code&gt;0000 1001&lt;/code&gt; 으로 초기화가 된다. 그리고 마지막으로 고정비트를 추가 해주는 or 연산을 통하여 &lt;code&gt;1110 1001&lt;/code&gt; 으로 되어서 1byte 출력을 하게 된다.&lt;/p&gt;
+&lt;p&gt;그리고 나머지 2byte 부분은 shift 연산을 하는 동작 이외에는 동일하게 6bit씩만 사용하기 때문에 63과 and 연산을 통해 초기화 하고 128과 or 연산을 통하여 고정 비트를 추가하여 출력 하게 된다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .mtki { font-style: italic; }
+  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk1 { color: #ABB2BF; }
+  .one-dark-pro .mtk3 { color: #61AFEF; }
+  .one-dark-pro .mtk4 { color: #E06C75; }
+  .one-dark-pro .mtk7 { color: #D19A66; }
+  .one-dark-pro .mtk5 { color: #7F848E; }
+  .one-dark-pro .mtk6 { color: #98C379; }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[Javascript] badge42 개발기(2) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 2편 입니다! 이전글 1편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전에 작성했던 글에서는 프로젝트 명을 42-readme-stats…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 2편 입니다!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/42-readme-stats-%EA%B0%9C%EB%B0%9C%EA%B8%B0_1/&quot;&gt;이전글 1편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;-badge42-aka-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-badge42-aka-42-readme-stats&quot; aria-label=&quot; badge42 aka 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📌 badge42! (aka. 42-readme-stats)&lt;/h1&gt;
 &lt;p&gt;이전에 작성했던 글에서는 프로젝트 명을 42-readme-stats로 명명 하였는데 이번에 구조를 개선하기 위하여 &lt;code&gt;Vercel&lt;/code&gt;에서 &lt;code&gt;Heroku&lt;/code&gt;로 이전을 하게 되면서 &lt;code&gt;Heroku&lt;/code&gt;의 도메인은 영어 소문자로 시작을 해야 한다는 제약 사항과 추가적인 기능에 대하여 표현을 하기 이름을 &lt;code&gt;badge42&lt;/code&gt;로 이름을 바꾸었다!&lt;/p&gt;
