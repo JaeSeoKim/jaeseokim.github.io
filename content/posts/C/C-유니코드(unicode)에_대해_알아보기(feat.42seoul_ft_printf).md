@@ -2,7 +2,7 @@
 title: "[C] 유니코드(unicode)에 대해 알아보기! (feat. 42seoul{ft_printf})"
 date: 2020-10-23
 tags: ["c", "ft_printf", "42seoul"]
-draft: true
+draft: false
 ---
 
 # intro
