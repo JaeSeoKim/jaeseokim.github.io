@@ -1,4 +1,200 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Nov 2020 12:46:39 GMT</lastBuildDate><item><title><![CDATA[[C] 유니코드(unicode)에 대해 알아보기! (feat. 42seoul{ft_printf})]]></title><description><![CDATA[intro 42Seoul에서 열심히 공부를 하면서 ft_print 서브젝트를 진행하면서 유니코드를 write() 함수로 직접 출력 해야 하는 부분이 있어서 공부를 하게 되었다. UNICODE? 유니코드(Unicode…]]></description><link>https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</link><guid isPermaLink="false">https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</guid><pubDate>Fri, 23 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Nov 2020 12:56:49 GMT</lastBuildDate><item><title><![CDATA[[Javascript] badge42 개발기(3) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 3편 입니다! 이전글 1편 보러 가기! 이전글 2편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전과 달리 개발에 대해서는 아직 ft_printf…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</guid><pubDate>Sun, 01 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 3편 입니다!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/42-readme-stats-%EA%B0%9C%EB%B0%9C%EA%B8%B0_1/&quot;&gt;이전글 1편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0_2_aka_42-readme-stats/&quot;&gt;이전글 2편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&quot;-badge42-aka-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-badge42-aka-42-readme-stats&quot; aria-label=&quot; badge42 aka 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📌 badge42! (aka. 42-readme-stats)&lt;/h1&gt;
+&lt;p&gt;이전과 달리 개발에 대해서는 아직 &lt;code&gt;ft_printf&lt;/code&gt; 프로젝트를 진행 중이라서 추가로 개발이 되었던 부분은 없지만 깃허브와 슬랙으로 이슈를 받게 되어서 그 부분에 해결한 기록을 남겨 보려고 한다!&lt;/p&gt;
+&lt;h2 id=&quot;-first-issue-cache-control-header-problem&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-first-issue-cache-control-header-problem&quot; aria-label=&quot; first issue cache control header problem permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🐛 First Issue! (cache-control header Problem)&lt;/h2&gt;
+&lt;p&gt;처음으로 받게 된 &lt;code&gt;Issue&lt;/code&gt; 는 바로 &lt;code&gt;hyeonski&lt;/code&gt; 님 께서 제보 해주신 Issue였다!&lt;/p&gt;
+&lt;p&gt;그 내용은 블랙홀 날짜가 이전 날짜로 지속적으로 사용이 된다는 문제였다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABFUlEQVQoz42S7U6DQBBFeQm1reXLQkEoZYFlFyhtTX0HY+JbaGLq0193ppZE/pQfN5vZZM6c/bD2hyPCOIMoSnhPayxsHw8LB/OlN4T2rqHa9UPEyRZxmsP967nG+v76RH98xcvpBN32qOoWeVmbKGwLidLU1DR7dP9Baeh4MMW6m9umqUEmJKTeoVIdlAGXskGSFQZaw1tFg+nYeBzr7f2DLciGAEGUcsI4HUzIjjIFap3PP2xFdnWzQ26MNnnJ8EJqHiR1h+dNDscPbhvez5bcWKmWjynM3YnqUotKsX1q4Kt1Mu3IfhBDd3u2oGaCkalqet7T3QFRkg2veRPomC9AhheY4lcujClBk42A7QUMo3UK8BdnrulfaeZyTgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201101205809511&quot;
+        title=&quot;image-20201101205809511&quot;
+        src=&quot;/static/d6ffdec3284b5e2a648354b4d5976910/5a190/image-20201101205809511.png&quot;
+        srcset=&quot;/static/d6ffdec3284b5e2a648354b4d5976910/772e8/image-20201101205809511.png 200w,
+/static/d6ffdec3284b5e2a648354b4d5976910/e17e5/image-20201101205809511.png 400w,
+/static/d6ffdec3284b5e2a648354b4d5976910/5a190/image-20201101205809511.png 800w,
+/static/d6ffdec3284b5e2a648354b4d5976910/54bf4/image-20201101205809511.png 1007w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;(&lt;em&gt;처음 Slack으로 연락을 받고 미완성이 아직 부족한 점이 많은 완전 프로토 수준 이였는데 관심을 주셔서 너무 기뻣다!!&lt;/em&gt;)&lt;/p&gt;
+&lt;p&gt;그 이유는 바로 다름 아닌 이전에 Vercel에서 Heroku로 이전을 하고 &lt;code&gt;Memory-cache&lt;/code&gt; 를 적용하면서 &lt;code&gt;cache-control&lt;/code&gt; 헤더를 자세히 모르는 상태에서 사용을 하게 되어 공부 후 사용을 하고자 제거를 하였는데 깃허브에서 사용하는 img proxy &lt;a href=&quot;https://github.com/atmos/camo&quot;&gt;&lt;code&gt;camo&lt;/code&gt;&lt;/a&gt; 에서 계속 캐쉬를 하여 전달을 하였기 때문에 일어난 일이 였다.&lt;/p&gt;
+&lt;p&gt;일단 제거를 한 &lt;code&gt;cache-control&lt;/code&gt; Header 때문에 생긴 문제였으니 &lt;code&gt;res.setHeader(&quot;Cache-Control&quot;, &quot;public, max-age=43200, stale-while-revalidate&quot;);&lt;/code&gt; 코드를 추가 하여 수정을 하였고 그 다음 지금은 Proxy 상에서 Cache가 되어서 &lt;code&gt;https://badge42.herokuapp.com&lt;/code&gt; 로 요청이 제대로 전달이 안되고 변한 &lt;code&gt;cache-control&lt;/code&gt; 정책을 모르기 때문에 아래의 명령어로 &lt;code&gt;PURGE&lt;/code&gt; 메소드를 날려서 Cache를 초기화 시키는 작업을 진행했다!&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;curl -X PURGE https://camo.githubusercontent.com/687997709b33483fe839174c5f3989840c6b4dc8/68747470733a2f2f626164676534322e6865726f6b756170702e636f6d2f6170692f73746174732f6a6165736b696d&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;-github-project-star&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-github-project-star&quot; aria-label=&quot; github project star permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✨ Github Project STAR!!!!!&lt;/h2&gt;
+&lt;p&gt;원래 아직 제대로 완성도 안되고 &lt;code&gt;ft_printf&lt;/code&gt; 를 진행 중 이여서 주변 42 동료들 한테 조금씩 소개만 하고 Slack에서 말하지는 않았었는데 &lt;code&gt;hhan&lt;/code&gt; 님께서 멋진 프로젝트가 하나 있다고 소개를 해주셔서 처음으로 프로젝트에 2자리 수의 Star 갯수를 받아 보게 되었다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 37.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABWElEQVQoz42SzU7CQBSF+womLlgYhdI/+jPQaQsttLQDFCUaER8AF0YiCSwMiQlx48qVJr7x8bYRNwZ0cXIyk5nvnntnpPePT4jBCAPRR9MNYDMXqmZCM6xv2VBJ1bqOmmKUfkjS5nkLnowQZOfwyFtdAUbiSQ6ejmlvWBbawQqX1cZeSUfHFVheF5G4QJjl6OeX4D0B2WxCcXwolos6JVZ0C7rJyrQFdJ+komo/FbiZztCLU8RJhk7YA+cB/CCE347g+h1kwzGCMIbT8g+mlGoE1JgHJ0whM2qNEp3ZHFXbQ9VwyjZVmiUn+GlNLdfFxV2iX0BZaeDE7ECLctjxhHwC1qbZDaZoJjRXAhUJtYbzAzjYsk4Hr2/XuFu8Qsw36M5fEKb3CGYr+FdzRFFMwJCA9p8PUibUbIbtwxJvjxsslks8rVeUTKBi+dAJYjotWIyXj/Kfr/MFf9r51XCcjUEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201101211909612&quot;
+        title=&quot;image-20201101211909612&quot;
+        src=&quot;/static/0e41a479e9c9fbcaa33ed442568748a8/5a190/image-20201101211909612.png&quot;
+        srcset=&quot;/static/0e41a479e9c9fbcaa33ed442568748a8/772e8/image-20201101211909612.png 200w,
+/static/0e41a479e9c9fbcaa33ed442568748a8/e17e5/image-20201101211909612.png 400w,
+/static/0e41a479e9c9fbcaa33ed442568748a8/5a190/image-20201101211909612.png 800w,
+/static/0e41a479e9c9fbcaa33ed442568748a8/96658/image-20201101211909612.png 881w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;뭔가 많은 분들이 알게 되어서 부끄러웠지만 기뻤었다 ㅎㅎ&lt;/em&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-issue-unable-to-generate-badge-for-my-profile&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-issue-unable-to-generate-badge-for-my-profile&quot; aria-label=&quot; issue unable to generate badge for my profile permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🐛 Issue! &lt;a href=&quot;https://github.com/JaeSeoKim/badge42/issues/3&quot;&gt;Unable to generate badge for my profile&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;이번 이슈는 Github를 통해 받게 된 Issue 사항이다!&lt;/p&gt;
+&lt;p&gt;그것도 42seoul에서 보낸 Issue가 아닌 42Amsterdam(aka. Codam)에서 공부하시는 42 동료께서 보낸 이슈였다!&lt;/p&gt;
+&lt;p&gt;지금까지 Github를 하면서 내가 개발한 것에 대해 Issue를 제대로 받는 것은 처음이라서 뭔가 떨렸지만 해외에서 있는 42 동료가 관심을 보인다는 것에 기뻐서 빠르게 해결 했던 issue 였다!&lt;/p&gt;
+&lt;p&gt;이슈의 내용은 자신의 &lt;code&gt;42 Stats Card&lt;/code&gt; 가 오류만 나타나고 정상적으로 보이지 않는 문제 였는데 이 부분은 기존에 작성한 &lt;code&gt;getImageToBase64&lt;/code&gt; 함수 내부에서 불필요한 객체 생성이 많아져 오류가 나는 상황 이였기 때문에 그 부분의 코드를 제거하여 해결을 하였다!&lt;/p&gt;
+&lt;p&gt;이슈에 관한 버그 내용은 매우 간단하였지만 마지막에 받은 한국어로된 감사 인사 한마디가 나를 뿌듯하게 만들었었다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 21.999999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAe0lEQVQY052ObQ/CMAiE+/9/qm6zjlFboJysvn1ZNJHkCYTcwSVXhYriVgUt+qApRAxq/Scvj6jB3ZGsFFRmnKYZyyUjXwkrMbjUENrnySGGjQvWjSNQi4NAQpR1x3laQESRTPBvjYT7UJtgzgR/LnvvQfQxf+GtfbB7795ROw+Lp8eDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201101212841293&quot;
+        title=&quot;image-20201101212841293&quot;
+        src=&quot;/static/9573c0a0a9f55524fd4001345c54ed15/5a190/image-20201101212841293.png&quot;
+        srcset=&quot;/static/9573c0a0a9f55524fd4001345c54ed15/772e8/image-20201101212841293.png 200w,
+/static/9573c0a0a9f55524fd4001345c54ed15/e17e5/image-20201101212841293.png 400w,
+/static/9573c0a0a9f55524fd4001345c54ed15/5a190/image-20201101212841293.png 800w,
+/static/9573c0a0a9f55524fd4001345c54ed15/c1b63/image-20201101212841293.png 1200w,
+/static/9573c0a0a9f55524fd4001345c54ed15/636d3/image-20201101212841293.png 1222w&quot;
+        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-issue-error-on-multiple-badge-in-github-markdown&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-issue-error-on-multiple-badge-in-github-markdown&quot; aria-label=&quot; issue error on multiple badge in github markdown permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🐛 Issue! &lt;a href=&quot;https://github.com/JaeSeoKim/badge42/issues/4&quot;&gt;Error on multiple badge in github markdown&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;이 이슈는 42Seoul에서 같이 공부하는 &lt;code&gt;sunpark&lt;/code&gt; 님께서 남겨 주신 이슈 사항이다!&lt;/p&gt;
+&lt;p&gt;문제는 바로 github에서 여러 개의 &lt;code&gt;badge&lt;/code&gt; 를 동시에 호출을 할 때 한두 개의 badge만이 제대로 로딩이 되고 나머지는 오류 화면이 나타나는 이슈 이다.&lt;/p&gt;
+&lt;p&gt;이 부분은 아직 해결이 된 것은 아니지만 2 가지의 개선 방향을 생각을 해보았다.&lt;/p&gt;
+&lt;p&gt;일단 근본적으로 오류가 나는 이유는 &lt;code&gt;42api&lt;/code&gt; 가 현재 초 당 2번 호출이 가능한데 초 당 3회 이상 호출을 하게 되면 바로 에러 응답 값이 오게 되어 문제가 생기는 일이다.&lt;/p&gt;
+&lt;p&gt;이 부분을 해결하기 위해서는 42Seoul의 스태프 분들께 이야기를 드려서 &lt;code&gt;API&lt;/code&gt; 호출 제한을 해제 해야 하는 문제기 때문에 바로 해결하기가 어려워 추후에 이 부분에 대하여 개선을 하고 지금은 다른 임시 방편의 방향으로 개선하기로 하였다.&lt;/p&gt;
+&lt;p&gt;2 번째 임시 방안의 해결 방법은 현재 Error 상황에서도 &lt;code&gt;cache-control&lt;/code&gt; Header가 12시간의 TTL를 가지고 있기 때문에 Github Image Proxy가 에러 응답 값을 계속 리턴 하게 되는데 이 부분을 에러 시에는 TTL를 0초와 Cache가 불가능하도록 설정하여 새로 고침 시 다시 응답 값을 받아 올 수 있도록 개선을 할려고 하고 있다.&lt;/p&gt;
+&lt;p&gt;이 부분은 추가로, &lt;code&gt;Expires와&lt;/code&gt; &lt;code&gt;Pragma&lt;/code&gt; Header에 대하여 좀 더 공부하여 적용을 하여야 하기 때문에 일단은 미 해결 으로 남겨두고 &lt;code&gt;ft_printf&lt;/code&gt; 과제가 끝난 후 첫 번째 작업 후보로 올려둔 상태 이다.&lt;/p&gt;
+&lt;h2 id=&quot;-마무리-하면서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%95%98%EB%A9%B4%EC%84%9C&quot; aria-label=&quot; 마무리 하면서 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🙈 마무리 하면서...&lt;/h2&gt;
+&lt;p&gt;이번에 같은 42서울에서 공부하는 동료 뿐만 아니라 해외에서 공부하는 42 동료께 이슈를 받게 되어서 기분이 신기하고 뭔가 기쁘다.&lt;/p&gt;
+&lt;p&gt;하지만 한편으로는 아직 완성도가 매우 떨어져 있는 상황이라서 빨리 &lt;code&gt;ft_printf&lt;/code&gt; 를 끝내고 &lt;code&gt;TypeScript&lt;/code&gt; Code refactoring도 해보고 싶고 TDD도 적용을 해서 안정성 있는 서비스를 만들어 보고 싶다!&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[C] 유니코드(unicode)에 대해 알아보기! (feat. 42seoul{ft_printf})]]></title><description><![CDATA[intro 42Seoul에서 열심히 공부를 하면서 ft_print 서브젝트를 진행하면서 유니코드를 write() 함수로 직접 출력 해야 하는 부분이 있어서 공부를 하게 되었다. UNICODE? 유니코드(Unicode…]]></description><link>https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</link><guid isPermaLink="false">https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</guid><pubDate>Fri, 23 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;h1 id=&quot;intro&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro&quot; aria-label=&quot;intro permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;intro&lt;/h1&gt;
 &lt;p&gt;42Seoul에서 열심히 공부를 하면서 &lt;code&gt;ft_print&lt;/code&gt; 서브젝트를 진행하면서 유니코드를 write() 함수로 직접 출력 해야 하는 부분이 있어서 공부를 하게 되었다.&lt;/p&gt;
 &lt;h1 id=&quot;unicode&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#unicode&quot; aria-label=&quot;unicode permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;UNICODE?&lt;/h1&gt;
 &lt;blockquote&gt;
@@ -414,202 +610,6 @@
     opacity: 0.7;
   }
   
-&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[Javascript] badge42 개발기(3) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 3편 입니다! 이전글 1편 보러 가기! 이전글 2편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전과 달리 개발에 대해서는 아직 ft_printf…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</guid><pubDate>Tue, 20 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 3편 입니다!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/42-readme-stats-%EA%B0%9C%EB%B0%9C%EA%B8%B0_1/&quot;&gt;이전글 1편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0_2_aka_42-readme-stats/&quot;&gt;이전글 2편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;h1 id=&quot;-badge42-aka-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-badge42-aka-42-readme-stats&quot; aria-label=&quot; badge42 aka 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📌 badge42! (aka. 42-readme-stats)&lt;/h1&gt;
-&lt;p&gt;이전과 달리 개발에 대해서는 아직 &lt;code&gt;ft_printf&lt;/code&gt; 프로젝트를 진행 중이라서 추가로 개발이 되었던 부분은 없지만 깃허브와 슬랙으로 이슈를 받게 되어서 그 부분에 해결한 기록을 남겨 보려고 한다!&lt;/p&gt;
-&lt;h2 id=&quot;-first-issue-cache-control-header-problem&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-first-issue-cache-control-header-problem&quot; aria-label=&quot; first issue cache control header problem permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🐛 First Issue! (cache-control header Problem)&lt;/h2&gt;
-&lt;p&gt;처음으로 받게 된 &lt;code&gt;Issue&lt;/code&gt; 는 바로 &lt;code&gt;hyeonski&lt;/code&gt; 님 께서 제보 해주신 Issue였다!&lt;/p&gt;
-&lt;p&gt;그 내용은 블랙홀 날짜가 이전 날짜로 지속적으로 사용이 된다는 문제였다!&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 37.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABFUlEQVQoz42S7U6DQBBFeQm1reXLQkEoZYFlFyhtTX0HY+JbaGLq0193ppZE/pQfN5vZZM6c/bD2hyPCOIMoSnhPayxsHw8LB/OlN4T2rqHa9UPEyRZxmsP967nG+v76RH98xcvpBN32qOoWeVmbKGwLidLU1DR7dP9Baeh4MMW6m9umqUEmJKTeoVIdlAGXskGSFQZaw1tFg+nYeBzr7f2DLciGAEGUcsI4HUzIjjIFap3PP2xFdnWzQ26MNnnJ8EJqHiR1h+dNDscPbhvez5bcWKmWjynM3YnqUotKsX1q4Kt1Mu3IfhBDd3u2oGaCkalqet7T3QFRkg2veRPomC9AhheY4lcujClBk42A7QUMo3UK8BdnrulfaeZyTgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image-20201101205809511&quot;
-        title=&quot;image-20201101205809511&quot;
-        src=&quot;/static/d6ffdec3284b5e2a648354b4d5976910/5a190/image-20201101205809511.png&quot;
-        srcset=&quot;/static/d6ffdec3284b5e2a648354b4d5976910/772e8/image-20201101205809511.png 200w,
-/static/d6ffdec3284b5e2a648354b4d5976910/e17e5/image-20201101205809511.png 400w,
-/static/d6ffdec3284b5e2a648354b4d5976910/5a190/image-20201101205809511.png 800w,
-/static/d6ffdec3284b5e2a648354b4d5976910/54bf4/image-20201101205809511.png 1007w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;(&lt;em&gt;처음 Slack으로 연락을 받고 미완성이 아직 부족한 점이 많은 완전 프로토 수준 이였는데 관심을 주셔서 너무 기뻣다!!&lt;/em&gt;)&lt;/p&gt;
-&lt;p&gt;그 이유는 바로 다름 아닌 이전에 Vercel에서 Heroku로 이전을 하고 &lt;code&gt;Memory-cache&lt;/code&gt; 를 적용하면서 &lt;code&gt;cache-control&lt;/code&gt; 헤더를 자세히 모르는 상태에서 사용을 하게 되어 공부 후 사용을 하고자 제거를 하였는데 깃허브에서 사용하는 img proxy &lt;a href=&quot;https://github.com/atmos/camo&quot;&gt;&lt;code&gt;camo&lt;/code&gt;&lt;/a&gt; 에서 계속 캐쉬를 하여 전달을 하였기 때문에 일어난 일이 였다.&lt;/p&gt;
-&lt;p&gt;일단 제거를 한 &lt;code&gt;cache-control&lt;/code&gt; Header 때문에 생긴 문제였으니 &lt;code&gt;res.setHeader(&quot;Cache-Control&quot;, &quot;public, max-age=43200, stale-while-revalidate&quot;);&lt;/code&gt; 코드를 추가 하여 수정을 하였고 그 다음 지금은 Proxy 상에서 Cache가 되어서 &lt;code&gt;https://badge42.herokuapp.com&lt;/code&gt; 로 요청이 제대로 전달이 안되고 변한 &lt;code&gt;cache-control&lt;/code&gt; 정책을 모르기 때문에 아래의 명령어로 &lt;code&gt;PURGE&lt;/code&gt; 메소드를 날려서 Cache를 초기화 시키는 작업을 진행했다!&lt;/p&gt;
-&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;curl -X PURGE https://camo.githubusercontent.com/687997709b33483fe839174c5f3989840c6b4dc8/68747470733a2f2f626164676534322e6865726f6b756170702e636f6d2f6170692f73746174732f6a6165736b696d&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;h2 id=&quot;-github-project-star&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-github-project-star&quot; aria-label=&quot; github project star permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✨ Github Project STAR!!!!!&lt;/h2&gt;
-&lt;p&gt;원래 아직 제대로 완성도 안되고 &lt;code&gt;ft_printf&lt;/code&gt; 를 진행 중 이여서 주변 42 동료들 한테 조금씩 소개만 하고 Slack에서 말하지는 않았었는데 &lt;code&gt;hhan&lt;/code&gt; 님께서 멋진 프로젝트가 하나 있다고 소개를 해주셔서 처음으로 프로젝트에 2자리 수의 Star 갯수를 받아 보게 되었다!&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 37.99999999999999%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAAAsSAAALEgHS3X78AAABWElEQVQoz42SzU7CQBSF+womLlgYhdI/+jPQaQsttLQDFCUaER8AF0YiCSwMiQlx48qVJr7x8bYRNwZ0cXIyk5nvnntnpPePT4jBCAPRR9MNYDMXqmZCM6xv2VBJ1bqOmmKUfkjS5nkLnowQZOfwyFtdAUbiSQ6ejmlvWBbawQqX1cZeSUfHFVheF5G4QJjl6OeX4D0B2WxCcXwolos6JVZ0C7rJyrQFdJ+komo/FbiZztCLU8RJhk7YA+cB/CCE347g+h1kwzGCMIbT8g+mlGoE1JgHJ0whM2qNEp3ZHFXbQ9VwyjZVmiUn+GlNLdfFxV2iX0BZaeDE7ECLctjxhHwC1qbZDaZoJjRXAhUJtYbzAzjYsk4Hr2/XuFu8Qsw36M5fEKb3CGYr+FdzRFFMwJCA9p8PUibUbIbtwxJvjxsslks8rVeUTKBi+dAJYjotWIyXj/Kfr/MFf9r51XCcjUEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image-20201101211909612&quot;
-        title=&quot;image-20201101211909612&quot;
-        src=&quot;/static/0e41a479e9c9fbcaa33ed442568748a8/5a190/image-20201101211909612.png&quot;
-        srcset=&quot;/static/0e41a479e9c9fbcaa33ed442568748a8/772e8/image-20201101211909612.png 200w,
-/static/0e41a479e9c9fbcaa33ed442568748a8/e17e5/image-20201101211909612.png 400w,
-/static/0e41a479e9c9fbcaa33ed442568748a8/5a190/image-20201101211909612.png 800w,
-/static/0e41a479e9c9fbcaa33ed442568748a8/96658/image-20201101211909612.png 881w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;뭔가 많은 분들이 알게 되어서 부끄러웠지만 기뻤었다 ㅎㅎ&lt;/em&gt;&lt;/p&gt;
-&lt;h2 id=&quot;-issue-unable-to-generate-badge-for-my-profile&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-issue-unable-to-generate-badge-for-my-profile&quot; aria-label=&quot; issue unable to generate badge for my profile permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🐛 Issue! &lt;a href=&quot;https://github.com/JaeSeoKim/badge42/issues/3&quot;&gt;Unable to generate badge for my profile&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;이번 이슈는 Github를 통해 받게 된 Issue 사항이다!&lt;/p&gt;
-&lt;p&gt;그것도 42seoul에서 보낸 Issue가 아닌 42Amsterdam(aka. Codam)에서 공부하시는 42 동료께서 보낸 이슈였다!&lt;/p&gt;
-&lt;p&gt;지금까지 Github를 하면서 내가 개발한 것에 대해 Issue를 제대로 받는 것은 처음이라서 뭔가 떨렸지만 해외에서 있는 42 동료가 관심을 보인다는 것에 기뻐서 빠르게 해결 했던 issue 였다!&lt;/p&gt;
-&lt;p&gt;이슈의 내용은 자신의 &lt;code&gt;42 Stats Card&lt;/code&gt; 가 오류만 나타나고 정상적으로 보이지 않는 문제 였는데 이 부분은 기존에 작성한 &lt;code&gt;getImageToBase64&lt;/code&gt; 함수 내부에서 불필요한 객체 생성이 많아져 오류가 나는 상황 이였기 때문에 그 부분의 코드를 제거하여 해결을 하였다!&lt;/p&gt;
-&lt;p&gt;이슈에 관한 버그 내용은 매우 간단하였지만 마지막에 받은 한국어로된 감사 인사 한마디가 나를 뿌듯하게 만들었었다!&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
-    &gt;
-      &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 21.999999999999996%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAe0lEQVQY052ObQ/CMAiE+/9/qm6zjlFboJysvn1ZNJHkCYTcwSVXhYriVgUt+qApRAxq/Scvj6jB3ZGsFFRmnKYZyyUjXwkrMbjUENrnySGGjQvWjSNQi4NAQpR1x3laQESRTPBvjYT7UJtgzgR/LnvvQfQxf+GtfbB7795ROw+Lp8eDAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;img
-        class=&quot;gatsby-resp-image-image&quot;
-        alt=&quot;image-20201101212841293&quot;
-        title=&quot;image-20201101212841293&quot;
-        src=&quot;/static/9573c0a0a9f55524fd4001345c54ed15/5a190/image-20201101212841293.png&quot;
-        srcset=&quot;/static/9573c0a0a9f55524fd4001345c54ed15/772e8/image-20201101212841293.png 200w,
-/static/9573c0a0a9f55524fd4001345c54ed15/e17e5/image-20201101212841293.png 400w,
-/static/9573c0a0a9f55524fd4001345c54ed15/5a190/image-20201101212841293.png 800w,
-/static/9573c0a0a9f55524fd4001345c54ed15/c1b63/image-20201101212841293.png 1200w,
-/static/9573c0a0a9f55524fd4001345c54ed15/636d3/image-20201101212841293.png 1222w&quot;
-        sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
-        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        loading=&quot;lazy&quot;
-      /&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h2 id=&quot;-issue-error-on-multiple-badge-in-github-markdown&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-issue-error-on-multiple-badge-in-github-markdown&quot; aria-label=&quot; issue error on multiple badge in github markdown permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🐛 Issue! &lt;a href=&quot;https://github.com/JaeSeoKim/badge42/issues/4&quot;&gt;Error on multiple badge in github markdown&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;이 이슈는 42Seoul에서 같이 공부하는 &lt;code&gt;sunpark&lt;/code&gt; 님께서 남겨 주신 이슈 사항이다!&lt;/p&gt;
-&lt;p&gt;문제는 바로 github에서 여러 개의 &lt;code&gt;badge&lt;/code&gt; 를 동시에 호출을 할 때 한두 개의 badge만이 제대로 로딩이 되고 나머지는 오류 화면이 나타나는 이슈 이다.&lt;/p&gt;
-&lt;p&gt;이 부분은 아직 해결이 된 것은 아니지만 2 가지의 개선 방향을 생각을 해보았다.&lt;/p&gt;
-&lt;p&gt;일단 근본적으로 오류가 나는 이유는 &lt;code&gt;42api&lt;/code&gt; 가 현재 초 당 2번 호출이 가능한데 초 당 3회 이상 호출을 하게 되면 바로 에러 응답 값이 오게 되어 문제가 생기는 일이다.&lt;/p&gt;
-&lt;p&gt;이 부분을 해결하기 위해서는 42Seoul의 스태프 분들께 이야기를 드려서 &lt;code&gt;API&lt;/code&gt; 호출 제한을 해제 해야 하는 문제기 때문에 바로 해결하기가 어려워 추후에 이 부분에 대하여 개선을 하고 지금은 다른 임시 방편의 방향으로 개선하기로 하였다.&lt;/p&gt;
-&lt;p&gt;2 번째 임시 방안의 해결 방법은 현재 Error 상황에서도 &lt;code&gt;cache-control&lt;/code&gt; Header가 12시간의 TTL를 가지고 있기 때문에 Github Image Proxy가 에러 응답 값을 계속 리턴 하게 되는데 이 부분을 에러 시에는 TTL를 0초와 Cache가 불가능하도록 설정하여 새로 고침 시 다시 응답 값을 받아 올 수 있도록 개선을 할려고 하고 있다.&lt;/p&gt;
-&lt;p&gt;이 부분은 추가로, &lt;code&gt;Expires와&lt;/code&gt; &lt;code&gt;Pragma&lt;/code&gt; Header에 대하여 좀 더 공부하여 적용을 하여야 하기 때문에 일단은 미 해결 으로 남겨두고 &lt;code&gt;ft_printf&lt;/code&gt; 과제가 끝난 후 첫 번째 작업 후보로 올려둔 상태 이다.&lt;/p&gt;
-&lt;h2 id=&quot;-마무리-하면서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EB%A7%88%EB%AC%B4%EB%A6%AC-%ED%95%98%EB%A9%B4%EC%84%9C&quot; aria-label=&quot; 마무리 하면서 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🙈 마무리 하면서...&lt;/h2&gt;
-&lt;p&gt;이번에 같은 42서울에서 공부하는 동료 뿐만 아니라 해외에서 공부하는 42 동료께 이슈를 받게 되어서 기분이 신기하고 뭔가 기쁘다.&lt;/p&gt;
-&lt;p&gt;하지만 한편으로는 아직 완성도가 매우 떨어져 있는 상황이라서 빨리 &lt;code&gt;ft_printf&lt;/code&gt; 를 끝내고 &lt;code&gt;TypeScript&lt;/code&gt; Code refactoring도 해보고 싶고 TDD도 적용을 해서 안정성 있는 서비스를 만들어 보고 싶다!&lt;/p&gt;
-&lt;style class=&quot;grvsc-styles&quot;&gt;
-  .grvsc-container {
-    overflow: auto;
-    position: relative;
-    -webkit-overflow-scrolling: touch;
-    padding-top: 1rem;
-    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
-    padding-bottom: 1rem;
-    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
-    border-radius: 8px;
-    border-radius: var(--grvsc-border-radius, 8px);
-    font-feature-settings: normal;
-    line-height: 1.4;
-  }
-  
-  .grvsc-code {
-    display: table;
-  }
-  
-  .grvsc-line {
-    display: table-row;
-    box-sizing: border-box;
-    width: 100%;
-    position: relative;
-  }
-  
-  .grvsc-line &gt; * {
-    position: relative;
-  }
-  
-  .grvsc-gutter-pad {
-    display: table-cell;
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  .grvsc-gutter {
-    display: table-cell;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter::before {
-    content: attr(data-content);
-  }
-  
-  .grvsc-source {
-    display: table-cell;
-    padding-left: 1.5rem;
-    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
-    padding-right: 1.5rem;
-    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
-  }
-  
-  .grvsc-source:empty::after {
-    content: &apos; &apos;;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-  }
-  
-  .grvsc-gutter + .grvsc-source {
-    padding-left: 0.75rem;
-    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
-  }
-  
-  /* Line transformer styles */
-  
-  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
-    content: &apos; &apos;;
-    position: absolute;
-    width: 100%;
-  }
-  
-  .grvsc-line-diff-add::before {
-    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
-  }
-  
-  .grvsc-line-diff-del::before {
-    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
-  }
-  
-  .grvsc-line-number {
-    padding: 0 2px;
-    text-align: right;
-    opacity: 0.7;
-  }
-  
-  .one-dark-pro {
-    background-color: #282c34;
-    color: #abb2bf;
-  }
-  .one-dark-pro .grvsc-line-highlighted::before {
-    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
-    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
-  }
 &lt;/style&gt;</content:encoded></item><item><title><![CDATA[[Javascript] 42-readme-stats 개발기(1)]]></title><description><![CDATA[이번에 42Seoul에 합격하고 어느덧 3주가 넘어가는 시점이 되었다. 그동안 Libft, netwhat, get_next_line 과 같은 기본 서클 과제를 깨면서 Github에 올리고 그 정보를 readme.md…]]></description><link>https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</guid><pubDate>Sat, 17 Oct 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;이번에 &lt;code&gt;42Seoul&lt;/code&gt;에 합격하고 어느덧 3주가 넘어가는 시점이 되었다.&lt;/p&gt;
 &lt;p&gt;그동안 &lt;code&gt;Libft&lt;/code&gt;, &lt;code&gt;netwhat&lt;/code&gt;, &lt;code&gt;get_next_line&lt;/code&gt; 과 같은 기본 서클 과제를 깨면서 Github에 올리고 그 정보를 &lt;code&gt;readme.md&lt;/code&gt; 파일에 각 프로젝트에 대하여 설명을 작성을 하였는데 무언가 &lt;code&gt;Badge&lt;/code&gt; 나 &lt;code&gt;Status&lt;/code&gt;를 보여주는 &lt;code&gt;dynamic&lt;/code&gt; 한 &lt;code&gt;SVG&lt;/code&gt; 이미지를 제공해주는 서비스가 필요 하겠다고 생각을 하게 되었다.&lt;/p&gt;
 &lt;p&gt;그리고 이번에 &lt;code&gt;ft_printf&lt;/code&gt; 과제를 하다가 중간에 집중이 안되어서 기분 전환 겸으로 &lt;strong&gt;토이 프로젝트&lt;/strong&gt;를 시작하였다.!&lt;/p&gt;

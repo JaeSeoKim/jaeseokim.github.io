@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/C/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Javascript/badge42-개발기_2_aka_42-readme-stats/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Javascript/42-readme-stats-개발기_1/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/C/C-variable-argument-사용법에-대해-알아-보기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Typescript/typescript-basic-types/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -29,9 +29,9 @@
 <url> <loc>https://jaeseokim.github.io/Python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/React/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/TIL/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Writeup/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/TIL/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/search/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 </urlset>
