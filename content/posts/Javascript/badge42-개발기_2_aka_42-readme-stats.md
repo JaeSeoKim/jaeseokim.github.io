@@ -1,7 +1,7 @@
 ---
 title: "[Javascript] badge42 개발기(2) aka.42-readme-stats"
 date: 2020-10-20
-tags: ["Readme Badge", "Javascript", "42seoul"]
+tags: ["badge42", "Readme Badge", "Javascript", "42seoul"]
 draft: false
 ---
 

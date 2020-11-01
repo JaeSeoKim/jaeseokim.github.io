@@ -12,7 +12,7 @@ draft: false
 # UNICODE?
 
 > 유니코드(Unicode)는 전 세계의 모든 문자를 컴퓨터에서 일관되게 표현하고 다룰 수 있도록 설계된 산업 표준이며, 유니코드 협회(Unicode Consortium)가 제정한다. 또한 이 표준에는 ISO 10646 문자 집합, 문자 인코딩, 문자 정보 데이터베이스, 문자들을 다루기 위한 알고리즘 등을 포함하고 있다.
-[*- 출처 위키백과*](https://ko.wikipedia.org/wiki/유니코드)
+> [_- 출처 위키백과_](https://ko.wikipedia.org/wiki/유니코드)
 
 기본적으로 유니코드의 탄생 과정은 기존 ASCII코드 (0~255) 1byte의 크기를 가지고 컴퓨터에서 문자에 대하여 표현을 하고 있었다.
 
@@ -48,7 +48,7 @@ draft: false
 예를 들어서 `☠` 문자를 보면 unicode 값으로는 `9760` 이다.
 아래와 같이 `UTF-8` 인코딩 방식을 통해 3byte의 크기로 변환이 된다.
 
-![utf-8-encoding](image/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/utf-8-encoding.drawio.svg)
+![utf-8-encoding](<image/C-유니코드(unicode)에_대해_알아보기(feat.42seoul_ft_printf)/utf-8-encoding.drawio.svg>)
 
 이제 위 방법을 C로 구현을 해본다!
 
@@ -143,7 +143,7 @@ void		ft_putwchar_fd(int unicode, int fd)
 
 이제 각 2byte, 3byte.. 등의 부분에서는 이제 쉬프트 연산을 통하여 각 첫 바이트에 들어가야 하는 부분을 가져와 and 연산을 통하여 정리후 or 연산으로 고정 비트를 추가 하여 write 한게 된다.
 
-이 부분을 위에서 설명한  `☠(9760)` 문자를 가지고 설명을 해본다!.
+이 부분을 위에서 설명한 `☠(9760)` 문자를 가지고 설명을 해본다!.
 
 일단 처음 uncode로 값이 들어 왔을 때 `9760` 이기 때문에 위에서부터 차례대로 내려오다 `ft_utf_3` 함수로 넘어가게 돤다.
 
@@ -152,4 +152,3 @@ void		ft_putwchar_fd(int unicode, int fd)
 그리고 `buf = (unicode >> 12 & 15) | 224;` 부분에서 12를 shift 연산을 통해 이동하게되어 `1000 1000 0000 1001` 가 되고 and 연산을 통해 `0000 1001` 으로 초기화가 된다. 그리고 마지막으로 고정비트를 추가 해주는 or 연산을 통하여 `1110 1001` 으로 되어서 1byte 출력을 하게 된다.
 
 그리고 나머지 2byte 부분은 shift 연산을 하는 동작 이외에는 동일하게 6bit씩만 사용하기 때문에 63과 and 연산을 통해 초기화 하고 128과 or 연산을 통하여 고정 비트를 추가하여 출력 하게 된다.
-
