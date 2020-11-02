@@ -44,7 +44,7 @@
     "sharp": "^0.26.1"
   },
   "devDependencies": {
-    "@emotion/core": "^10.0.35",
+    "@emotion/core": "^10.1.0",
     "@emotion/styled": "^10.0.27",
     "babel-preset-gatsby": "^0.5.14",
     "gatsby-plugin-emotion": "^4.3.14",
