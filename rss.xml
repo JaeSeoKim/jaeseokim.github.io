@@ -1,4 +1,219 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 07 Nov 2020 13:36:36 GMT</lastBuildDate><item><title><![CDATA[[Javascript] badge42 개발기(3) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 3편 입니다! 이전글 1편 보러 가기! 이전글 2편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전과 달리 개발에 대해서는 아직 ft_printf…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</guid><pubDate>Sun, 01 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 3편 입니다!&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 08 Nov 2020 08:31:33 GMT</lastBuildDate><item><title><![CDATA[부동소수점(Floating Point System) 알아보기!(feat.ft_printf)]]></title><description><![CDATA[일단 부동소수점(Floating Point System)이란 컴퓨터에서 실수를 표현하는 방법 중 하나이다. 기본적으로 부동소수점이란 움직이지 않는다는 뜻의 부동이 아닌 자유 롭게 떠다닌다는 의미의 부동(浮動)이다. 즉 부동소수점이라는 것은 2bit…]]></description><link>https://jaeseokim.github.io/Etc/부동소수점(Floating_Point_System)_알아보기!(feat.ft_printf)/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/부동소수점(Floating_Point_System)_알아보기!(feat.ft_printf)/</guid><pubDate>Sun, 08 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;일단 부동소수점(Floating Point System)이란 컴퓨터에서 실수를 표현하는 방법 중 하나이다.&lt;/p&gt;
+&lt;p&gt;기본적으로 부동소수점이란 움직이지 않는다는 뜻의 부동이 아닌 자유 롭게 떠다닌다는 의미의 부동(浮動)이다.&lt;/p&gt;
+&lt;p&gt;즉 부동소수점이라는 것은 2bit로 표현을 할 때 소수점 위치에 대해 가변적으로 조절을 하여 사용한다고 이해를 하면 된다.&lt;/p&gt;
+&lt;p&gt;부동소수점(Floating Point System)은 IEEE에서 제안한 표준을 대부분 따르고 있는데 이 표준에 대하여 알아본다.&lt;/p&gt;
+&lt;h1 id=&quot;ieee-floating-point-standard-ieee-754&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ieee-floating-point-standard-ieee-754&quot; aria-label=&quot;ieee floating point standard ieee 754 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;IEEE Floating Point Standard (IEEE 754)&lt;/h1&gt;
+&lt;p&gt;IEEE 754에서는 표현 하게 되는 수의 정밀도에 따라 32bit(4byte)의 단 정밀도(single-precision) 64bit(8byte)의 배 정밀도(double-precision)로 형식 뿐만 아니라 79bit(약 10byte) 이상으로 (보통 80bit로 구현됨) 이루어진 확장 정밀도(extended-precision) 등 다양하게 정의 하고 있다.&lt;/p&gt;
+&lt;p&gt;이 때 &lt;code&gt;C&lt;/code&gt; 에서 사용하는 &lt;code&gt;float&lt;/code&gt; 이 단 정밀도(single-precision)에 해당하게 되고 &lt;code&gt;double&lt;/code&gt; 이 배 정밀도(double-precision), &lt;code&gt;long double&lt;/code&gt; 이 확장 정밀도(extended-precision)에 해당하게 된다.&lt;/p&gt;
+&lt;h2 id=&quot;정의&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EC%9D%98&quot; aria-label=&quot;정의 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정의&lt;/h2&gt;
+&lt;p&gt;EEE 754 부동소수점 표기 표준은 다음과 같이 항목들을 정의한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;산술 형식: 유한한 수들(0을 포함한)과 무한대와 NaN(Not a number)값으로 구성된 2진수와 10진수의 부동소수점 데이터 집합&lt;/li&gt;
+&lt;li&gt;형식의 교환: 부동소수점 데이터를 효율적이고 압축적으로 전환할 수도 있는 인코딩&lt;/li&gt;
+&lt;li&gt;반올림 규칙: 산수와 전환의 과정에서 반올림을 할 때의 성질&lt;/li&gt;
+&lt;li&gt;작동: 산수와 산술 형식의 처리 방법 형식&lt;/li&gt;
+&lt;li&gt;예외 처리: 예외적인 조건의 표기 (0으로의 나누는 작업, 오버플로 등)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IEEE 754에 이 외에도 더 복잡한 예외 처리, 추가적인 작업(삼각함수 등), 표현의 평가, 그리고 생산 가능한 결과의 성취를 위한 여러 방법이 포함되어 있다.&lt;/p&gt;
+&lt;h2 id=&quot;실수의-표현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%EC%88%98%EC%9D%98-%ED%91%9C%ED%98%84&quot; aria-label=&quot;실수의 표현 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실수의 표현&lt;/h2&gt;
+&lt;p&gt;IEEE 754에서 정의한 표현 형식을 보게 되면 아래와 같이 비트 화 하여 저장하게 된다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th align=&quot;left&quot;&gt;값&lt;/th&gt;
+&lt;th align=&quot;left&quot;&gt;저장&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;단정밀도(single-precision)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;sign bit, 8-bit exponent, 23-bit significand&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;배정밀도(double-precision)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;sign bit, 11-bit exponent, 52-bit significand&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td align=&quot;left&quot;&gt;확장정밀도(extended-precision)&lt;/td&gt;
+&lt;td align=&quot;left&quot;&gt;sign bit, 15-bit exponent, Integer bit, 63-bit significand&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;아래의 예제들은 모두 비트가 적은 float를 기준으로 설명하겠습니다!&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;IEEE 754&lt;/code&gt; 에서 정의한 부동 소수점은 아래와 같은 형태로 비트를 저장을 하게 된다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sign&lt;/th&gt;
+&lt;th&gt;Exponent&lt;/th&gt;
+&lt;th&gt;Significand&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1bit&lt;/td&gt;
+&lt;td&gt;8bit&lt;/td&gt;
+&lt;td&gt;23bit&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;code&gt;IEEE 754&lt;/code&gt; 는 총 3가지의 값에 따라 각기 다른 인코딩 방법을 통해 표현을 하도록 정의가 되어 있다.&lt;/p&gt;
+&lt;p&gt;일단 첫번째로 설명할 방법은 &lt;code&gt;Special value&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;h2 id=&quot;special-value&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#special-value&quot; aria-label=&quot;special value permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Special value&lt;/h2&gt;
+&lt;p&gt;Special Value는 &lt;code&gt;nan&lt;/code&gt;, &lt;code&gt;inf&lt;/code&gt; &lt;code&gt;-inf&lt;/code&gt; 를 표현을 할 때 사용이 된다.
+일단 Special value 값이 라는 조건은 &lt;code&gt;Exponent&lt;/code&gt; 가 전부 1일때 작동을 하게 된다.&lt;/p&gt;
+&lt;p&gt;그 후 &lt;code&gt;significand&lt;/code&gt; 가 0으로 전부 채워져 있다면 &lt;code&gt;inf&lt;/code&gt; 로 분류가 되고 이때에 &lt;code&gt;sign&lt;/code&gt; 에 따라서 &lt;code&gt;-inf&lt;/code&gt; &lt;code&gt;inf&lt;/code&gt; 로 나뉘어 지게 된다.&lt;/p&gt;
+&lt;p&gt;위의 &lt;code&gt;significand&lt;/code&gt; 가 0으로 전부 채워진 경우가 아닌 나머지 경우는 &lt;code&gt;nan&lt;/code&gt; 즉 숫자가 아닌 것으로 취급을 하게 된다.&lt;/p&gt;
+&lt;h2 id=&quot;normalized-value&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#normalized-value&quot; aria-label=&quot;normalized value permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Normalized value&lt;/h2&gt;
+&lt;p&gt;Noemalized value는 &lt;code&gt;exp&lt;/code&gt; 가 1 또는 0 으로만 채워져 있는 경우가 아니라면 &lt;code&gt;Normalized value&lt;/code&gt; 방식으로 인코딩으로 표현이 된 방식이다.&lt;/p&gt;
+&lt;p&gt;예를 들어 0.625라는 값을 &lt;code&gt;IEEE 754&lt;/code&gt; 형태로 인코딩을 할때 아래처럼 진행을 하게 되는데 일딴 정수 부분이 0 이기 때문에 넘어가게 되고 그 다음 실수 부분에 대하여 비트로 저장을 해야 하는데 간단하게 설명을 하면 각 비트는 &lt;code&gt;(2 ^ n / 1)&lt;/code&gt; 형태로 표현을 하게 된다.&lt;/p&gt;
+&lt;p&gt;즉 0.625는 0.101로 표현을 하게 된다!  &lt;/p&gt;
+&lt;p&gt;이때 정규화 과정을 거치게 되는데 여기서 정규화는 맨 앞에 정수 부분 비트를 1비트를 만들도록 shift 연산을 시키는 것을 말한다.&lt;/p&gt;
+&lt;p&gt;정규화를 진행하게 되면 1.01로 표현이 되고 여기서 정규화를 진행하게 된 모든 값들은 첫 비트가 1이 되기 때문에 1를 제외한 나머지 01를 저장하게 된다.&lt;/p&gt;
+&lt;p&gt;최종적으로 &lt;code&gt;significand&lt;/code&gt; 는 &lt;code&gt;01000000000000000000000&lt;/code&gt;  이 저장되게 된다.&lt;/p&gt;
+&lt;p&gt;그렇다면 이제 남은 것은 &lt;code&gt;exponent&lt;/code&gt; 인데 이 부분은 아까전에 정규화 과정을 통해 얼만큼 shift 이동이 되었는지에 대해 저장을 하게 된다.&lt;/p&gt;
+&lt;p&gt;이때 이동된 거리는 &lt;code&gt;-1&lt;/code&gt; 로 &lt;code&gt;&amp;#x3C;&amp;#x3C;&lt;/code&gt; 연산을 통해 이동을 했을 때를 기준으로 한다. 그리고 &lt;code&gt;exponent&lt;/code&gt; 에 저장하기 전에 &lt;code&gt;bias&lt;/code&gt; 를 더하는 과정을 진행해야 하는데 이때의 bias는 &lt;code&gt;2 ^ (exp_bit수 - 1) - 1&lt;/code&gt; 로 계산이 된다.&lt;/p&gt;
+&lt;p&gt;즉  exponent에는 -1 + 127의 값 126이 저장되게 된다.&lt;/p&gt;
+&lt;p&gt;최종적으로 bit를 보게 되면 아래와 같이 완성이 된다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Sign&lt;/th&gt;
+&lt;th&gt;Exponent&lt;/th&gt;
+&lt;th&gt;Significand&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;01111110&lt;/td&gt;
+&lt;td&gt;01000000000000000000000&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;위의 연산과정을 간단하게 정리를 해본다면 아래와 같이 정리가 된다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;10진수에서 2진수로 변환을 한다. (Ex. 0.625 -&gt; 0.101)&lt;/li&gt;
+&lt;li&gt;정수부 첫 비트가 1이 되도록 정규화를 진행한다. (Ex. 0.101 &amp;#x3C;&amp;#x3C; -1)&lt;/li&gt;
+&lt;li&gt;2단계에서 구해진 실수 부의 bit를 significand에 저장을 한다.&lt;/li&gt;
+&lt;li&gt;2단계에서 이동한 비트 만큼을 bias를 더하여 exponent에 저장을 한다. (Ex. -1 + 127 =  126)&lt;/li&gt;
+&lt;li&gt;저장하는 수의 부호를 sign에 저장을 한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&quot;denormalized-value&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#denormalized-value&quot; aria-label=&quot;denormalized value permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Denormalized value&lt;/h2&gt;
+&lt;p&gt;Denormalized value는 &lt;code&gt;exp&lt;/code&gt; 가 0으로 채워져 있는 경우를 표현을 하게 된다.&lt;/p&gt;
+&lt;p&gt;이때에는 0을 표현을 하거나 매우 작은 소수점을 표현을 할때 사용을 하게 된다.&lt;/p&gt;
+&lt;p&gt;이때에는 특별하게 기존에 1을 붙여서 사용하지 않고 0으로 취급되어서 사용을 하게 된다.&lt;/p&gt;
+&lt;h2 id=&quot;문자열로-표현을-하기-feat-ft_printf&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%AC%B8%EC%9E%90%EC%97%B4%EB%A1%9C-%ED%91%9C%ED%98%84%EC%9D%84-%ED%95%98%EA%B8%B0-feat-ft_printf&quot; aria-label=&quot;문자열로 표현을 하기 feat ft_printf permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;문자열로 표현을 하기! Feat. ft_printf&lt;/h2&gt;
+&lt;p&gt;이제 이렇게 위에서 정리한 내용을 바탕으로 현재 &lt;code&gt;42seoul&lt;/code&gt; 에서 진행하는 &lt;code&gt;ft_printf&lt;/code&gt; 에서 사용을 할 수 있는 방법을 구상 해 본다.&lt;/p&gt;
+&lt;p&gt;일단 printf에서의 &lt;code&gt;%f&lt;/code&gt; 를 표현하기 위해서는 &lt;code&gt;dtoa&lt;/code&gt; 함수의 구현이 필요하게 되는데 이때 위에서 정리한 내용을 바탕으로 구현이 가능하다.&lt;/p&gt;
+&lt;p&gt;일단 &lt;code&gt;double&lt;/code&gt; 에서 표현해야 하는 수의 범위는 기존 자료형으로는 표현이 불가능하기 때문에 char 또는 int의 크기로 배열을 선언하여 각 자리수 별로 각각 저장하여 사용을 하게 된다.&lt;/p&gt;
+&lt;p&gt;이렇게 저장된 자료형을 이용하여 값을 알아 내는 방법은 약간은 단순 무식 하지만 아래의 로직을 사용하면 정확한 bit의 값을 알 수 있다.&lt;/p&gt;
+&lt;p&gt;예를 들어서 0.615의 경우를 예를 들어서 설명을 한다.&lt;/p&gt;
+&lt;p&gt;일단  bias의 최대값까지 저장 할 수 있는 &lt;code&gt;1023&lt;/code&gt; 크기를 가진 배열을 선언하고 전부 0으로 초기화 작업을 진행을 한다.&lt;/p&gt;
+&lt;p&gt;그리고 0.615의 경우는 Nomalized value 이기 때문에 배열의 0번째에 1로 넣어두고 exp - bias 한 값 만큼 이동된 위체에 &lt;code&gt;siginificand&lt;/code&gt; 의 비트를 차례대로 저장을 합니다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;1 0 1 0 0 0 0 ........ 0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt; 위와 같은 형태로 저장이 되어 있는데 이제 각 자리수의 비트를 &lt;code&gt;5 ^ n&lt;/code&gt; 의 값으로 계산을 하고 그 값을 더하여 배열에 저장을 한다.&lt;/p&gt;
+&lt;p&gt;즉 첫번째 비트에서는 5이기 때문에 5를 저장하게 되고 두번째 비트는 0이므로 skip 3번째 비트는 1이므로 125를 더하여 저장을 한다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;6 2 5 0 0 0  ......... 0&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;연산이 끝나게 되면 아래와 같이 최종적으로 구현이 되는데 이제 여기서 필요한 precision 만큼 잘라서 사용을 하면 된다. &lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[Javascript] badge42 개발기(3) aka.42-readme-stats]]></title><description><![CDATA[토이 프로젝트(badge42) 개발기 3편 입니다! 이전글 1편 보러 가기! 이전글 2편 보러 가기! 📌 badge42! (aka. 42-readme-stats) 이전과 달리 개발에 대해서는 아직 ft_printf…]]></description><link>https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/badge42-개발기_3_aka_42-readme-stats/</guid><pubDate>Sun, 01 Nov 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;strong&gt;토이 프로젝트(badge42) 개발기 3편 입니다!&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/42-readme-stats-%EA%B0%9C%EB%B0%9C%EA%B8%B0_1/&quot;&gt;이전글 1편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0_2_aka_42-readme-stats/&quot;&gt;이전글 2편 보러 가기!&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
 &lt;h1 id=&quot;-badge42-aka-42-readme-stats&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-badge42-aka-42-readme-stats&quot; aria-label=&quot; badge42 aka 42 readme stats permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📌 badge42! (aka. 42-readme-stats)&lt;/h1&gt;
