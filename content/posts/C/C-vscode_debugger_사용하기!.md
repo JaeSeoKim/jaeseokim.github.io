@@ -2,7 +2,7 @@
 title: "[C] vscode debugger 사용하기!"
 date: 2020-11-15
 tags: ["C", "vscode", "debug"]
-draft: true
+draft: false
 ---
 
 # intro
