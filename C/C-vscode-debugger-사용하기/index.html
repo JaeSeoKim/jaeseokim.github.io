@@ -113,8 +113,8 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  ],</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk4">&quot;version&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;2.0.0&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre>
-<p> 기본적으로 위와 같이 기본적인 세팅이 들어 오게 되는데 예시의 제목과 같이 단 하나의 파일에서만 모든 작업이 수행이 가능하다면 저상태로 바로 task가 진행이 오류 없이 사용이 가능하다.</p>
-<p>만약 외부의 라이브러리를 사용해야 한다면 그때 필요한 인자 옵션들을  <code>args</code>에 추가하여 지정을 해주어야 한다. </p>
+<p>기본적으로 위와 같이 기본적인 세팅이 들어 오게 되는데 예시의 제목과 같이 단 하나의 파일에서만 모든 작업이 수행이 가능하다면 바로 task가 진행이 오류 없이 사용이 가능하다.</p>
+<p>만약 외부의 라이브러리를 사용해야 한다면 그때 필요한 인자 옵션들을 <code>args</code>에 추가하여 지정을 해주어야 한다.</p>
 <p>이제 디버깅을 시작하게 하는 <code>launch.json</code> 에 대해 설정을 해본다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="json" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">{</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk5 mtki">// Use IntelliSense to learn about possible attributes.</span></span></span>
@@ -151,8 +151,8 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre>
 <p>기본적인 설정은 위와 같이 완성이 되는데 이제 어떤 라이브러리에 대해서 개발을 한다고 가정을 하고 예시를 작성해 본다.</p>
 <h2 id="ex-printf의-기능을-동일하게-작동하는-ft_printf-함수-라이브러리-test-debug-하기" style="position:relative;"><a href="#ex-printf%EC%9D%98-%EA%B8%B0%EB%8A%A5%EC%9D%84-%EB%8F%99%EC%9D%BC%ED%95%98%EA%B2%8C-%EC%9E%91%EB%8F%99%ED%95%98%EB%8A%94-ft_printf-%ED%95%A8%EC%88%98-%EB%9D%BC%EC%9D%B4%EB%B8%8C%EB%9F%AC%EB%A6%AC-test-debug-%ED%95%98%EA%B8%B0" aria-label="ex printf의 기능을 동일하게 작동하는 ft_printf 함수 라이브러리 test debug 하기 permalink" class="toc-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Ex. printf의 기능을 동일하게 작동하는 ft_printf 함수 라이브러리 test debug 하기</h2>
-<p>라이브러리를 개발을 할 때에는 기본적으로 makefile를 통해 개발을 하게 되는데 이것을 모두 task.json에 정의가 하기 힘드므로 make를 task.json에서 작동하도록 설정을 하도록 한다.</p>
-<p>일단 makefile은 아래와 같이 <code>make debug_test</code> 를 하게 되면 실행파일이 만들어 지도록 되어 있다.</p>
+<p>라이브러리를 개발을 할 때에는 기본적으로 makefile를 통해 개발을 하게 되는데 이것을 모두 task.json에 정의가 하기 힘들기 때문에 make를 task.json에서 작동하도록 설정을 하도록 한다.</p>
+<p>일단 makefile은 아래와 같이 <code>make debug_test</code> 를 하게 되면 실행 파일이 만들어 지도록 되어 있다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="makefile" data-index="2"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># **************************************************************************** #</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki">#                                                                              #</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki">#                                                         :::      ::::::::    #</span></span></span>
@@ -240,7 +240,7 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">	</span><span class="mtk10">@</span><span class="mtk6">$(</span><span class="mtk4">RM</span><span class="mtk6">)</span><span class="mtk11"> </span><span class="mtk6">$(</span><span class="mtk4">RMFLAGS</span><span class="mtk6">)</span><span class="mtk11"> </span><span class="mtk6">$(</span><span class="mtk4">NAME</span><span class="mtk6">)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">	</span><span class="mtk10">@</span><span class="mtk11">printf &quot;</span><span class="mtk6">$(</span><span class="mtk4">LF</span><span class="mtk6">)</span><span class="mtk11">🧹 </span><span class="mtk6">$(</span><span class="mtk4">FG_TEXT</span><span class="mtk6">)</span><span class="mtk11">Cleaning </span><span class="mtk6">$(</span><span class="mtk4">FG_TEXT_PRIMARY</span><span class="mtk6">)$(</span><span class="mtk4">NAME</span><span class="mtk6">)</span><span class="mtk11">\n&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">re</span><span class="mtk11"> </span><span class="mtk1">:</span><span class="mtk4"> fclean all </span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk3">re</span><span class="mtk11"> </span><span class="mtk1">:</span><span class="mtk4"> fclean all</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk6">$(</span><span class="mtk4">OBJ_DIR</span><span class="mtk6">)</span><span class="mtk11">/%.o : %.c</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">	</span><span class="mtk10">@</span><span class="mtk11">mkdir -p </span><span class="mtk6">$(</span><span class="mtk4">OBJ_DIR</span><span class="mtk6">)</span></span></span>
@@ -284,7 +284,7 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">	all clean fclean re </span><span class="mtk8">\</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">	</span><span class="mtk6">$(</span><span class="mtk4">LIBFT</span><span class="mtk6">)</span><span class="mtk4"> </span><span class="mtk6">$(</span><span class="mtk4">LIBFT</span><span class="mtk6">)</span><span class="mtk4">_clean </span><span class="mtk6">$(</span><span class="mtk4">LIBFT</span><span class="mtk6">)</span><span class="mtk4">_fclean </span><span class="mtk8">\</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk4">	test debug_make</span></span></span></code></pre>
-<p>일단 makefile를 보게 되면 <code>task.json</code> 에서 환경변수를 설정 할 수 있는 점을 이용하여 아래의 코드를 이용하여 vscode task build시 <code>-g</code> 옵션으로 라이브러리가 컴파일 되도록 되어 있다.</p>
+<p>일단 makefile를 보게 되면 <code>task.json</code> 에서 환경 변수를 설정 할 수 있는 점을 이용하여 아래의 코드를 이용하여 vscode task build시 <code>-g</code> 옵션으로 라이브러리가 컴파일 되도록 되어 있다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="makefile" data-index="3"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">ifeq</span><span class="mtk11"> (</span><span class="mtk6">$(</span><span class="mtk4">DEBUG</span><span class="mtk6">)</span><span class="mtk11">,true)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk11">	CDEBUG = -g</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">endif</span></span></span></code></pre>
@@ -299,22 +299,15 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk5 mtki">// make 명령어를 실행!</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;command&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;/usr/bin/make&quot;</span><span class="mtk1">,</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk5 mtki">// 현재 workspace를 기준으로 re, debug_make 작업을 수행함</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;args&quot;</span><span class="mtk1">: [</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk6">&quot;-C&quot;</span><span class="mtk1">,</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk6">&quot;${workspaceFolder}&quot;</span><span class="mtk1">,</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk6">&quot;re&quot;</span><span class="mtk1">,</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk6">&quot;debug_make&quot;</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;args&quot;</span><span class="mtk1">: [</span><span class="mtk6">&quot;-C&quot;</span><span class="mtk1">, </span><span class="mtk6">&quot;${workspaceFolder}&quot;</span><span class="mtk1">, </span><span class="mtk6">&quot;re&quot;</span><span class="mtk1">, </span><span class="mtk6">&quot;debug_make&quot;</span><span class="mtk1">],</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;options&quot;</span><span class="mtk1">: {</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk4">&quot;cwd&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;/usr/bin&quot;</span><span class="mtk1">,</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk5 mtki">// 환경 변수로 DEBUG: ture로 설정함</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk4">&quot;env&quot;</span><span class="mtk1">: {</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          </span><span class="mtk4">&quot;DEBUG&quot;</span><span class="mtk1"> : </span><span class="mtk6">&quot;true&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">          </span><span class="mtk4">&quot;DEBUG&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;true&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        }</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      },</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;problemMatcher&quot;</span><span class="mtk1">: [</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk6">&quot;$gcc&quot;</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      ],</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;problemMatcher&quot;</span><span class="mtk1">: [</span><span class="mtk6">&quot;$gcc&quot;</span><span class="mtk1">],</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;group&quot;</span><span class="mtk1">: {</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk4">&quot;kind&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;build&quot;</span><span class="mtk1">,</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk4">&quot;isDefault&quot;</span><span class="mtk1">: </span><span class="mtk7">true</span></span></span>
@@ -323,7 +316,7 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  ],</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk4">&quot;version&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;2.0.0&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre>
-<p>그 다음 <code>luanch.json</code> 은 이전것과 크게 다른점은 없이 아래와 같이 설정을 하였다.</p>
+<p>그 다음 <code>luanch.json</code> 은 이전 것과 크게 다른 점은 없이 아래와 같이 설정을 하였다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="json" data-index="5"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">{</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk5 mtki">// Use IntelliSense to learn about possible attributes.</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  </span><span class="mtk5 mtki">// Hover to view descriptions of existing attributes.</span></span></span>
@@ -334,7 +327,7 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;name&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;debug ft_printf_test&quot;</span><span class="mtk1">,</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;type&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;cppdbg&quot;</span><span class="mtk1">,</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;request&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;launch&quot;</span><span class="mtk1">,</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk5 mtki">// 현재 workspace를 기준으로 test.out 프로그램을 실행 </span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk5 mtki">// 현재 workspace를 기준으로 test.out 프로그램을 실행</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;program&quot;</span><span class="mtk1">: </span><span class="mtk6">&quot;${workspaceFolder}/test.out&quot;</span><span class="mtk1">,</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;args&quot;</span><span class="mtk1">: [],</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">      </span><span class="mtk4">&quot;stopAtEntry&quot;</span><span class="mtk1">: </span><span class="mtk7">true</span><span class="mtk1">,</span></span></span>
@@ -351,9 +344,32 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    }</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">  ]</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">}</span></span></span></code></pre>
-<p>다른 점은 일단 <code>preLaunchTask</code> 가 따로 설정한 task라는 점이고 그 다음으로는 운영체제별로 각기 다른 debugger를 실행하도록 설정을 해두었다.</p>
-<p><img src="./image/C-vscode-debugger-%E1%84%89%E1%85%A1%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5/image-20201115213301439.png" alt="image-20201115213301439"></p>
-<p>이제 <code>f5</code> 를 눌러보게 되면 자동으로 이전에 설정한 task.json의 작업이 수행이 되고 내부에서 동작할때의 변수 값 등등에 대해서 세밀하게 debugging이 가능해진다.</p>
+<p>다른 점은 일단 <code>preLaunchTask</code> 가 따로 설정한 task라는 점이고 그 다음으로는 운영 체제 별로 각기 다른 debugger를 실행하도록 설정을 해두었다.</p>
+<p><span
+      class="gatsby-resp-image-wrapper"
+      style="position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; "
+    >
+      <span
+    class="gatsby-resp-image-background-image"
+    style="padding-bottom: 56.49999999999999%; position: relative; bottom: 0; left: 0; background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAABqElEQVQoz42SaW7bMBSEdZE2jbU4oiRqIaldcpwUaBHkBG3RJQl6oV6kTexfOdxkKNmpi8BBf3x4AknNm3mkk2QdYqnhnSU4cUMsggQyrVHpAXneQMoKIjE4i/VRlpFCyDNJ2sAJuSBiBZeC7zwBdykhKGLyFkb1kKyCDexPr7EXd/wwm4T2LJazQ5nVU9dIlqx7N+oIf106gcgZM5449WM6TZHIBlkxIlEj45Y8bP4DPSWjw5RC0TMuHRamRduvUTYDjDbIlYYsildJ8mJ2aGdmo1qxfeQ0r6GbS5j6AqVuOQLD7jaSouO5HmL3hJxjOx4jHgraBklmI7esNedjdjM6hkIQ5vDJ5NAKnh4IenS47jtcXYz4cD7wm7etKwRidwHRS5ZRMWH3nQUdveH7O/EivHXF9A4vxx7X71f4uB4xdh2dlvApGNDRIT7FZvQOCprqHFXJeHGGSEikssCqaUiNoeIDVyWKTEPlBiozU9XErqWcW5b+i/Pr5x0efxg83I7Y3PTY3q1w/7XG708F/nxWuCcPX/RLuL75VmN7O2B702HzvSUNngA2QmGggdsVEwAAAABJRU5ErkJggg=='); background-size: cover; display: block;"
+  ></span>
+  <img
+        class="gatsby-resp-image-image"
+        alt="image-20201115221215532"
+        title="image-20201115221215532"
+        src="/static/2925f2f9cb13a5d94ab7c27299120158/5a190/image-20201115221215532.png"
+        srcset="/static/2925f2f9cb13a5d94ab7c27299120158/772e8/image-20201115221215532.png 200w,
+/static/2925f2f9cb13a5d94ab7c27299120158/e17e5/image-20201115221215532.png 400w,
+/static/2925f2f9cb13a5d94ab7c27299120158/5a190/image-20201115221215532.png 800w,
+/static/2925f2f9cb13a5d94ab7c27299120158/c1b63/image-20201115221215532.png 1200w,
+/static/2925f2f9cb13a5d94ab7c27299120158/29007/image-20201115221215532.png 1600w,
+/static/2925f2f9cb13a5d94ab7c27299120158/242b2/image-20201115221215532.png 5120w"
+        sizes="(max-width: 800px) 100vw, 800px"
+        style="width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;"
+        loading="lazy"
+      />
+    </span></p>
+<p>이제 <code>f5</code> 를 눌러보게 되면 자동으로 이전에 설정한 task.json의 작업이 수행이 되고 내부에서 동작 할 때의 변수 값 등등에 대해서 세밀하게 debugging이 가능해진다.</p>
 <style class="grvsc-styles">
   .grvsc-container {
     overflow: auto;
