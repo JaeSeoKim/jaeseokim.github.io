@@ -340,7 +340,7 @@ endif
 
 다른 점은 일단 `preLaunchTask` 가 따로 설정한 task라는 점이고 그 다음으로는 운영체제별로 각기 다른 debugger를 실행하도록 설정을 해두었다.
 
-![image-20201115213301439](image/C-vscode_debugger_사용하기/image-20201115213301439.png)
+![image-20201115213301439](./image/C-vscode-debugger-사용하기/image-20201115213301439.png)
 
 이제 `f5` 를 눌러보게 되면 자동으로 이전에 설정한 task.json의 작업이 수행이 되고 내부에서 동작할때의 변수 값 등등에 대해서 세밀하게 debugging이 가능해진다.
 
