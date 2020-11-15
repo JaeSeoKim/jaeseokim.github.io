@@ -74,9 +74,9 @@ vscode의 debugger의 간단하게 아래의 작업을 수행을 해준다.
 }
 ```
 
- 기본적으로 위와 같이 기본적인 세팅이 들어 오게 되는데 예시의 제목과 같이 단 하나의 파일에서만 모든 작업이 수행이 가능하다면 저상태로 바로 task가 진행이 오류 없이 사용이 가능하다.
+기본적으로 위와 같이 기본적인 세팅이 들어 오게 되는데 예시의 제목과 같이 단 하나의 파일에서만 모든 작업이 수행이 가능하다면 바로 task가 진행이 오류 없이 사용이 가능하다.
 
-만약 외부의 라이브러리를 사용해야 한다면 그때 필요한 인자 옵션들을  `args`에 추가하여 지정을 해주어야 한다. 
+만약 외부의 라이브러리를 사용해야 한다면 그때 필요한 인자 옵션들을 `args`에 추가하여 지정을 해주어야 한다.
 
 이제 디버깅을 시작하게 하는 `launch.json` 에 대해 설정을 해본다.
 
@@ -120,9 +120,9 @@ vscode의 debugger의 간단하게 아래의 작업을 수행을 해준다.
 
 ## Ex. printf의 기능을 동일하게 작동하는 ft_printf 함수 라이브러리 test debug 하기
 
-라이브러리를 개발을 할 때에는 기본적으로 makefile를 통해 개발을 하게 되는데 이것을 모두 task.json에 정의가 하기 힘드므로 make를 task.json에서 작동하도록 설정을 하도록 한다.
+라이브러리를 개발을 할 때에는 기본적으로 makefile를 통해 개발을 하게 되는데 이것을 모두 task.json에 정의가 하기 힘들기 때문에 make를 task.json에서 작동하도록 설정을 하도록 한다.
 
-일단 makefile은 아래와 같이 `make debug_test` 를 하게 되면 실행파일이 만들어 지도록 되어 있다.
+일단 makefile은 아래와 같이 `make debug_test` 를 하게 되면 실행 파일이 만들어 지도록 되어 있다.
 
 ```makefile
 # **************************************************************************** #
@@ -212,7 +212,7 @@ fclean : $(LIBFT)_fclean clean
 	@$(RM) $(RMFLAGS) $(NAME)
 	@printf "$(LF)🧹 $(FG_TEXT)Cleaning $(FG_TEXT_PRIMARY)$(NAME)\n"
 
-re : fclean all 
+re : fclean all
 
 $(OBJ_DIR)/%.o : %.c
 	@mkdir -p $(OBJ_DIR)
@@ -259,7 +259,7 @@ test : $(NAME) $(TEST_FILE)
 
 ```
 
-일단 makefile를 보게 되면 `task.json` 에서 환경변수를 설정 할 수 있는 점을 이용하여 아래의 코드를 이용하여 vscode task build시 `-g` 옵션으로 라이브러리가 컴파일 되도록 되어 있다.
+일단 makefile를 보게 되면 `task.json` 에서 환경 변수를 설정 할 수 있는 점을 이용하여 아래의 코드를 이용하여 vscode task build시 `-g` 옵션으로 라이브러리가 컴파일 되도록 되어 있다.
 
 ```makefile
 ifeq ($(DEBUG),true)
@@ -280,22 +280,15 @@ endif
       // make 명령어를 실행!
       "command": "/usr/bin/make",
       // 현재 workspace를 기준으로 re, debug_make 작업을 수행함
-      "args": [
-        "-C",
-        "${workspaceFolder}",
-        "re",
-        "debug_make"
-      ],
+      "args": ["-C", "${workspaceFolder}", "re", "debug_make"],
       "options": {
         "cwd": "/usr/bin",
         // 환경 변수로 DEBUG: ture로 설정함
         "env": {
-          "DEBUG" : "true"
+          "DEBUG": "true"
         }
       },
-      "problemMatcher": [
-        "$gcc"
-      ],
+      "problemMatcher": ["$gcc"],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -306,7 +299,7 @@ endif
 }
 ```
 
-그 다음 `luanch.json` 은 이전것과 크게 다른점은 없이 아래와 같이 설정을 하였다.
+그 다음 `luanch.json` 은 이전 것과 크게 다른 점은 없이 아래와 같이 설정을 하였다.
 
 ```json
 {
@@ -319,7 +312,7 @@ endif
       "name": "debug ft_printf_test",
       "type": "cppdbg",
       "request": "launch",
-      // 현재 workspace를 기준으로 test.out 프로그램을 실행 
+      // 현재 workspace를 기준으로 test.out 프로그램을 실행
       "program": "${workspaceFolder}/test.out",
       "args": [],
       "stopAtEntry": true,
@@ -338,9 +331,8 @@ endif
 }
 ```
 
-다른 점은 일단 `preLaunchTask` 가 따로 설정한 task라는 점이고 그 다음으로는 운영체제별로 각기 다른 debugger를 실행하도록 설정을 해두었다.
+다른 점은 일단 `preLaunchTask` 가 따로 설정한 task라는 점이고 그 다음으로는 운영 체제 별로 각기 다른 debugger를 실행하도록 설정을 해두었다.
 
-![image-20201115213301439](./image/C-vscode-debugger-사용하기/image-20201115213301439.png)
+![image-20201115221215532](image/C-vscode-debugger-사용하기/image-20201115221215532.png)
 
-이제 `f5` 를 눌러보게 되면 자동으로 이전에 설정한 task.json의 작업이 수행이 되고 내부에서 동작할때의 변수 값 등등에 대해서 세밀하게 debugging이 가능해진다.
-
+이제 `f5` 를 눌러보게 되면 자동으로 이전에 설정한 task.json의 작업이 수행이 되고 내부에서 동작 할 때의 변수 값 등등에 대해서 세밀하게 debugging이 가능해진다.
