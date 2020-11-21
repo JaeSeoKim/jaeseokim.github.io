@@ -29,13 +29,13 @@ Typescript로 이전을 완료한 이후에는 react를 쓰고 있는 강점을 
 
 애니메이션은 매우 간단하게 fadein 애니메이션과 progress bar 애니메이션을 추가하고 duration를 주어서 아래와 같이 보이도록 완성을 하였다!
 
-![jaeskim](./image/badge42-개발기_4/jaeskim.svg)
+![jaeskim](image/badge42-개발기_4/jaeskim.svg)
 
 ## 🔒 [Email privacy issue #10](https://github.com/JaeSeoKim/badge42/issues/10)
 
 한동안 42seoul에서의 프로젝트를 진행하면서 신경을 제대로 못쓰고 있던 찰나에 새로운 이슈가 들어와서 해결을 해보았다.
 
-이슈의 내용은 다름이 아닌 기존의 badge는 기본적으로 무조건적으로 이메일을 보이게 표시를 하는데 이렇게 이메일을 표시하게 된다면 스팸봇 같은 것에 의해 크롤링이 되고 스팸이 날라올 수 있다는 문제점을 제시 한 것이였다.
+이슈의 내용은 다름이 아닌 기존의 badge는 기본적으로 무조건적으로 이메일을 보이게 표시를 하는데 이렇게 이메일을 표시하게 된다면 스팸봇 같은 것에 의해 크롤링이 되고 스팸이 날라올 수 있다는 문제점을 제시 한 것 이였다.
 
 > **[d-r-e](https://github.com/d-r-e)** commented [3 days ago](https://github.com/JaeSeoKim/badge42/issues/10#issue-743291583)
 >
@@ -57,23 +57,23 @@ ctx.body = ReactDomServer.renderToStaticMarkup(
 )
 ```
 
-이제 전달받은 privacyEmail이 true라면 기존에 redering 되는 height를 25정도를 빼도록 설정을 하고 email에 대한 정보를 렌더링 하지 않도록 수정을 하였다.
+이제 전달 받은 privacyEmail이 true라면 기존에 redering 되는 height를 25정도를 빼도록 설정을 하고 email에 대한 정보를 렌더링 하지 않도록 수정을 하였다.
 
 이렇게 만듬으로 기존의 email 정보를 제거하였을 때에도 빈 여백이 크게 발생하지 않도록 만들었다.
 
-![jaeskim-noEmail](./image/badge42-개발기_4/jaeskim-noEmail.svg)
+![jaeskim-noEmail](image/badge42-개발기_4/jaeskim-noEmail.svg)
 
-이제 이렇게 수정을 완료 하였으니 readme에 사용방법에 대한 예제를 추가를 하고 이슈 번호와 함께 커밋후 push를 하였다!
+이제 이렇게 수정을 완료 하였으니 readme에 사용 방법에 대한 예제를 추가를 하고 이슈 번호와 함께 커밋 후 push를 하였다!
 
-![image-20201120200133554](./image/badge42-개발기_4/image-20201120200133554.png)
+![image-20201122022332407](image/badge42-개발기_4/image-20201122022332407.png)
 
 그리고 위와 같은 내용을 답변을 받고 이슈는 close 되었다!
 
 ## 🐛 [Error in Exp precision #9](https://github.com/JaeSeoKim/badge42/issues/9)
 
-이번 이슈는 부동소수점에서 발생하는 문제 때문에 생기는 오류 였다.
+이번 이슈는 부동 소수점에서 발생하는 문제 때문에 생기는 오류 였다.
 
-기존의 퍼센티지에 대해 구하는 코드를 아래와 같이 만들어 두었는데 100를 곱하였을 때 부동소수점의 문제로 소수점 아래의 값이 보이게 되는 문제였다.
+기존의 퍼센티지에 대해 구하는 코드를 아래와 같이 만들어 두었는데 100를 곱하였을 때 부동 소수점의 문제로 소수점 아래의 값이 보이게 되는 문제였다.
 
 ```ts
 const level_percentage = parseFloat((level % 1).toFixed(2)) * 100
@@ -85,11 +85,11 @@ const level_percentage = parseFloat((level % 1).toFixed(2)) * 100
 const level_percentage = (parseFloat((level % 1).toFixed(2)) * 100).toFixed(0)
 ```
 
-![image-20201120201119510](./image/badge42-개발기_4/image-20201120201119510.png)
+![image-20201122022443727](image/badge42-개발기_4/image-20201122022443727.png)
 
 ### ⚓️ choose **cursus**!
 
-기존의 코드에서는 무조건 cursus배열에서 첫번째에 해당하는 정보만을 가지고 와서 redering 하도록 만들었었는데 이번에 lodash를 이용하여 cursus에 대해서 선택이 가능하도록 수정을 하였다!
+기존의 코드에서는 무조건 cursus배열에서 첫 번째에 해당하는 정보만 을 가지고 와서 redering 하도록 만들었었는데 이번에 lodash를 이용하여 cursus에 대해서 선택이 가능하도록 수정을 하였다!
 
 ```ts
 const index = _.findIndex<get42UserCrususData>(crusus, {
@@ -99,9 +99,9 @@ const index = _.findIndex<get42UserCrususData>(crusus, {
 
 일단 첫번째로 발생하는 문제는 기본적으로 42에서 본과정을 진행하는 학생은 2개의 cursus를 진행하였고, piscine 과정에서는 coalition이 없기 때문에 그점에 대해서 적절한 예외 처리가 필요하였다.
 
-그래서 `cursusSlug.includes("piscine")` 를 이용하여 piscine인 경우에는 logo를 출력을 하지 않도록 하고 piscine과정만을 진행하였던 사람들도 정상적으로 동작이 가능하도록 하였다!
+그래서 `cursusSlug.includes("piscine")` 를 이용하여 piscine인 경우에는 logo를 출력을 하지 않도록 하고 piscine과정 만을 진행하였던 사람들도 정상적으로 동작이 가능하도록 하였다!
 
-![jaeskim-piscine](./image/badge42-개발기_4/jaeskim-piscine.svg)
+![jaeskim-piscine](image/badge42-개발기_4/jaeskim-piscine.svg)
 
 ## 🚧 code coverage 추가하기!
 
