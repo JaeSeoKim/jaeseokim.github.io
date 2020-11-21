@@ -29,7 +29,7 @@ Typescript로 이전을 완료한 이후에는 react를 쓰고 있는 강점을 
 
 애니메이션은 매우 간단하게 fadein 애니메이션과 progress bar 애니메이션을 추가하고 duration를 주어서 아래와 같이 보이도록 완성을 하였다!
 
-![jaeskim](image/badge42-개발기_4/jaeskim.svg)
+![jaeskim](./image/badge42-개발기_4/jaeskim.svg)
 
 ## 🔒 [Email privacy issue #10](https://github.com/JaeSeoKim/badge42/issues/10)
 
@@ -61,11 +61,11 @@ ctx.body = ReactDomServer.renderToStaticMarkup(
 
 이렇게 만듬으로 기존의 email 정보를 제거하였을 때에도 빈 여백이 크게 발생하지 않도록 만들었다.
 
-![jaeskim-noEmail](image/badge42-개발기_4/jaeskim-noEmail.svg)
+![jaeskim-noEmail](./image/badge42-개발기_4/jaeskim-noEmail.svg)
 
 이제 이렇게 수정을 완료 하였으니 readme에 사용방법에 대한 예제를 추가를 하고 이슈 번호와 함께 커밋후 push를 하였다!
 
-![image-20201120200133554](image/badge42-개발기_4/image-20201120200133554.png)
+![image-20201120200133554](./image/badge42-개발기_4/image-20201120200133554.png)
 
 그리고 위와 같은 내용을 답변을 받고 이슈는 close 되었다!
 
@@ -85,7 +85,7 @@ const level_percentage = parseFloat((level % 1).toFixed(2)) * 100
 const level_percentage = (parseFloat((level % 1).toFixed(2)) * 100).toFixed(0)
 ```
 
-![image-20201120201119510](image/badge42-개발기_4/image-20201120201119510.png)
+![image-20201120201119510](./image/badge42-개발기_4/image-20201120201119510.png)
 
 ### ⚓️ choose **cursus**!
 
@@ -101,7 +101,7 @@ const index = _.findIndex<get42UserCrususData>(crusus, {
 
 그래서 `cursusSlug.includes("piscine")` 를 이용하여 piscine인 경우에는 logo를 출력을 하지 않도록 하고 piscine과정만을 진행하였던 사람들도 정상적으로 동작이 가능하도록 하였다!
 
-![jaeskim-piscine](image/badge42-개발기_4/jaeskim-piscine.svg)
+![jaeskim-piscine](./image/badge42-개발기_4/jaeskim-piscine.svg)
 
 ## 🚧 code coverage 추가하기!
 

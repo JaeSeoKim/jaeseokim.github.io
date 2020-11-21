@@ -17,6 +17,8 @@ module.exports = {
         name: "posts",
       },
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -24,7 +26,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 800,
+              maxWidth: 1200,
               linkImagesToOriginal: false,
             },
           },
@@ -72,6 +74,7 @@ module.exports = {
         theme_color: `#3F4145`,
         display: `minimal-ui`,
         icon: metaConfig.icon,
+        cache_busting_mode: `name`,
       },
     },
     // `gatsby-plugin-feed`,
@@ -128,8 +131,6 @@ module.exports = {
         ],
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
