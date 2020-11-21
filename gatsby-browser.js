@@ -3,10 +3,14 @@ import "tailwindcss/dist/base.min.css"
 
 // polyfill
 import "intersection-observer"
+import smoothscroll from "smoothscroll-polyfill"
 
 import React, { useState, useEffect, useCallback } from "react"
 import ThemeContext from "./src/lib/context/ThemContext"
 import metaConfig from "./gatsby-meta-config"
+
+// kick off the polyfill!
+smoothscroll.polyfill()
 
 export const onInitialClientRender = () => {
   if (metaConfig.share.facebookAppId) {
@@ -93,7 +97,7 @@ const Wrapper = ({ element }) => {
       }
       printCopyright()
     }
-  }, [])
+  }, [printCopyright])
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleThemMode }}>
       {element}
@@ -102,13 +106,3 @@ const Wrapper = ({ element }) => {
 }
 
 export const wrapRootElement = ({ element }) => <Wrapper element={element} />
-
-export const onServiceWorkerUpdateReady = () => {
-  const answer = window.confirm(
-    `This application has been updated. ` +
-      `Reload to display the latest version?`
-  )
-  if (answer === true) {
-    window.location.reload()
-  }
-}

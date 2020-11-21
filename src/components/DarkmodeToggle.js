@@ -57,7 +57,7 @@ const DarkmodeToggle = () => {
           z-index: 100;
         `}
         onClick={() => {
-          window.scrollTo({ top: 0, behavior: "smooth" })
+          window.scroll({ top: 0, behavior: "smooth" })
         }}
       >
         <AiOutlineArrowUp
