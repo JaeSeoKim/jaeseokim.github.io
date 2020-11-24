@@ -19,7 +19,7 @@ ft_printf라는 프로젝트를 들었을 때는 선발 과정인 피신 과정 
 
 그리고 본 과정을 시작을 하게 되고 첫 프로젝트인 Libft를 클리어 하고 나니 바로 `ft_printf` 프로젝트가 보이는 것을 볼 수 가 있었다 ㅠㅠ
 
-![circle](image/42Seoul-ft_printf-프로젝트-기록/circle.png)
+![circle](image/42Seoul-ft_printf-프로젝트-기록/circle.png)
 
 ft_printf 프로젝트가 워낙 어렵다고 소문이 있어서 처음 시작을 하기 전에 netwhat, get_next_line 를 완료 후 도전을 하게 되었다.
 
