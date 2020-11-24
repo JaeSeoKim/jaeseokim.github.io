@@ -171,7 +171,8 @@
 <p>일단 <code>double</code> 에서 표현해야 하는 수의 범위는 기존 자료형으로는 표현이 불가능하기 때문에 char 또는 int의 크기로 배열을 선언하여 각 자리수 별로 각각 저장하여 사용을 하게 된다.</p>
 <p>이렇게 저장된 자료형을 이용하여 값을 알아 내는 방법은 약간은 단순 무식 하지만 아래의 로직을 사용하면 정확한 bit의 값을 알 수 있다.</p>
 <p>예를 들어서 0.615의 경우를 예를 들어서 설명을 한다.</p>
-<p>일단 bias의 최대값까지 저장 할 수 있는 <code>1023</code> 크기를 가진 배열을 선언하고 전부 0으로 초기화 작업을 진행을 한다.</p>
+<p>일단 bias의 최대값까지 저장 할 수 있는 <code>1074</code> 크기를 가진 배열을 선언하고 전부 0으로 초기화 작업을 진행을 한다.</p>
+<p>(exponent로 밀리는 최대값 1022 + significand 52 한 크기!)</p>
 <p>그리고 0.615의 경우는 Nomalized value 이기 때문에 배열의 0번째에 1로 넣어두고 exp - bias 한 값 만큼 이동된 위체에 <code>siginificand</code> 의 비트를 차례대로 저장을 합니다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source">1 0 1 0 0 0 0 ........ 0</span></span></code></pre>
 <p>위와 같은 형태로 저장이 되어 있는데 이제 각 자리수의 비트를 <code>5 ^ n</code> 의 값으로 계산을 하고 그 값을 더하여 배열에 저장을 한다.</p>

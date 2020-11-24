@@ -150,7 +150,7 @@
 <p><code>UTF-8</code> 은 최소 1byte ~ 4byte 까지를 가변적으로 사용하게 되는 데 이때 각 표현이 가능한 문자열의 크기에 따라 정해 지게 된다.</p>
 <p>예를 들어서 <code>☠</code> 문자를 보면 unicode 값으로는 <code>9760</code> 이다.
 아래와 같이 <code>UTF-8</code> 인코딩 방식을 통해 3byte의 크기로 변환이 된다.</p>
-<p><img src="/e2540de4eca4da20864d3ad2bbce127e/utf-8-encoding.drawio.svg" alt="utf-8-encoding"></p>
+<p><img src="/a8e35df4618104bbba394bb3025364d8/utf-8-encoding.drawio.svg" alt="utf-8-encoding"></p>
 <p>이제 위 방법을 C로 구현을 해본다!</p>
 <h1 id="utf-8-encoding-with-c" style="position:relative;"><a href="#utf-8-encoding-with-c" aria-label="utf 8 encoding with c permalink" class="toc-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>UTF-8 Encoding with C!</h1>
 <p>일단 헤더파일을 만든 후 아래와 같이 Define를 해둔다.</p>
