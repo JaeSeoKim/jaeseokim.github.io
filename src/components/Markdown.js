@@ -120,7 +120,8 @@ const Markdown = ({ html }) => {
       margin-bottom: 1.5rem;
     }
 
-    p > code {
+    p > code,
+    li > code {
       padding-top: 0.1rem;
       padding-bottom: 0.1rem;
       padding-right: 0.25rem;
