@@ -358,5 +358,38 @@ $ docker stop testserver
 docker start testserver
 ```
 
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
 - `-a`, `--attach` stdout/stderr 연결 한다.
 - `-i`, `--interactive` STDIN를 container와 연결 하여서 동적으로 반응 할 수 있도록 한다.
+
+### ⚓️ attach
+
+`attach` 명령어는 실행된 container의 프로세스에 연결 할 때 사용을 한다.
+
+```sh
+# docker attach [OPTIONS] CONTAINER
+docker attach testserver
+```
+
+이 때 전달 연결하게 되는 프로세스는 cmd, entrypoint로 정의된 프로세스 이므로 여기서 `ctr-c` 를 눌러 종료하면 컨테이너가 멈추므로 `ctr-p`, `ctr-q` 로 deattach를 하여 나오는 것이 권장이 된다.
+
+### 📡 exec
+
+`exec` 명령어는 실행된 container에게 프로세스를 실행을 시킬 때 사용을 한다.
+
+```sh
+# docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+docker exec -it testserver /bin/bash
+```
+
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
+- `-d`, `--detach` 실행한 프로세스와 연결 시키지 않고 백그라운드로 동작 하게 한다.
+- `-e`, `--env` 컨테이너에게 환경변수를 전달.
+- `-i`, `--interactive` STDIN를 container와 연결 하여서 동적으로 반응 할 수 있도록 한다.
+- `-t`, `--tty` tty처럼 작동 할 수 있게 한다.
+- `-u` `--user` 실행하는 프로세스의 유저를 정의 한다. <name|uid>[:<group|gid>]
+- `-w`, `--workdir` 실행되는 작업 경로를 지정한다.
+
+###
