@@ -1,8 +1,8 @@
 ---
 title: "🐳 Docker 기초 부터 Wordpress 서비스 직접 구현 까지!"
-date: 2020-11-27
+date: 2020-12-01
 tags: ["docker", "ft_server", "42seoul"]
-draft: true
+draft: false
 ---
 
 ![Moby-logo.png (601×431)](image/docker기초부터-wordpress서비스-직접구현까지/Moby-logo.png)
@@ -392,4 +392,418 @@ docker exec -it testserver /bin/bash
 - `-u` `--user` 실행하는 프로세스의 유저를 정의 한다. <name|uid>[:<group|gid>]
 - `-w`, `--workdir` 실행되는 작업 경로를 지정한다.
 
-###
+### 🗂 ps
+
+`ps` 명령어는 continaer로 목록을 확인 할 때 사용을 한다.
+
+```sh
+# docker ps [OPTIONS]
+docker ps -a
+```
+
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
+- `-a`, `--all` 모든 container 목록을 출력! (기본값은 작동 중인 continer만 출력함)
+
+### 📀 images
+
+`images` 명령어는 images의 목록을 확인🇧🇸 할 때 사용을 한다.
+
+```sh
+# docker images [OPTIONS] [REPOSITORY[:TAG]]
+docker images -a
+```
+
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
+- `-a`, `--all` 모든 images 목록을 출력! (기본값은 중간 layer 단계의 images는 숨김)
+
+### 🖨 inspect
+
+`inspect` 명령어는 container object의 정보를 출력 할 때 사용한다.
+
+```sh
+# docker inspect [OPTIONS] NAME|ID [NAME|ID...]
+docker inspect testserver
+```
+
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
+- `-f`, `--format` 옵션과 함께 주어진 template 형태로 출력를 한다.
+
+### 🗑 rm
+
+`rm` 명령어는 contiainer를 제거 할 때 사용한다.
+
+```sh
+# docker rm [OPTIONS] CONTAINER [CONTAINER...]
+docker rm testserver
+```
+
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
+- `-f`, `--force` 작동 중인 container여도 SIGKILL를 보내어 강제로 종료후 삭제를 한다.
+
+### ✨ rmi
+
+`rmi` 명령어는 images를 제거를 할 때 사용한다.
+
+```sh
+# docker rmi [OPTIONS] IMAGE [IMAGE...]
+docker rmi test
+```
+
+기본적으로 위와 같은 구조로 작동이 되는데 자주 사용 되는 옵션에 대해서만 설명을 한다.
+
+- `-f`, `--force` 강제로 image를 제거한다.
+
+### 🛎 commit
+
+`commit` 명령어는 container의 상태를 가지고 새로운 이미지를 만들 때 사용한다.
+
+```sh
+# docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+docker commit testserver testserver:v2
+```
+
+- `-a`, `--author` author에 대해 정의 한다.
+- `-c`, `--change` 생성된 image에 Dockerfile 명령어를 적용.
+- `-m`, `--message` 커밋 메세지 작성.
+- `-p`, `--pause` commit 시점에 container 일시 중단. (Default true)
+
+# 🐳 Docker를 Wordpress 서비스 직접 구현!
+
+이제 위에서 정리한 내용을 바탕으로 Wordpress 서비스를 직접 구현을 한다.!
+
+일단 시작 하기 전에 아래와 같은 조건으로 구현을 할 예정이다.
+
+- Docker Container 에서는 web server를 Nginx로 사용을 하고, base Images는 debian buster로 설정한다.
+- WebServer는 동시에 여러가지 서비스를 실행 하며, 서비스의 목록은 WordPress, phpMyAdmin, MySQL 이다.
+- WebServer는 SSL protocol이 적용이 되어야 한다.
+- Url에 따라서 각 서비스로 연결이 되어야 한다.
+- 비활성화가 가능한 autoindex를 이용하여 서비스가 동작 하는지에 대해 확인이 가능해야 한다.
+
+## 🔐 SSL 설정 하기!
+
+일단 `Makefile`를 먼저 간단하게 작성을 해본다.
+
+```dockerfile
+FROM debian:buster
+LABEL maintainer="jaeskim <jaeskim.student.42seoul.kr>"
+
+# init setup
+RUN apt update -y; apt upgrade -y
+
+# install dependency
+RUN apt install nginx curl -y
+```
+
+이렇게 작성한 dockerfile를 가지고 일단 build를 하여서 내부에 접근하여서 `SSL` 설정을 시작한다.
+
+```sh
+$ docker build --tag ft_server:v1 .
+$ docker run -it --name ft_server ft_server:v1 /bin/bash
+```
+
+`SSL` 를 적용 하기 위해서는 인증서가 필요한데 인증서를 CA에 등록을 하여 사용을 하게 되면 비용이 발생하므로 OpenSSL를 이용하여 자체 서명 인증서를 발급 받아서 구현을 한다.
+
+SSL 인증서를 발급 받기 위해서는 아래의 절차가 진행되어야 한다.
+
+1. 개인키 생성
+
+   ```sh
+   openssl genrsa -out ft_server.localhost.key 4096
+   ```
+
+2. 개인키를 가지고 자체 서명 인증서 생성
+
+   ```sh
+   openssl req -x509 -nodes -days 365 -key ft_server.localhost.key -out ft_server.localhost.crt -subj "/C=KR/ST=SEOUL/L=Gaepo-dong/O=42Seoul/OU=jaeskim/CN=localhost"
+   ```
+
+이제 위에서 만든 `ft_server.localhost.key`, `ft_server.localhost.crt` 파일을 `/etc/ssl/certs` 와 `/etc/ssl/private` 경로로 이동을 시켜준다.
+
+각 인증서 파일에 대한 권한을 `644` 변경을 하여서 root 소유자 만이 수정이 가능하도록 한다.
+
+이제 `/etc/nginx/sites-available/default` 파일을 아래와 같이 수정을 한다.
+
+```nginx
+server {
+	listen 80 default_server;
+	listen [::]:80 default_server;
+
+	return 301 https://$host$request_uri;
+}
+
+server {
+	listen 443 ssl default_server;
+	listen [::]:443 ssl default_server;
+
+	server_name _;
+
+	ssl_certificate /etc/ssl/certs/ft_server.localhost.crt;
+	ssl_certificate_key /etc/ssl/private/ft_server.localhost.key;
+
+	root /var/www/html;
+
+	index index.html index.htm index.nginx-debian.html;
+
+	location / {
+		try_files $uri $uri/ =404;
+	}
+}
+```
+
+`443` 으로 들어온 요청은 설정한 `ssl_certificate`, `ssl_certificate_key` 파일들을 이용하여 ssl 통신을 하게 되고, 기존 `80` 으로 들어온 요청은 `https` 요청을 redirect 하도록 하였다.
+
+continer 내부에서 수정한 파일을 continer 외부로 복사하기 위하여 `docker cp` 명령어를 이용하여 외부로 파일을 가져오고 위에서 했던 작업들을 dockerfile에 다시 정의를 해주었다.
+
+```dockerfile
+FROM debian:buster
+LABEL maintainer="jaeskim <jaeskim.student.42seoul.kr>"
+
+# init setup
+RUN apt update -y; apt upgrade -y
+
+# install dependency
+RUN apt install nginx vim curl -y
+
+# environment
+ENV AUTO_INDEX=false
+
+# setup SSL
+RUN openssl genrsa -out ft_server.localhost.key 4096; \
+	openssl req -x509 -nodes -days 365 \
+	-key ft_server.localhost.key \
+	-out ft_server.localhost.crt \
+	-subj "/C=KR/ST=SEOUL/L=Gaepo-dong/O=42Seoul/OU=jaeskim/CN=localhost"; \
+	chmod 644 ft_server.localhost.*; \
+	mv ft_server.localhost.crt /etc/ssl/certs/;	\
+	mv ft_server.localhost.key /etc/ssl/private/;
+
+COPY src/nginx-sites-available-default.conf /etc/nginx/sites-available/default
+```
+
+## 🗂 비활성화가 가능한 autoindex 기능 추가!
+
+이번에는 비활성화가 가능한 autoindex 기능을 추가를 해본다.
+
+`cmd` 를 이용하여 비활성화 하도록 만들어 본다.
+
+일단 `server.sh` 파일을 작성을 하고 `ENTRYPOINT` 로 설정을 한다.
+
+```sh
+#!/bin/bash
+
+/bin/bash -C /setup_autoindex.sh $1
+
+service nginx start
+
+if [ $? -eq 0 ]; then
+	tail -f /var/log/nginx/access.log /var/log/nginx/error.log
+f
+```
+
+그리고 `setup_autoindex.sh` 에게 첫번째 인자를 같이 전달하여 `cmd` 를 이용하여 제어가 가능하도록 한다.
+
+```sh
+#!/bin/bash
+
+# setup index.html
+if [ -e "/var/www/html/index.nginx-debian.html" ]; then
+	mv /var/www/html/index.nginx-debian.html /var/www/html/index.html
+fi
+
+if [ "$1" == "autoindex" ]; then
+	echo "autoindex on!"
+	sed -i "s@autoindex off;@autoindex on;@g" /etc/nginx/sites-available/default
+	sed -i "s@index index.html index.htm;@index index.htm;@g" /etc/nginx/sites-available/default
+else
+	echo "autoindex off!"
+	sed -i "s@autoindex on;@autoindex off;@g" /etc/nginx/sites-available/default
+	sed -i "s@index index.htm;@index index.html index.htm;@g" /etc/nginx/sites-available/default
+fi
+```
+
+이제 빌드를 하고 `run` 를 동작 할 때 `autoindex` cmd를 같이 보냈을 떄에 대해서 제대로 동작 하는지를 확인 해본다.
+
+```sh
+$ docker run --rm -it --env AUTO_INDEX=true -p 443:443 -p 80:80 --name ft_server ft_server:v3 autoindex
+```
+
+![image-20201201012220274](image/docker기초부터-wordpress서비스-직접구현까지/image-20201201012220274.png)
+
+![image-20201201012247664](image/docker기초부터-wordpress서비스-직접구현까지/image-20201201012247664.png)
+
+## 📦 mysqlDB(maria DB) 설치 및 설정 하기!
+
+이번에는 wordpress를 위한 DB를 설정해 본다.
+
+`apt install marinade-server` 명령어를 이용하여 설치를 한다.
+
+여기서 mariadb를 사용하는 이유는 기존 mysql이 Oracle로 인수가 되면서 Fork되어 진행되고 있는 opensource 프로젝트 이다. (mysql과 동일한 소스코드를 기반으로 하여 대부분의 작업이 호환이 된다.)
+
+Maria db를 php와 함께 사용을 하기 위해서는 여러가지 모듈이 필요한데 이에 따른 모듈을 설치한다.
+
+```sh
+$ apt install php-mysql php-mbstring
+```
+
+- php-mysql : php에서 mysql명령어를 실행하기 위한 모듈
+- php-mbstring : 한국어, 중국어, 일본어와 같은 multibyte 문자열을 처리 하기 위해 사용되는 모듈
+
+이제 `mysql service` 를 시작시키고 SQL 명령어에 대해서 작성을 해본다.
+
+```mysql
+# wordpress db 생성
+CREATE DATABASE wordpress;
+# wordpress db를 사용
+USE wordpress;
+# jaeskim user를 password `testpassword`으로 만들고 localhost에서만 접근이 가능하도록 함.
+CREATE USER 'jaeskim'@'localhost' IDENTIFIED BY 'testpassword';
+# jaeskim에게 wordpress db에 대한 권한을 전부 위임
+GRANT ALL PRIVILEGES ON wordpress.* TO 'jaeskim'@'localhost' WITH GRANT OPTION;
+# 권한 설정 업데이트
+FLUSH PRIVILEGES;
+```
+
+이제 이렇게 작성한 내용을 바탕으로 실제 dockerfile에 적용을 해본다.
+
+이때 db_name, db_user, db_password에 대한 항목은 `ARG` 명령어를 이용하여 관리를 한다. (실제로 암호와 같은 중요 정보는 `docker secret` 명령어를 이용하여 관리하는 것이 권장됨.)
+
+```dockerfile
+# init arg
+ARG WP_DB_NAME=wordpress
+ARG WP_DB_USER=jaeskim
+ARG WP_DB_PASSWORD=42seoul
+
+# setup mysqlDB(mariaDB)
+RUN service mysql start; \
+	mysql -e "CREATE DATABASE ${WP_DB_NAME};\
+	USE ${WP_DB_NAME}; \
+	CREATE USER '${WP_DB_USER}'@'localhost' IDENTIFIED BY '${WP_DB_PASSWORD}'; \
+	GRANT ALL PRIVILEGES ON ${WP_DB_NAME}.* TO '${WP_DB_USER}'@'localhost' WITH GRANT OPTION; \
+	FLUSH PRIVILEGES;"
+```
+
+위와 같이 `mysql -e` 와 `ARG` 를 이용하여 mysql 서비스 부분을 완성하였다.
+
+## 📚 wordpress 서비스 설치 및 설정하기!
+
+이전에 설치한 `curl` 를 이용하여 https://wordpress.org/latest.tar.gz 를 다운 받아서 설치를 해본다!!!
+
+일단 wordpress를 설치 하기 전에 nignix에서 php를 동작 할 수 있도록 도와 주는 모듈인 `php-fpm` 를 설치 하여 사용을 한다.
+
+그리고 `niginx/sites-available/default` 파일을 수정하여서 php가 동작 하도록 수정을 한다.
+
+```nginx
+index index.html index.htm index.php;
+
+location ~ \.php$ {
+	include snippets/fastcgi-php.conf;
+	fastcgi_pass unix:/var/run/php/php7.3-fpm.sock;
+}
+```
+
+이제 기본적인 준비가 끝났으니 아래의 명령어를 통해서 wordpress를 다운 받고 압축을 해제 한다.
+
+```sh
+$ curl -O https://wordpress.org/latest.tar.gz
+$ tar -xzf latest.tar.gz -C /var/www/html/
+```
+
+이제 내부에 존재하는 `wp-config-sample.php` sed 명령어를 통해서 수정을 해본다.
+
+![image-20201201190619006](image/docker기초부터-wordpress서비스-직접구현까지/image-20201201190619006.png)
+
+내부를 보게 되면 기본적으로 정의 해야 하는 DB 정보가 있는데 이 부분을 아까전에 mysql를 설정 하면서 사용 하였던 변수를 이용하여 수정을 하도록 한다.!
+
+```dockerfile
+RUN mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php; \
+	sed -i "s/database_name_here/${WP_DB_NAME}/g" /var/www/html/wordpress/wp-config.php; \
+	sed -i "s/username_here/${WP_DB_USER}/g" /var/www/html/wordpress/wp-config.php; \
+	sed -i "s/password_here/${WP_DB_PASSWORD}/g" /var/www/html/wordpress/wp-config.php
+```
+
+그리고 아래와 같이 여러가지 key, salt 값을 정의 하는 부분이 있는데 이것을 `/dev/null` 를 이용하여서 채워준다.
+
+![image-20201201192914636](image/docker기초부터-wordpress서비스-직접구현까지/image-20201201192914636.png)
+
+```sh
+wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'AUTH_KEY',         'put your unique phrase here' );/define( 'AUTH_KEY', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'SECURE_AUTH_KEY',  'put your unique phrase here' );/define( 'SECURE_AUTH_KEY', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'LOGGED_IN_KEY',    'put your unique phrase here' );/define( 'LOGGED_IN_KEY', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'NONCE_KEY',        'put your unique phrase here' );/define( 'NONCE_KEY', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'AUTH_SALT',        'put your unique phrase here' );/define( 'AUTH_SALT', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'SECURE_AUTH_SALT', 'put your unique phrase here' );/define( 'SECURE_AUTH_SALT', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'LOGGED_IN_SALT',   'put your unique phrase here' );/define( 'LOGGED_IN_SALT', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	wp_salt=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s/define( 'NONCE_SALT',       'put your unique phrase here' );/define( 'NONCE_SALT', '$wp_salt' );/g" /var/www/html/wordpress/wp-config.php; \
+	unset wp_salt
+```
+
+이제 저번에 작성한 `src/server.sh` 파일을 수정하여서 `mysql`, `php-fpm` 등도 같이 실행이 가능하도록 설정을 한다.
+
+```sh
+#!/bin/bash
+
+/bin/bash -C /setup_autoindex.sh $1
+
+service mysql start
+service php7.3-fpm start
+service nginx start
+
+if [ $? -eq 0 ]; then
+	tail -f /var/log/nginx/access.log /var/log/nginx/error.log
+fi
+```
+
+이제 dockerfile로 정리하여서 서비스를 실행해 본다.!
+
+```sh
+$ docker run --rm -it -p 443:443 -p 80:80 --name ft_server ft_server
+```
+
+`https://localhost/wordpress` 로 접근을 해보면 아래와 같이 wordpress가 정상적으로 올라온 것을 볼 수 있다.
+
+![image-20201201193659307](image/docker기초부터-wordpress서비스-직접구현까지/image-20201201193659307.png)
+
+## 🧑‍💻 phpmyadmin 설치 하기!
+
+이제 마지막으로 db관리를 위한 `phpmyadmin` 를 설치 해본다.
+
+Curl 명령어를 이용하여 일단 phpmyadmin를 다운 받는다.
+
+```dockerfile
+RUN curl -O https://files.phpmyadmin.net/phpMyAdmin/5.0.4/phpMyAdmin-5.0.4-all-languages.tar.gz
+```
+
+그리고 이제 압축을 해제하고 생성된 폴더의 이름을 수정해준 후 `config.sample.inc.php` 를 이용하여 간단하게 설정을 해본다.
+
+여기서는 `blowfish_secret` 라는 cookie를 암호화 하게 되는 키를 만들어서 넣어주게 된다.
+
+```sh
+blowfish_secret=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9!@#\%+=' | fold -w 64 | sed 1q); \
+	sed -i "s@''; /\* YOU MUST FILL IN THIS FOR COOKIE AUTH! \*/@'$blowfish_secret';@g" /var/www/html/phpmyadmin/config.inc.php; \
+	unset blowfish_secret;
+```
+
+그리고 마지막으로 현재 `/var/www/html` 이 `root` 소유자로 등록이 되어 있어서 `phpmyadmin` 에서 temp directory를 생성을 못한는 이슈가 있기 때문에 권한을 `www-data:www-data` 로 수정을 해준다.
+
+![image-20201201194547831](image/docker기초부터-wordpress서비스-직접구현까지/image-20201201194547831.png)
+
+이제 접근을 하게 되면 위에서 만들었던 계정을 통해서 로그인이 가능 한 모습을 볼 수 있다.
+
+---
+
+> `42Seoul` 에서 진행한 **ft_server** 프로젝트를 정리한 글 입니다.
+> 여기서 진행된 Dockerfile과 src 파일은 아래의 github에서 확인 할 수 있습니다.!
+>
+> [jaeseokim/42cursus/02_ft_server](https://github.com/JaeSeoKim/42cursus/tree/master/02_ft_server)
