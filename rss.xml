@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Dec 2020 10:53:29 GMT</lastBuildDate><item><title><![CDATA[🐳 Docker 기초 부터 Wordpress 서비스 직접 구현 까지!]]></title><description><![CDATA[귀여운 Docker Logo! 🐳 Docker란! Docker는 Linux Container 기술을 이용하여 만든 Container 기술 중 하나! Linux Container…]]></description><link>https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</guid><pubDate>Tue, 01 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Dec 2020 11:02:11 GMT</lastBuildDate><item><title><![CDATA[🐳 Docker 기초 부터 Wordpress 서비스 직접 구현 까지!]]></title><description><![CDATA[귀여운 Docker Logo! 🐳 Docker란! Docker는 Linux Container 기술을 이용하여 만든 Container 기술 중 하나! Linux Container…]]></description><link>https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</guid><pubDate>Tue, 01 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; &quot;
     &gt;
@@ -397,8 +397,50 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk10&quot;&gt;fi&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;이제 빌드를 하고 &lt;code&gt;run&lt;/code&gt; 를 동작 할 때 &lt;code&gt;autoindex&lt;/code&gt; cmd를 같이 보냈을 떄에 대해서 제대로 동작 하는지를 확인 해본다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;41&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;$ docker run --rm -it --env AUTO_INDEX=true -p 443:443 -p 80:80 --name ft_server ft_server:v3 autoindex&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;img src=&quot;image/docker%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5-wordpress%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3-%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%81%E1%85%A1%E1%84%8C%E1%85%B5/image-20201201012220274.png&quot; alt=&quot;image-20201201012220274&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;image/docker%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5-wordpress%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3-%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%81%E1%85%A1%E1%84%8C%E1%85%B5/image-20201201012247664.png&quot; alt=&quot;image-20201201012247664&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAe0lEQVQY052ORw7CQBRD5xyQPr0lk8D9r2b4loKyQUIsnuxfZaWtx2IcZm2Jjxm5bqjbTi9zqV1ISKUi5kIvs5Dy28dPLah2PHlwNqyPuPcjbt1Avfpr7xtqbTva8WCisjZiXEA/zn+hfEyMLE+0dUw4LQbdMHHh1F95AfmKcNDaHyYOAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201201012220274&quot;
+        title=&quot;image-20201201012220274&quot;
+        src=&quot;/static/b7cadaf85224b0ee97399bcbab130a30/c1b63/image-20201201012220274.png&quot;
+        srcset=&quot;/static/b7cadaf85224b0ee97399bcbab130a30/5a46d/image-20201201012220274.png 300w,
+/static/b7cadaf85224b0ee97399bcbab130a30/0a47e/image-20201201012220274.png 600w,
+/static/b7cadaf85224b0ee97399bcbab130a30/c1b63/image-20201201012220274.png 1200w,
+/static/b7cadaf85224b0ee97399bcbab130a30/2ed34/image-20201201012220274.png 1776w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA5klEQVQY062Oy06DYBSEeakWW1qJCGg1bn0XXRlTF01/SLSQAj6AD6ayBCKEO/kEksbb1pNM5lxmTkbSVqdcnqicT2SuFiuUi2s08wxF01CPVQzDGKHr+hebJsvFnHnvmclLpvIUZXLErJ+l9WaNuL9D3NziPDxhPb/w6O6xXRdnt8P3fYIgwPO8sfe8/chOf98KgW3biJ63lkDYFlIYhry+v5GkKf9RUpYUFFlF27TUdU1Zln+QJAlRFBHHMXmeU1UVRVGQ9iF+a6U0yck+cpqmoW3bH+i6buThwcEw6A77IcB33YBPFh5EL6HQxkQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201201012247664&quot;
+        title=&quot;image-20201201012247664&quot;
+        src=&quot;/static/1da30d60dfe7dbbbb8e271e0b94e872a/c1b63/image-20201201012247664.png&quot;
+        srcset=&quot;/static/1da30d60dfe7dbbbb8e271e0b94e872a/5a46d/image-20201201012247664.png 300w,
+/static/1da30d60dfe7dbbbb8e271e0b94e872a/0a47e/image-20201201012247664.png 600w,
+/static/1da30d60dfe7dbbbb8e271e0b94e872a/c1b63/image-20201201012247664.png 1200w,
+/static/1da30d60dfe7dbbbb8e271e0b94e872a/e92cd/image-20201201012247664.png 1778w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;-mysqldbmaria-db-설치-및-설정-하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-mysqldbmaria-db-%EC%84%A4%EC%B9%98-%EB%B0%8F-%EC%84%A4%EC%A0%95-%ED%95%98%EA%B8%B0&quot; aria-label=&quot; mysqldbmaria db 설치 및 설정 하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📦 mysqlDB(maria DB) 설치 및 설정 하기!&lt;/h2&gt;
 &lt;p&gt;이번에는 wordpress를 위한 DB를 설정해 본다.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;apt install marinade-server&lt;/code&gt; 명령어를 이용하여 설치를 한다.&lt;/p&gt;
@@ -449,14 +491,58 @@
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;46&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;$ curl -O https://wordpress.org/latest.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;$ tar -xzf latest.tar.gz -C /var/www/html/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;이제 내부에 존재하는 &lt;code&gt;wp-config-sample.php&lt;/code&gt; sed 명령어를 통해서 수정을 해본다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;image/docker%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5-wordpress%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3-%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%81%E1%85%A1%E1%84%8C%E1%85%B5/image-20201201190619006.png&quot; alt=&quot;image-20201201190619006&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 30.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAABDklEQVQY04WQzVKDQBCEeQ+VZAMILIFl2Q3s8k+SikaN5cX3f5R23NIqL4mHr2Yu09PdXlLskKkWen7Dth4h+xOE2SOVBnkzOwqzQNi9m5nukYgaXFo3M9UhLQ3CVIBFKTzRHpDXE1SzRzdfsGuP4GWD/vCBZjxD2wPM+AIzvUKoAUGcwV8HxAYPf1kxh5eIHXhlkeYaBX3LiSgtaO8dj7SH9JltIvg+w72/ItZX8eTwhIpiqnpGv7zDkpM4kzDDGZacST2AcwnGQtzRwa+Ta3gRHX+7TApNXTQU1yDeVohz5dhE/Cdi8K+YEyy7I0rqqdIjWnK0nD4xLBdwKtwOz+R8gqTofKsQBomLdUvwC4sJtjIc7nYnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201201190619006&quot;
+        title=&quot;image-20201201190619006&quot;
+        src=&quot;/static/8a1bcc2b0c500fa61868f4aabb683458/c1b63/image-20201201190619006.png&quot;
+        srcset=&quot;/static/8a1bcc2b0c500fa61868f4aabb683458/5a46d/image-20201201190619006.png 300w,
+/static/8a1bcc2b0c500fa61868f4aabb683458/0a47e/image-20201201190619006.png 600w,
+/static/8a1bcc2b0c500fa61868f4aabb683458/c1b63/image-20201201190619006.png 1200w,
+/static/8a1bcc2b0c500fa61868f4aabb683458/7960f/image-20201201190619006.png 1274w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;내부를 보게 되면 기본적으로 정의 해야 하는 DB 정보가 있는데 이 부분을 아까전에 mysql를 설정 하면서 사용 하였던 변수를 이용하여 수정을 하도록 한다.!&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;dockerfile&quot; data-index=&quot;47&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;RUN&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; mv /var/www/html/wordpress/wp-config-sample.php /var/www/html/wordpress/wp-config.php; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	sed -i &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;s/database_name_here/${WP_DB_NAME}/g&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; /var/www/html/wordpress/wp-config.php; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	sed -i &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;s/username_here/${WP_DB_USER}/g&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; /var/www/html/wordpress/wp-config.php; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	sed -i &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;s/password_here/${WP_DB_PASSWORD}/g&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; /var/www/html/wordpress/wp-config.php&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;그리고 아래와 같이 여러가지 key, salt 값을 정의 하는 부분이 있는데 이것을 &lt;code&gt;/dev/null&lt;/code&gt; 를 이용하여서 채워준다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;image/docker%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5-wordpress%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3-%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%81%E1%85%A1%E1%84%8C%E1%85%B5/image-20201201192914636.png&quot; alt=&quot;image-20201201192914636&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 31.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAGCAYAAADDl76dAAAACXBIWXMAABYlAAAWJQFJUiTwAAAA6UlEQVQY05WRzW6DMBCEeZCA+THYYGIMxIWQBPKn5JBUVXvo+7/JdHHUnunh04xW61mv7ZWbA1S7g9AbyOqNsJDagsUpVkH4b7zSjtD9Cbo7OtZOJ5R27waodkBRdyhpaFH3yA3Vmq2rFaZ7KZEqAxZxeMV8iMjyCixMECUCSSrBMwUuFGIuEVA9oGanjvjP+78+Is9ieHa4YTw8cLl+QeQaphkwTg+czh+kT5iqx8pny1eeA6fxidv9G7mq0bR7F3S+fGI8vqM2W/jU6LNoEV45v49uIaRGSB8xr5jJNd22chpz8Zq+MPAHtwmxBD9P8osAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201201192914636&quot;
+        title=&quot;image-20201201192914636&quot;
+        src=&quot;/static/f37620ced0e16f24cff89328689cab7e/c1b63/image-20201201192914636.png&quot;
+        srcset=&quot;/static/f37620ced0e16f24cff89328689cab7e/5a46d/image-20201201192914636.png 300w,
+/static/f37620ced0e16f24cff89328689cab7e/0a47e/image-20201201192914636.png 600w,
+/static/f37620ced0e16f24cff89328689cab7e/c1b63/image-20201201192914636.png 1200w,
+/static/f37620ced0e16f24cff89328689cab7e/d61c2/image-20201201192914636.png 1800w,
+/static/f37620ced0e16f24cff89328689cab7e/97a96/image-20201201192914636.png 2400w,
+/static/f37620ced0e16f24cff89328689cab7e/2ef06/image-20201201192914636.png 2448w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;48&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;wp_salt=&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;$(cat /dev/urandom &lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; tr -dc &amp;#39;a-zA-Z0-9!@#\%+=&amp;#39; &lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; fold -w 64 &lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; sed 1q)&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	sed -i &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;s/define( &amp;#39;AUTH_KEY&amp;#39;,         &amp;#39;put your unique phrase here&amp;#39; );/define( &amp;#39;AUTH_KEY&amp;#39;, &amp;#39;&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;$wp_salt&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;#39; );/g&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; /var/www/html/wordpress/wp-config.php; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	wp_salt=&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;$(cat /dev/urandom &lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; tr -dc &amp;#39;a-zA-Z0-9!@#\%+=&amp;#39; &lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; fold -w 64 &lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt; sed 1q)&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
@@ -489,7 +575,29 @@
 &lt;p&gt;이제 dockerfile로 정리하여서 서비스를 실행해 본다.!&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;50&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;$ docker run --rm -it -p 443:443 -p 80:80 --name ft_server ft_server&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;code&gt;https://localhost/wordpress&lt;/code&gt; 로 접근을 해보면 아래와 같이 wordpress가 정상적으로 올라온 것을 볼 수 있다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;image/docker%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5-wordpress%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3-%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%81%E1%85%A1%E1%84%8C%E1%85%B5/image-20201201193659307.png&quot; alt=&quot;image-20201201193659307&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 96%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAABYlAAAWJQFJUiTwAAAB4UlEQVQ4y51U2Y7TQBDMZ/M98AN8BUirRQjxshFogQhwfHsOX3HsomvWHZx1sstiqTRXu7r6mNlUVQVjzArVPFrBm/db3Hz9hdY7XLWf9ze6IMqyXMwrIasQpTlevb3F63d36LxFsbBZQnk2uvDeo2ka1HUd5opG1mlpkBsb5sszgvbO/VUeCK21YTPLMrRti5d+XdetCbkgYZ7nIfSiKJCmKZIkQSxIZM5zgvsK/tv3ffjnjJBQMo4kpFqGxFQssdyjuosKmQ8SEfRM4sPhcAYqUZBkGIbrITvnYSWPavxYyVKdFo62Fwmds6HvMlH3P9+KkBNVNk1TCIU51KZlGoz0ZNeKwrm9qFA74mLITdMGQ34kjOPkVEnaZIUUy9bBseb0yRyq12AwdLiLP+PTjw/4eH+Lb+UWP02MqKpxHKd/C5mhngz6Dl++bxEXEfZZhCj/jdIU4abwApi5Kwj+R8JVH3oxrmbicRwlX5LPUdjFD8dJlI1ytnT8fFEEJCMeWunhSmpxOCeUVMcVoZdnicnf7XairA2yWNn9fh+uHsFzrumIDp8ktNag6Xq4tkfdDxiOx1BBvR1aUY7XQj7LoROvpW+wy0xAexhOCh5DU6LgHvtx9cCStJb8EPr6vARK+AfNd7kxtH5QvAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201201193659307&quot;
+        title=&quot;image-20201201193659307&quot;
+        src=&quot;/static/2eb8927e4c4c653e73a6583be2bdc059/c1b63/image-20201201193659307.png&quot;
+        srcset=&quot;/static/2eb8927e4c4c653e73a6583be2bdc059/5a46d/image-20201201193659307.png 300w,
+/static/2eb8927e4c4c653e73a6583be2bdc059/0a47e/image-20201201193659307.png 600w,
+/static/2eb8927e4c4c653e73a6583be2bdc059/c1b63/image-20201201193659307.png 1200w,
+/static/2eb8927e4c4c653e73a6583be2bdc059/d61c2/image-20201201193659307.png 1800w,
+/static/2eb8927e4c4c653e73a6583be2bdc059/ec09f/image-20201201193659307.png 1916w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;h2 id=&quot;🧑-phpmyadmin-설치-하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%F0%9F%A7%91-phpmyadmin-%EC%84%A4%EC%B9%98-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;🧑 phpmyadmin 설치 하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🧑‍💻 phpmyadmin 설치 하기!&lt;/h2&gt;
 &lt;p&gt;이제 마지막으로 db관리를 위한 &lt;code&gt;phpmyadmin&lt;/code&gt; 를 설치 해본다.&lt;/p&gt;
 &lt;p&gt;Curl 명령어를 이용하여 일단 phpmyadmin를 다운 받는다.&lt;/p&gt;
@@ -500,7 +608,27 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	sed -i &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;s@&amp;#39;&amp;#39;; /\* YOU MUST FILL IN THIS FOR COOKIE AUTH! \*/@&amp;#39;&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;$blowfish_secret&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;#39;;@g&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; /var/www/html/phpmyadmin/config.inc.php; \&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;	&lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;unset&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; blowfish_secret;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;그리고 마지막으로 현재 &lt;code&gt;/var/www/html&lt;/code&gt; 이 &lt;code&gt;root&lt;/code&gt; 소유자로 등록이 되어 있어서 &lt;code&gt;phpmyadmin&lt;/code&gt; 에서 temp directory를 생성을 못한는 이슈가 있기 때문에 권한을 &lt;code&gt;www-data:www-data&lt;/code&gt; 로 수정을 해준다.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;image/docker%E1%84%80%E1%85%B5%E1%84%8E%E1%85%A9%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5-wordpress%E1%84%89%E1%85%A5%E1%84%87%E1%85%B5%E1%84%89%E1%85%B3-%E1%84%8C%E1%85%B5%E1%86%A8%E1%84%8C%E1%85%A5%E1%86%B8%E1%84%80%E1%85%AE%E1%84%92%E1%85%A7%E1%86%AB%E1%84%81%E1%85%A1%E1%84%8C%E1%85%B5/image-20201201194547831.png&quot; alt=&quot;image-20201201194547831&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1116px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 89.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAASCAYAAABb0P4QAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB40lEQVQ4y51U226jMBDl/z9lnyvt40qV+tzupo0gaQi3AuUSbglgIJzOuHVENiR7GelosBmfOZ6xreE3G8fx5BVohL7vMR6PZzFzpt0iU9YPI7K8hB+843gl5kQ4r+jTWjEQW4303YFpLLBaPqKt9zdValN1U8Isr/D0EiBdPyBbfEP8fIdk+R2iCNAfR15wsYa9Nid9GAYYqxUMw4C5tWCaJrbkfy2esV6/Yrfb4VrtTwq7rkOSJMiyDHEcI01TNE0jyXuC9NQYxvA1VjhTqAirqoJt2xK6rmOz2SAMQ0nMiRj8zerYK+R5Pk/IahzHged58H1fBrdti7quJfi/IldkakezhLy4KEvs93uplsHfU/BcURQnsDqeu2iKGrCKum5kPf/VLprCCixrC9N+gxdElD1DSYpZifKsaAqe43WzWz4cDrJ2y+ULEVuy+KoZQRBIr4hVEq7j1RrydqMokmfPdV0ZKAtP4G7zmJvDiT9Ry7mbTQkCnw6wSdkLCtwhl8jQdwIDnb+OvEJPda5Y8bVjU1ZUQ9eH5flw/BDuFPQocF2neAsjOK6HMIrnCZOswKNO12vt4OfKPsMTw5h4woLiftw/QH/dnr0F2vT+Nq2grf8FhJCxQnQQtPU/Pg7/Y4rjA0iqcAXSXURRAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201201194547831&quot;
+        title=&quot;image-20201201194547831&quot;
+        src=&quot;/static/1aea308733faa51a3b00be2ec1b4dc0b/ea64c/image-20201201194547831.png&quot;
+        srcset=&quot;/static/1aea308733faa51a3b00be2ec1b4dc0b/5a46d/image-20201201194547831.png 300w,
+/static/1aea308733faa51a3b00be2ec1b4dc0b/0a47e/image-20201201194547831.png 600w,
+/static/1aea308733faa51a3b00be2ec1b4dc0b/ea64c/image-20201201194547831.png 1116w&quot;
+        sizes=&quot;(max-width: 1116px) 100vw, 1116px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;이제 접근을 하게 되면 위에서 만들었던 계정을 통해서 로그인이 가능 한 모습을 볼 수 있다.&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
