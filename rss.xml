@@ -1,4 +1,318 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 01 Dec 2020 11:02:11 GMT</lastBuildDate><item><title><![CDATA[🐳 Docker 기초 부터 Wordpress 서비스 직접 구현 까지!]]></title><description><![CDATA[귀여운 Docker Logo! 🐳 Docker란! Docker는 Linux Container 기술을 이용하여 만든 Container 기술 중 하나! Linux Container…]]></description><link>https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</guid><pubDate>Tue, 01 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Dec 2020 13:26:44 GMT</lastBuildDate><item><title><![CDATA[42서울 건곤감리 해커톤 참여후기!]]></title><description><![CDATA[온라인으로 진행된 42서울 건곤감리 해커톤 대회! 42Seoul 건곤감리 해커톤! 이번에 42서울에서 아래와 같은 내부 해커톤을 진행한다는 공지가 올라와서 참여를 신청하게 되었다!  위에서 보다 싶이 원래는 11.24 ~ 2…]]></description><link>https://jaeseokim.github.io/42Seoul/42서울-건곤감리-해커톤-참여후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/42Seoul/42서울-건곤감리-해커톤-참여후기/</guid><pubDate>Sun, 20 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAANABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAIDBP/EABYBAQEBAAAAAAAAAAAAAAAAAAECA//aAAwDAQACEAMQAAABz1u2d5xhf//EABsQAAICAwEAAAAAAAAAAAAAAAABAhMDERIi/9oACAEBAAEFAqfNXZVNEcar4UDaP//EABcRAAMBAAAAAAAAAAAAAAAAAAABAhL/2gAIAQMBAT8BUmGf/8QAFhEBAQEAAAAAAAAAAAAAAAAAABES/9oACAECAQE/AdVX/8QAGxAAAgIDAQAAAAAAAAAAAAAAAAERIQISMkH/2gAIAQEABj8CT2R0pIxdFUT6jk//xAAcEAEAAgIDAQAAAAAAAAAAAAABABExUSFhkaH/2gAIAQEAAT8hFol0wdLQfYpQA0Sw4Jch3EAbdkb8PZ//2gAMAwEAAgADAAAAENgv/8QAFxEAAwEAAAAAAAAAAAAAAAAAABEhYf/aAAgBAwEBPxB0dMD/xAAXEQADAQAAAAAAAAAAAAAAAAAAAREh/9oACAECAQE/EFpCj//EABwQAQACAwADAAAAAAAAAAAAAAEAESExQVGBsf/aAAgBAQABPxAQXEhqqLa1Fig4Y+xaaaKl85ia60bHR2UdJVpz6glUn//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;KakaoTalk_Image_2020-12-16-13-06-52&quot;
+        title=&quot;KakaoTalk_Image_2020-12-16-13-06-52&quot;
+        src=&quot;/static/6d075e20a349695e1e8d4e1d627ab879/6a068/KakaoTalk_Image_2020-12-16-13-06-52.jpg&quot;
+        srcset=&quot;/static/6d075e20a349695e1e8d4e1d627ab879/f93b5/KakaoTalk_Image_2020-12-16-13-06-52.jpg 300w,
+/static/6d075e20a349695e1e8d4e1d627ab879/b4294/KakaoTalk_Image_2020-12-16-13-06-52.jpg 600w,
+/static/6d075e20a349695e1e8d4e1d627ab879/6a068/KakaoTalk_Image_2020-12-16-13-06-52.jpg 960w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;온라인으로 진행된 42서울 건곤감리 해커톤 대회!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;42seoul-건곤감리-해커톤&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#42seoul-%EA%B1%B4%EA%B3%A4%EA%B0%90%EB%A6%AC-%ED%95%B4%EC%BB%A4%ED%86%A4&quot; aria-label=&quot;42seoul 건곤감리 해커톤 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;42Seoul 건곤감리 해커톤!&lt;/h1&gt;
+&lt;p&gt;이번에 42서울에서 아래와 같은 내부 해커톤을 진행한다는 공지가 올라와서 참여를 신청하게 되었다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAABe0lEQVQoz4WT2VKDQBBF+RBLE7KQFcM+EHYyINGHVOXBP7D0/z/gOt0RjFUmPFwYmPTJ7duD9vXxidPpDMcLEYQx6jJBFofwgj0WKxMjfd5Lny4GpcVJjiQtFSxh4PurwLmNEEQZXD/Cemthvtgo+BbT+YqLJrPlTWkPjzoXFlWjVENWOY5tg6yQkPURlWx5zwsiGMttD7zpkC62K5DmB+yVWxEpx7lUQHouEKcFxzEz1r2Ley618cTgVg91C9sJ2Em4TzkCX8Scpetf8iXwUNsMJEimHFJBByMIwTamzZCRboB+S7rnkoHUcpKV/aQJKKILVKg17dOe7QZ4ttwBh2rT8QRkc4SlWr4UClXo8fPvlE0eCq0HgTtVnJeSXeZl/bOu2CkBqeWu3esp/wukAyuiFE37xq6oJZK5c3myXWZD6v6Ajw0FTxOl/OjokDN6/zSe9c6uv5hO3fvrQfFQKLdKvrDTWH011PrO9v/Icrp70Is6orw3KpYO+g2ThnK91hAG9wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201219202521939&quot;
+        title=&quot;image-20201219202521939&quot;
+        src=&quot;/static/378614154f1350f816fc7b4f308c85c2/c1b63/image-20201219202521939.png&quot;
+        srcset=&quot;/static/378614154f1350f816fc7b4f308c85c2/5a46d/image-20201219202521939.png 300w,
+/static/378614154f1350f816fc7b4f308c85c2/0a47e/image-20201219202521939.png 600w,
+/static/378614154f1350f816fc7b4f308c85c2/c1b63/image-20201219202521939.png 1200w,
+/static/378614154f1350f816fc7b4f308c85c2/e1250/image-20201219202521939.png 1786w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;위에서 보다 싶이 원래는 &lt;strong&gt;11.24 ~ 26&lt;/strong&gt; 동안 진행되는 해커톤 이였지만 &lt;strong&gt;&lt;del&gt;나쁜&lt;/del&gt;코로나&lt;/strong&gt; 때문에 온라인으로 전환되고 기간도 &lt;strong&gt;12.16 ~ 18&lt;/strong&gt;로 연기가 되었다 ㅠㅠ&lt;/p&gt;
+&lt;p&gt;같은 코알리션끼리 팀빌딩이 되어야 하기 때문에 &lt;code&gt;kilee&lt;/code&gt; 형!, &lt;code&gt;skim&lt;/code&gt; 누나와 함께 팀을 만들어서 참여하게 되었다..!!!&lt;/p&gt;
+&lt;h2 id=&quot;-준비물-수령---1215&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%EC%A4%80%EB%B9%84%EB%AC%BC-%EC%88%98%EB%A0%B9---1215&quot; aria-label=&quot; 준비물 수령   1215 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📦 준비물 수령! - 12.15&lt;/h2&gt;
+&lt;p&gt;이번 해커톤 기간동안 오프라인으로 진행되는 만큼 여러 기기를 대여 해주셨는데 무려 &lt;code&gt;맥북프로 16인치&lt;/code&gt; , &lt;code&gt;아이패드 프로&lt;/code&gt;, &lt;code&gt;라즈베리 파이4&lt;/code&gt;, &lt;code&gt;웹캠&lt;/code&gt; 을 대여 해주셔서 편하게 참가 할 수 있었다! (&lt;del&gt;심지어 맥북 프로와 아이패드가 새 제품이여서 언박싱을 할 수 있는 기회가..!!!&lt;/del&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAIAAABr+ngCAAAACXBIWXMAAAsTAAALEwEAmpwYAAADnklEQVQozwGTA2z8AIheL4xiMo9lN5RqPZ9pR55sR59tP51sOqBwOqFzOaR1Oah7QKh7Qat8Qqp+RqZ9Rqh7QKZ4O55wN5dpMACHXjKPZDiSajqecE2bbmOhfGmbcFinb1SseWKhcmCfdmGoeFCnfUWogEyOdlFjU0F0UjeFYjqXbz6bcDkAh182kGc7lWw/rXxiq4NvjnhmlXZfnXFXmn9qrpB8s5uNr2s4nHAzbFtJa005ck1BaVRKVTkwSDIkjWc8AJFsR5VvRphwRKuAX7uQdHBRQFxFOpdsULqEXceScKZ2YsmHVbuWZoprVYFhSW9OPWpYPlg5K1U7LKJoJwCRbUqTbUWkfFF9bFpOPTdnUEheQzhwUTrBpZLOoH3ntpa3nYaOd2u9nYHOsJG0n5KIdHRoUkx0UzmuaRwAkm5Lk2tEqYtoYl5SaEVCeWlZalE5f3aHhXuHpIpqtpqFo450h2dDiXFhhmlfmYR3rI2BeVdYmWU/tmsTAJJuSqF5UYVyXkhBOWc/NG1LPXhyg2haaYhvWp+MeKqUhaWIXot2Pl5SQCgfKE84NLiDS6pfDKxlGLxxGQCSbEaad1RIQDhnZWp6Z2KFfY5sbIpqZHB6hJ2io7nNt6NlXVUiFBM1NTxAOFFkST7HklLGfiLCeyKnYxYAlG5HqI10lZSQn5SmjoGWlpe6hoKVZWJmtq2t4c/KuKSTOyYaTUM1doSZUzpLdVVDzZRKzIQjomMbUCUKAJFrR6mGZbaUfMitmLKclsi1srWllLasos67v97Fuox4bFJIPJ2ZlJaIoFU4SYdmVM6PPLJuG2gzEEwgCQCQa0aQaECQZDqOZD+Pa0+rjHXNtqTbyLnn08Pq08Ssm4uloJOSiZ2TgJI0JEObeF69ey9vORBWJQt5Pg0AjGdDk21Jk29MhWRJalA+WkI2YUk9cVhMkHpuqpeNwayi0LmpyLGjv6midGBnn31iaz4aTyEKdT8RtW0ZAJBrR5FsSZFtSolmSoFhSnteSnRaSG5URWZNQWFKQmVQSWxWTn5pYpaCeLGajZ59ZU4nDnA5DrhtGLVqFgCRbUiUb0uVcE2Yc1CYdFWScFOMbFKJalGKa1SJa1WHa1WAZlRrVUlQPjlLOjhXPjBTNB5qPxeNURKaVA0Ai2VBkm5KlXFPmHRQmndTnHlXnXpZnHpbmXhbknNZjm9WjW5WhWhTfWFOdVlHZkw6XEIvTjUiRi4cSy8ZCc2I0Xx9D1EAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201220162308164&quot;
+        title=&quot;image-20201220162308164&quot;
+        src=&quot;/static/937c538949e5649c979fdab55864236c/d9199/image-20201220162308164.png&quot;
+        srcset=&quot;/static/937c538949e5649c979fdab55864236c/5a46d/image-20201220162308164.png 300w,
+/static/937c538949e5649c979fdab55864236c/0a47e/image-20201220162308164.png 600w,
+/static/937c538949e5649c979fdab55864236c/d9199/image-20201220162308164.png 960w&quot;
+        sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;spark&lt;/code&gt; 형 집에 두팀이 모여서 진행을 해서 아이패드 프로랑 맥북이 엄청나게 모인 모습을 볼 수 있었다 ㅋㅋㅋ&lt;/p&gt;
+&lt;h3 id=&quot;🧐-해커톤-시작전-아이디어-회의&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%F0%9F%A7%90-%ED%95%B4%EC%BB%A4%ED%86%A4-%EC%8B%9C%EC%9E%91%EC%A0%84-%EC%95%84%EC%9D%B4%EB%94%94%EC%96%B4-%ED%9A%8C%EC%9D%98&quot; aria-label=&quot;🧐 해커톤 시작전 아이디어 회의 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🧐 해커톤 시작전 아이디어 회의!&lt;/h3&gt;
+&lt;p&gt;일단 준비물을 수령하고 이제 다같이 모였으니 아이디어 회의에 돌입을 하였다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7klEQVQoz31Sy47TQBD0J/MBSBz4FBAHPoAjFx4HJCSEILDrJHbweDx+zMPjV+I4qe2ebKIVQlgqdc/IXV1dPdG0eol59QJy/RHJTiJNE0gpsdvtKE+RJAmUUnDOwRgDaynqCtXqDeE1qvgdyl9vUf54hVreIxq+P8f+2zPI7VckqUCabCFEHsieElpriVAHUqMblMlnZL/fI998gYg/oVh/gKkFIlvGsOoOre/gux79MGLoezSNRp5LuuvQ09l7HyKj4/Mww3UHOD8SJsIe1rWIjPPQxqPRGnWRoUjucB9v8HO1wjZJsdls0V1JKXbUtG1bOnc4HPZYliOmcaSGbZgi0iRfZBn5J6DzNboqwU7Ii49/MsTxGv/7zuczjscjkR+CHZGlUVRdI8tEkNxoF9SqskRF97wEHl0Wxc0GkecoCkX2DIF0oHhZGClsFRVJgh/g6CITIkDKIhRdyFTIlSrD2AP5PNKYy7IEwtPpdHsFkckLGFFAk5eO1FRVHdRxMeesqmma0J0Vs5+8IK0NHHnZth7zPD8hbB0sg34whp4GFfLPAZTzAqZpuhWxYi6sH5twDd9fcvbQmkBiqgad7zFSMY/DcaLzcV6C8YyZzGf8azE3hZbNNI+khpXpCyhvaGxWwCOyUo7X/G9cFT4AMOE8uHKDOEIAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201220162755478&quot;
+        title=&quot;image-20201220162755478&quot;
+        src=&quot;/static/a47c8346701484ca52809dce690f9107/c1b63/image-20201220162755478.png&quot;
+        srcset=&quot;/static/a47c8346701484ca52809dce690f9107/5a46d/image-20201220162755478.png 300w,
+/static/a47c8346701484ca52809dce690f9107/0a47e/image-20201220162755478.png 600w,
+/static/a47c8346701484ca52809dce690f9107/c1b63/image-20201220162755478.png 1200w,
+/static/a47c8346701484ca52809dce690f9107/d61c2/image-20201220162755478.png 1800w,
+/static/a47c8346701484ca52809dce690f9107/97a96/image-20201220162755478.png 2400w,
+/static/a47c8346701484ca52809dce690f9107/23814/image-20201220162755478.png 2856w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;GIthub의 이슈를 이용하여 아이디어를 기록 하였고 최종적으로 토론을 한 결과 도서관 대출 시스템을 구축 하는 것으로 결정 나게 되었다!&lt;/p&gt;
+&lt;p&gt;그 다음 이제 집현전에서 사용을 한다고 생각을 하였을 때 실질적으로 필요한 기능이 어떤 것이 있을 까 하고 추가적인 세부 기능에 대해서 고민을 하였는데 현재 집현전 동아리에서 봉사를 통해 도서 관리를 하고 있는 형태라서 키오스크를 이용한 무인 반납, 대출 시스템이 있으면 좋겠다고 생각을 하였고, 추가적으로 필요하다고 생각 한 기능들을 모아서 간단한 명세서를 작성을 하였다.&lt;/p&gt;
+&lt;p&gt;그리고 프로젝트 명을 &lt;code&gt;Book42Book&lt;/code&gt; 으로 명명 하고 15일의 일정을 끝나게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 85.66666666666666%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAARCAYAAADdRIy+AAAACXBIWXMAABYlAAAWJQFJUiTwAAACA0lEQVQ4y51Uy5KbMBDk/6855kNyymErOeSa4z4SbxbIGgMGPdALQWdGGNuJvVXrqKprJI00qLslsvz+Ed/vvuLx/gHl71f83DwjzwtsKG6ef+Hp6QfyooTSA7jN80zAP5gXUD7rPn1G9eEj1EsBMQzQSmPgqHUC9xXFaZqwtPkKcMxlXHmkOaGoiHEwLlD0KXpKLJgQ4nwVnOO11keMNM5i8FQgYFPsUO56vDYSdT9grxy0B2F+EwPlpZvQKk/rPex4OGEkOt6HBOc93ttW/U5jKsidEEZCgBAiaWaMTbr1QmLf9eh6gZ4gpEpRUjTWIsZ48ZFst62okIS1Li1kN/VgYJ0j+ARDOc6nsT3NhzHCh4VZGMdkXPbt7gtKuiZV3aITCpLMYYN8WEQOcaJ4wjJmMyLJM6Y9DN7DTBPlibjXTYOu6+DoZMaYRH2hb45jTae3RFVKiZFOdKkpm3IQlxfwJt5wXmQYzgvqi4KrKevlzkT+AC0FtkS53ffopU5YaTM1RjiA5wLdPUf0HGm3UJYnyqPVGEnYpt2j2tVEvU1gp9nFSJpdxbSAzViRTFn5M40mFWtQ1zXp2Seat7RFwwP3HZ2uKEtU1Q5KqePbPT78dyJb/xJN26Zidd3cXOwvU9JLIf55UeCF7qOiv825ezdT5g6Lz9ptqwotmcPP8H/oMv4AG8kuGRgOmoUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201220164138576&quot;
+        title=&quot;image-20201220164138576&quot;
+        src=&quot;/static/77cb41a4f80d9dccbb9c7797dab323c5/c1b63/image-20201220164138576.png&quot;
+        srcset=&quot;/static/77cb41a4f80d9dccbb9c7797dab323c5/5a46d/image-20201220164138576.png 300w,
+/static/77cb41a4f80d9dccbb9c7797dab323c5/0a47e/image-20201220164138576.png 600w,
+/static/77cb41a4f80d9dccbb9c7797dab323c5/c1b63/image-20201220164138576.png 1200w,
+/static/77cb41a4f80d9dccbb9c7797dab323c5/d61c2/image-20201220164138576.png 1800w,
+/static/77cb41a4f80d9dccbb9c7797dab323c5/71ba4/image-20201220164138576.png 1870w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;♂️-해커톤-시작---1216&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%99%82%EF%B8%8F-%ED%95%B4%EC%BB%A4%ED%86%A4-%EC%8B%9C%EC%9E%91---1216&quot; aria-label=&quot;♂️ 해커톤 시작   1216 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🏃🏻‍♂️ 해커톤 시작! - 12.16&lt;/h2&gt;
+&lt;p&gt;드디어 대망의 해커톤 당일날이 되어서 1시 부터 Zoom를 통한 해커톤을 시작하게 되었다!&lt;/p&gt;
+&lt;p&gt;일단 5시에 주제 발표를 해야 하기 때문에 어제 기획을 했던 내용을 바탕으로 간단한 db diagram를 작성을 하게 되었다!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/92a561eeb9a793372daf6f0859092b16/Book42Book_DB_SCHEMA.drawio.svg&quot; alt=&quot;Book42Book_DB_SCHEMA.drawio&quot;&gt;&lt;/p&gt;
+&lt;p&gt;그리고 이제 필요한 기술 스택에 대해서 정의를 하였는데 결과적으로 아래와 같이 결정이 되었다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;BackEnd - Node.js&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;express.js &amp;#x3C;-&gt; Next.js&lt;/li&gt;
+&lt;li&gt;Passport : passport-42 (42 Oauth 2.0 API)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DataBase - mongoDB&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;mongoose : ODM&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;FrontEnd - React&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;reactstrap: components&lt;/li&gt;
+&lt;li&gt;tailwindcss : CSS&lt;/li&gt;
+&lt;li&gt;Tailwind.macro&lt;/li&gt;
+&lt;li&gt;emotion&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;p&gt;그리고 이제 사전 기술 스택에서 조사한 passport-42 라이브러리를 이용하여 42 Oauth 2.0 로그인을 구현 하였고 mongoDB와도 연결를 하여 프로젝트 베이스를 완성 하였다!&lt;/p&gt;
+&lt;p&gt;그리고 팀원과 함께 &lt;a href=&quot;https://github.com/JaeSeoKim/book42book/wiki/%EA%B8%B0%ED%9A%8D&quot;&gt;기획 문서&lt;/a&gt;를 작성하여 접근이 필요한 &lt;code&gt;URL PATH&lt;/code&gt; 를 정의 하고 각 필요한 기능에 대하여 백엔드 API와 함께 프론트의 컴포넌트를 개발 하였다.&lt;/p&gt;
+&lt;p&gt;그 결과 간단한 검색 API 등 일부 필요한 기능을 완성하고 하루를 종료하게 되었다.&lt;/p&gt;
+&lt;h2 id=&quot;🧑-해커톤-2일차---1217&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%F0%9F%A7%91-%ED%95%B4%EC%BB%A4%ED%86%A4-2%EC%9D%BC%EC%B0%A8---1217&quot; aria-label=&quot;🧑 해커톤 2일차   1217 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🧑‍💻 해커톤 2일차 - 12.17&lt;/h2&gt;
+&lt;p&gt;2일차에는 일단 어제 개발 했던 API를 프론트로 이식 하는 기능과 함께 API 명세서를 작성 하면서 개발하기로 하였다.&lt;/p&gt;
+&lt;p&gt;첫날에 개발하였던 API의 명세를 작성을 하고 추가적으로 필요한 API의 기능을 함께 구상을 하면서 명세를 먼저 작성을 하고 API를 개발 하는 형태로 진행을 하였다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JaeSeoKim/book42book/wiki/API-%EB%AA%85%EC%84%B8%EC%84%9C&quot;&gt;API 명세서&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;그 다음 reactstrap과 tailwindcss를 이용하여 만든 컴포넌트 디자인을 API와 연결 하는 형태로 개발을 하였고 그 다음 일부 개선이 필요한 부분에 개선에 들어가면서 내일 있어야 하는 발표 준비를 하였다!&lt;/p&gt;
+&lt;h2 id=&quot;-해커톤-마지막날---1218&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%ED%95%B4%EC%BB%A4%ED%86%A4-%EB%A7%88%EC%A7%80%EB%A7%89%EB%82%A0---1218&quot; aria-label=&quot; 해커톤 마지막날   1218 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;😴 해커톤 마지막날! - 12.18&lt;/h2&gt;
+&lt;p&gt;이제 마지막날이 되고 발표 준비를 하면서 &lt;code&gt;yjung&lt;/code&gt; 형이 배우로 참여를 하여 시연 영상도 재미있게 촬영도 하고 중간에 42seoul에서 촬영도 오고 여러가지 이벤트가 있었다.&lt;/p&gt;
+&lt;p&gt;원래 heroku를 이용하여 실 서버에 deploy를 하고 싶었는데 아무리 시도를 해봐도 &lt;code&gt;@babel/runtime&lt;/code&gt; 에서 생기는 오류를 잡지 못하여 ㅠㅠ 실서버에는 못 올리게 되었다 ㅠㅠ&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;spark&lt;/code&gt; 형 팀에서 &lt;code&gt;QQUADET&lt;/code&gt; 이라는 재미난 프로젝트를 발표하고 시연 영상에서 출연했던 &lt;code&gt;yjung&lt;/code&gt; 형이 이어서 &lt;code&gt;book42book&lt;/code&gt; 발표 시연에서 나와서 명품연기를 선 보이면서 재미있게 발표를 할 수 있었다!!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 720px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 95%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAIAAAAf7rriAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEfklEQVQ4yw3C6U9aBwAA8Jfsy/ZhWdIdrS1tRRBEW0FABOR8+LgveYC894QHT46HHCuICuKJClSlXhVRQQXreq2HdZ3r0m5rmm5ZsnRLtmRZsm/7tr9i++UHvP7uybMnjdMn9Ud3tx8erR5Xi0fl+epqenU+VsgEF8YCuTQ5MULGSTweCQVJMj0SKuWTmyuZytoU8PbN2bOnR08f1R8cV+4erh3tLa0XJ/LTyfzk+ERmMpGazs6VYnMVCzascwRllpjfj68XR2/fyu5u5ICff3v31YvTp4/rjXq5cbDR2CkGZ1bIzZP5+78XT/+aOvhpqvo2tvXKN7unQib4xrQLw27lR7dXZ/bLeeCXf/59+OvflbM3uXIts7ScmEhjmQVzdlkTn+Y7AyZyjCPRscXqVo6E30cokGXHoO/mwujOxuJhdRk4/PHPuefvyNoLrHiAZPNwNAk6cYXBrrd6lLDPMJSUm3CRBqV3SnkQoR6qOnHy5uL49u3Cwd4yENv7JrT5eGCxbp0qD0yvuMYn1INBqRmRwz4ZTMg9yV79YJe8v7lDxAVxQ7CutxPRMF4qTpZXZ4H0gx8S9TNk5RjLV5y5W/1j0xpfVGzFuyFbB7bRnv6j3VliiJ1UgYMp9ig9NZHWHSCJSBAJep0AUX85WD1zrN9Dizuu7JKEzIg9cV1oUkekTENZLTou7SelegyyuEG1CdIaQVDeI+D2SnuEwi6AqD0nK4/D60emwo5mrCAnEgqXF/fj5LAPQSwOs8Lt1HpdxiHk/yYU1ps08qtUaguVYjKAwNjBw3SlkVzdGl5a8+fmTWRcakONAzg6FIFRP+zwKCETRyDqYl9ntbd3S5QgJGttY7IYLTqdEli7t7/W2CrsLE2uzM/m01g4aEQQ0O61BVJYIGVwRZhC4+U2bguDSWMwqDQaCEmhPpmId81mBoFIcS2ysERkZq3jk1A0IUfcoxFPt1JN7VZwVaZP6OwLLCGdLTxHoX7aRLlAodDoNIlEyGJQugVsAA7H7YGwPRxzJVJwgJS7MMJjF6p0DKFKoIXbRboWjpTOFnxwnvL+x+ff++jcuaarKAJtlGAyoAcWd6uFSiWSToP9dtgFy/T6XlAplvXSrnMojGsXWtkfXqS2sTqQPjGm6XFresImQQrh7uRUdg0H2P7y5MG3rx7dL1sRI1emvNYrZ/BF9E7OJQarmdk2oBMbIGnIKqtFHZWAvha15RFJKSi7Uxia8cqA3PTIYW19LjeuMUIMXg+TJ2jl8Oid7Cusjqarzbspy/eN3MYUelwaPZgJVyM2t0bCbGuxQjx+Jw1YnruBBwmlQnh7Me4m0FYOR9KnQgcdZpsBlPI3R6xJTFEZtX9dIio31PufW+birvOUpotNn12+chE4uVc+Kue+WInfKc8sZkNeRB/Czeko6nFABjktgmi2Eu7XJf+bkvflPPyygJ7Mmot4V9bZOQJfB7wOrc+uJmwgpuV79TzSwo9auDELe1jP8oNXYkZuCu5dcEs3SVU5rNyLKupxyf0bgpMx8dmM4j8eg7iGT5G6pAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201220191217806&quot;
+        title=&quot;image-20201220191217806&quot;
+        src=&quot;/static/021af882483b018b214cf494019fc8b4/37523/image-20201220191217806.png&quot;
+        srcset=&quot;/static/021af882483b018b214cf494019fc8b4/5a46d/image-20201220191217806.png 300w,
+/static/021af882483b018b214cf494019fc8b4/0a47e/image-20201220191217806.png 600w,
+/static/021af882483b018b214cf494019fc8b4/37523/image-20201220191217806.png 720w&quot;
+        sizes=&quot;(max-width: 720px) 100vw, 720px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;TV로 Zoom을 통한 발표를 보는 모습!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAACSklEQVQoz6WS22sTURDG9z/0LxCEiohgH6R4eyhCUF+qSKlU9EGKUNEXpfemSdOkaZo0SZM0bejdpM1ts5t7stlb8vNk+2KlPjkwzPlmvm/2zJ6RzOwMxtEEA1vjygZct7/x9Zym9Wi12nS1K72kt0vorQJ9wTGtPnZ/GG0scbBM08GWwLYgmNbQrT9yV9GyBxhDrm0hKTEXl7FpagfT5OPvqaYmKCQ+IO+MU8lF6GVnKWe+08pMkY9NivwLSvtfUeIuinszVOIvKSY/Ikdd4qZ1JDVwm4uNh5RCj0UcpeS/y2XwGRXvLconHprhES5Ss3TOv6Ek3qBu3iEXclH2j5ANPKXgv08p8AA5cI9210SqR8eQY6+oJV+jpt7SSIyjpCapRx8h73+hk3ZRzXymcTCFejJPMz6Gkv5ELfoEZU9MFnsudO9Qt0epVWWkgVGFfo+B2UTrVNFaMpbRwtRUdK2JruuYehOzncfsVtDbZWxLx+iUBa+L3VOFXqcv+gz64h8OH2P4Zu2OxvHJGadnvzg+PiWbvaBQLHJ+fkYud0k2l6csq+QLJVHLOfjw8IhiqcJANHD6CJdu2AkMw6CiVGm1OzSdlejR64lbGaazHo1G8x/rJBqGduJ4/UGC2zuEo7sEw1Hcvk129zJOnFv2sLYRxOPfYtHtIxJPEkumWRO1bcGPxBL4tyLCw9QbDST3eoAf8yssuddZ9fpZWPUyv+LhSIzvC4QE9jDkrHg3mFtyOx9Npg/4ubjK8prPqQ01C0KjqNWbR/4f+w20jRsgC5vS2wAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201220193245695&quot;
+        title=&quot;image-20201220193245695&quot;
+        src=&quot;/static/24a56aa7681320c9fc5eaca1ead6d726/c1b63/image-20201220193245695.png&quot;
+        srcset=&quot;/static/24a56aa7681320c9fc5eaca1ead6d726/5a46d/image-20201220193245695.png 300w,
+/static/24a56aa7681320c9fc5eaca1ead6d726/0a47e/image-20201220193245695.png 600w,
+/static/24a56aa7681320c9fc5eaca1ead6d726/c1b63/image-20201220193245695.png 1200w,
+/static/24a56aa7681320c9fc5eaca1ead6d726/d61c2/image-20201220193245695.png 1800w,
+/static/24a56aa7681320c9fc5eaca1ead6d726/59f0d/image-20201220193245695.png 2370w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;완성된 Book42Book 메인 페이지&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;-해커톤을-끝내면서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-%ED%95%B4%EC%BB%A4%ED%86%A4%EC%9D%84-%EB%81%9D%EB%82%B4%EB%A9%B4%EC%84%9C&quot; aria-label=&quot; 해커톤을 끝내면서 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🤔 해커톤을 끝내면서..&lt;/h2&gt;
+&lt;p&gt;일단 이번 해커톤을 진행하면서 아쉬웠던 점은 내가 프로젝트의 PM이 되어서 프로젝트의 관리를 했어야 하는데 이러한 협업을 통한 프로젝트 진행한 경험이 적어서 제대로 못했다는 점이 매우 아쉬웠다.&lt;/p&gt;
+&lt;p&gt;처음에는 어느정도 자신감을 가지고 깃허브를 만들고 계획를 하고 진행을 하였는데 어느순간부터 멘붕이 오더니 제대로 진행을 못하고 마구잡이로 진행을 하게 되어서 팀원들이 엄청 힘들게 진행을 한 것 같아서 이러한 협업능력을 42서울에서 공부하는 기간 동안 더욱 발전해 나아가고 싶어졌다.&lt;/p&gt;
+&lt;h3 id=&quot;-book42book-개선-방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-book42book-%EA%B0%9C%EC%84%A0-%EB%B0%A9%ED%96%A5&quot; aria-label=&quot; book42book 개선 방향 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📚 Book42Book 개선 방향&lt;/h3&gt;
+&lt;p&gt;만약 42서울의 집현전과 같이 개발을 할 수 있는 기회를 가지게 된다면 구조부터 다시 만들어서 제대로 완성도 있게 다시 만들어 보고 싶다.&lt;/p&gt;
+&lt;p&gt;아이디어 회의중 나온 인트라 로그인 부분을 스피드게이트에서 사용하는 출입카드로 인증하여 손쉽게 대출 할 수 있는 시스템, 그리고 미래에 출판사와 협력하여서 DRM을 이용한 42-EBOOK 서비스 까지 완성도가 높은 서비스로 발전해 나아가고 싶다!&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[🐳 Docker 기초 부터 Wordpress 서비스 직접 구현 까지!]]></title><description><![CDATA[귀여운 Docker Logo! 🐳 Docker란! Docker는 Linux Container 기술을 이용하여 만든 Container 기술 중 하나! Linux Container…]]></description><link>https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/docker기초부터-wordpress서비스-직접구현까지/</guid><pubDate>Tue, 01 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 601px; &quot;
     &gt;
@@ -489,6 +803,7 @@
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;이제 기본적인 준비가 끝났으니 아래의 명령어를 통해서 wordpress를 다운 받고 압축을 해제 한다.&lt;/p&gt;
 &lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;sh&quot; data-index=&quot;46&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;$ curl -O https://wordpress.org/latest.tar.gz&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk5 mtki&quot;&gt;# 다운 후 srcs로 이동을 시켜준다.&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
 &lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;$ tar -xzf latest.tar.gz -C /var/www/html/&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;이제 내부에 존재하는 &lt;code&gt;wp-config-sample.php&lt;/code&gt; sed 명령어를 통해서 수정을 해본다.&lt;/p&gt;
 &lt;p&gt;&lt;span
