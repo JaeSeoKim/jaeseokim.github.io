@@ -709,6 +709,7 @@ location ~ \.php$ {
 
 ```sh
 $ curl -O https://wordpress.org/latest.tar.gz
+# 다운 후 srcs로 이동을 시켜준다.
 $ tar -xzf latest.tar.gz -C /var/www/html/
 ```
 
