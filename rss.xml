@@ -1,4 +1,460 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 20 Dec 2020 13:26:44 GMT</lastBuildDate><item><title><![CDATA[42서울 건곤감리 해커톤 참여후기!]]></title><description><![CDATA[온라인으로 진행된 42서울 건곤감리 해커톤 대회! 42Seoul 건곤감리 해커톤! 이번에 42서울에서 아래와 같은 내부 해커톤을 진행한다는 공지가 올라와서 참여를 신청하게 되었다!  위에서 보다 싶이 원래는 11.24 ~ 2…]]></description><link>https://jaeseokim.github.io/42Seoul/42서울-건곤감리-해커톤-참여후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/42Seoul/42서울-건곤감리-해커톤-참여후기/</guid><pubDate>Sun, 20 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 31 Dec 2020 10:57:53 GMT</lastBuildDate><item><title><![CDATA[초보개발자의 2020년 회고록]]></title><description><![CDATA[🦠 Covid-19와 함께한 2020년..! 나의 2…]]></description><link>https://jaeseokim.github.io/Etc/2020-retrospective/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/2020-retrospective/</guid><pubDate>Thu, 31 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB6ElEQVQoz4WSz1LTUByF87SufAWam5vcFqoUCkVsU9I/aQuMgtNR1BlnfABdU1pqJW1i2wFXrpxxOPHcJGB2Ls4miy/nd79jqMHyXvV+xMqPoDoRnFYIx1vAaS5gN+aw6wHswxvYBzeQte+QezPI3W+wdpjtKaxn17DK1xCbk1gUx38MAmMCobqEdcIUeKSB8xT4MgXKA8L2c8DK9BEotiYaCAJjQ/UJ81OgahPkZUB3DqcRpMAXuqEGElZl2E5q4POsoQaWxhBqDCNpR6DwmKMVJJtZdYYgk2cKninYrLA7g0lQga0EY/LMAkGF0gQbBJlKA69gWP4t9ntf8eX8KZr+R7jDn2ieL1HphtjrMX6Iw0GI/nCFamuOHTfAZm0G7ziEN1ig3g7gn4TYqvAHcgTD8Vd8rxEuL57gzUkLjeEvnH1aY3CxxvDzHfpvV3BPI5y+W+PsA/N+jZoXoMtv/VcROgQfv46wXZ1iQxCo2MRuLyHcCBYlKNpV+v14suTbOdnbOUyR0TIkT3YYybPt8gSWfj/nCmbSMJnKIjcVgjJY3qxFsyIzKx7MltK3MwkT9gimpYHtMDVLGdpssrvMbLK7nFnrwWw5Z7aYthNsZ4rL2ODu7jmT+P+7+zdkUX7cXWI2axcT+PsvpzlSUJ6lqFoAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231140611221&quot;
+        title=&quot;image-20201231140611221&quot;
+        src=&quot;/static/93de7815a889251a58debd4cb8708adf/01e7c/image-20201231140611221.png&quot;
+        srcset=&quot;/static/93de7815a889251a58debd4cb8708adf/5a46d/image-20201231140611221.png 300w,
+/static/93de7815a889251a58debd4cb8708adf/01e7c/image-20201231140611221.png 512w&quot;
+        sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h1 id=&quot;🦠-covid-19와-함께한-2020년&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%F0%9F%A6%A0-covid-19%EC%99%80-%ED%95%A8%EA%BB%98%ED%95%9C-2020%EB%85%84&quot; aria-label=&quot;🦠 covid 19와 함께한 2020년 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🦠 Covid-19와 함께한 2020년..!&lt;/h1&gt;
+&lt;p&gt;나의 20살이 오늘으로 마무리 되는 날이다.&lt;/p&gt;
+&lt;p&gt;코로나 때문에 아쉽기도 하지만 그래도 좋은 사람들을 많이 만나서 즐겁고 보람차게 보낼 수 있었던 한해 였던 것 같다!&lt;/p&gt;
+&lt;p&gt;올 한 해 있었던 여러가지 주요 사건들을 위주로 정리해보았다.&lt;/p&gt;
+&lt;h2 id=&quot;️-1월-유럽-여행&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EF%B8%8F-1%EC%9B%94-%EC%9C%A0%EB%9F%BD-%EC%97%AC%ED%96%89&quot; aria-label=&quot;️ 1월 유럽 여행 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;✈️ 1월 유럽 여행&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://m.blog.naver.com/PostView.nhn?blogId=2019sca&amp;#x26;logNo=222086576390&amp;#x26;navType=tl&quot;&gt;서울특별시에서 계최한 창의아이디어 경진대회에서 은상을 수상&lt;/a&gt;하고 부상으로 유렵여행을 다녀오게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAFwAAAwEAAAAAAAAAAAAAAAAAAAQFA//EABYBAQEBAAAAAAAAAAAAAAAAAAABAv/aAAwDAQACEAMQAAABwdiX4XNzOpNiI/T5ID//xAAeEAACAQMFAAAAAAAAAAAAAAABAgADERITITEyQf/aAAgBAQABBQJauTYAjSEvBvG5p0C8VcViM1l6+//EABYRAQEBAAAAAAAAAAAAAAAAAAASEf/aAAgBAwEBPwFTEv/EABURAQEAAAAAAAAAAAAAAAAAAAAR/9oACAECAQE/AUVX/8QAGRAAAgMBAAAAAAAAAAAAAAAAAREAEDEh/9oACAEBAAY/AgFsTpzlaoBWm//EAB0QAQADAQACAwAAAAAAAAAAAAEAESFBMVFhkbH/2gAIAQEAAT8htenhcuktKyVAHIID0Yr31ssYh2kejZut11iHZeftEo135iotfuf/2gAMAwEAAgADAAAAEAP9jf/EABcRAQEBAQAAAAAAAAAAAAAAAAEAEXH/2gAIAQMBAT8QFtTlur//xAAVEQEBAAAAAAAAAAAAAAAAAAABEP/aAAgBAgEBPxAkj//EABsQAQEBAAMBAQAAAAAAAAAAAAERACExQVGB/9oACAEBAAE/EGkVHJ7pUaJExWQCS4Fdkn5nBiE7vTpQOJmDc/RMpUiAHKZUioTEUDjxZBXRzU3EBAX1v//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;094B9823-F3A1-4E16-B507-B0974B402B28_1_105_c&quot;
+        title=&quot;094B9823-F3A1-4E16-B507-B0974B402B28_1_105_c&quot;
+        src=&quot;/static/72cecd3bdb9bd043707c15609b638ab6/212bf/094B9823-F3A1-4E16-B507-B0974B402B28_1_105_c.jpg&quot;
+        srcset=&quot;/static/72cecd3bdb9bd043707c15609b638ab6/f93b5/094B9823-F3A1-4E16-B507-B0974B402B28_1_105_c.jpg 300w,
+/static/72cecd3bdb9bd043707c15609b638ab6/b4294/094B9823-F3A1-4E16-B507-B0974B402B28_1_105_c.jpg 600w,
+/static/72cecd3bdb9bd043707c15609b638ab6/212bf/094B9823-F3A1-4E16-B507-B0974B402B28_1_105_c.jpg 768w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;다행히 코로나가 아직 중국내에서 해외로 퍼지지 않았던 시점이라서 다행히 안전하게 다녀 올 수 있었던 것 같다.&lt;/p&gt;
+&lt;p&gt;스페인, 프랑스, 독일 3개국을 돌아다니면서 여러가지 문화를 느낄 수 있었던 좋은 기회였다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGAAAAwEBAAAAAAAAAAAAAAAAAAEDBAL/xAAWAQEBAQAAAAAAAAAAAAAAAAAAAQP/2gAMAwEAAhADEAAAAdrzd75WJi5KCpiI/8QAGhABAQEAAwEAAAAAAAAAAAAAABEBAhITIP/aAAgBAQABBQKIj0ZzrszVX4//xAAWEQEBAQAAAAAAAAAAAAAAAAARABD/2gAIAQMBAT8BI3//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/AR//xAAUEAEAAAAAAAAAAAAAAAAAAAAw/9oACAEBAAY/Ak//xAAcEAACAgIDAAAAAAAAAAAAAAAAARFREEEhcZH/2gAIAQEAAT8hWQ4WMSYa7JUhmkL2To2Ia5P/2gAMAwEAAgADAAAAECwpDv/EABYRAQEBAAAAAAAAAAAAAAAAAAABEf/aAAgBAwEBPxAwkY//xAAVEQEBAAAAAAAAAAAAAAAAAAAAEf/aAAgBAgEBPxCqqv/EAB0QAQEAAQQDAAAAAAAAAAAAAAEAESExQXFhkeH/2gAIAQEAAT8QCCyBhWHJ8EUAHo+oHk7m5EkN8An5rZBjSI7nMHC//9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;7DCB6E03-D85C-4E16-910E-E1F474D72A14_1_105_c&quot;
+        title=&quot;7DCB6E03-D85C-4E16-910E-E1F474D72A14_1_105_c&quot;
+        src=&quot;/static/ff47dc10ce9f4eaf3b01ac43f68f9982/212bf/7DCB6E03-D85C-4E16-910E-E1F474D72A14_1_105_c.jpg&quot;
+        srcset=&quot;/static/ff47dc10ce9f4eaf3b01ac43f68f9982/f93b5/7DCB6E03-D85C-4E16-910E-E1F474D72A14_1_105_c.jpg 300w,
+/static/ff47dc10ce9f4eaf3b01ac43f68f9982/b4294/7DCB6E03-D85C-4E16-910E-E1F474D72A14_1_105_c.jpg 600w,
+/static/ff47dc10ce9f4eaf3b01ac43f68f9982/212bf/7DCB6E03-D85C-4E16-910E-E1F474D72A14_1_105_c.jpg 768w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAwACBf/EABcBAAMBAAAAAAAAAAAAAAAAAAECAwD/2gAMAwEAAhADEAAAAewOcjc2CdEQjnR7ER//xAAfEAACAQIHAAAAAAAAAAAAAAABAgMAEhETISIxMkH/2gAIAQEAAQUCqWW1SAxikuEw2YFlLaZhMSuak7+Dj//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABURAQEAAAAAAAAAAAAAAAAAABAB/9oACAECAQE/ASH/xAAbEAACAwADAAAAAAAAAAAAAAAAARESMQIhUf/aAAgBAQAGPwI5Qu0aQ9GKPBE2djBjEf/EABwQAAMBAQADAQAAAAAAAAAAAAABESExQWFx0f/aAAgBAQABPyEpqR7zRqeIar+ijV1qP2UNeDJQckY2aPR6m8+kTca6LELkHgIuS4f/2gAMAwEAAgADAAAAEIjeM//EABcRAAMBAAAAAAAAAAAAAAAAAAABERD/2gAIAQMBAT8QGS5//8QAFxEBAQEBAAAAAAAAAAAAAAAAAQAQEf/aAAgBAgEBPxCGXHP/xAAdEAEAAwEAAwEBAAAAAAAAAAABABEhMVGhsUFx/9oACAEBAAE/EERs5LIgWqiLcf2YwMFeOnphjg8V0w3CUDoAaz+w4GYK6KfAjoVGweOsPV3ni8BUQzxhdgEgpaPMwTDnpnzkn//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;D25D9449-890C-44B3-BF62-24054DA76D6C_1_105_c&quot;
+        title=&quot;D25D9449-890C-44B3-BF62-24054DA76D6C_1_105_c&quot;
+        src=&quot;/static/200b6a7f1918442c232919ca9e1ef172/212bf/D25D9449-890C-44B3-BF62-24054DA76D6C_1_105_c.jpg&quot;
+        srcset=&quot;/static/200b6a7f1918442c232919ca9e1ef172/f93b5/D25D9449-890C-44B3-BF62-24054DA76D6C_1_105_c.jpg 300w,
+/static/200b6a7f1918442c232919ca9e1ef172/b4294/D25D9449-890C-44B3-BF62-24054DA76D6C_1_105_c.jpg 600w,
+/static/200b6a7f1918442c232919ca9e1ef172/212bf/D25D9449-890C-44B3-BF62-24054DA76D6C_1_105_c.jpg 768w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 768px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 133.33333333333331%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAbABQDASIAAhEBAxEB/8QAGQAAAgMBAAAAAAAAAAAAAAAAAAQBAgMF/8QAFwEBAQEBAAAAAAAAAAAAAAAAAgMAAf/aAAwDAQACEAMQAAABYOfHKPi5lnbPFRdKBf8A/8QAHRAAAQQCAwAAAAAAAAAAAAAAAgABAxESIQQTM//aAAgBAQABBQK1krUpLs1aLROMbR4WuR6xvcMAC4f/xAAXEQEBAQEAAAAAAAAAAAAAAAAAARES/9oACAEDAQE/Aaxrqv/EABcRAAMBAAAAAAAAAAAAAAAAAAABERD/2gAIAQIBAT8BpciP/8QAHRAAAgEEAwAAAAAAAAAAAAAAAAECAxAhMREiQf/aAAgBAQAGPwK6M2cGuwm+DaKg4vRlen//xAAdEAEAAwEAAgMAAAAAAAAAAAABABEhMRBBUZHh/9oACAEBAAE/Ia32I+fFBZ3YchlbnuO2MC6YVPY14H7B6rn1aqNoKORFpVJ//9oADAMBAAIAAwAAABAgwU//xAAZEQADAAMAAAAAAAAAAAAAAAAAAREQMUH/2gAIAQMBAT8QaOYpuldM/8QAGBEBAAMBAAAAAAAAAAAAAAAAAQAQETH/2gAIAQIBAT8Q1RBmHZ//xAAcEAEAAgMBAQEAAAAAAAAAAAABESEAMUFRcWH/2gAIAQEAAT8QiggfFwBKA+4y7h5zoqfMMgx1Sfxmm1NY/wAptVrswzjQlTZ08mkncFY10br6ZzVyVEUYuHUE9MQ5CCVoqs//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;215D9658-64DC-4A38-B26C-68874A05D10E_1_105_c&quot;
+        title=&quot;215D9658-64DC-4A38-B26C-68874A05D10E_1_105_c&quot;
+        src=&quot;/static/28ce158383765af7fa94f1105704ae62/212bf/215D9658-64DC-4A38-B26C-68874A05D10E_1_105_c.jpg&quot;
+        srcset=&quot;/static/28ce158383765af7fa94f1105704ae62/f93b5/215D9658-64DC-4A38-B26C-68874A05D10E_1_105_c.jpg 300w,
+/static/28ce158383765af7fa94f1105704ae62/b4294/215D9658-64DC-4A38-B26C-68874A05D10E_1_105_c.jpg 600w,
+/static/28ce158383765af7fa94f1105704ae62/212bf/215D9658-64DC-4A38-B26C-68874A05D10E_1_105_c.jpg 768w&quot;
+        sizes=&quot;(max-width: 768px) 100vw, 768px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-3월-react-공부-후-공적마스크맵-개발&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-3%EC%9B%94-react-%EA%B3%B5%EB%B6%80-%ED%9B%84-%EA%B3%B5%EC%A0%81%EB%A7%88%EC%8A%A4%ED%81%AC%EB%A7%B5-%EA%B0%9C%EB%B0%9C&quot; aria-label=&quot; 3월 react 공부 후 공적마스크맵 개발 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🗺 3월 React 공부 후 공적마스크맵 개발&lt;/h2&gt;
+&lt;p&gt;처음으로 웹 프론트에 대해서 관심을 가지게 된 계기가 되는 프로젝트이다.&lt;/p&gt;
+&lt;p&gt;코로나가 지속되면서 집에서만 있게되고 입학하게 되는 대학도 MT 취소, 입학식 취소, 비대면 수업으로 진행됨에 따라서 허무함을 느끼고 있다가 &lt;code&gt;TeamMODU&lt;/code&gt; 에서 진행하기로 했던 프로젝트를 위해서 React를 공부하게 되었다.&lt;/p&gt;
+&lt;p&gt;처음 간단하게 클론코딩을 통해서 React, React Hook 까지 공부를 하고 그 다음 코로나 관련해서 무언가 만들고 싶어져서 재난 문자 API를 이용한 프로젝트를 해본뒤 마스크맵 API를 이용하여서 공적 마스크맵까지 개발 하게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jaeseokim.github.io/React/React-JS-%EA%B3%B5%EC%A0%81-%EB%A7%88%EC%8A%A4%ED%81%AC%EB%A7%B5-%EA%B0%9C%EB%B0%9C-%ED%9B%84%EA%B8%B0feat-Kakaomap/&quot;&gt;[React JS] - 공적 마스크맵 개발 후기(feat. Kakaomap)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAADDklEQVQ4y1WTS4sjVRiG89NciOjCQXTAhcogglvBwYU/QNyJKG4URhgUXQgDLkQaumXGHtrWTib3zqXTSSqpS6oqdb8kqcvjVxWV8UCdr6pO1Xu+93Ia3U6T1XJGEMao3QfkVy+y++0Ou5PXofUC/bNPaLaaBL7N7GbM6LqHZa6Jwi0302sW8xsU+X886qGuFzSur/v1C8Mw6Px1QvDnW+wv73I4fRfarzI9+4Be+w/iyMd1LLa2LnVDGGwFWMO2dMzNGkNXcF2LhidTp33FdDJEVVUstQ8HnTIxYWeRRQqOreF5Hr7vkWUHyrKgKHLyPJONXDR1waDfYbs1abhbo6bgOia6usLa2Dw/ihLSdMdul7Lf72qwf0ee5wwHHW5nY+nOruVoRKFDGLokQknb3DI2nxHtwYwKjLDAS0t8efZ2sE2pn82oZJuUxIdCdFsKM6XutJKhEQZOLXjoiyaOwshq4SYIWM4hLzhkxXO1RG7Jin+qTLs0Io29WrZ+r10BVmBW7ZorGqyXCvs0Zp+E0nVIHEfyU1rXSrPjKI+z0LctrTbKMnXWqzmNQMAq0SvHNsYKRZmT5BDLFe0z2UiAk0ToVIYIdwEpxZCyzGvgSr+RJGUyHhwBfc/GNNY17fV6zup2BL9+RfHwI4qzbynqToTif339r0fZ0KUy9snjUy4unh5jUxnje6aEdEIi94f2Cdn5j+Sj8xooSwNK/Qk4pxy6XQrjMfjnzL0E3QtII6fOqOdKbKpQVu5UYR0OexJSlUQozSXovdEQr0qAMiH9/m3K6cvEn35M+vl9guZLXD39iRtFx5MOK4y1uqRRaVDR3toGnmQxlg4dEdreLGptq7VYTAqnLYpf7lC2XiO4/wXxo/eJ23fZzH5nupihCDtNvmlomsr8diInZSAhbdc7DQddSf+yBru8OGcq63sJv3/2DcXkTbKf3yH88DNovkJ6cQ/nsofbHRDrTTHFd9C0FUfqjujp1UDHfFZnV5NY2fKNQneywBx8B+M3SH/4kt2jr8lP3yNsPeSQDkXtPn8D5WcEs6XBRxcAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231145104970&quot;
+        title=&quot;image-20201231145104970&quot;
+        src=&quot;/static/361fbd105ed1fdc0526e3fd97c105f86/c1b63/image-20201231145104970.png&quot;
+        srcset=&quot;/static/361fbd105ed1fdc0526e3fd97c105f86/5a46d/image-20201231145104970.png 300w,
+/static/361fbd105ed1fdc0526e3fd97c105f86/0a47e/image-20201231145104970.png 600w,
+/static/361fbd105ed1fdc0526e3fd97c105f86/c1b63/image-20201231145104970.png 1200w,
+/static/361fbd105ed1fdc0526e3fd97c105f86/21482/image-20201231145104970.png 1350w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-6월-첫-github-contribution&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-6%EC%9B%94-%EC%B2%AB-github-contribution&quot; aria-label=&quot; 6월 첫 github contribution permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🎉 6월 첫 Github Contribution!&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;React&lt;/code&gt;, &lt;code&gt;Next.js&lt;/code&gt; 등을 공부하면서 게시판 구현을 하게 되었는데 이 때 사용한 &lt;code&gt;react-simplemde-editor&lt;/code&gt; 라이브러리에 버그를 발견하게 되어서 내부에 이벤트에 대해서 하나가 처리가 안되어 있는 것을 알게 되고 해당하는 코드를 하나 추가 해서 처음으로 오픈소스에 기여를 하게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jaeseokim.github.io/React/%EC%B2%AB-GitHub-Contribution-feat-react-simplemde-editor/&quot;&gt;첫 GitHub Contribution!! (feat. react-simplemde-editor)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACEklEQVQ4y5WTy3KbQBBF+f8/8jKruJJVKh9gS0IIPUDM+81NdyN7oTiLUHUZmGGaM923u5/f3vDrxw5v7zvs9z3O4xmHfsDuOKI/nnCZFJSNyLmglILWGlYA68r3bXQ+QBsLT2P3+tLj9/eRXrxsiCEgpQLjM0KI8LFKQOccUoz411VbRa4FXUWCzx6LcXAhQdFoPQWIiZQRc5V3S2uefsRzrFSa0AoxUeZCczmji/TRQgTjbLB4IiMiHQpCAyJJxnUTLcuarJdVThWfqLvWVplUSsNaL8fyniitpWNaGg2M1jDGyLE5JYHEVLwvpfSZS1bHyIY2D8MJfX/EcBpF+0OP223aNE2Y7wsWpaC1IWmUWiXH1rrHsbegHd9SbpSniv+5OAAHrLU+EUpCK4wLmBeH2xIwkQzl1bok85bEldaO0kHF4eIVKkoMbKf8VcBGPnIYLgr7M41Xh+vNYLzcxYfDVeMyO2jLAfNnQM7llwETExqPaeaNBtfZEqXDXVmykcesvBAynRD6JBBcZQ76VJTtyGyflDYvRRpDLLKJf8brmfyYqFsiKdFzfbjDPwfE1kjywpVjcdX+KsJDfDXqCi6GowrP8ywWY1Ke6xI5V88Rd7IF+4z7kT9gf33QcUt+EAi1UBbxLGt9AAih0xWnd43D7ih+5CTz34K0XnmkIgl1bWwvWk9bOvg7pczW8/TMMH8AGQFCcDT0RO8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231151149553&quot;
+        title=&quot;image-20201231151149553&quot;
+        src=&quot;/static/5072215826566713225c16bd9a0ce33d/c1b63/image-20201231151149553.png&quot;
+        srcset=&quot;/static/5072215826566713225c16bd9a0ce33d/5a46d/image-20201231151149553.png 300w,
+/static/5072215826566713225c16bd9a0ce33d/0a47e/image-20201231151149553.png 600w,
+/static/5072215826566713225c16bd9a0ce33d/c1b63/image-20201231151149553.png 1200w,
+/static/5072215826566713225c16bd9a0ce33d/d61c2/image-20201231151149553.png 1800w,
+/static/5072215826566713225c16bd9a0ce33d/97a96/image-20201231151149553.png 2400w,
+/static/5072215826566713225c16bd9a0ce33d/38abd/image-20201231151149553.png 2766w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;♂️-7월-42seoul---la-piscine-참여&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%99%82%EF%B8%8F-7%EC%9B%94-42seoul---la-piscine-%EC%B0%B8%EC%97%AC&quot; aria-label=&quot;♂️ 7월 42seoul   la piscine 참여 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🏊‍♂️ 7월 42Seoul - La Piscine 참여!&lt;/h2&gt;
+&lt;p&gt;작년에 신청했었던 42Seoul의 1개월 집중 교육 및 선발과정인 &lt;code&gt;La Piscine&lt;/code&gt;에 참여 하였다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;&lt;img src=&quot;https://badge42.herokuapp.com/api/stats/jaeskim?cursus=C%20Piscine&quot; alt=&quot;jaeskim&amp;#x27;s 42 stats&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;한달동안 진행되는 선발 과정동안 많은 사람들을 만나면서 매일 밤샘으로 코딩 하고 팀 프로젝트도 하고 여러가지 많은 일들이 있었다.&lt;/p&gt;
+&lt;p&gt;코로나 때문에 격주로 진행해야 한다는 불편함도 있었지만 좋은 사람들을 많이 만나서 한달동안 재미있게 할 수 있었던 것 같다.&lt;/p&gt;
+&lt;p&gt;피신 기간동안 같이 공부 했던 동료들과 모두 다 같이 본과정에 합격을 하여서 더욱더 의미가 깊게 느껴졌던 것 같다.&lt;/p&gt;
+&lt;h2 id=&quot;-7월-토이-프로젝트-your-portfolio-개발&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-7%EC%9B%94-%ED%86%A0%EC%9D%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-your-portfolio-%EA%B0%9C%EB%B0%9C&quot; aria-label=&quot; 7월 토이 프로젝트 your portfolio 개발 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🎞 7월 토이 프로젝트 &lt;a href=&quot;https://github.com/JaeSeoKim/Your-Portfolio&quot;&gt;Your-Portfolio&lt;/a&gt; 개발!&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;La-Piscine&lt;/code&gt; 에 참여하느라 마무리를 못했던 프로젝트를 마무리 하고 &lt;code&gt;생활 코딩&lt;/code&gt;, &lt;code&gt;React Korea&lt;/code&gt; 에 공개를 해보았다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://your-portfolio.vercel.app/&quot;&gt;https://your-portfolio.vercel.app/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1006px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 154%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231155743990&quot;
+        title=&quot;image-20201231155743990&quot;
+        src=&quot;/static/5742a7f7a8cafc2026c045075e97a74f/2c5fd/image-20201231155743990.png&quot;
+        srcset=&quot;/static/5742a7f7a8cafc2026c045075e97a74f/5a46d/image-20201231155743990.png 300w,
+/static/5742a7f7a8cafc2026c045075e97a74f/0a47e/image-20201231155743990.png 600w,
+/static/5742a7f7a8cafc2026c045075e97a74f/2c5fd/image-20201231155743990.png 1006w&quot;
+        sizes=&quot;(max-width: 1006px) 100vw, 1006px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;많은 사람들이 관심을 가져주어서 기분도 좋았고 관심이 있었던 &lt;code&gt;GraphQL&lt;/code&gt;, &lt;code&gt;Next.js&lt;/code&gt; 등 여러가지 기술들을 써볼 수 있는 재미있었던 프로젝트 였다.&lt;/p&gt;
+&lt;h2 id=&quot;-8월-gatsby를-이용한-blog로-이전-tistory---git-blog&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-8%EC%9B%94-gatsby%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-blog%EB%A1%9C-%EC%9D%B4%EC%A0%84-tistory---git-blog&quot; aria-label=&quot; 8월 gatsby를 이용한 blog로 이전 tistory   git blog permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🖋 8월 Gatsby를 이용한 Blog로 이전! (Tistory -&gt; git-blog)&lt;/h2&gt;
+&lt;p&gt;React에 대해서 공부를 하면서 한번 &lt;code&gt;Gatsby&lt;/code&gt; 를 이용해서 블로그를 직접 만들어 보고 싶어져서 빠르게 개발에 착수 했다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jaeseokim.github.io/React/gatsby-blog-%EA%B0%9C%EB%B0%9C-%ED%9B%84%EA%B8%B0/&quot;&gt;gatsby를 이용한 Github blog 개발후기&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 56.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABbklEQVQoz42Si06DMBSGef/nYTiXaTajRuNTOLcxxv1S2kLb31MGYygmNvkovZzT8/+t47pHuAsfrufjfh1g9XjGYhVgsQ7hPYRYbmIstzG8TQRvSzwRzzR+IV4TLN9S3L33fGRw8EczStC3hRAcVSXw3+ZobTDQJaLO/ldFCsE5ipIhy3g3Z9cGrnHmpiccYy6J7CTnkjZrNI3G7iuHkBqyAQSNa95e4cRYgJlAki8LkoLygl0SthqfuwRpWiBJyzGRUIS1QU0STiSjn2iUBrfldNVqRHGKMMoRJyWkVHMu/+j7hMMJxow+KqVwOATECfu95YgwDBEEQc+52zNboZmZtObWogZjFeqa0S1XKCtGnsqOpmn7yzF97K2HZmqubS3JP0UZspwhzSryTJBs+Vu0GV/GcIAzt0FRQt8PsSPZeyKOY0RRhCRJ6AllKIqi83mMMVcvnfkT7RO6SGaD5HKsVNLl3VZnk7Wt7Hz9Bgh6VaZlZGjrAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231161728302&quot;
+        title=&quot;image-20201231161728302&quot;
+        src=&quot;/static/a9a7d986c0f32236bcc54754a6c31639/c1b63/image-20201231161728302.png&quot;
+        srcset=&quot;/static/a9a7d986c0f32236bcc54754a6c31639/5a46d/image-20201231161728302.png 300w,
+/static/a9a7d986c0f32236bcc54754a6c31639/0a47e/image-20201231161728302.png 600w,
+/static/a9a7d986c0f32236bcc54754a6c31639/c1b63/image-20201231161728302.png 1200w,
+/static/a9a7d986c0f32236bcc54754a6c31639/d61c2/image-20201231161728302.png 1800w,
+/static/a9a7d986c0f32236bcc54754a6c31639/97a96/image-20201231161728302.png 2400w,
+/static/a9a7d986c0f32236bcc54754a6c31639/88b57/image-20201231161728302.png 3582w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;기존 Tistory에 작성하였던 글과 사진을 Backup하기 위해서 &lt;code&gt;GoLang&lt;/code&gt; 를 이용하여 스크립트를 작성해보고 여러가지 최적화도 진행하고 지금도 계속 조금씩 수정을 하면서 개선 발전해 나아가고 있다.&lt;/p&gt;
+&lt;p&gt;아직은 블로그 이전후 오랜 시간이 지나지 않아서 기존 Tistory 블로그 방문수를 뛰어 넘지는 못하고 있지만 그래서 직접 만들었다는 점에서 매우 뿌듯 하다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;jaeseokim.github.io&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABj0lEQVQoz3WSPYsTYRSF5xdZuLWF9oLgNkKwsRIrBQtBsLMTOwsLf0JclCAqrs12ClorZiHRbLLJJPP1zvs9j3cmk6CCFw7D/Zhzztw7ye0XilvPFYNnisOnJXdvnvBo8IF7195x//p7NmlFXVeEEGiaBmMMRVFgre3yGGP33CG5+kRx5XHFwcOSiw9yDi+95c7l1wwOXnLjwpDVIsdYTRvty2VZopTq8lbk30hefa45+mQYffG8+eo4Hv3k43DM8fCUk9EEZ8OeLHi/d9LlPeGu1uYJ2Hac/0dP8Mdn7fAXmQi0a0h8EKXYdOiGengXKDPZU09a6i1p53ZHJiQxxL1w6zppmtgrwTyLpHmgqiPnC823HzXfp5bxxDCZWfKNxdaes4WlVp51asmktl7JoXK3PYoTJ5U0Z+eWX3PDdGY4nWpWG8e4JakCm8KTCeapYyn1tne2dMxST1pGlllgsXZbh6rWFKXGOS8H0LJYj5ZfwzmLlyM4Z2QwyH4MXnq1NljnUMZ1c8bKvNZS8x3hb4MJWSYn8ODMAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231161531050&quot;
+        title=&quot;image-20201231161531050&quot;
+        src=&quot;/static/2bf1b9557340314c7d5af7cbf62778b0/c1b63/image-20201231161531050.png&quot;
+        srcset=&quot;/static/2bf1b9557340314c7d5af7cbf62778b0/5a46d/image-20201231161531050.png 300w,
+/static/2bf1b9557340314c7d5af7cbf62778b0/0a47e/image-20201231161531050.png 600w,
+/static/2bf1b9557340314c7d5af7cbf62778b0/c1b63/image-20201231161531050.png 1200w,
+/static/2bf1b9557340314c7d5af7cbf62778b0/d61c2/image-20201231161531050.png 1800w,
+/static/2bf1b9557340314c7d5af7cbf62778b0/ec5f6/image-20201231161531050.png 1852w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;jaeseokim.tistory.com&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABhElEQVQoz2VSvy8EURDev+lqlWgUGhGFH41EpaASlZYotBL+CCIiRyioVIRa4cTh3O7avdsf7/dnZu5WJF4yO+/N9+bbmfletHpUYOWwxPJBidn9AdYXbrG9eI2NmQtszl0hS0sMiwGstQghoK5r5HkOrbWcvffim300vVdgaodst0BrK8f8RBtrk2dYbB1jqXWCNB7iO0tRVRV4FUUhhEzgnJMYbcc+IDp/qHF2r9F+tLh8Mrhpd3F7+oKb0w7uLt9gzSiJ/95UOWLgikbYmE7wCEHR4S/wf1FD8m2WJ8Js6KC0hzGe2mejs1KI+M/OByQDj/TbiCW5RUaWJBo5JfYSg27fyJ6JPmODTleh867x/Krw+UX3CksjoAqNdSgrh4+eRq+vhShODfpE8hVrxJkTYo69E2mPyLKBlZy89KgUFZJZVLWTEURKW1LO/aolDQY/bnGknGDsQ/iNi6rje43CLFKkVA02HigrqY2Rp8Hz0NqIZ4xjjecnw8aYofucxxgT/gDjkllcQ6KnLgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231161629367&quot;
+        title=&quot;image-20201231161629367&quot;
+        src=&quot;/static/769822ddd92f90a61cc0aa5c77c0df0c/c1b63/image-20201231161629367.png&quot;
+        srcset=&quot;/static/769822ddd92f90a61cc0aa5c77c0df0c/5a46d/image-20201231161629367.png 300w,
+/static/769822ddd92f90a61cc0aa5c77c0df0c/0a47e/image-20201231161629367.png 600w,
+/static/769822ddd92f90a61cc0aa5c77c0df0c/c1b63/image-20201231161629367.png 1200w,
+/static/769822ddd92f90a61cc0aa5c77c0df0c/d61c2/image-20201231161629367.png 1800w,
+/static/769822ddd92f90a61cc0aa5c77c0df0c/ec5f6/image-20201231161629367.png 1852w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;♂️-9월-42seoul-본과정-시작&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%E2%99%82%EF%B8%8F-9%EC%9B%94-42seoul-%EB%B3%B8%EA%B3%BC%EC%A0%95-%EC%8B%9C%EC%9E%91&quot; aria-label=&quot;♂️ 9월 42seoul 본과정 시작 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🏃🏻‍♂️ 9월 42Seoul 본과정 시작!&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;&lt;img src=&quot;https://badge42.herokuapp.com/api/stats/jaeskim&quot; alt=&quot;jaeskim&amp;#x27;s 42 stats&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;코로나 때문에 42Seoul의 본과정 시작이 연기 되는 불상사가 있었지만 본과정이 시작이 되었다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.33333333333334%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAYAAAAvxDzwAAAACXBIWXMAABYlAAAWJQFJUiTwAAACcElEQVQ4y11TCW7bMBDU/1/UTxRoi6BNEye+ZFuiDoqHeOia7q7jICgFQjyWszvDYVFVNaq6xu1WwVgLbtu24dH+H3+ZYvv4vraCAWvVIOeMsizhvIcl4MPh+Jmg63t0XS9jax0OxxMUnXHWo6k7hBDw8rqD1gOKGCPmeUacVoS8UAUrpmnCsixY1xV+HCUJB+c8IaUkcy7MJAMVlOzt3t6lgCJSAAMyWJ5XAZlozm2h8bm8YH88omk7SkRxVAADMvUhDqjGCtZ5MI5QNm6EDxHaJdQ6wseMtjdoOk3rGbvDCbv9CbemQ8wz+sHR/kDAMyrb4qgvsla3JMtAFTJYTBmDz2hMkkPaOAoyCLS+2x8FvKfgmCZwAQPpmBh8NKhdQ3MPRYDWBxSsybYu8GmFsgTmZ5HgcauO6OhhkM7tMeemRoU384aBkve9lviCM0USm3uePsZp+vxz5kq1uFQKDR1KFJOnRfYS6T5Nm0j2WC+GLxpWrCHpZlzASFpyf96949fvZ/x4+oPztRI5WK+YZlyNwq7b39eaXv6FGyPGkGB8QmeTXIqneaJsDPj0/Cr9+88n3KhS1okPBqqw9xbKdaIhXyQXV/CFTEJ1hg2k37JiHOkQ6ZKIdkUGrpsW58sVg7EiC9tkJouZ6KB8Q54lu213mxXhw9jsw9ZmAfR+FOEzGVwRWHm9g7E/Y0w0NuLDPvQ427MA8kPgf9FT+Y4oKvLZ6Vyi0wYsA1fM9JtuEM1CvrPotIUm2+S8otRX/G1fJeZU3sSfBdPjp6ZdROcmKTtEfj10g9SZOr+Skd7rSryYLs+pHLwQ8LdaEatFzjG7fz4wNMN5h4BpAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231162624958&quot;
+        title=&quot;image-20201231162624958&quot;
+        src=&quot;/static/e5475c83495f2e3d571f97957555f009/c1b63/image-20201231162624958.png&quot;
+        srcset=&quot;/static/e5475c83495f2e3d571f97957555f009/5a46d/image-20201231162624958.png 300w,
+/static/e5475c83495f2e3d571f97957555f009/0a47e/image-20201231162624958.png 600w,
+/static/e5475c83495f2e3d571f97957555f009/c1b63/image-20201231162624958.png 1200w,
+/static/e5475c83495f2e3d571f97957555f009/dcb79/image-20201231162624958.png 1700w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;시작 후 빠르게 초반 프로젝트를 클리어 하고 어렵다고 소문난 &lt;code&gt;ft_printf&lt;/code&gt; 프로젝트를 보너스 까지 모두 완성하였다.&lt;/p&gt;
+&lt;p&gt;한달정도를 &lt;code&gt;ft_printf&lt;/code&gt; 프로젝트에 시간을 투자하였는데 스터디 사람들 끼리 클러스터에 모여서 오아시스에서 토론을 하고 서로 찾은 방법을 공유 하면서 매우 재미있게 프로젝트를 진행 했던 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://jaeseokim.github.io/C/42Seoul-ft_printf-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EA%B8%B0%EB%A1%9D/&quot;&gt;[42Seoul] ft_printf 프로젝트 기록.&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;-10월-토이-프로젝트-badge42-시작&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-10%EC%9B%94-%ED%86%A0%EC%9D%B4-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-badge42-%EC%8B%9C%EC%9E%91&quot; aria-label=&quot; 10월 토이 프로젝트 badge42 시작 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;📌 10월 토이 프로젝트 &lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;Badge42&lt;/a&gt; 시작!&lt;/h2&gt;
+&lt;p&gt;42Seoul에서 공부를 하면서 중간에 진행 할 만한 프로젝트가 없나 고민을 하다가 42에서 제공하는 API를 이용하여 토이프로젝트를 진행하게 되었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;badge42-개발기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0&quot; aria-label=&quot;badge42 개발기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;badge42 개발기&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://jaeseokim.github.io/Javascript/42-readme-stats-%EA%B0%9C%EB%B0%9C%EA%B8%B0_1/&quot;&gt;1편 보러 가기!&lt;/a&gt;, &lt;a href=&quot;https://jaeseokim.github.io/Javascript/badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0_2_aka_42-readme-stats/&quot;&gt;2편 보러 가기!&lt;/a&gt;, &lt;a href=&quot;https://jaeseokim.github.io/Javascript/badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0_3_aka_42-readme-stats/&quot;&gt;3편 보러 가기!&lt;/a&gt;, &lt;a href=&quot;https://jaeseokim.github.io/Javascript/badge42-%EA%B0%9C%EB%B0%9C%EA%B8%B0_4/&quot;&gt;4편 보러 가기!&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;처음에는 간단한 컬러에 Level, BlackHole 등의 정보만 보여줄 수 있도록 디자인을 하였는데 지속적으로 개발하여서 이제는 아래처럼 코알리션 별 배경을 적용하여 좀더 이쁘게 보일 수 있도록 발전 시켰다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/JaeSeoKim/badge42&quot;&gt;&lt;img src=&quot;https://badge42.herokuapp.com/api/stats/jaeskim&quot; alt=&quot;jaeskim&amp;#x27;s 42 stats&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;이제는 많은 사람들이 사용하면서 &lt;code&gt;Star&lt;/code&gt; 도 &lt;strong&gt;71&lt;/strong&gt;개나 받게 되었다..!!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 988px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 57.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABq0lEQVQoz41Sa4+bMBDk//+1+1Cp0qmX4xogNmADdsC8X5nu+sKlUauqH4axrd3Z2V0CY2sUtkVUToiLEaKakNseoRrwKntE9LasK+bl31jWzXNwdT10PeKkZoR6RlItyOyE72LES0QFzILb7YbtBmw78b7f+YF1279EAxmeEL2/Q+USqUggCakUyGSCTMT+HCUXvJ1CYgEhMyRCIrlIfJwjhD/PuNbNl2jQVBpFaSDLFmnpkBGkrpFXju4NbNOj7TrYa03cezSuhWs7NATmfpweLSsSi7XDt2TAj2zEuZjxlk94TUd86AmmXbHf22QXf8Mh9tlypiDSDMZa5Eqjqgy2baPAzfP/LORpKaWxKEhEZhq2djQPR3dLRdRTKwcf54e7Z9GAkwZCP4wYp9nPx9KQu37ANC9/gBM5vm4caoo93g4O+MOVtvuWGtdBFaUvcDhhfoAFZ2SqwEWm3sThkEWDlhI1tVjaKyZ6rIh5o7xBDqjMFSWNRJeVf2MBvnMXv4+BO/IOW2OQxzEKITBTMLvjZG6HAwwVULqkGed+HFxE6cL/anw+RIe701+pvUzdbLRNEAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231165359829&quot;
+        title=&quot;image-20201231165359829&quot;
+        src=&quot;/static/cb88c3777f4ad86be0f1d94a8b092d32/e4900/image-20201231165359829.png&quot;
+        srcset=&quot;/static/cb88c3777f4ad86be0f1d94a8b092d32/5a46d/image-20201231165359829.png 300w,
+/static/cb88c3777f4ad86be0f1d94a8b092d32/0a47e/image-20201231165359829.png 600w,
+/static/cb88c3777f4ad86be0f1d94a8b092d32/e4900/image-20201231165359829.png 988w&quot;
+        sizes=&quot;(max-width: 988px) 100vw, 988px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;처음으로 오픈소스 프로젝트를 진행하면서 사람들에게 호응을 많이 받은 것이 처음이여서 매우 뿌듯 하다.&lt;/p&gt;
+&lt;h2 id=&quot;-1년을-돌아보면서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#-1%EB%85%84%EC%9D%84-%EB%8F%8C%EC%95%84%EB%B3%B4%EB%A9%B4%EC%84%9C&quot; aria-label=&quot; 1년을 돌아보면서 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;🤔 1년을 돌아보면서&lt;/h2&gt;
+&lt;p&gt;1년간 코로나라는 제약이 있었음에도 그래도 내자신이 열심히 했다라고 자부심 있게 말 할 수 있을 정도로 한 것 같아서 다행이였던 것 같다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 26.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAYAAABFA8wzAAAACXBIWXMAABYlAAAWJQFJUiTwAAABAElEQVQY05WQXU/CQBBF+f+/x4RHicaQgIYGkCofUZtSaGG327LtttLtsV31yScnczMfyZzczOBy0QghkbJTmmJMxX/CNpZSl1x0QV3XDKy1VF3Tg8rSILTiqE+cS0lcnMkr7eZIx4T5gX0es8sDwuLATgVs5QdvKqRqatq2/QYaY8g6p0kmGMczvNh3R8tsjZ/s8E4+YzljKTfcR1NuoluG4Yjh4Y5RMuHh+MS5kM6xA+a6BxpipXiVAbEWvKd7ZnLFY7JglW4JdMRSrPHEiud8w0TO8ZTPVC2YJy9kOv8FtpS1dSo61Z+ts960jav0+VNta//srtdr956UsjL0qy8fW3vnbML5FAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20201231194744904&quot;
+        title=&quot;image-20201231194744904&quot;
+        src=&quot;/static/fc64a0df343ece42ef0945b08f510826/c1b63/image-20201231194744904.png&quot;
+        srcset=&quot;/static/fc64a0df343ece42ef0945b08f510826/5a46d/image-20201231194744904.png 300w,
+/static/fc64a0df343ece42ef0945b08f510826/0a47e/image-20201231194744904.png 600w,
+/static/fc64a0df343ece42ef0945b08f510826/c1b63/image-20201231194744904.png 1200w,
+/static/fc64a0df343ece42ef0945b08f510826/d61c2/image-20201231194744904.png 1800w,
+/static/fc64a0df343ece42ef0945b08f510826/71ba4/image-20201231194744904.png 1870w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;연초와 연말에 잔디가 비워져 있는 모습이 보이는게 조금 아쉬운 점이다. ㅠㅠ &lt;del&gt;(좀더 노력 할껄...)&lt;/del&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;내년의 목표는 &lt;strong&gt;잔디를 올해보다 좀더 풍성하게 만드는 것!&lt;/strong&gt;, &lt;strong&gt;42Seoul의 공통과정 끝내기!&lt;/strong&gt;, &lt;strong&gt;Github Star 100개 이상 받을 수 있는 프로젝트 만들기!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이 3가지를 목표로 열심히 달려봐야겠다!&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[42서울 건곤감리 해커톤 참여후기!]]></title><description><![CDATA[온라인으로 진행된 42서울 건곤감리 해커톤 대회! 42Seoul 건곤감리 해커톤! 이번에 42서울에서 아래와 같은 내부 해커톤을 진행한다는 공지가 올라와서 참여를 신청하게 되었다!  위에서 보다 싶이 원래는 11.24 ~ 2…]]></description><link>https://jaeseokim.github.io/42Seoul/42서울-건곤감리-해커톤-참여후기/</link><guid isPermaLink="false">https://jaeseokim.github.io/42Seoul/42서울-건곤감리-해커톤-참여후기/</guid><pubDate>Sun, 20 Dec 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
