@@ -1,7 +1,7 @@
 ---
 title: "[42Seoul] ft_printf 프로젝트 기록."
 date: 2020-11-24
-tags: ["42seoul", "ft_printf", "C"]
+tags: ["42Seoul", "ft_printf", "C"]
 draft: false
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "[C] variable argument 사용법에 대해 알아 보기!"
 date: 2020-10-06
-tags: ["c", "ft_printf", "42seoul"]
+tags: ["c", "ft_printf", "42Seoul"]
 draft: false
 ---
 

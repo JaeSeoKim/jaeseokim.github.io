@@ -1,7 +1,7 @@
 ---
 title: "[Typescript] badge42 개발기(4)"
 date: 2020-11-22
-tags: ["badge42", "Readme Badge", "Javascript", "42seoul"]
+tags: ["Badge42", "Readme Badge", "Javascript", "42Seoul"]
 draft: false
 ---
 
