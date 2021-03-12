@@ -118,6 +118,11 @@ const Markdown = ({ html }) => {
     }
     table {
       margin-bottom: 1.5rem;
+      display: block;
+      max-width: fit-content;
+      margin: 0 auto;
+      overflow-x: auto;
+      white-space: nowrap;
     }
 
     p > code,
