@@ -93,13 +93,14 @@ minishell에서는 많은 조건들이 존재 하지 않기 때문에 `Token` �
 
 상태에 따른 기본적인 규칙을 정리를 해보면 아래와 같은 형태로 정리가 된다.
 
-| Status    | CMD                | REDIRECT         | PIPE             | SEPERATOR        | NONE            |
-| --------- | ------------------ | ---------------- | ---------------- | ---------------- | --------------- |
-| CMD       | NONE: ARG로 처리됨 | O                | O                | O                | O               |
-| REDIRECT  | O                  | X: FILE Required | X: FILE Required | X: FILE Required | O               |
-| PIPE      | O                  | X: FILE Required | X: FILE Required | X: CMD Required  | X: CMD Required |
-| SEPERATOR | O                  | X: FILE Required | X: CMD Required  | X: CMD Required  | X: CMD Required |
-| NONE      | O                  | O                | X: CMD Required  | X: CMD Required  | NONE            |
+| Status    | CMD                | REDIRECT         | PIPE             | SEPERATOR        | CTR_OP           | NONE            |
+| --------- | ------------------ | ---------------- | ---------------- | ---------------- | ---------------- | --------------- |
+| CMD       | NONE: ARG로 처리됨 | O                | O                | O                | O                | O               |
+| REDIRECT  | O                  | X: FILE Required | X: FILE Required | X: FILE Required | X: FILE Required | O               |
+| PIPE      | O                  | X: FILE Required | X: FILE Required | X: CMD Required  | X: CMD Required  | X: CMD Required |
+| SEPERATOR | O                  | X: FILE Required | X: CMD Required  | X: CMD Required  | X: CMD Required  | X: CMD Required |
+| CTR_OP    | O                  | X: FILE Required | X: CMD Required  | X: CMD Required  | X: CMD Required  | X: CMD Required |
+| NONE      | O                  | O                | X: CMD Required  | X: CMD Required  | X: CMD Required  | NONE            |
 
 표에 정리되지 못한 조건을 추가로 작성을 해본다면 아래와 같이 정리가 된다.
 
