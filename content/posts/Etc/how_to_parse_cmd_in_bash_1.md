@@ -17,7 +17,7 @@ draft: false
 
 일단 [Compiler Design Tutorial](https://www.tutorialspoint.com/compiler_design/index.htm) 글에서 설명을 보게 되면 컴파일러는 기본적으로 `FrontEnd(Analysis Phase)` , `BackEnd(Synthesis Phase)` 크게 2가지로 구분되게 되는데 FrontEnd에서 들어온 코드에 대해서 컴퓨터가 이해를 할 수 있는 형태로 해석과 함께 구문에 대해서 문제점이 있는지에 대해서 처리를 하게 된다. 그 후 BackEnd 영역에서 해석된 내용을 바탕으로 기계어로 합성을 시키게 된다.
 
-![Analysis and Synthesis phase of compiler](./how_to_parse_cmd_in_bash_1/compiler_analysis_synthesis-20210421203556564.jpg)
+![Analysis and Synthesis phase of compiler](./image/how_to_parse_cmd_in_bash_1/compiler_analysis_synthesis-20210421203556564.jpg)
 
 > [출처 : [Compiler Design Tutorial](https://www.tutorialspoint.com/compiler_design/index.htm)]
 
