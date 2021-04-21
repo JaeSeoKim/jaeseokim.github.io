@@ -1,4 +1,250 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 12 Mar 2021 14:45:15 GMT</lastBuildDate><item><title><![CDATA[[42-libasm] nasm intel assembly syntax 알아보기!]]></title><description><![CDATA[42Seoul에서 assembly 관련 서브젝트를 진행하게 되어서 개인적으로 정리한 내용입니다. 틀린 부분이 존재 할 수 있으니 발견하게 된다면 댓글로 이야기 해주세요! nasm syntax 란? The Netwide Assembler (NASM…]]></description><link>https://jaeseokim.github.io/42Seoul/about-nasm-intel-syntax/</link><guid isPermaLink="false">https://jaeseokim.github.io/42Seoul/about-nasm-intel-syntax/</guid><pubDate>Fri, 12 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;42Seoul에서 assembly 관련 서브젝트를 진행하게 되어서 개인적으로 정리한 내용입니다. 틀린 부분이 존재 할 수 있으니 발견하게 된다면 댓글로 이야기 해주세요!&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 21 Apr 2021 14:32:33 GMT</lastBuildDate><item><title><![CDATA[[42seoul-minishell] bash에서 cmd를 parsing 하는 방법에 대한 고찰 (1)!]]></title><description><![CDATA[42seoul에서 bash와 같이 명령어에 대해서 읽고 실행 할 수 있는 shell를 직접 만들어 보는 과제가 나와서 bash에서 어떻게 cmd에 대해 parsing하는 지에 대해 고민해보았다. bash…]]></description><link>https://jaeseokim.github.io/Etc/how_to_parse_cmd_in_bash_1/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/how_to_parse_cmd_in_bash_1/</guid><pubDate>Wed, 21 Apr 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;42seoul에서 bash와 같이 명령어에 대해서 읽고 실행 할 수 있는 shell를 직접 만들어 보는 과제가 나와서 bash에서 어떻게 cmd에 대해 parsing하는 지에 대해 고민해보았다.&lt;/p&gt;
+&lt;h2 id=&quot;bash는-컴파일러하고-유사하게-동작을-한다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bash%EB%8A%94-%EC%BB%B4%ED%8C%8C%EC%9D%BC%EB%9F%AC%ED%95%98%EA%B3%A0-%EC%9C%A0%EC%82%AC%ED%95%98%EA%B2%8C-%EB%8F%99%EC%9E%91%EC%9D%84-%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;bash는 컴파일러하고 유사하게 동작을 한다 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;bash는 컴파일러하고 유사하게 동작을 한다.&lt;/h2&gt;
+&lt;p&gt;일단 bash는 기본적으로 명령어에 대해서 실행을 해주는 것만이 아니라 파일에 대해 입출력을 전달 할 수 도 있고 명령어와 명령어를 이어주는 pipe 기능 이전 명령어에 대한 상태를 기반으로한 조건 흔히 shell script라고 사용하는 if, while, 변수 등 흔히 사용하는 컴퓨터 언어와 동일하게 동작을 한다.&lt;/p&gt;
+&lt;p&gt;이를 토대로 bash가 어떻게 parsing를 하는지에 대해 컴파일러의 동작 방법를 보고 유추가 가능하다.&lt;/p&gt;
+&lt;h2 id=&quot;compiler의-동작-방법-살펴-보기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#compiler%EC%9D%98-%EB%8F%99%EC%9E%91-%EB%B0%A9%EB%B2%95-%EC%82%B4%ED%8E%B4-%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;compiler의 동작 방법 살펴 보기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Compiler의 동작 방법 살펴 보기!&lt;/h2&gt;
+&lt;p&gt;일단 &lt;a href=&quot;https://www.tutorialspoint.com/compiler_design/index.htm&quot;&gt;Compiler Design Tutorial&lt;/a&gt; 글에서 설명을 보게 되면 컴파일러는 기본적으로 &lt;code&gt;FrontEnd(Analysis Phase)&lt;/code&gt; , &lt;code&gt;BackEnd(Synthesis Phase)&lt;/code&gt; 크게 2가지로 구분되게 되는데 FrontEnd에서 들어온 코드에 대해서 컴퓨터가 이해를 할 수 있는 형태로 해석과 함께 구문에 대해서 문제점이 있는지에 대해서 처리를 하게 된다. 그 후 BackEnd 영역에서 해석된 내용을 바탕으로 기계어로 합성을 시키게 된다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 540px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 36%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAHABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEAMQAAAB3YFB/8QAFxAAAwEAAAAAAAAAAAAAAAAAABARMf/aAAgBAQABBQLVT//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAABD/2gAIAQIBAT8BP//EABYQAAMAAAAAAAAAAAAAAAAAAAAQIf/aAAgBAQAGPwIi/8QAGBAAAwEBAAAAAAAAAAAAAAAAAAERIWH/2gAIAQEAAT8hscE7ok//2gAMAwEAAgADAAAAEIPP/8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAwEBPxA//8QAFBEBAAAAAAAAAAAAAAAAAAAAEP/aAAgBAgEBPxA//8QAGBABAQEBAQAAAAAAAAAAAAAAAREAIVH/2gAIAQEAAT8QqhK93YAJxq6Cjac3/9k=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;Analysis and Synthesis phase of compiler&quot;
+        title=&quot;Analysis and Synthesis phase of compiler&quot;
+        src=&quot;/static/346d2de0bf079a61b14e0d7d9a522de5/09d21/compiler_analysis_synthesis-20210421203556564.jpg&quot;
+        srcset=&quot;/static/346d2de0bf079a61b14e0d7d9a522de5/f93b5/compiler_analysis_synthesis-20210421203556564.jpg 300w,
+/static/346d2de0bf079a61b14e0d7d9a522de5/09d21/compiler_analysis_synthesis-20210421203556564.jpg 540w&quot;
+        sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;[출처 : &lt;a href=&quot;https://www.tutorialspoint.com/compiler_design/index.htm&quot;&gt;Compiler Design Tutorial&lt;/a&gt;]&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;일단 bash를 만들때 필요한 정보는 &lt;code&gt;FrontEnd&lt;/code&gt; 에 대한 부분이고 &lt;code&gt;BackEnd&lt;/code&gt; 에 대한 부분은 조금 다르기 때문에 &lt;code&gt;FrontEnd&lt;/code&gt; 에서 어떻게 처리를 하는지에 대해서 알아본다!&lt;/p&gt;
+&lt;h3 id=&quot;lexical-analyzers&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#lexical-analyzers&quot; aria-label=&quot;lexical analyzers permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Lexical Analyzers&lt;/h3&gt;
+&lt;p&gt;코드에 대해서 어휘를 분석하는 단계가 필요하다!&lt;/p&gt;
+&lt;p&gt;이 단계 안에서는 기본적으로 2가지 과정이 수행이 되는 데 첫번째 과정은 바로 &lt;code&gt;Tokenizer&lt;/code&gt; 과정이다.&lt;/p&gt;
+&lt;h4 id=&quot;tokenizer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tokenizer&quot; aria-label=&quot;tokenizer permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tokenizer&lt;/h4&gt;
+&lt;p&gt;Tokenizer는 컴퓨터가 이해를 하기위해서 코드에 대해서 최소한의 단위 즉 &lt;code&gt;Token&lt;/code&gt; 으로 나누는 작업을 진행하게 된다.&lt;/p&gt;
+&lt;p&gt;이때 특별한 의미를 가지고 있는 &lt;code&gt;Symbol(if, while, &amp;#x26;&amp;#x26; 등)&lt;/code&gt; 에 대해서도 &lt;code&gt;Token&lt;/code&gt; 화 시키게 된다.&lt;/p&gt;
+&lt;p&gt;이렇게 나누어진 Token를 가지고 이 Token에 대해 어떤 의미인지 분석하는 과정이 필요 하게 되는데 이 과정이 바로 &lt;code&gt;Lexer&lt;/code&gt; 단계이다.&lt;/p&gt;
+&lt;h4 id=&quot;lexer&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#lexer&quot; aria-label=&quot;lexer permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Lexer&lt;/h4&gt;
+&lt;p&gt;Lexer는 기본적으로 정해진 규칙을 이용하여 해석을 하게된다. 특별한 의미를 가지고 있는 Symbol에 대해서는 각 심볼에 대한 의미를 부여 하고 특정 심볼 뒤에 에는 어떤 형태로 해석이 되어야 한다. 등 이러한 규칙들을 이용하여 해석을 하게 된다.&lt;/p&gt;
+&lt;p&gt;이제 이렇게 분석된 어휘를 가지고 컴퓨터에서 이해하기 쉽도록 구문 트리를 만들게 된다.  &lt;/p&gt;
+&lt;h3 id=&quot;syntax-analyzers&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#syntax-analyzers&quot; aria-label=&quot;syntax analyzers permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Syntax Analyzers&lt;/h3&gt;
+&lt;p&gt;위 단계에서 해석한 내용을 기반으로 구문 트리를 만들게 된다.&lt;/p&gt;
+&lt;p&gt;예를 들면 &lt;code&gt;if&lt;/code&gt; 가 오게 되면 그에 따른 조건이 존재하게 되고 결과값이 참일 때 빠져야 하는 곳 거짓일 때 행해야 하는 곳 등으로 여러가지 트리가 만들어지게 된다.&lt;/p&gt;
+&lt;p&gt;엄청 간단한 사칙 연산을 기준으로 예시를 들어 보면 아래와 같이 해석이 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;a + b * c&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;        *&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;       / \&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;      +   c&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;     / \&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;    a   b&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;semantic-analysis&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#semantic-analysis&quot; aria-label=&quot;semantic analysis permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Semantic Analysis&lt;/h3&gt;
+&lt;p&gt;이제 마지막으로 하게 되는 부분은 바로 만들어진 구문 트리에 대해서 의미가 정상적으로 해석이 가능한지에 대한 작업이 필요하다.&lt;/p&gt;
+&lt;p&gt;예를 들어 int형 변수에 문자열을 대입 할려고 한다던가 이러한 Type 오류와 같이 여러가지 에러상황에 대해서 탐지하게 된다.&lt;/p&gt;
+&lt;h2 id=&quot;compiler-이론을-bash에-적용시켜-보기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#compiler-%EC%9D%B4%EB%A1%A0%EC%9D%84-bash%EC%97%90-%EC%A0%81%EC%9A%A9%EC%8B%9C%EC%BC%9C-%EB%B3%B4%EA%B8%B0&quot; aria-label=&quot;compiler 이론을 bash에 적용시켜 보기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Compiler 이론을 Bash에 적용시켜 보기!&lt;/h2&gt;
+&lt;p&gt;일단 내가 만들어야 하는 shell은 &lt;code&gt;pipe, redirect, control operator&lt;/code&gt; 등의 기능이 작동을 해야 하기 때문에 &lt;code&gt;special symbol&lt;/code&gt; 에 대해서 아래처럼 정리를 해두었다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h6 id=&quot;special-symbol&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#special-symbol&quot; aria-label=&quot;special symbol permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Special Symbol&lt;/h6&gt;
+&lt;p&gt;&lt;code&gt;&amp;#x3C;&lt;/code&gt;, &lt;code&gt;&gt;&lt;/code&gt;, &lt;code&gt;&amp;#x3C;&amp;#x3C;&lt;/code&gt;, &lt;code&gt;&gt;&gt;&lt;/code&gt;, &lt;code&gt;&amp;#x26;&amp;#x26;&lt;/code&gt;, &lt;code&gt;||&lt;/code&gt;, &lt;code&gt;|&lt;/code&gt;, &lt;code&gt;;&lt;/code&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;일단 의미를 분석하기 위해서 구분자에 대해서 어떻게 처리가 필요한데 어떻게 작동하는지에 대해 자세하게 찾아보았다.&lt;/p&gt;
+&lt;p&gt;bash에서는 &lt;code&gt;Input field Seporator&lt;/code&gt; 를 기준으로 작동하게 되는 이것은 기본적으로 &lt;code&gt;\n\t&lt;/code&gt; 를 가지고 구분하게 된다고 한다.&lt;/p&gt;
+&lt;p&gt;이 점을 이용하여서 로직을 간단하게 구상을 해보았다.&lt;/p&gt;
+&lt;h3 id=&quot;lexical-analyzers-minishellver&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#lexical-analyzers-minishellver&quot; aria-label=&quot;lexical analyzers minishellver permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Lexical Analyzers minishell.ver&lt;/h3&gt;
+&lt;p&gt;minishell에서는 많은 조건들이 존재 하지 않기 때문에 &lt;code&gt;Token&lt;/code&gt; 화를 진행하면서 바로 의미를 부여 하는 형태로 로직을 구상을 하였다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Special Symbol&lt;/code&gt; 에 따른 여러가지 조건을 이용하여 의미를 부여를 하였다.&lt;/p&gt;
+&lt;p&gt;일단 가장 큰 기본이 되는 틀은 현재 상태에 대해서 저장을 하는 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Status&lt;/code&gt; 를 저장할 수 있는 변수를 선언 후 각 상태에 따른 bit를 활성화 하는 형태로 사용을 하였다.&lt;/p&gt;
+&lt;p&gt;상태에 따른 기본적인 규칙을 정리를 해보면 아래와 같은 형태로 정리가 된다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Status&lt;/th&gt;
+&lt;th&gt;CMD&lt;/th&gt;
+&lt;th&gt;REDIRECT&lt;/th&gt;
+&lt;th&gt;PIPE&lt;/th&gt;
+&lt;th&gt;SEPERATOR&lt;/th&gt;
+&lt;th&gt;NONE&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;CMD&lt;/td&gt;
+&lt;td&gt;NONE: ARG로 처리됨&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;REDIRECT&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X: FILE Required&lt;/td&gt;
+&lt;td&gt;X: FILE Required&lt;/td&gt;
+&lt;td&gt;X: FILE Required&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;PIPE&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X: FILE Required&lt;/td&gt;
+&lt;td&gt;X: FILE Required&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;SEPERATOR&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X: FILE Required&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;NONE&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;O&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;td&gt;X: CMD Required&lt;/td&gt;
+&lt;td&gt;NONE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;표에 정리되지 못한 조건을 추가로 작성을 해본다면 아래와 같이 정리가 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CMD는 PIPE와 SEPERATOR를 만나게 되면 0으로 초기화 된다.&lt;/p&gt;
+&lt;p&gt;CMD가 활성화 되게 되면 그 뒤에 오는 일반 토큰은 ARG로 처리가 된다.&lt;/p&gt;
+&lt;p&gt;NONE 상태에서 일반 토큰을 만나게 되면 CMD로 처리가 된다.&lt;/p&gt;
+&lt;p&gt;REDIRECT가 활성화 된 상태에서 다음에 오는 일반 토큰은 FILE로 처리가 되고 FLAG를 0으로 설정한다.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이제 Token화를 하는 로직에 대해서 고민을 해본다!&lt;/p&gt;
+&lt;p&gt;위에서 설명한 &lt;code&gt;Input Field Seporator&lt;/code&gt; 문자열을 일단 처음에는 Skip를 하고 그후 만나게 되는 문자는 무조건 Token의 시작이니 그 부분 부터 &lt;code&gt;&quot;&lt;/code&gt;, &lt;code&gt;&apos;&lt;/code&gt;, &lt;code&gt;\&lt;/code&gt; 등을 고려 해가면서 Token화를 시켜준다. 이때 &lt;code&gt;Special Symbol&lt;/code&gt; 가 올 경우에는 예외처리를 통해 Token화를 시켜주는 형태로 진행을 하게 된다.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;참고 예외 케이스
+&lt;code&gt;$ echo hello&gt;file world!&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;// file&lt;/p&gt;
+&lt;p&gt;hello world&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;이때 나온 Token이 &lt;code&gt;Special Symbol&lt;/code&gt; 인 경우 위에 작성한 표에 따른 예외처리와 함께 의미를 부여하여 Lexical Analyzers를 진행 한다.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&quot;syntax-analyzers-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#syntax-analyzers-1&quot; aria-label=&quot;syntax analyzers 1 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Syntax Analyzers&lt;/h3&gt;
+&lt;p&gt;2편에서 계속...!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;h5 id=&quot;참고-자료&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B0%B8%EA%B3%A0-%EC%9E%90%EB%A3%8C&quot; aria-label=&quot;참고 자료 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;참고 자료:&lt;/h5&gt;
+&lt;p&gt;Compiler Design Tutorial](&lt;a href=&quot;https://www.tutorialspoint.com/compiler_design/index.htm&quot;&gt;https://www.tutorialspoint.com/compiler_design/index.htm&lt;/a&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[[42-libasm] nasm intel assembly syntax 알아보기!]]></title><description><![CDATA[42Seoul에서 assembly 관련 서브젝트를 진행하게 되어서 개인적으로 정리한 내용입니다. 틀린 부분이 존재 할 수 있으니 발견하게 된다면 댓글로 이야기 해주세요! nasm syntax 란? The Netwide Assembler (NASM…]]></description><link>https://jaeseokim.github.io/42Seoul/about-nasm-intel-syntax/</link><guid isPermaLink="false">https://jaeseokim.github.io/42Seoul/about-nasm-intel-syntax/</guid><pubDate>Fri, 12 Mar 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;42Seoul에서 assembly 관련 서브젝트를 진행하게 되어서 개인적으로 정리한 내용입니다. 틀린 부분이 존재 할 수 있으니 발견하게 된다면 댓글로 이야기 해주세요!&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;nasm syntax 란?&lt;/p&gt;
 &lt;p&gt;The Netwide Assembler (NASM) uses a syntax &quot;designed to be simple and easy to understand, similar to Intel&apos;s but less complex&quot;.&lt;/p&gt;
