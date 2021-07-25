@@ -107,7 +107,7 @@ export default ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query($categoryRegex: String) {
+  query ($categoryRegex: String) {
     site {
       siteMetadata {
         configs {

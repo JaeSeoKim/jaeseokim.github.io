@@ -87,7 +87,7 @@ export const getTitleFromPage = (
   titleKey: string = "Name"
 ) => {
   let title: RichText[] = []
-  if (page.parent.type === ("page_id" || "workspace")) {
+  if (page.parent.type === "page_id" || page.parent.type === "workspace") {
     title = (page.properties.title as TitlePropertyValue).title
   } else if (page.parent.type === "database_id") {
     title = (page.properties[titleKey] as TitlePropertyValue).title
@@ -300,7 +300,7 @@ interface DateMentionProps {
 }
 
 const DateMention: React.FC<DateMentionProps> = ({ mention }) => {
-  const { date } = (mention as unknown) as DatePropertyValue
+  const { date } = mention as unknown as DatePropertyValue
   const startAt = dayjs(date.start).format("DD/MM YYYY mm:ss")
   if (date.end) {
     const endAt = dayjs(date.end).format("DD/MM YYYY mm:ss")
