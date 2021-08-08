@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Mon, 26 Jul 2021 14:32:21 GMT</lastBuildDate><item><title><![CDATA[Notion API 분석해보기!(feat. Next.js)(2)]]></title><description><![CDATA[✍️ 이전 1편 읽으러 가기! 하위 Notion Block 불러오기! 저번에 간단하게 만들어둔 Block Rendering 부분에서 Child Component 를 Rendering 하는 부분은 코드 상으로 존재하지만 notion…]]></description><link>https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/Javascript/analysis-notion-api-feat_nextjs_part_1/&quot;&gt;✍️ 이전 1편 읽으러 가기!&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 08 Aug 2021 20:10:12 GMT</lastBuildDate><item><title><![CDATA[Notion API 분석해보기!(feat. Next.js)(2)]]></title><description><![CDATA[✍️ 이전 1편 읽으러 가기! 하위 Notion Block 불러오기! 저번에 간단하게 만들어둔 Block Rendering 부분에서 Child Component 를 Rendering 하는 부분은 코드 상으로 존재하지만 notion…]]></description><link>https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/Javascript/analysis-notion-api-feat_nextjs_part_1/&quot;&gt;✍️ 이전 1편 읽으러 가기!&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;하위-notion-block-불러오기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%98%EC%9C%84-notion-block-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0&quot; aria-label=&quot;하위 notion block 불러오기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;하위 Notion Block 불러오기!&lt;/h3&gt;
 &lt;p&gt;저번에 간단하게 만들어둔 &lt;code&gt;Block Rendering&lt;/code&gt; 부분에서 &lt;code&gt;Child Component&lt;/code&gt; 를 Rendering 하는 부분은 코드 상으로 존재하지만 &lt;code&gt;notion&lt;/code&gt; 의 응답이 실제 &lt;code&gt;typedef&lt;/code&gt; 된 부분과 다르기 때문에 아래의 함수를 만들어서 재귀를 돌려 하위 &lt;code&gt;child blocks&lt;/code&gt; 모두 불러올 수 있도록 만들었습니다.&lt;/p&gt;
 &lt;p&gt;typescript의 type 때문에 코드가 조금 길게 작성되었습니다. (개선 하시는 방법을 아시는 분은 댓글로 알려주세요!)&lt;/p&gt;
@@ -550,17 +550,17 @@
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 103%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAACUElEQVQ4y5VU227TQBD1lyPBRyD4BxSgj5C2ae4JpaUpouUiSJU0Vxw7jr3r2I4PO+NsWCdNA5aOZi/js3NmZtdaJRGWoYAUPhaLOWj+b98K6SoG0iQHq9VsoFop47j4ju3X2xucf2ijVq3guvMJpydFlM9KaDRqKJ2eoKj8Ws06B/AQqXXduUKjXmXHZqOOztUl2q2mOuA9Pp631VqN9968LqBSPmPSSrm0nzCUAW+S1ePA9zgNBFqLlhIiWLD1VVrIJ45CJtghpAXKm4Y5T+LljtVjTbRDyAMVOmPtwE689vBnkuwQus4Mk/EQ49GApWYHpCzt9stn9HtdfP92g7vuT7bDQY/3s4OTDZBmc4vyovMXR0voiClP3V8/YNsTDO57TNTv3WE6Gf0tBkcXb8jIWsCuZFoTUmBq21j4PqKVIuC4Ms8wThRihowyq/+1dM5M0KYIJUbDEe77fdiOC09IuH4ALxDwZQipSAkiSph0Q7jd6ZqQqkmtkSoZZHULkaU05QMwJe8hpJ9m9m8uVBJHa8EGDN9cUR6LcO46cGa2amqfDzCb3WxssycfJdS3hKKU65sSrUkzQiP3hwiphSaqRaaTsXqFPEUudFsbslX1Cf8jeT53EKqKE6QIMkiKUqWA7rgIeIzDEYbwFNnCc9kS5u6MpceR3FSeLgClYi9h7n5uSzQqvH3X+WFOD0imYtCzZT5vFBXth8oWj4t4VSjg4vJiQ3qgD6dwHZsfCpJIa1xdFZ2vDnv+4iWePH2Gt0dHTEhBHJCc5u55bn+P5D+ZB1pZbau/TwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 103%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAIAAADJt1n/AAAACXBIWXMAABYlAAAWJQFJUiTwAAACEUlEQVQ4y4VTaW/TQBDtL0dC/AgQ/4GAyjdSF7fOyaGQBqmlCESomzhNfXu9673M89FiHCdEk9Xset/Mm5m3R0ryjKU0TeIoFILnB35atuxoOh0PB5Zh9IeD8+tvV58/fRyNBl8Xc/O9YZ2bk/HwDN5J/8N0QlOCAFqJv+DFxXw8GuIz7l3Mv+DSqdFHiMl4ZJy8e/O6Z1mmaZ5a1hmjO2AcwcAcBockEc8ojDEiOEM5nFOShPiEbZs2/giGymGPTmVSZI9+M2ETrPK8NDj1qdrt1S6yAAe+e7dZb5xVSuIyik7i4OpycXuz/H59+Xv5E+t6ZbeqrcEYVFUwSBZHuWJpsvz1w3O369WNs7Zv7eX91impddCWD7Rl5aeUbl03IYRLqQvGudSaSclEYbRYRQPctFyh0Y7jrGzb84OYsjAhUUoT8HsAU74PrKUSGaaitRQi41lRESa3O6fuzLjqufeExFLyutW1/RespRQ8DH3f91IopBRMxijk0i2SNm0JZRFgoDYoTPAKn8oaLA6BUer2bgPDQ2OU/iOVwtRh2hloh2GQZYwBTTE7yJ5iC1HgbcHZ2zDUFoV+FAUxVkQJPEpigUlxVr18VLE3c7e2KyHVO32oYdA5MlSvtXywqFwhrWEYr3q92WxWRFCimzbmDLbotiwFUwwp19g+f/HyydNnx8dvAUaOTtqyIQzVUH6b9h//7bmjhE5SHwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;image-20210722195714233&quot;
         title=&quot;image-20210722195714233&quot;
-        src=&quot;/static/b11e461496b2737043da99a7a9266674/c1b63/image-20210722195714233.png&quot;
-        srcset=&quot;/static/b11e461496b2737043da99a7a9266674/5a46d/image-20210722195714233.png 300w,
-/static/b11e461496b2737043da99a7a9266674/0a47e/image-20210722195714233.png 600w,
-/static/b11e461496b2737043da99a7a9266674/c1b63/image-20210722195714233.png 1200w,
-/static/b11e461496b2737043da99a7a9266674/81315/image-20210722195714233.png 1656w&quot;
+        src=&quot;/static/da0dd117b0ca554626c9dcf149951f38/c1b63/image-20210722195714233.png&quot;
+        srcset=&quot;/static/da0dd117b0ca554626c9dcf149951f38/5a46d/image-20210722195714233.png 300w,
+/static/da0dd117b0ca554626c9dcf149951f38/0a47e/image-20210722195714233.png 600w,
+/static/da0dd117b0ca554626c9dcf149951f38/c1b63/image-20210722195714233.png 1200w,
+/static/da0dd117b0ca554626c9dcf149951f38/81315/image-20210722195714233.png 1656w&quot;
         sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -573,16 +573,16 @@
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 116.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAYAAAALHW+jAAAACXBIWXMAABYlAAAWJQFJUiTwAAABQElEQVQ4y+2V3U6DQBCFeU9fg7vGxF4KLlJ4Ae+MAuFC2kufwMS3aGNJUf6hy3Lc3bS1QWpqQ2KMnuTLzs7OHDYkDMp4fIHZbIrpNNgh9ocQ54GoCx5kbN76GN+4uL4PQAwCxbYtrNcViiLlZKiqHGWZyViQZbE8b9tGwhjluQRZGoPSGudPIc4e51CfU9w5DhTTNHljwYuEYS7XPM+4Sd1h3Utd18h5v5AjDC3L4jcqEYYhlssXLBZzRKsVviPGmFw9z4MymUzkJklirLjRaxQhjt9krm3bo6C0+WzYlSg8Vk3TY9h96n5uMMNBbniKfo+h67pD39D9a+/w37A9mR8y/GICiYG6D6X040uxbXtTyDZNGwPGdrkt28l8SL7vQ1FVFYZhQNc16BpH12WsaX1cgpArWb8PIQTiVzIajfAOVc3CcnzMtcMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 116.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAIAAACEf/j0AAAACXBIWXMAABYlAAAWJQFJUiTwAAABAklEQVQ4y+2U3U7DIBSA+5y+hr2rF847bUfszwt4ZeJovZDu1icw8S22NJW5MaClQD21s2l2oZkmMyZ+OYFzCB8kBHAmk/P5PM9zMgSUfYwhOSHkAfrw9v7iBl/PCEJTJ45jrVVVCQilZF2LPheCwXjbYa01XGwFZ8Y0Z0/lyePy9JnfYeyEYSil4HwL0zln0CqlmmaIgV2pVA3zYUmMZ04URbKSZVkWRbFcLCil7afYttVaQ5JlWSdDxtiG0pfX1WqzXn8pN3vyQezv3J2JMfadg+Uf7XxsOU3Tf/lo8h+9JL8rJ0nSP8nvyK7rIoSuRlx+AGlf+b4/HREEAfx8nue9AYWn+gDZxBgIAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;image-20210722200032340&quot;
         title=&quot;image-20210722200032340&quot;
-        src=&quot;/static/9eb06f3fc9ee6839c129f86f808c6c31/7bf07/image-20210722200032340.png&quot;
-        srcset=&quot;/static/9eb06f3fc9ee6839c129f86f808c6c31/5a46d/image-20210722200032340.png 300w,
-/static/9eb06f3fc9ee6839c129f86f808c6c31/0a47e/image-20210722200032340.png 600w,
-/static/9eb06f3fc9ee6839c129f86f808c6c31/7bf07/image-20210722200032340.png 1128w&quot;
+        src=&quot;/static/d3c8a96fe2251cc09c4abae065dff2bd/7bf07/image-20210722200032340.png&quot;
+        srcset=&quot;/static/d3c8a96fe2251cc09c4abae065dff2bd/5a46d/image-20210722200032340.png 300w,
+/static/d3c8a96fe2251cc09c4abae065dff2bd/0a47e/image-20210722200032340.png 600w,
+/static/d3c8a96fe2251cc09c4abae065dff2bd/7bf07/image-20210722200032340.png 1128w&quot;
         sizes=&quot;(max-width: 1128px) 100vw, 1128px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -990,19 +990,19 @@
     &gt;
       &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 56.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABi0lEQVQoz4WSzUvDQBDF88960YseBBUUsRZBq0WkqIgorW2tRai0VGw1B2+91It4E5Qe9NCvJJs0u9nkuRubmH5QB4ZMZnd/782ySrV8h0I2h9JNAfnrPDJXGVQqZaiqinrtAU+1Oo5SF9jeO8d68hJr+2fYSJxga+cA8c0YdldXcLi8hOOFOaQX56EAHmxKMSuaL58oVpu4fX5HVn1DptpAvniPUjqHx7NTNFJJvCZi+EjGoRiGjlarBdd1wTkfSdmjlGFgGei0v2C1vzHQujCNPrR+d0LYE6mY1gCapk8uep7/dQTYFKK6AFBHiIg+F0JukFJYpCdqRm3pkKDd6fibnKErWYdAATFNE72uANp2KBbkiLjjQJEHJFQe4lOAsifXNE0DY3QEMDGNBOKfkECDmNBNyx9r3GHUqQ+cthjdxLkDIhwSy/LdT4s/IPsFzlKVDgkhfspa9qMvIjo+D0Yev5NoL7hDQgzxhKgPk6MxUbPhfxCyVhzmzHTIxDvs9frhgSnK4V5qU/wAnRFEAWu022QAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 56.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAIAAADwazoUAAAACXBIWXMAABYlAAAWJQFJUiTwAAABQ0lEQVQoz52Rz0sCQRTH58/tUofoEFEUYUYgKlREFlG5mWZBxaYHjY1OXqpLeAoK9uDB3N3Zndl1fm5PLQlaCXy3N/M+3+/7zqC6eVspla6rF+VK2TAM8860Hqxmo3HfaO7sHaczR6v5k5Xs4Vq2kNrKb65vZJaXthcX9udmivOzSHJGoyhOqueXj8va09Xj25nVLtZa59X6zWmpeVBo7eZeM6n3XBoFgW/btlJK/ipoGeMkCD67nbDbibBDfA97jlRyLK3iGIVRH/v+X1tQANjHLhcgpQd6o4ILKWOlBOsjQkiv54yctdaDQa2HsKSUuq7DGEsMJaVAQkjgaRgmwhhjzvlEOJ5QABNKgzACwWlgcCZhBLtM5QxxKP2Oo4dP9RNqNPCfMyGcMwCgFfB7nI8XgUMkhUyEORee5w3+c8LaIPUFgR1pu+qIRZYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;img
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;image-20210724083929099&quot;
         title=&quot;image-20210724083929099&quot;
-        src=&quot;/static/eeb143e52e98ca611829bb1da072007e/c1b63/image-20210724083929099.png&quot;
-        srcset=&quot;/static/eeb143e52e98ca611829bb1da072007e/5a46d/image-20210724083929099.png 300w,
-/static/eeb143e52e98ca611829bb1da072007e/0a47e/image-20210724083929099.png 600w,
-/static/eeb143e52e98ca611829bb1da072007e/c1b63/image-20210724083929099.png 1200w,
-/static/eeb143e52e98ca611829bb1da072007e/d61c2/image-20210724083929099.png 1800w,
-/static/eeb143e52e98ca611829bb1da072007e/97a96/image-20210724083929099.png 2400w,
-/static/eeb143e52e98ca611829bb1da072007e/242b2/image-20210724083929099.png 5120w&quot;
+        src=&quot;/static/783c21ede9207ca70d748d16e9f9d496/c1b63/image-20210724083929099.png&quot;
+        srcset=&quot;/static/783c21ede9207ca70d748d16e9f9d496/5a46d/image-20210724083929099.png 300w,
+/static/783c21ede9207ca70d748d16e9f9d496/0a47e/image-20210724083929099.png 600w,
+/static/783c21ede9207ca70d748d16e9f9d496/c1b63/image-20210724083929099.png 1200w,
+/static/783c21ede9207ca70d748d16e9f9d496/d61c2/image-20210724083929099.png 1800w,
+/static/783c21ede9207ca70d748d16e9f9d496/97a96/image-20210724083929099.png 2400w,
+/static/783c21ede9207ca70d748d16e9f9d496/242b2/image-20210724083929099.png 5120w&quot;
         sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -1142,9 +1142,9 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;Analysis and Synthesis phase of compiler&quot;
         title=&quot;Analysis and Synthesis phase of compiler&quot;
-        src=&quot;/static/346d2de0bf079a61b14e0d7d9a522de5/09d21/compiler_analysis_synthesis-20210421203556564.jpg&quot;
-        srcset=&quot;/static/346d2de0bf079a61b14e0d7d9a522de5/f93b5/compiler_analysis_synthesis-20210421203556564.jpg 300w,
-/static/346d2de0bf079a61b14e0d7d9a522de5/09d21/compiler_analysis_synthesis-20210421203556564.jpg 540w&quot;
+        src=&quot;/static/d181eeae344870eb9f87fb30f653f790/09d21/compiler_analysis_synthesis-20210421203556564.jpg&quot;
+        srcset=&quot;/static/d181eeae344870eb9f87fb30f653f790/f93b5/compiler_analysis_synthesis-20210421203556564.jpg 300w,
+/static/d181eeae344870eb9f87fb30f653f790/09d21/compiler_analysis_synthesis-20210421203556564.jpg 540w&quot;
         sizes=&quot;(max-width: 540px) 100vw, 540px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
