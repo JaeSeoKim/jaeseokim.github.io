@@ -1,4 +1,151 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 08 Aug 2021 20:10:12 GMT</lastBuildDate><item><title><![CDATA[Notion API 분석해보기!(feat. Next.js)(2)]]></title><description><![CDATA[✍️ 이전 1편 읽으러 가기! 하위 Notion Block 불러오기! 저번에 간단하게 만들어둔 Block Rendering 부분에서 Child Component 를 Rendering 하는 부분은 코드 상으로 존재하지만 notion…]]></description><link>https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/Javascript/analysis-notion-api-feat_nextjs_part_1/&quot;&gt;✍️ 이전 1편 읽으러 가기!&lt;/a&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 14 Aug 2021 11:43:12 GMT</lastBuildDate><item><title><![CDATA[Hackalearn 2021 참여 후기!]]></title><description><![CDATA[hackalearn 2021 이란? HackaLearn은 Hackathon + Learn의 합성어로 주어진 기간 안에 관련 지식을 직접 배워서 해커톤에 적용하는 이벤트입니다. 이번 HackaLearn 이벤트의 주제는 바로 애저 정적 웹 앱(Azure…]]></description><link>https://jaeseokim.github.io/Etc/hackalearn-2021/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/hackalearn-2021/</guid><pubDate>Sat, 14 Aug 2021 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+&lt;h3 id=&quot;hackalearn-2021-이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hackalearn-2021-%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;hackalearn 2021 이란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/devrel-kr/HackaLearn&quot;&gt;hackalearn 2021 이란?&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;HackaLearn은 Hackathon + Learn의 합성어로 주어진 기간 안에 관련 지식을 직접 배워서 해커톤에 적용하는 이벤트입니다. 이번 HackaLearn 이벤트의 주제는 바로 애저 정적 웹 앱(Azure Static Web Apps)과 깃헙 액션(GitHub Actions)입니다. 2주간 공부하고 직접 웹 애플리케이션을 만들어 보는 HackaLearn 이벤트!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;코로나로 인해 또 &lt;code&gt;42Seoul&lt;/code&gt; 클러스터가 멈추게 되어서 공부의 의욕을 잃어가던 와중 &lt;code&gt;42seoul&lt;/code&gt; 멘토님이 올리신 한 해커톤을 보고 참여하게 맘을 먹게 되었다!&lt;/p&gt;
+&lt;p&gt;평소 많이 친하게 공부하며 지내던 형, 누나들과 같이 참여를 신청을 하게 되었다!&lt;/p&gt;
+&lt;p&gt;주제를 &lt;strong&gt;로드뷰&lt;/strong&gt;를 통한 &lt;strong&gt;가상 문화체험, 관광 서비스&lt;/strong&gt; 를 &lt;strong&gt;게임&lt;/strong&gt;과 접목시켜 만들기로 하였다!&lt;/p&gt;
+&lt;p&gt;일단 hackalearn의 주제가 에저 정적 웹앱과 깃허브 액션을 주제로 하고 있어서 평소에 제가 잘 알고 있는 &lt;code&gt;React&lt;/code&gt; 으로 기술 스택이 확정을 하고 아직 저만 다룰줄 알기 때문에 첫 1주일은 대부분 &lt;strong&gt;기획, JS, React, Kakao map api&lt;/strong&gt; 용법을 각자 공부하고 정리하는 시간을 가지게 되었다.&lt;/p&gt;
+&lt;p&gt;일단 나의 역할 이였던 아이디어인 &lt;code&gt;Roadview&lt;/code&gt; 를 관리하고 제어 하는 부분이였는데 현재 &lt;strong&gt;react 라이브러리&lt;/strong&gt;로 만들어 진 것 중 현재 까지 유지보수 되고 가장 중요한 &lt;code&gt;Roadview&lt;/code&gt; 를 지원하고 있는 라이브러리가 없었기 때문에 &lt;strong&gt;&lt;a href=&quot;https://github.com/JaeSeoKim/react-kakao-maps-sdk&quot;&gt;react-kakao-maps-sdk&lt;/a&gt;&lt;/strong&gt; 라이브러리를 직접 만들어 현 시점(8월 14일) 까지는 이번 주제를 구현 가능한 수준 까지 구현을 하고 개인적으로 추후에 계속 오픈소스 프로젝트로 진행하게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 107%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAVCAYAAABG1c6oAAAACXBIWXMAABYlAAAWJQFJUiTwAAAD/klEQVQ4y42Uy28bVRTG/acgsaBVBShtoyK2SJXoggKFhqCkBELzEBUqESqEFRLPFRskFmUDXfGQopYW8VIblZCEpHWc1LHjV+zEb4899ng8nvFr/OPMuI2SFFqufHyux3e++51zvnM8Q1NjvD00xPTAANPDw4yOnGXwrWnenJzk1dE3eH1khImJCSbl9/j4uLsfGxvr7cWGh15jePgMk7IfHzuLRy2WyOXz5BWFrHitqlO32vyf1RVrt1tomkY2mya6sYLHMJvohollWdTrJp1OB9M02dgI4fevE41G8XpXmJv7i3A4gs+3ysLi36yt3SGTybjAjVYXu9u7xKPXm5iNVu/Gbte1ZrMpN+aIbiZIpTMkkynSqSRltST7pESUwzAMl5mzmm2bdsema9t4TKtBo9nZB9igUlGpltIU8imMmo4vGGJ+aYWbNxdYmFvEu7wiZ7Rdwffe9TRaNqWK4bLqASIhG8QTQdKrP5MLLxLd2uSLdy4wevoVzr17gckPP2fw/AfcmL3uwtl2d4eMx5acVatVdL1GVdclyR0Bt4jFQ2yHfaT8s0TjmwR++IqL505we+ka3/8+w/HxCb67OuPAuSR2AB2AYkl1rSI5cW5rtiwWb/1BILhExnuNbDrB15+e58upU/x48SOefeYY/YcP8OtvP93P0KmqplVdq0minYftVpN4bJ1AzIeyeImE9yrPvzTIwUNHOHL4GH19T3G0r59L33y7J/c7gPcY5vIFDJGObbeIBG+x6l8ltjZPbOkKJ08NceBQP48/+TSPHTzKI48+wceffEan3d4D6rGl1GWplptDEbUD2HJyGFohGFzljt9HeHmGqfff4+XTZzh+4iQvnh7kuRcGuHzl8t2Q7d05bFOUblHEHEE7ywEN+m+T2goT3lgj4vtF/J9E4ussL14nHvUTifhJJ+MCtldybshqRUcpaRTVqtspmlQ94F8mEPASiq0R8t9ga2OW7UyEaMBH0DtPYH1JxB5x2e0BrJsWBbVGWW+iVhs4QneYZtJbRDaDFJQcuiYKKG6j6WUUJU+lpEhUOUlRcUfQO4DO1/7ldEqhkKdcVtEq5QcPiO4+wPsfym+7TrXoo1wI0DRiYps0alGsWky8mB6jbcbpttJyvt1rvN0Md5tbtU4DvZKgXNoShklqWlrCTlGV/T1v1fNyTpNX7O6eTvk3wI5Mjq2kSTZXJp8tU9wuouYlj7pcpDWxNJN6yaCuGl270xtcDwXMKzUpRAU9X0ITX1E1d27WLRl3YnWz4Xr77iB8cMgihYKik8qoJAoqpYxCOa2IvDQqVWkAo0FdZqgzR+3uwwDl4xzSdItkwSBUsSgKcK0gLHXD1azzn/kfgP8Ah6vqkVHBBf8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;react-kakao-maps-sdk-docs 사이트&quot;
+        title=&quot;react-kakao-maps-sdk-docs 사이트&quot;
+        src=&quot;/static/cb2f1dddccb04cdd58f69c801299a36f/c1b63/react-kakao-maps-sdk-docs.png&quot;
+        srcset=&quot;/static/cb2f1dddccb04cdd58f69c801299a36f/5a46d/react-kakao-maps-sdk-docs.png 300w,
+/static/cb2f1dddccb04cdd58f69c801299a36f/0a47e/react-kakao-maps-sdk-docs.png 600w,
+/static/cb2f1dddccb04cdd58f69c801299a36f/c1b63/react-kakao-maps-sdk-docs.png 1200w,
+/static/cb2f1dddccb04cdd58f69c801299a36f/1e1c3/react-kakao-maps-sdk-docs.png 1670w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;작년에 &lt;code&gt;kakao-map&lt;/code&gt; 를 react에서 간단하게 다뤄본적이 있어서 겁없이 도전 해보았는데 1년동안 배운 지식이 늘어나게 되니 그전에 작성했던 코드들이 얼마나 잘못 되었는지 알게 되었고 이번에는 최대한 &lt;strong&gt;상태관리의 편의성&lt;/strong&gt;과 react 컴포넌트의 props로 쉽게 제어가 가능하게 라이브러리를 작성할려고 노력을 하였다.&lt;/p&gt;
+&lt;p&gt;일단 react에서 kakao map api 제어 하는 방법에 대해 심도 있게 구현을 하였으니 이제 구현물을 같이 구현하게 되었는데 이미 시간이 일주일이 지나버려서 초기에는 &lt;code&gt;azure function&lt;/code&gt; 를 이용하여 구현을 할려고 하였지만 시간 관계상 &lt;code&gt;mock_data&lt;/code&gt; 를 이용하여 개발을 하게 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 65.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAADJ0lEQVQ4y22TXWwUVRiGR5R6540JSPFGE9FSUGOjEEml1gtIxDTGWjQFYsCQNMbE1mqr21oCag1gk1WbIBaSEsJFoUJKSqhY1tgsP0vTbhX6t+1mW7q63W1nd3Z2dmZnt304c8BiopM8ec+cn3e+95wzirKigEeeKKLg5S08+tSLPPjYMzy8upC8/LssX1UgyctfK98fWlXIAyvXCl3H8vz1UvPyn2WZ6Fu2shDl1tgk/uEgl30hPD6h1yfpvTbBr1cDQgP0DUxLPD7RL8auD00yGggyPB5kbCLE2OSU1JvCx0GxbZvpaIYTvSadXpsuH3T3w/kbcNq7SMupgKT9kk7bBZX+cRPIYZqO3n/Slk3atFGSeorRKQ332RhHuiIcPnmT6oM97Kg9xrb3Gil+bQslpSWU7d7Pvh/9eP9MYJkGalxDT6WxszlsO4ua0CVKyjAYCWk0n5plX9sIWyubePLp9ZSWbGDzpnWUvb6Rne++SuVeFx9+3YtnIC4KNMkaKtgJUdsCLC4Q1wziSQPFsjJij4KsecvNmrJmikq38/xzBWzc9BKbS1+hrPxN3q7Yygsbiiku/5L2n31EUzn6JmIMhf+m/68cM9oCum5IU8Up+eLvfpTHt7GiaAcV739B1actVNe7aTxwjK++7eCzplYOfHOU6ppmerovMi6KbBsUezwMxwcXGQhnMURS1THU0xnGxamdPP4T5zrP0NV5msvnu2l3f09vxwk6Wn8gELzFlRs+rnr7UOfD5DKWSGqIuFnBooy9FNlpaOJg1MQ8oZkw09MhYpEIYdGOzkaYmbpNJKYSjsSYjUbFXJ2UYQoDHS2ZwrJzWJksieS9yJqeZnYuzshYkLl4kqSRkaXHk+m7qjuakl93UBMpudhZ5yD7/zWuJOQkndicytx8gnlVw8zk7mNll0gZlrwq0uAf7hktGabFxMGhP6iq2k1tzQfU1X2E6/OPaXDV4nJ9QmNjPQ1NDdTV13D0TA+X/LdJywP4r5k0NE0L32iYN/ZfoLy5h4pDHrYf9PDOod+obOljl/sae1r72XvEz3cdVzj7i1f+FU6q/zO8A5/JPfu2HFaxAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;개발중인 사이트 이미지-1&quot;
+        title=&quot;개발중인 사이트 이미지-1&quot;
+        src=&quot;/static/caba96482c1cf52d018747884697f2f5/c1b63/page-1.png&quot;
+        srcset=&quot;/static/caba96482c1cf52d018747884697f2f5/5a46d/page-1.png 300w,
+/static/caba96482c1cf52d018747884697f2f5/0a47e/page-1.png 600w,
+/static/caba96482c1cf52d018747884697f2f5/c1b63/page-1.png 1200w,
+/static/caba96482c1cf52d018747884697f2f5/d61c2/page-1.png 1800w,
+/static/caba96482c1cf52d018747884697f2f5/97a96/page-1.png 2400w,
+/static/caba96482c1cf52d018747884697f2f5/b1945/page-1.png 2754w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;이번 해커런을 통해서 기존에 알던 &lt;code&gt;Github Action&lt;/code&gt; 에 대해 깊게 알게 되었고 평소에 잘 모드고 있던 &lt;code&gt;azure static web apps&lt;/code&gt; 에 대해서 경험을 해볼 수 있어서 좋았던 것 같다.&lt;/p&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Notion API 분석해보기!(feat. Next.js)(2)]]></title><description><![CDATA[✍️ 이전 1편 읽으러 가기! 하위 Notion Block 불러오기! 저번에 간단하게 만들어둔 Block Rendering 부분에서 Child Component 를 Rendering 하는 부분은 코드 상으로 존재하지만 notion…]]></description><link>https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</link><guid isPermaLink="false">https://jaeseokim.github.io/Javascript/analysis-notion-api-feat_nextjs_part_2/</guid><pubDate>Mon, 26 Jul 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;/Javascript/analysis-notion-api-feat_nextjs_part_1/&quot;&gt;✍️ 이전 1편 읽으러 가기!&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;하위-notion-block-불러오기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%95%98%EC%9C%84-notion-block-%EB%B6%88%EB%9F%AC%EC%98%A4%EA%B8%B0&quot; aria-label=&quot;하위 notion block 불러오기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;하위 Notion Block 불러오기!&lt;/h3&gt;
 &lt;p&gt;저번에 간단하게 만들어둔 &lt;code&gt;Block Rendering&lt;/code&gt; 부분에서 &lt;code&gt;Child Component&lt;/code&gt; 를 Rendering 하는 부분은 코드 상으로 존재하지만 &lt;code&gt;notion&lt;/code&gt; 의 응답이 실제 &lt;code&gt;typedef&lt;/code&gt; 된 부분과 다르기 때문에 아래의 함수를 만들어서 재귀를 돌려 하위 &lt;code&gt;child blocks&lt;/code&gt; 모두 불러올 수 있도록 만들었습니다.&lt;/p&gt;
 &lt;p&gt;typescript의 type 때문에 코드가 조금 길게 작성되었습니다. (개선 하시는 방법을 아시는 분은 댓글로 알려주세요!)&lt;/p&gt;
