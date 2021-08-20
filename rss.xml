@@ -1,4 +1,452 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 14 Aug 2021 11:43:12 GMT</lastBuildDate><item><title><![CDATA[Hackalearn 2021 참여 후기!]]></title><description><![CDATA[hackalearn 2021 이란? HackaLearn은 Hackathon + Learn의 합성어로 주어진 기간 안에 관련 지식을 직접 배워서 해커톤에 적용하는 이벤트입니다. 이번 HackaLearn 이벤트의 주제는 바로 애저 정적 웹 앱(Azure…]]></description><link>https://jaeseokim.github.io/Etc/hackalearn-2021/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/hackalearn-2021/</guid><pubDate>Sat, 14 Aug 2021 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 20 Aug 2021 10:08:25 GMT</lastBuildDate><item><title><![CDATA[Github action를 이용한 커뮤니티 행사 관리/운영 하기!]]></title><description><![CDATA[42Seoul의 공식 커뮤니티인 42JS에 기획하고 제작을 한 Javascript 단기 교육과정 일명 피씬(Piscine) 를 실제 42Seoul 학생들을 대상으로 베타로 진행을 하게 되었습니다! ℹ️ JS Piscine…]]></description><link>https://jaeseokim.github.io/42Seoul/Github_action를_이용한_커뮤니티_행사_관리운영_하기/</link><guid isPermaLink="false">https://jaeseokim.github.io/42Seoul/Github_action를_이용한_커뮤니티_행사_관리운영_하기/</guid><pubDate>Fri, 20 Aug 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 52.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsTAAALEwEAmpwYAAABXklEQVQoz5VSW4uCYBDt//+LysKowCAQKygypQva/faY7FppDxGlZdaJGVBqW2h34KBndM53Zr5J7HY7KIqCWq2GarWK2WwGwzBQr9fR7/chCAJ0XUej0UAymYQkSfgZ9/udn9frFQnXdVEoFJDL5VAul1GpVFAqlZjTAaIocr7ZbCKVSiGfz2O5XMKyLKxWK3ieFwsHQYDE4XBgh5lMBt1ul981TUM6nUar1WJ32WyWOygWi+xQlmUG5TabTeySBcMwjO3ebre3do7HY/zz6XTC+XxmRHX0Lapjwf1+j3a7DVVV0ev1GBHvdDoYDAYMminlaK7knGY9Ho+ZU5cvLY9GIwa1SvOZz+csSjni0+kUpmliOBzCtu23C3lxGP7S5qcgkQjPETv0fY9PoTlGIP5c+Amx4Nr+xvrLwna75bksFgtMJhM4jvOyY38J3kPaI+/p9i6XCyPi/4Hv+3gAfEXjPwK+ID8AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;og_image&quot;
+        title=&quot;og_image&quot;
+        src=&quot;/static/ddb8b6561ea91aae5e2e94d5baa57aa2/c1b63/OG_IMAGE.png&quot;
+        srcset=&quot;/static/ddb8b6561ea91aae5e2e94d5baa57aa2/5a46d/OG_IMAGE.png 300w,
+/static/ddb8b6561ea91aae5e2e94d5baa57aa2/0a47e/OG_IMAGE.png 600w,
+/static/ddb8b6561ea91aae5e2e94d5baa57aa2/c1b63/OG_IMAGE.png 1200w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;42Seoul&lt;/strong&gt;의 공식 커뮤니티인 &lt;strong&gt;42JS&lt;/strong&gt;에 기획하고 제작을 한 &lt;code&gt;Javascript 단기 교육과정&lt;/code&gt; 일명 &lt;code&gt;피씬(Piscine)&lt;/code&gt; 를 실제 &lt;strong&gt;42Seoul&lt;/strong&gt; 학생들을 대상으로 베타로 진행을 하게 되었습니다!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ℹ️ JS Piscine에 더 알고 싶은 분들은 아래의 repo로 들어가 주세요!&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/42js/piscine&quot;&gt;https://github.com/42js/piscine&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;원래 최초의 계획은 학생들이 만든 교육 과정의 문제 &lt;code&gt;subject&lt;/code&gt; 들을 기존 &lt;code&gt;42Intra&lt;/code&gt; 시스템에 추가를 하여서 진행을 하는 것 이였지만 시스템에 추가하기 위해서는 subject 에 대한 검증 및 부가 적으로 엮이는 시스템에 관련된 이슈들이 있기 때문에 이번 베타 테스트에서는 자체적으로 진행하기로 결정을 하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;원할한 진행을 위해 &lt;code&gt;google sheet&lt;/code&gt; 와 &lt;code&gt;form&lt;/code&gt; 를 이용하여 점수 및 통계를 나타내도록 제작을 하였고 이제 subject에 대한 평가를 제출 하고 이에 대한 리뷰어(평가자)를 매칭 시키는 것에 대해서 고민을 많이 하게 되었는데, 최초에 적용한 방법은 아래와 같습니다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;피평가자가 문제를 풀고 해당 Subject의 정답의 코드를 &lt;code&gt;PR&lt;/code&gt; 형태로 제출&lt;/li&gt;
+&lt;li&gt;42JS 스태프가 &lt;code&gt;PR&lt;/code&gt; 제출 시간, 추가 규칙 등을 확인 후 &lt;code&gt;Github Team Code review assignment&lt;/code&gt; 를 활용하여 리뷰어를 배정&lt;/li&gt;
+&lt;li&gt;리뷰어가 배정이 되면 평가 기간내에 &lt;code&gt;google form&lt;/code&gt; 를 이용하여 평가 진행 후 해당 정보와 함께 &lt;code&gt;PR review&lt;/code&gt; 를 통해 기록&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;원래 회의를 진행 하면서 리뷰어를 매칭 하는 것에 대해 &lt;code&gt;code owner&lt;/code&gt; 기능 &lt;code&gt;github action&lt;/code&gt; 등 많은 이야기가 오갔지만 첫번째인 &lt;code&gt;code owner&lt;/code&gt; 는 team 권한을 &lt;code&gt;write&lt;/code&gt;까지 줘야 하기 때문에 &lt;strong&gt;보안 이슈&lt;/strong&gt;와 &lt;strong&gt;중도 포기자&lt;/strong&gt;에 대한 처리와 함께 부가적으로 오는 이슈들을 해결 하기 어렵기 때문에 무산이 되었고 두번째인 &lt;code&gt;github action&lt;/code&gt; 은 시작일이 얼마 남지 않아서 현재 상황에서는 적용이 어려우니 중간에 적용이 가능하다면 적용하기로 하고 일단 수동으로 진행하게 되었습니다.&lt;/p&gt;
+&lt;p&gt;현재 &lt;strong&gt;8월 16일&lt;/strong&gt; 첫 날에 해당 담당하기로한 &lt;code&gt;sunpark&lt;/code&gt; 님께서 직접 진행을 하였는데 실제 수 작업으로 진행해보니 &lt;strong&gt;약 10분간&lt;/strong&gt; 의 시간이 소요된다고 하였고 다음날부터는 평가 확인과 같은 다양한 작업을 진행 해야 하기 때문에 더 많은 시간 소요가 많이 되기 때문에 &lt;code&gt;github action&lt;/code&gt; 를 이용하여 자동화를 설정 하기로 결심을 하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 19.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAnUlEQVQY043OTQ6CMBQE4N7CRIHSPyjS2gg0JJCYsOIIHMCVG8+hXnqsxT0svrzNy8yQ1/sD33n4foBrPCrjoLRBUVnIskYuSjAZiA1yRe6PJ+y8YJxmtF0P49qgieG1vYJLDaEq8E06/hJtHZYQmpkesjhDBJQXSChHmgtkTO0g48pfMLEXh+k24EAV6H96mkscU4ZTxuLdI6Fr+Rdm6XWvBGrcgwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20210820151530372&quot;
+        title=&quot;image-20210820151530372&quot;
+        src=&quot;/static/372d652a8f949dc68c9888ab7e79c0a7/c1b63/image-20210820151530372.png&quot;
+        srcset=&quot;/static/372d652a8f949dc68c9888ab7e79c0a7/5a46d/image-20210820151530372.png 300w,
+/static/372d652a8f949dc68c9888ab7e79c0a7/0a47e/image-20210820151530372.png 600w,
+/static/372d652a8f949dc68c9888ab7e79c0a7/c1b63/image-20210820151530372.png 1200w,
+/static/372d652a8f949dc68c9888ab7e79c0a7/5148a/image-20210820151530372.png 1228w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;github-action-활용-범위-선정-하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#github-action-%ED%99%9C%EC%9A%A9-%EB%B2%94%EC%9C%84-%EC%84%A0%EC%A0%95-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;github action 활용 범위 선정 하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Github Action 활용 범위 선정 하기!&lt;/h2&gt;
+&lt;p&gt;일단 자동화를 구축 하기 위해 일단 자동화를 어떤 형태로 진행 할 것인지에 대해서 정의를 하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Github Action&lt;/code&gt; 에서 제공 하는 트리거 이벤트 &lt;code&gt;pull_request opened&lt;/code&gt; 를 활용하여 자동으로 PR의 제출 시간에 대해서 검증 하고 라벨을 붙여 주는 작업, 이후 &lt;code&gt;Github Action Input&lt;/code&gt; 를 이용하여 전 단계에서 정상적인 라벨일 때 리뷰어를 배정 하는 것을 최소 &lt;code&gt;MVP&lt;/code&gt; 로 정의를 하고 구현하기 위해 어떤 작업이 필요 한지 생각을 해보았습니다.&lt;/p&gt;
+&lt;p&gt;Ï일단 &lt;strong&gt;PR 검증 기능&lt;/strong&gt; 구현하기 위해서는 일단 제출 경로에 따른 마감 시간이 서로 다르기 때문에 &lt;strong&gt;제출 한 파일에 대해 어떤 경로에 속해 있는지&lt;/strong&gt;에 대해 체크를 하는 부분과 &lt;strong&gt;제출 경로와 마감 시간등&lt;/strong&gt;을 &lt;strong&gt;설정 파일&lt;/strong&gt;의 정보를 가져 올 수 있는 기능을 구현을 해야 하는 것이 필요하다고 생각을 하였습니다.&lt;/p&gt;
+&lt;p&gt;이제 해당 자동화를 구축 하기에 앞서 기존에 만들어진 App을 이용하려고 하였지만 제출 경로에 따른 제출 시간등이 조건으로 걸려있는 부분을 세밀 하게 정의 하는 것이 기존 APP에서는 불가능 하기 때문에 &lt;strong&gt;직접 Script&lt;/strong&gt; 를 작성하여 구현 하는 것으로 정하였습니다.&lt;/p&gt;
+&lt;p&gt;일단 GitHub action에서 App를 개발 하는 방법에는 &lt;strong&gt;Docker Image&lt;/strong&gt;, &lt;strong&gt;Javascript&lt;/strong&gt; 등 다양한 방법이 있지만 &lt;strong&gt;javascript 커뮤니티&lt;/strong&gt; 이기도 하고 또한 저의 주력언어가 typescript 이기 때문에 &lt;strong&gt;typescript로 개발&lt;/strong&gt;을 하기로 정하였습니다!&lt;/p&gt;
+&lt;p&gt;이제 구현을 하기 위해 &lt;strong&gt;Github&lt;/strong&gt;에서 &lt;strong&gt;&lt;a href=&quot;https://github.com/actions/typescript-action&quot;&gt;TypeScript-Action&lt;/a&gt;&lt;/strong&gt; 템플릿을 제공을 하여서 해당 템플릿을 참조 하여 개발을 진행 하엿습니다.&lt;/p&gt;
+&lt;p&gt;템플릿을 살펴 보면 **&lt;a href=&quot;https://github.com/actions/toolkit/blob/master/README.md#packages&quot;&gt;action-toolkit&lt;/a&gt; **를 사용하여 action내부의 여러가지 정보를 가져오거나 정보를 외부로 보내는 기능 github 제어등 다양한 기능을 제공 하기 때문에 해당 문서를 참조하면서 개발을 진행하였습니다.&lt;/p&gt;
+&lt;p&gt;또한 최종적으로 workflow가 동작을 할 때 &lt;code&gt;node.js&lt;/code&gt; 개발이 된 것은 동작을 할때 &lt;code&gt;node_modules&lt;/code&gt; 라는 무거운 의존 파일을 가지고 있어야 하기 때문에 workflow 내부에 &lt;code&gt;npm install&lt;/code&gt; 과 같은 작업이 포함되어야 하지만 &lt;code&gt;@vercel/ncc&lt;/code&gt; 라는 CLI 도구를 이용하여 의존성을 모두 가지고 있는 &lt;code&gt;단일 JS&lt;/code&gt; 파일로 나올 수 있도록 작업을 진행 하였습니다.&lt;/p&gt;
+&lt;p&gt;이제 개발을 진행 하면서 어떤 형태로 &lt;code&gt;Debug&lt;/code&gt; 및 &lt;code&gt;Test&lt;/code&gt; 를 진행 하는 것이 관권 이였는데 매번 실제 &lt;code&gt;Action&lt;/code&gt; 를 동작 시키는 것은 힘들고 local에서 동작 하게 해주는 &lt;a href=&quot;https://github.com/nektos/act&quot;&gt;act&lt;/a&gt; 라는 도구를 사용하기 에도 PR 이벤트 라는 제약 때문에 사용하기가 애매하다고 판단하고 &lt;code&gt;Jest&lt;/code&gt; 를 이용한 &lt;code&gt;TDD&lt;/code&gt; 방법론으로 개발을 진행 하게 되었습니다!&lt;/p&gt;
+&lt;h2 id=&quot;jest를-이용하여-github-action-개발하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#jest%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%98%EC%97%AC-github-action-%EA%B0%9C%EB%B0%9C%ED%95%98%EA%B8%B0&quot; aria-label=&quot;jest를 이용하여 github action 개발하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Jest를 이용하여 GitHub action 개발하기!&lt;/h2&gt;
+&lt;p&gt;Jest를 이용하여 action에 대한 테스트 코드는 매우 단순하게 작성을 하였는 데 특정 함수를 &lt;code&gt;mock&lt;/code&gt; 함수로 설정을 하고 동작을 할 때 총 몇번 호출을 되었는지에 대해서 확인을 하도록 하는 형태로 개발을 진행 하였습니다.&lt;/p&gt;
+&lt;p&gt;예를 들어서 &lt;code&gt;action&lt;/code&gt; 이 동작되는 함수에서는 &lt;code&gt;core.error()&lt;/code&gt; 를 0번 호출 해야 한다. 이런 형태로 정상적일 때의 동작을 정의후 동작 시 지정한 횟수에 만족 하지 않는 다면 해당 테스트를 만족 할 수 있는 코드로 다시 작성 하는 형태로 개발을 하였습니다.&lt;/p&gt;
+&lt;p&gt;또한 실제 동작시에만 객체 들에 대해서도 &lt;code&gt;Mock&lt;/code&gt; 화를 시켜 테스트를 진행 하여 점진적으로 개발을 진행 하여 최종적으로 작성된 &lt;code&gt;run()&lt;/code&gt; 함수에 대한 테스트 코드는 아래와 같이 매우 간단한 형태로 작성이 완료 되었습니다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;typescript&quot; data-index=&quot;0&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;run()시 정상적이라면 정해진 함수들의 횟수가 동일하게 동작&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; () &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;errorMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;error&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;setFailedMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;core&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;setFailed&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getOctokitMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;github&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;getOctokit&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;paginateMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;paginate&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;paginateMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;mockResolvedValue&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;([&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;js00/test.js&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    },&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  ])&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;getPullsMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;rest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;pulls&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;get&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;addLabelsMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;rest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;issues&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;addLabels&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;removeLabelMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;rest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;issues&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;removeLabel&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;addCommentMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;rest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;issues&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;createComment&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;await&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;()&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;getOctokitMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;getPullsMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;addLabelsMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;removeLabelMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;addCommentMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;errorMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;setFailedMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toBeCalledTimes&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;})&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;또한 내부에 사용 되는 여러가지 함수 들도 아래와 같이 테스트를 작성을 하여서 개발을 진행 하였습니다.&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;typescript&quot; data-index=&quot;1&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk3&quot;&gt;it&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;test getChnageFiles()&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;async&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; () &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;paginateMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;jest&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;spyOn&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;paginate&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;const&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;reuslt&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk8&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; [{ &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;filelist1&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; }, { &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;filelist2&amp;quot;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; }]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;paginateMock&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;mockResolvedValue&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;reuslt&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;expect&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;await&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;getChnageFiles&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;gh&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;, &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;toStrictEqual&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;reuslt&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk3&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;((&lt;/span&gt;&lt;span class=&quot;mtk4 mtki&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;) &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mtk11&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  )&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;})&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;또한 실제 개발을 진행하는 중간 실 동작을 확인 해야 하는 경우에는 test repo에 올려서 실제로 동작을 테스트 해보면서 일단 초기 아이디어 단계를 전부 구현을 하여서 완성을 하였습니다.&lt;/p&gt;
+&lt;h2 id=&quot;리뷰어-매칭-workflow-만들기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%AC%EB%B7%B0%EC%96%B4-%EB%A7%A4%EC%B9%AD-workflow-%EB%A7%8C%EB%93%A4%EA%B8%B0&quot; aria-label=&quot;리뷰어 매칭 workflow 만들기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;리뷰어 매칭 workflow 만들기!&lt;/h2&gt;
+&lt;p&gt;이제 PR 검증에 대한 &lt;strong&gt;Action&lt;/strong&gt;은 완성을 하였으니 이제 라벨을 가지고 Reviwer를 배정하는 workflow를 정의를 하였는데 이 경우에는 별도의 App 으로 분리하지 않고 &lt;code&gt;actions/github-script@v4&lt;/code&gt; 를 이용하여 &lt;code&gt;inline-script&lt;/code&gt; 형태로 간단하게 작성을 하였습니다.&lt;/p&gt;
+&lt;p&gt;초기에 나온 버전은 아래와 같이 완성을 하여 &lt;strong&gt;8월 16일&lt;/strong&gt;에 첫 도입을 하였습니다!&lt;/p&gt;
+&lt;pre class=&quot;grvsc-container one-dark-pro&quot; data-language=&quot;yaml&quot; data-index=&quot;2&quot;&gt;&lt;code class=&quot;grvsc-code&quot;&gt;&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;리뷰어 매칭&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk7&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;workflow_dispatch&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;inputs&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;subject&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;자동으로 매칭 시킬 타겟 Subject&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;currect-label&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;정상적인 제출 확인용 라벨&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;✅ 정상적인 제출&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;      &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;reviewer&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;리뷰어로 지정될 팀명&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;required&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk7&quot;&gt;true&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;beta-pisciner&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk4&quot;&gt;jobs&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;  &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;matching-reviwers&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;&amp;quot;해당 서브젝트 Reviewer 매칭&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;runs-on&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;ubuntu-latest&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;      - &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;uses&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;actions/github-script@v4&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;        &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;:&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;          &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;github-token&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk6&quot;&gt;${{ secrets.SECRET_PAT }}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk1&quot;&gt;          &lt;/span&gt;&lt;span class=&quot;mtk4&quot;&gt;script&lt;/span&gt;&lt;span class=&quot;mtk1&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;mtk10&quot;&gt;|&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;            const prlistConfig = github.pulls.list.endpoint.merge({&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;              owner: context.repo.owner,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;              repo: context.repo.repo,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;            });&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;            const prList = await github.paginate(prlistConfig);&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;            for (const pr of prList) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;              if (&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                pr.state === &amp;quot;open&amp;quot; &amp;amp;&amp;amp;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                !!pr.labels.find(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  (label) =&amp;gt; label.name === &amp;quot;${{ github.event.inputs.subject }}&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                ) &amp;amp;&amp;amp;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                !!pr.labels.find(&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  (label) =&amp;gt; label.name === &amp;quot;${{ github.event.inputs.currect-label }}&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                )&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;              ) {&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                await github.pulls.requestReviewers({&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  owner: context.repo.owner,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  repo: context.repo.repo,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  pull_number: pr.number,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  team_reviewers: [&amp;quot;${{ github.event.inputs.reviewer }}&amp;quot;],&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                });&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                await github.issues.createComment({&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  owner: context.repo.owner,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  repo: context.repo.repo,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                  issue_number: pr.number,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                body : [&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                        `- 🎉 평가 매칭이 되셨습니다! 리뷰어를 확인후 아래의 주의 사항을 확인하여 진행 해주세요!`,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                        `- ⚠️ 평가시 주의 사항`,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                        `  - 본과정과 동일 하게 위에서 틀린 경우 그 즉시 평가점수 부여는 멈춰야 합니다.`,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                        `  - 평가를 진행 할때 PR의 CodeReview 기능을 이용해서 \`approve\`로 리뷰를 남겨주세요.`,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                        `  - \`comment\` 로 작성하여 남겨주시면 스탭분들이 확인하는데 어려움을 격습니다 ㅠㅠ`,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                        `  - PR 리뷰에 구글 폼 제출 후 나오는 점수 결과를 꼭 같이 제출 하여주세요!`,&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                      ].join(&amp;quot;\n&amp;quot;),&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;                });&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;              }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;grvsc-line&quot;&gt;&lt;span class=&quot;grvsc-source&quot;&gt;&lt;span class=&quot;mtk6&quot;&gt;            }&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;중간에 &lt;strong&gt;reviewer를 team으로 배정&lt;/strong&gt; 하는 부분에 대해서 일반적으로 제공되는 &lt;strong&gt;repo의 token&lt;/strong&gt;으로는 권한이 부족하여 작동하지 않는 이슈가 있어서 &lt;code&gt;PAT&lt;/code&gt; 를 발급 받아 적용하는 것으로 해결을 하였습니다.&lt;/p&gt;
+&lt;h2 id=&quot;첫-도입-이후-발생한-이슈-해결-하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%B2%AB-%EB%8F%84%EC%9E%85-%EC%9D%B4%ED%9B%84-%EB%B0%9C%EC%83%9D%ED%95%9C-%EC%9D%B4%EC%8A%88-%ED%95%B4%EA%B2%B0-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;첫 도입 이후 발생한 이슈 해결 하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;첫 도입 이후 발생한 이슈 해결 하기!&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.666666666666668%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAx0lEQVQY0z2PWRKCMBBEOYayhCwoiAghhE0tiw/LA3j/u7STRP14NUlnpicdSVVBqBJZrpBkwpOyQDhLT5JJxKkAl0dUdQtZVNgnOfYpp8rpjfv+aBpXXO8bhnHx9MOE3q7oBqKfcOmM1+0XbSa02qJuNMpTg0N59rhPOdPoogcymWHsQsw0MOP1MHg/NW7LiM44bUSzbNArLbZh6encojjWPhnjBVUZDKu6oUjqGyvE5JxDiRyMib++SwPu7qLuYuarM/nh+j7533S5cmcjCAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20210820153916499&quot;
+        title=&quot;image-20210820153916499&quot;
+        src=&quot;/static/54bf1caf3fdb94d418103eeb800772a4/c1b63/image-20210820153916499-9444711.png&quot;
+        srcset=&quot;/static/54bf1caf3fdb94d418103eeb800772a4/5a46d/image-20210820153916499-9444711.png 300w,
+/static/54bf1caf3fdb94d418103eeb800772a4/0a47e/image-20210820153916499-9444711.png 600w,
+/static/54bf1caf3fdb94d418103eeb800772a4/c1b63/image-20210820153916499-9444711.png 1200w,
+/static/54bf1caf3fdb94d418103eeb800772a4/d61c2/image-20210820153916499-9444711.png 1800w,
+/static/54bf1caf3fdb94d418103eeb800772a4/1d7f7/image-20210820153916499-9444711.png 2038w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Piscine 적용 공지!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;일단 적용이후 만든 &lt;strong&gt;Action의 tag&lt;/strong&gt;을 정의 하여 사용하였는데 배포를 할 때 &lt;strong&gt;pre-release&lt;/strong&gt; 로 정의를 하지 않았더니 버전관련해서 찾지 못하는 부분이 있어서 &lt;code&gt;42js/pr-checker@master&lt;/code&gt; 로 정의 하여 해결을 하였습니다.&lt;/p&gt;
+&lt;p&gt;또한 실 적용 이후 PR이 올라오면서 아래와 같이 정상적이지 않는 PR로 판정되는 이슈가 있었는데 알고 보니 설정을 할 때 &lt;code&gt;glob&lt;/code&gt; 형태를 잘못 작성 하여 생긴 문제여서 설정을 업데이트 하는 것으로 해결을 하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAl0lEQVQI13XKuxKCMBCFYd5AW+4QLokJGJC7I8yk1Io3sPf9++OCpVp8M7v/rvV6GqzrHd244LYYtP2EphtRNz0ZoOsOpW5waUe6Xek2QcgzclFAFppUUGW1t4jlsI4HB/Y8Q5kH8lQgTjiS7EQEWMo/O/WMq93WHC/6yQ8TWBmXEErD8RnF8O+z7Ya7bfYC9sX1YwRRijcvF1eEehvLDwAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20210820153839738&quot;
+        title=&quot;image-20210820153839738&quot;
+        src=&quot;/static/9e52d33f40203a2f5e12b66c393105ef/c1b63/image-20210820153839738-9444716.png&quot;
+        srcset=&quot;/static/9e52d33f40203a2f5e12b66c393105ef/5a46d/image-20210820153839738-9444716.png 300w,
+/static/9e52d33f40203a2f5e12b66c393105ef/0a47e/image-20210820153839738-9444716.png 600w,
+/static/9e52d33f40203a2f5e12b66c393105ef/c1b63/image-20210820153839738-9444716.png 1200w,
+/static/9e52d33f40203a2f5e12b66c393105ef/536c7/image-20210820153839738-9444716.png 1480w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그 결과 아래와 같이 &lt;strong&gt;PR&lt;/strong&gt;에 대해 잘 검사 후 라벨링을 적용 하는 것을 볼 수 있었습니다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 112.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAXCAIAAACEf/j0AAAACXBIWXMAAAsTAAALEwEAmpwYAAACMUlEQVQ4y5VUCW7bMBD0ExugsWEndZ2kMHp8ra/oI4IeCHxIog6KS8o6SZFUl7KNxlcREyOCojjcIXe0g4f5t8lsPv7wOJzMZp++TJ8+P8y/4mB4N7sdT28nHx3G0/c9bkb370aTm9Hd8P5x+jQfsKwOoaprWZRVWVZ1g4O6rJtaKhwjcEq1WhuLULLtbKeaFicRg65vSqkqz6uikEppY4y1r4FfVdsapddl8t3/4VUUKbazOzJGgGwj8nJTVI1baHEPHLj4UpVVU1RODi2yn+BtZNmTux0Zt2dChHECPAt4RDfcmA75SmvU3A8cevUWsWXtyKgBhAhICJyvwc+bsrvQTN8OydamAGEUhyxe0LXWeivsFHgj+pjcoWzuB4QB+DyEnF9PJiHjfMk8UW+uI1Ngvk8opATiihC5Wp0lt0juD3VwZp5lUZxwIWgOkBDN4NKFnY9MSJRAumR+peQ2f6fA5B1HRjEhTVc+idL0d7TgZSFbU6NJTlA2EjN/LBsEx8iUs0W6rlVzxYUhG5jLs08DD4h2y665bXQYCeOUsVAkWRqbongzGb3NwZmEAYGE//mlPO9yqs5E5s7bQrzQZS6rax0mwjDG+GsaFJvMCIFy3irbOSwgMU0CFudxVD8/230+u//LxtZIiWVIyqZuG/xzrTOJ6eO4X/jfLnYr6BXZ7KfsvrC4sqYUGiJv0C07/QaPZ11/6LBWt/iYri9ArlT062xvPveKn7Bvse8r4Zb1Fx7KHJBkh0mvAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20210820154219387&quot;
+        title=&quot;image-20210820154219387&quot;
+        src=&quot;/static/f7176098e826907049284115a66c0b0f/c1b63/image-20210820154219387-9444720.png&quot;
+        srcset=&quot;/static/f7176098e826907049284115a66c0b0f/5a46d/image-20210820154219387-9444720.png 300w,
+/static/f7176098e826907049284115a66c0b0f/0a47e/image-20210820154219387-9444720.png 600w,
+/static/f7176098e826907049284115a66c0b0f/c1b63/image-20210820154219387-9444720.png 1200w,
+/static/f7176098e826907049284115a66c0b0f/d61c2/image-20210820154219387-9444720.png 1800w,
+/static/f7176098e826907049284115a66c0b0f/97a96/image-20210820154219387-9444720.png 2400w,
+/static/f7176098e826907049284115a66c0b0f/a2b91/image-20210820154219387-9444720.png 3360w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;그리고 &lt;strong&gt;리뷰어 매칭&lt;/strong&gt; 하는 부분에 대해서도 아래와 같이 정상적으로 잘 동작 한 것을 볼 수 있습니다!&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 67%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB3UlEQVQ4y31TCXLbMAz0/z/VvCKdNrFkJWNbtyjx1EFtANhy1EzHnFmDFokFlgAOuK9rnqMsSwyDhnOO4DHoAVn3geMlwWA0rHUYxxHP1iEnovf3IzqlUdUNkRgYcmSr+gGtUeitRiCicZwwTjPmJRKWOyKmeZHzJUYcXl9/4+XlFww5nq/lncxCk7UuYJoiXYQQbQg78H9PgYz1mIn4sKU62gZKdfDekzQr0nhvjNnJXJ/KXdcVh0hpkoXWGkmS4JikOGWZ4Hy5ytsWRQlH5JvTMzwyDCGgoKJwYdq2RVVV6Ptevt+IIiTyBmz2R4abtN4EKEMSw/zAuOAb8WbpSeHnFX5aEcjasIiv9jOmhQhD8NIOddfjnFfImx4FIa8Vmt6i04Hgae/E1srCERmDOCjwQomMGDwnsJM8+xb5JUWWfaJpGnRdJ1BKid2+ccG+pf5HMv/EeDu4XHP8+ftGxUmRpCdkH594ox5NTycBF6ykt/WPd/23IHEjXO8RFRWhKCuqbIGaMippz0HKqpaKN01LfTk/7v9cnJhI5g63Mm6OGtRKBiHcJsMYK9iPHLea80HG05PVNFXsL6PH78ARO0VFOV+QU8/1wyDtwpd5trlHeb+X6eXci+Xmd3fCL+XK8CGSSLSKAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20210820154534724&quot;
+        title=&quot;image-20210820154534724&quot;
+        src=&quot;/static/6d48c7877bd41d99c9b944bed3470cc2/c1b63/image-20210820154534724-9444725.png&quot;
+        srcset=&quot;/static/6d48c7877bd41d99c9b944bed3470cc2/5a46d/image-20210820154534724-9444725.png 300w,
+/static/6d48c7877bd41d99c9b944bed3470cc2/0a47e/image-20210820154534724-9444725.png 600w,
+/static/6d48c7877bd41d99c9b944bed3470cc2/c1b63/image-20210820154534724-9444725.png 1200w,
+/static/6d48c7877bd41d99c9b944bed3470cc2/d61c2/image-20210820154534724-9444725.png 1800w,
+/static/6d48c7877bd41d99c9b944bed3470cc2/c6720/image-20210820154534724-9444725.png 1922w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;개선-하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%84%A0-%ED%95%98%EA%B8%B0&quot; aria-label=&quot;개선 하기 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개선 하기!&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;github-action&lt;/code&gt; 를 첫 적용이후 여러가지 불편한 부분과 함께 개선 해야 하는 항목 들이 보였는데 그 부분은 아래와 같습니다.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;8월 18일&lt;/code&gt; 기준 PR 제출 이후 &lt;code&gt;Commit&lt;/code&gt; 은 &lt;strong&gt;0점 처리 항목으로 정의&lt;/strong&gt;가 되어 있어서 PR에 다른 서브젝트에 대한 파일이 섞여 있는 경우 action에서 비정상 제출을 받아도 수정이 불가능 하다는 부분이 첫번째 문제 였습니다.&lt;/p&gt;
+&lt;p&gt;일단 해당 사항에 대해서 내부적으로 논의 후 일단 해당 날짜에&lt;/p&gt;
+&lt;p&gt;기존 규칙에 다른 서브젝트에 대한 파일이 포함되어 있으면 안된다는 규칙이 없었기 때문에 발생한 문제이지만 &lt;code&gt;GithubAction&lt;/code&gt; 에서의 원할한 작동을 위해서는 파일 제출에 대한 제약을 걸어야 하기 때문에 &lt;strong&gt;제출 방법에 대해&lt;/strong&gt; 아래와 같이 &lt;strong&gt;팀회의를&lt;/strong&gt; 진행 하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 898px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 200.66666666666669%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAoCAYAAAD+MdrbAAAACXBIWXMAAAsTAAALEwEAmpwYAAAFWUlEQVRIx4VWWXMbRRDeV4oXKAocHSvtpb11a2Wd1mGcUKFwUZUKlGMnqSTETjDwwhngvzf99ezsSo5jHrp6tJrt7f6+r3vGuLx6Q7PFirr9EQVRmyynRdW6RTXTvsWs/zXjm9NvaZRNKE465PkRmU3n9s11vf5w4CoCXl5yhusTao/m5MY9qlo+1eyQag6bG1PdjdhiMr2Eag2Xs2/Ki6iiat4wfmZ8flCj0XhKi9WWxpMFpd0htdnSzoA6DEOU9gQKP0rFu61QBfuAGSghafdozjiOJ3OazuY0my9pebQRC+O2ZFVvlFjeGfDTz74gx08o6maCoe8H4r0gIcf1yeRAlVqDqjCUe0cwCfji5SvKpkeU9MfkBCmZwM4OGMuAKg2Pqk2PaoKrTxUTwe8Oamy/vE/LzQlNllvqjqZktWLJ2GZzo458xGZzQl57AVmWU5JyW8CPPv6EywxpNOjTaDig4XBE2eGMiRlQyEREjCF8EAICjyzbuTvD1fqY+qNDNtaiMJqSF7YlQ4jcdgOxpt0qXrpd9MqM15dXNJxtyOtk5DIRNhMBaSiLxIMkBIdvBTH7WP7D2sn3+lxBk/cYFxfPKJtvKBpMyI9VtzheKHhhI7yykGxPZStrt3yu9zcsj4zHT84pW2ypN1mxkDPRnS5TB3jP5LlffoifoQKz6ZLx5+trmq8fUMKth7SxocWlw3RZUmZeqph+lkPQsD26VzVFp8Y/X5/RdrlhUsY8ILoSNJA2S3mtDC0XMhxYIwB+wxqWK0MBXVRvOIqU85NTGjPD6FWVVbhXSklQuENIudaZwgTDq+trOlpvaYgRlnZlgy/ZJbmlRckmZ6SzUWbvmPptDIdjGnKGCIipA49hAXJQJryGQGMIbJUaggJbkRD/Nn78+RfaHN+n6fxIgkUYtIEGniGQcuKCqFKDKnsdHNVIySE3fYfnX2+QyTGAbkFmCIzsIiYKHnCojBU5YaL2aNKaWjZ/PXpGR/OVDFOADT3p7gAxyECLG9nahdCDnLSo6CSwbrz56S0tZVrPqdPDpO4LhvDISpODLPGiklA7x3YfX+BomMwOJgswxBGAE3C+XNNktpQPKKwSeVkdYq4cZNrqua8xw5bjY2IfyEtdbjsE7vRGUg5EChlIAMstAmHAYoKX1hS7V20oUr4/e0KH04WUqMSZa02+rIKUunPkpabtyTiDx/5G/kH0t/HVg4c04HkIDcKD6T5rE2vgOhiV+sSz3mCcVzOUvYAlafcpTdUgNrKHTMh8IS8gS923SjLKh0mnIKHF092yXcELWVqclWZYhH363WMajieKKVF7OY7wEsrY/e04HrleS1iVTvHVENYSMn7/7Q/arFd0OJlKGbr51caoaPxyHefBQvHADqOrIOXd3+/oeLOmLBvLbSGI0mIG7o4qpcXOzlhL8nUi0OADIMl4/uI5a25REAIcIR94Jea4nDx5gBYfq4MeZ+lCRmoe4vCSgAecKnSIXga76GXVo4lIpzzl9i9GtRtnM7QoAaEzlIRgMC0PkABcKvVmId7969v+8aky5FPvoGJKechQawxr4Al9qYy7sg7yqa4Hh17DClIunp5L/0K8aDsZU1xynKRienTBEESk894RW04fbr0zGQw6oCKjQ0nSpnabA/HkUXoMcj36e2fz7nErwn7KBz3uhhm3mWJXlaovm618cuvS5MwRppWwy/+VN8zI5+z41sqBpCuYDMdTWUC06vqmrCAoXyuGm/ssv/33V1rxlS7jkqOkR71uSsM+7ilhfu7aN0630mp7Emoqll+9/KGY1iGaP78xaDGXJSZ7z/BbCxoBK3WV4X+eNJhWJd/67AAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;제출 방법에 대한 논의&quot;
+        title=&quot;제출 방법에 대한 논의&quot;
+        src=&quot;/static/37d5e8b7e2c8357b026bf49fb664a2b7/84cc5/%EC%A0%9C%EC%B6%9C_%EB%B0%A9%EB%B2%95%EC%97%90_%EB%8C%80%ED%95%9C_%EB%85%BC%EC%9D%98.png&quot;
+        srcset=&quot;/static/37d5e8b7e2c8357b026bf49fb664a2b7/5a46d/%EC%A0%9C%EC%B6%9C_%EB%B0%A9%EB%B2%95%EC%97%90_%EB%8C%80%ED%95%9C_%EB%85%BC%EC%9D%98.png 300w,
+/static/37d5e8b7e2c8357b026bf49fb664a2b7/0a47e/%EC%A0%9C%EC%B6%9C_%EB%B0%A9%EB%B2%95%EC%97%90_%EB%8C%80%ED%95%9C_%EB%85%BC%EC%9D%98.png 600w,
+/static/37d5e8b7e2c8357b026bf49fb664a2b7/84cc5/%EC%A0%9C%EC%B6%9C_%EB%B0%A9%EB%B2%95%EC%97%90_%EB%8C%80%ED%95%9C_%EB%85%BC%EC%9D%98.png 898w&quot;
+        sizes=&quot;(max-width: 898px) 100vw, 898px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;최종적으로 위와 같이 제출 방법에 대해 새롭게 재 정의 후 해당 동작대로 작업 할 수 있도록 기존 비정상 제출에 대한 &lt;code&gt;Close&lt;/code&gt; 행위를 제거 함과 &lt;code&gt;Action Trigger&lt;/code&gt; 에 &lt;code&gt;PR synchronize&lt;/code&gt; 를 추가 함으로 동기화 이벤트 발생시 재 검사를 도와줄 수 있도록 하였습니다.&lt;/p&gt;
+&lt;p&gt;그리고 &lt;code&gt;리뷰어 매칭 Action&lt;/code&gt; 를 동작 시 해당 시점을 기준으로 &lt;code&gt;비 정상 제출&lt;/code&gt; 에 대한 라벨이 적용된 경우 안내 메세지와 함께 Close 할 수 있도록 수정 하엿습니다.&lt;/p&gt;
+&lt;p&gt;최종적으로 변경 사항을 적용 후 공지를 하여 개선을 하였습니다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 17%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAADCAYAAACTWi8uAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAjElEQVQI13WO2wqDMBBE/Y5aNVk1bhLjhUAtpQr9/4+abiL41D4cZm/DTvF6vnHsHyzxgXWKYB5h7IjBBlRNi9tdoax0JvW/qJVoTXKjUJRSrHFDmCOsn+HDAjcuYDeJznnWDx6dcaCOochc6Ha4tNF9fl4QEY5NUrFH21uBs/GsT5KpVl1OmUz/SPsv9TxVpa43BggAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;image-20210820184531995&quot;
+        title=&quot;image-20210820184531995&quot;
+        src=&quot;/static/564cab4e3d6d2a3e8047ddfb1e371ef8/c1b63/image-20210820184531995.png&quot;
+        srcset=&quot;/static/564cab4e3d6d2a3e8047ddfb1e371ef8/5a46d/image-20210820184531995.png 300w,
+/static/564cab4e3d6d2a3e8047ddfb1e371ef8/0a47e/image-20210820184531995.png 600w,
+/static/564cab4e3d6d2a3e8047ddfb1e371ef8/c1b63/image-20210820184531995.png 1200w,
+/static/564cab4e3d6d2a3e8047ddfb1e371ef8/d61c2/image-20210820184531995.png 1800w,
+/static/564cab4e3d6d2a3e8047ddfb1e371ef8/97a96/image-20210820184531995.png 2400w,
+/static/564cab4e3d6d2a3e8047ddfb1e371ef8/c7ddf/image-20210820184531995.png 2810w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h2 id=&quot;끝-마치면서&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%81%9D-%EB%A7%88%EC%B9%98%EB%A9%B4%EC%84%9C&quot; aria-label=&quot;끝 마치면서 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;끝 마치면서&lt;/h2&gt;
+&lt;p&gt;현재 &lt;strong&gt;8월 20일&lt;/strong&gt; 기준 &lt;strong&gt;Github Action&lt;/strong&gt;을 통해 자동화를 적용해보니 관리 운영을 하는데 소모되는 비용이 줄어들고 수동으로 진행하면서 발생하는 실수 들이 없어지기 때문에 다른 커뮤니티 활동이나 개발을 진행 할 때 &lt;strong&gt;Github Action&lt;/strong&gt; 을 적극적으로 적용을 하여 진행을 할 것 입니다.&lt;/p&gt;
+&lt;p&gt;또한 현재 아직 &lt;strong&gt;8월 31일&lt;/strong&gt; 까지 &lt;strong&gt;JS piscine 베타&lt;/strong&gt;가 진행 되기 때문에 &lt;strong&gt;추가적으로 자동화할 수 있는 부분에 대해 적용 및 개선&lt;/strong&gt;하여 진행할 것 입니다!&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h3 id=&quot;42jspr-checker&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#42jspr-checker&quot; aria-label=&quot;42jspr checker permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;@42js/pr-checker&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Github: &lt;a href=&quot;https://github.com/42js/pr-checker&quot;&gt;https://github.com/42js/pr-checker&lt;/a&gt;&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+&lt;style class=&quot;grvsc-styles&quot;&gt;
+  .grvsc-container {
+    overflow: auto;
+    position: relative;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 1rem;
+    padding-top: var(--grvsc-padding-top, var(--grvsc-padding-v, 1rem));
+    padding-bottom: 1rem;
+    padding-bottom: var(--grvsc-padding-bottom, var(--grvsc-padding-v, 1rem));
+    border-radius: 8px;
+    border-radius: var(--grvsc-border-radius, 8px);
+    font-feature-settings: normal;
+    line-height: 1.4;
+  }
+  
+  .grvsc-code {
+    display: table;
+  }
+  
+  .grvsc-line {
+    display: table-row;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+  }
+  
+  .grvsc-line &gt; * {
+    position: relative;
+  }
+  
+  .grvsc-gutter-pad {
+    display: table-cell;
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  .grvsc-gutter {
+    display: table-cell;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter::before {
+    content: attr(data-content);
+  }
+  
+  .grvsc-source {
+    display: table-cell;
+    padding-left: 1.5rem;
+    padding-left: var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem));
+    padding-right: 1.5rem;
+    padding-right: var(--grvsc-padding-right, var(--grvsc-padding-h, 1.5rem));
+  }
+  
+  .grvsc-source:empty::after {
+    content: &apos; &apos;;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+  
+  .grvsc-gutter + .grvsc-source {
+    padding-left: 0.75rem;
+    padding-left: calc(var(--grvsc-padding-left, var(--grvsc-padding-h, 1.5rem)) / 2);
+  }
+  
+  /* Line transformer styles */
+  
+  .grvsc-has-line-highlighting &gt; .grvsc-code &gt; .grvsc-line::before {
+    content: &apos; &apos;;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .grvsc-line-diff-add::before {
+    background-color: var(--grvsc-line-diff-add-background-color, rgba(0, 255, 60, 0.2));
+  }
+  
+  .grvsc-line-diff-del::before {
+    background-color: var(--grvsc-line-diff-del-background-color, rgba(255, 0, 20, 0.2));
+  }
+  
+  .grvsc-line-number {
+    padding: 0 2px;
+    text-align: right;
+    opacity: 0.7;
+  }
+  
+  .one-dark-pro {
+    background-color: #282c34;
+    color: #abb2bf;
+  }
+  .one-dark-pro .mtki { font-style: italic; }
+  .one-dark-pro .mtk3 { color: #61AFEF; }
+  .one-dark-pro .mtk1 { color: #ABB2BF; }
+  .one-dark-pro .mtk6 { color: #98C379; }
+  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk11 { color: #E5C07B; }
+  .one-dark-pro .mtk8 { color: #56B6C2; }
+  .one-dark-pro .mtk4 { color: #E06C75; }
+  .one-dark-pro .mtk7 { color: #D19A66; }
+  .one-dark-pro .grvsc-line-highlighted::before {
+    background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));
+    box-shadow: inset var(--grvsc-line-highlighted-border-width, 4px) 0 0 0 var(--grvsc-line-highlighted-border-color, rgba(255, 255, 255, 0.5));
+  }
+&lt;/style&gt;</content:encoded></item><item><title><![CDATA[Hackalearn 2021 참여 후기!]]></title><description><![CDATA[hackalearn 2021 이란? HackaLearn은 Hackathon + Learn의 합성어로 주어진 기간 안에 관련 지식을 직접 배워서 해커톤에 적용하는 이벤트입니다. 이번 HackaLearn 이벤트의 주제는 바로 애저 정적 웹 앱(Azure…]]></description><link>https://jaeseokim.github.io/Etc/hackalearn-2021/</link><guid isPermaLink="false">https://jaeseokim.github.io/Etc/hackalearn-2021/</guid><pubDate>Sat, 14 Aug 2021 00:00:00 GMT</pubDate><content:encoded>&lt;blockquote&gt;
 &lt;h3 id=&quot;hackalearn-2021-이란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hackalearn-2021-%EC%9D%B4%EB%9E%80&quot; aria-label=&quot;hackalearn 2021 이란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;&lt;a href=&quot;https://github.com/devrel-kr/HackaLearn&quot;&gt;hackalearn 2021 이란?&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;HackaLearn은 Hackathon + Learn의 합성어로 주어진 기간 안에 관련 지식을 직접 배워서 해커톤에 적용하는 이벤트입니다. 이번 HackaLearn 이벤트의 주제는 바로 애저 정적 웹 앱(Azure Static Web Apps)과 깃헙 액션(GitHub Actions)입니다. 2주간 공부하고 직접 웹 애플리케이션을 만들어 보는 HackaLearn 이벤트!&lt;/p&gt;
 &lt;/blockquote&gt;
