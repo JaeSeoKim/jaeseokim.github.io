@@ -131,7 +131,11 @@ module.exports = {
         ],
       },
     },
+    /**
+     * Remove offline
+     */
     // `gatsby-plugin-offline`,
+    `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
