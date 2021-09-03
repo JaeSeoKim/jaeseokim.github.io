@@ -6,9 +6,23 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  const { site } = useStaticQuery(
+  const {
+    ogImage: {
+      childImageSharp: {
+        original: { src: ogImage },
+      },
+    },
+    site,
+  } = useStaticQuery(
     graphql`
       query {
+        ogImage: file(absolutePath: { regex: "/social-image.png/" }) {
+          childImageSharp {
+            original {
+              src
+            }
+          }
+        }
         site {
           siteMetadata {
             title
@@ -39,6 +53,10 @@ function SEO({ description, lang, meta, title }) {
           content: title,
         },
         {
+          property: `og:image`,
+          content: ogImage,
+        },
+        {
           property: `og:description`,
           content: metaDescription,
         },
@@ -48,7 +66,11 @@ function SEO({ description, lang, meta, title }) {
         },
         {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
+        },
+        {
+          name: `twitter:image`,
+          content: ogImage,
         },
         {
           name: `twitter:creator`,

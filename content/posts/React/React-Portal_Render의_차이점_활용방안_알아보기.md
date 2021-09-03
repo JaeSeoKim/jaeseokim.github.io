@@ -2,7 +2,7 @@
 title: "[React] Portal, Render의 차이점, 활용방안 알아보기!"
 date: 2021-08-21
 tags: ["React", "ReactDom"]
-draft: true
+draft: false
 ---
 
 최근 **Kakao Map Api**를 **React Component 라이브러리**로 개발을 진행하며 자주 사용하게 된 **ReactDom**의 **Portal** 기능에 대해서 공부를 하면서 **Render**와 **어떠한 차이점**이 있는지 그리고 **활용방안에 대해서 정리** 해보았습니다!
@@ -82,7 +82,7 @@ const App = () => {
 export default App
 ```
 
-![image-20210903161418171](image/React-Portal_Render의_차이점_활용방안_알아보기/image-20210903161418171.png)
+![image-20210903161418171](image/React-Portal_Render의_차이점_활용방안_알아보기/image-20210903161418171.png)
 
 실제로 `Children` 에 대한 컴포넌트는 실제 Dom 위치는 `body` 안에 있지만 React의 Component Tree 상에서는 App 하위에 존재하는 것을 React Development Tool를 통해 확인 할 수 있습니다.
 
@@ -197,7 +197,7 @@ export default InfoWindow
 
 또한 **children** 를 content로 사용된 객체에 `ReactDom.createPortal` 를 통해 해당 **Dom** 에 렌더링이 되고 React의 컴포넌트로써 관리가 가능하게 됩니다.
 
-![image-20210903164055051](image/React-Portal_Render의_차이점_활용방안_알아보기/image-20210903164055051.png)
+![image-20210903164055051](image/React-Portal_Render의_차이점_활용방안_알아보기/image-20210903164055051.png)
 
 # Render 이란?
 
@@ -300,7 +300,7 @@ const App = () => {
 export default App
 ```
 
-![image-20210903172617558](image/React-Portal_Render의_차이점_활용방안_알아보기/image-20210903172617558.png)
+![image-20210903172617558](image/React-Portal_Render의_차이점_활용방안_알아보기/image-20210903172617558.png)
 
 해당 `notification` 함수를 호출 시 위와 같이 React Component가 렌더링 되지만 최상위 `APP` 과 별개로 생성이 되는 것을 볼 수 있습니다.
 
