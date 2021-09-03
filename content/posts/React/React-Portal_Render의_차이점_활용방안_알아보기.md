@@ -1,6 +1,6 @@
 ---
 title: "[React] Portal, Render의 차이점, 활용방안 알아보기!"
-date: 2021-08-21
+date: 2021-09-03
 tags: ["React", "ReactDom"]
 draft: false
 ---
