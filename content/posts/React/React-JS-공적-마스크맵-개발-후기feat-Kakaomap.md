@@ -5,6 +5,12 @@ tags: ["react", "kakaomap", "공적마스크맵", "개발후기"]
 draft: false
 ---
 
+> ### 2021-10-02 추가
+>
+> 예전에 사용을 했던 경험을 바탕으로 새롭게 [react-kakao-maps-sdk](https://github.com/JaeSeoKim/react-kakao-maps-sdk) 라이브러리를 만들었습니다. 해당 글에 적혀있는 내용은 비효율 적인 부분과 이상한 부분도 있을 수 있으니 참고만 해주세요!
+
+---
+
 이번에 React JS에 대해 공부를 하면서 "나도 한번 마스크맵, 재난문자 서비스를 개발 해보자!" 라는 생각이 가지게 되어서 급하게 바로 개발을 하기 시작 하게 되었다. 맨 처음 리액트의 컴포넌트 생명주기에서 골머리를 앓았는데 `Hook` 이라는 매우 좋은 기술을 알게 되어서 편하게 개발을 할 수 있었다.
 
 그래서 맨 처음 만들어 낸 작품이 [재난문자 확인](http://msg.devjs.cf/) 이다. [깃허브 링크](https://github.com/JaeSeoKim/disaster_message)
