@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Dec 2021 20:16:28 GMT</lastBuildDate><item><title><![CDATA[log4j 취약점 Log4Shell (CVE-2021-44228) 이 무서운 이유]]></title><description><![CDATA[Log4j logo Log4j란? log4j는 java의 기반 로깅 유틸 라이브러리로, Apache Software Foundation이 관리 하고 있는 프로젝트이며, 다양한 java…]]></description><link>https://jaeseokim.github.io/Security/log4j 취약점 Log4Shell (CVE-2021-44228)/</link><guid isPermaLink="false">https://jaeseokim.github.io/Security/log4j 취약점 Log4Shell (CVE-2021-44228)/</guid><pubDate>Wed, 15 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://logging.apache.org/log4j/2.x/images/logo.png&quot; alt=&quot;Log4j logo&quot;&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[JaeSeoKim's Blog]]></title><description><![CDATA[Develop, Security, It, Etc...]]></description><link>https://jaeseokim.github.io</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 14 Dec 2021 20:24:52 GMT</lastBuildDate><item><title><![CDATA[log4j-취약점-Log4Shell-CVE-2021-44228 이 무서운 이유]]></title><description><![CDATA[Log4j logo Log4j란? log4j는 java의 기반 로깅 유틸 라이브러리로, Apache Software Foundation이 관리 하고 있는 프로젝트이며, 다양한 java…]]></description><link>https://jaeseokim.github.io/Security/log4j-취약점-Log4Shell-CVE-2021-44228/</link><guid isPermaLink="false">https://jaeseokim.github.io/Security/log4j-취약점-Log4Shell-CVE-2021-44228/</guid><pubDate>Wed, 15 Dec 2021 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://logging.apache.org/log4j/2.x/images/logo.png&quot; alt=&quot;Log4j logo&quot;&gt;&lt;/p&gt;
 &lt;h1 id=&quot;log4j란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#log4j%EB%9E%80&quot; aria-label=&quot;log4j란 permalink&quot; class=&quot;toc-header before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Log4j란?&lt;/h1&gt;
 &lt;p&gt;log4j는 java의 기반 로깅 유틸 라이브러리로, Apache Software Foundation이 관리 하고 있는 프로젝트이며, 다양한 java기반 프로젝트에서 자주 사용되는 라이브러리 입니다.&lt;/p&gt;
 &lt;p&gt;해당 라이브러리에서는 기본적으로 로깅에 대해서 강력한 기능을 지원해주기 위해 format 기능들을 지원을 해줍니다.&lt;/p&gt;
@@ -61,9 +61,55 @@
 &lt;p&gt;2번째 조건의 경우 대부분의 서비스에서 시큐어 코딩으로 가드가 되어있고, 또 Tomcat에서 파일을 직접 관리하는 것이 아닌 대부분 Storage 서버를 별도로 두어 관리하기 때문에 공격하는 것이 힘듭니다.&lt;/p&gt;
 &lt;p&gt;그에 반해 &lt;strong&gt;Log4Shell&lt;/strong&gt; 취약점의 경우 로그가 발생할 여지가 될만한 곳에 단순하게 남겨두는 것만으로 공격이 가능하고, 공격이 매우 쉬운 방법으로 이루어 질 수 있다는 것을 이용하여 단순하게 스크립트를 통해 무작위의 대다수에게 공격이 가능하다는 점이 있습니다.&lt;/p&gt;
 &lt;p&gt;실제로 제가 운영중인 서버에 남은 로그를 살펴보면 아래와 같이 해당 취약점이 오픈된 이후 공격이 지속적으로 들어온 것을 볼 수 있습니다.&lt;/p&gt;
-&lt;p&gt;![운영중인 서버에 남은 공격 로그 기록](./image/log4j 취약점 Log4Shell (CVE-2021-44228)/Untitled.png)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 62.66666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB+UlEQVQ4y5VS2ZKbMBDkM1K1HMbGgAEhgTiN7T3+/5vo9AjsTWUfUnnomkMzrZ6RvNS0KLoJVX91SHSHuGoQ5jUOF41fceZwKAyiXCPMJG9QtJNDojqkdU9/RmYGeH07YJnvuM0Ph2VcMA8LjOlxtSPGfsbICwfxaaXemg6qrFGXGroyzpZ55eBpO6MdbuivH7DTA5Z+R9jxjoHomeum9+1M4vmd9XfUVFdRUUrlx7TEIbkgPhfwjBD2C0YSumY2SWPD/DLetgsYT8sn8tLgxOYkq3DOFM65won+kUSCkxBq3uSadgUNY0Mo3m4tfRLX7QipK7nbrNCEQUZyuaBgLhfssZdy8YWyKGvrbCFF+6E0Fap9NSj6UieodA/FB1Sut3OQfq/nfkaOM9++nB24o/n6sU5cAcdcB/r9vtu2W1A3I5SAE4gvuxT1bhLGXqlbt0NJaiuHoxu70t2qqEKUXFS7ppcalWqopKESvqyx0E2HqpYcvx7PpMaLk9wtND7liOWlCL7YemBMrDsQHbO1LDL0VmFoKzxmi8/bwC/WQtUK+YW9pxSeIyPJ86V2rH/Yda9Z3/wAYRggCkMEgb+Bvs984PuI4kQU/iB7kT4Vb35OgpCEgghR9BeY/xfhk3RXuBFGUfiT7D8IX+sQ++Zv4/lB8G2D71gIfwNKToimfLrIHQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;운영중인 서버에 남은 공격 로그 기록&quot;
+        title=&quot;운영중인 서버에 남은 공격 로그 기록&quot;
+        src=&quot;/static/263e7efd0d1367a4ca3720e70ee24f87/c1b63/Untitled.png&quot;
+        srcset=&quot;/static/263e7efd0d1367a4ca3720e70ee24f87/5a46d/Untitled.png 300w,
+/static/263e7efd0d1367a4ca3720e70ee24f87/0a47e/Untitled.png 600w,
+/static/263e7efd0d1367a4ca3720e70ee24f87/c1b63/Untitled.png 1200w,
+/static/263e7efd0d1367a4ca3720e70ee24f87/d61c2/Untitled.png 1800w,
+/static/263e7efd0d1367a4ca3720e70ee24f87/97a96/Untitled.png 2400w,
+/static/263e7efd0d1367a4ca3720e70ee24f87/a2b91/Untitled.png 3360w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;운영중인 서버에 남은 공격 로그 기록&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;![우회를 통한 공격 로그 기록](./image/log4j 취약점 Log4Shell (CVE-2021-44228)/Untitled 1.png)&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 1200px; &quot;
+    &gt;
+      &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 7.333333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAABCAYAAADeko4lAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAQUlEQVQI103IQQ6AIBBDUS+kQRmngwKR+x+qlJ2Ll/R3i3cweyWeIR9dDJV3dPqCxpASjVCv39T22ykXHhe4n84JMFohH8I5wpMAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;우회를 통한 공격 로그 기록&quot;
+        title=&quot;우회를 통한 공격 로그 기록&quot;
+        src=&quot;/static/273d0664ee3088e0ded3ebd9c8ef7deb/c1b63/Untitled-1.png&quot;
+        srcset=&quot;/static/273d0664ee3088e0ded3ebd9c8ef7deb/5a46d/Untitled-1.png 300w,
+/static/273d0664ee3088e0ded3ebd9c8ef7deb/0a47e/Untitled-1.png 600w,
+/static/273d0664ee3088e0ded3ebd9c8ef7deb/c1b63/Untitled-1.png 1200w,
+/static/273d0664ee3088e0ded3ebd9c8ef7deb/d61c2/Untitled-1.png 1800w,
+/static/273d0664ee3088e0ded3ebd9c8ef7deb/97a96/Untitled-1.png 2400w,
+/static/273d0664ee3088e0ded3ebd9c8ef7deb/2b2b8/Untitled-1.png 3344w&quot;
+        sizes=&quot;(max-width: 1200px) 100vw, 1200px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+      /&gt;
+    &lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;우회를 통한 공격 로그 기록&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;해당 공격을 살펴보면 우회기법을 통해 waf 장비를 우회할려고 하는 모습도 볼 수 있고, 특정 명령어를 Base64를 통해 전달 하는 것을 볼 수 있는데, 해당 Base64 공격은 decode 하면 위의 사진에서 나온 것 처럼 특정 주소에서 파일을 다운 받아 실행하는 것을 볼 수 있습니다.&lt;/p&gt;
 &lt;p&gt;이를 통해 코인채굴기와 같은 악성프로그램을 서버에서 실행시킬려는 것을 확인 할 수 있습니다.&lt;/p&gt;
