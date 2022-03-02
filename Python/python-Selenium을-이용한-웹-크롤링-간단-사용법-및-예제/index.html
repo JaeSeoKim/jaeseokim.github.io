@@ -87,7 +87,7 @@
 <p>글 제목에서 적혀 있듯이 웹 크롤링을 할 때에도 사용 합니다.</p>
 <h4 id="python---requests-beautifulsoup를-이용한-웹-크롤링과의-차이점" style="position:relative;"><a href="#python---requests-beautifulsoup%EB%A5%BC-%EC%9D%B4%EC%9A%A9%ED%95%9C-%EC%9B%B9-%ED%81%AC%EB%A1%A4%EB%A7%81%EA%B3%BC%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90" aria-label="python   requests beautifulsoup를 이용한 웹 크롤링과의 차이점 permalink" class="toc-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>python - requests, beautifulsoup를 이용한 웹 크롤링과의 차이점</h4>
 <p><strong>requests</strong> 라이브러리는 단순하게 request만 날려 그때 서버에서 응답을 한 값을 가지고 크롤링을 한다는 특징이 있습니다. 이때 만약 naverblog를 크롤링 할려고 하면 아래처럼 iframe, js의 처리가 된 상태의 내용을 못 가져온 다는 것을 확인할 수 있습니다.</p>
-<pre class="grvsc-container one-dark-pro" data-language="python" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">import</span><span class="mtk1"> requests</span></span></span>
+<pre class="grvsc-container one-dark-pro" data-language="python" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">import</span><span class="mtk1"> requests</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># 친한 형의 블로그 입니다!!</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">responese </span><span class="mtk8">=</span><span class="mtk1"> requests.</span><span class="mtk3">get</span><span class="mtk1">(</span><span class="mtk6">&#39;https://blog.naver.com/ldw0811&#39;</span><span class="mtk1">)</span></span></span>
@@ -117,7 +117,7 @@
 <p>하지만 selenium은 웹 자동화 테스트 용도로 개발이 되어 실제 브라우저를 사용한다는 것이 특징입니다.</p>
 <p>즉 dom이 변화하는 것도 관찰이 가능합니다. 아래의 스크립트를 작동하면 실제로 firefox의 브라우저가 실행되고 dom이 정상적으로 변화하는 것도 관찰이 가능합니다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="python" data-index="1"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># 설치한 selenium에서 webdriver를 import</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">from</span><span class="mtk1"> selenium </span><span class="mtk10 mtki">import</span><span class="mtk1"> webdriver</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">from</span><span class="mtk1"> selenium </span><span class="mtk9 mtki">import</span><span class="mtk1"> webdriver</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># 다운받은 webdriver의 경로를 지정</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">driver </span><span class="mtk8">=</span><span class="mtk1"> webdriver.</span><span class="mtk3">Firefox</span><span class="mtk1">(</span><span class="mtk4 mtki">executable_path</span><span class="mtk8">=</span><span class="mtk6">&#39;D:/OneDrive - JaeSeo/blog/seleninum/python/webdriver/geckodriver.exe&#39;</span><span class="mtk1">)</span></span></span>
@@ -231,7 +231,7 @@
 <p>여기서 광고 영역을 보면 <code>&#x3C;</code> , <code>></code> 버튼을 통해 서버에 요청을 하고 div 내부의 내용을 변경 하는 것을 볼 수가 있습니다. 이때 requests에서는 1페이지에 있는 항목만 크롤링이 가능하지만 selenium을 이용하여 다른 페이지도 크롤링 해봅니다.</p>
 <p>설치한 selenium에서 webdriver를 import 시키고 driver 객체를 생성합니다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="python" data-index="3"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># 설치한 selenium에서 webdriver를 import</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">from</span><span class="mtk1"> selenium </span><span class="mtk10 mtki">import</span><span class="mtk1"> webdriver</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">from</span><span class="mtk1"> selenium </span><span class="mtk9 mtki">import</span><span class="mtk1"> webdriver</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># 다운받은 webdriver의 경로설정</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">driver </span><span class="mtk8">=</span><span class="mtk1"> webdriver.</span><span class="mtk3">Firefox</span><span class="mtk1">(</span><span class="mtk4 mtki">executable_path</span><span class="mtk8">=</span><span class="mtk6">&#39;D:/OneDrive - JaeSeo/blog/seleninum/python/webdriver/geckodriver.exe&#39;</span><span class="mtk1">)</span></span></span></code></pre>
@@ -335,9 +335,9 @@
       />
     </span></p>
 <p>정상적으로 click 이벤트가 발생된 후 내용을 크롤링 하는 것을 볼 수 있습니다. 이제 이러한 방법을 이용하여 스크립트를 완성 시킵니다.</p>
-<pre class="grvsc-container one-dark-pro" data-language="python" data-index="7"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">from</span><span class="mtk1"> selenium </span><span class="mtk10 mtki">import</span><span class="mtk1"> webdriver</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">import</span><span class="mtk1"> time</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">import</span><span class="mtk1"> random</span></span></span>
+<pre class="grvsc-container one-dark-pro" data-language="python" data-index="7"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">from</span><span class="mtk1"> selenium </span><span class="mtk9 mtki">import</span><span class="mtk1"> webdriver</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">import</span><span class="mtk1"> time</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">import</span><span class="mtk1"> random</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># 다운받은 webdriver의 경로설정</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">driver </span><span class="mtk8">=</span><span class="mtk1"> webdriver.</span><span class="mtk3">Firefox</span><span class="mtk1">(</span><span class="mtk4 mtki">executable_path</span><span class="mtk8">=</span><span class="mtk6">&#39;D:/OneDrive - JaeSeo/blog/seleninum/python/webdriver/geckodriver.exe&#39;</span><span class="mtk1">)</span></span></span>
@@ -347,7 +347,7 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">driver.</span><span class="mtk3">switch_to_frame</span><span class="mtk1">(</span><span class="mtk6">&#39;cnsv_shbx&#39;</span><span class="mtk1">)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk8">print</span><span class="mtk1">(driver.</span><span class="mtk3">find_element_by_xpath</span><span class="mtk1">(</span><span class="mtk6">&#39;/html/body/div/div[2]/div/div/div/div/div/ul/li[1]/a/p&#39;</span><span class="mtk1">).text,</span><span class="mtk6">&quot;</span><span class="mtk8">\n</span><span class="mtk6">&quot;</span><span class="mtk1">)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">time.</span><span class="mtk3">sleep</span><span class="mtk1">(random.</span><span class="mtk3">uniform</span><span class="mtk1">(</span><span class="mtk7">4</span><span class="mtk1">,</span><span class="mtk7">5</span><span class="mtk1">))</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">for</span><span class="mtk1"> i </span><span class="mtk10">in</span><span class="mtk1"> </span><span class="mtk8">range</span><span class="mtk1">(</span><span class="mtk8">int</span><span class="mtk1">(driver.</span><span class="mtk3">find_element_by_xpath</span><span class="mtk1">(</span><span class="mtk6">&#39;/html/body/div/div[2]/div/div/div/div/div/div[1]/em&#39;</span><span class="mtk1">).text.</span><span class="mtk3">split</span><span class="mtk1">(</span><span class="mtk6">&#39;/&#39;</span><span class="mtk1">)[</span><span class="mtk7">1</span><span class="mtk1">])</span><span class="mtk8">-</span><span class="mtk7">1</span><span class="mtk1">):</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">for</span><span class="mtk1"> i </span><span class="mtk9 mtki">in</span><span class="mtk1"> </span><span class="mtk8">range</span><span class="mtk1">(</span><span class="mtk8">int</span><span class="mtk1">(driver.</span><span class="mtk3">find_element_by_xpath</span><span class="mtk1">(</span><span class="mtk6">&#39;/html/body/div/div[2]/div/div/div/div/div/div[1]/em&#39;</span><span class="mtk1">).text.</span><span class="mtk3">split</span><span class="mtk1">(</span><span class="mtk6">&#39;/&#39;</span><span class="mtk1">)[</span><span class="mtk7">1</span><span class="mtk1">])</span><span class="mtk8">-</span><span class="mtk7">1</span><span class="mtk1">):</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    time.</span><span class="mtk3">sleep</span><span class="mtk1">(random.</span><span class="mtk3">uniform</span><span class="mtk1">(</span><span class="mtk7">1</span><span class="mtk1">,</span><span class="mtk7">2</span><span class="mtk1">))</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    driver.</span><span class="mtk3">find_element_by_xpath</span><span class="mtk1">(</span><span class="mtk6">&#39;//*[@id=&quot;prod_page_next&quot;]&#39;</span><span class="mtk1">).</span><span class="mtk3">click</span><span class="mtk1">()</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk8">print</span><span class="mtk1">(driver.</span><span class="mtk3">find_element_by_xpath</span><span class="mtk1">(</span><span class="mtk6">&#39;/html/body/div/div[2]/div/div/div/div/div/ul/li[1]/a/p&#39;</span><span class="mtk1">).text,</span><span class="mtk6">&quot;</span><span class="mtk8">\n</span><span class="mtk6">&quot;</span><span class="mtk1">)</span></span></span>
@@ -447,7 +447,7 @@
     color: #abb2bf;
   }
   .one-dark-pro .mtki { font-style: italic; }
-  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk9 { color: #C678DD; }
   .one-dark-pro .mtk1 { color: #ABB2BF; }
   .one-dark-pro .mtk5 { color: #7F848E; }
   .one-dark-pro .mtk8 { color: #56B6C2; }

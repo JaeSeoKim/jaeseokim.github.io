@@ -253,8 +253,8 @@
 <p>만약 만들어진 image를 가지고 FROM를 할 때에 미리 수행 되어야 하는 작업이 있을 때 <code>ONBUILD</code> 를 사용한다.</p>
 <p>예를 들어서 아래와 같이 <code>python build</code> 에 관련된 이미지라면 <code>FROM</code> 으로 사용하면 build를 할 때 src 파일들을 가져와 사용을 하게 만들 수 있다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="dockerfile" data-index="17"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># ONBUILD &lt;INSTRUCTION&gt;</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">ONBUILD</span><span class="mtk1"> </span><span class="mtk3">ADD</span><span class="mtk1"> . /app/src</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">ONBUILD</span><span class="mtk1"> </span><span class="mtk3">RUN</span><span class="mtk1"> /usr/local/bin/python-build --dir /app/src</span></span></span></code></pre>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">ONBUILD</span><span class="mtk1"> </span><span class="mtk3">ADD</span><span class="mtk1"> . /app/src</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">ONBUILD</span><span class="mtk1"> </span><span class="mtk3">RUN</span><span class="mtk1"> /usr/local/bin/python-build --dir /app/src</span></span></span></code></pre>
 <h4 id="-stopsignal" style="position:relative;"><a href="#-stopsignal" aria-label=" stopsignal permalink" class="toc-header before"><svg aria-hidden="true" focusable="false" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>📋 STOPSIGNAL</h4>
 <p>기본적으로 Docker Container를 종료하게 되면 내부에서 작동하는 프로세스에게 <code>SIGTERM</code> 를 보내게 되는데 이 때 보내지는 SIGNAL에 대해서 정의가 가능하다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="dockerfile" data-index="18"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># STOPSIGNAL signal</span></span></span>
@@ -485,26 +485,26 @@
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">service nginx start</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">if</span><span class="mtk1"> [ </span><span class="mtk4">$?</span><span class="mtk1"> </span><span class="mtk8">-eq</span><span class="mtk1"> 0 ]; </span><span class="mtk10">then</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">if</span><span class="mtk1"> [ </span><span class="mtk4">$?</span><span class="mtk1"> </span><span class="mtk8">-eq</span><span class="mtk1"> 0 ]; </span><span class="mtk9">then</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	tail -f /var/log/nginx/access.log /var/log/nginx/error.log</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">f</span></span></span></code></pre>
 <p>그리고 <code>setup_autoindex.sh</code> 에게 첫번째 인자를 같이 전달하여 <code>cmd</code> 를 이용하여 제어가 가능하도록 한다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="sh" data-index="40"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki">#!/bin/bash</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki"># setup index.html</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">if</span><span class="mtk1"> [ </span><span class="mtk8">-e</span><span class="mtk1"> </span><span class="mtk6">&quot;/var/www/html/index.nginx-debian.html&quot;</span><span class="mtk1"> ]; </span><span class="mtk10">then</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">if</span><span class="mtk1"> [ </span><span class="mtk8">-e</span><span class="mtk1"> </span><span class="mtk6">&quot;/var/www/html/index.nginx-debian.html&quot;</span><span class="mtk1"> ]; </span><span class="mtk9">then</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	mv /var/www/html/index.nginx-debian.html /var/www/html/index.html</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">fi</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">fi</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">if</span><span class="mtk1"> [ </span><span class="mtk6">&quot;</span><span class="mtk4">$1</span><span class="mtk6">&quot;</span><span class="mtk1"> </span><span class="mtk8">==</span><span class="mtk1"> </span><span class="mtk6">&quot;autoindex&quot;</span><span class="mtk1"> ]; </span><span class="mtk10">then</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">if</span><span class="mtk1"> [ </span><span class="mtk6">&quot;</span><span class="mtk4">$1</span><span class="mtk6">&quot;</span><span class="mtk1"> </span><span class="mtk8">==</span><span class="mtk1"> </span><span class="mtk6">&quot;autoindex&quot;</span><span class="mtk1"> ]; </span><span class="mtk9">then</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	</span><span class="mtk8">echo</span><span class="mtk1"> </span><span class="mtk6">&quot;autoindex on!&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	sed -i </span><span class="mtk6">&quot;s@autoindex off;@autoindex on;@g&quot;</span><span class="mtk1"> /etc/nginx/sites-available/default</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	sed -i </span><span class="mtk6">&quot;s@index index.html index.htm;@index index.htm;@g&quot;</span><span class="mtk1"> /etc/nginx/sites-available/default</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">else</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">else</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	</span><span class="mtk8">echo</span><span class="mtk1"> </span><span class="mtk6">&quot;autoindex off!&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	sed -i </span><span class="mtk6">&quot;s@autoindex on;@autoindex off;@g&quot;</span><span class="mtk1"> /etc/nginx/sites-available/default</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	sed -i </span><span class="mtk6">&quot;s@index index.htm;@index index.html index.htm;@g&quot;</span><span class="mtk1"> /etc/nginx/sites-available/default</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">fi</span></span></span></code></pre>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">fi</span></span></span></code></pre>
 <p>이제 빌드를 하고 <code>run</code> 를 동작 할 때 <code>autoindex</code> cmd를 같이 보냈을 떄에 대해서 제대로 동작 하는지를 확인 해본다.</p>
 <pre class="grvsc-container one-dark-pro" data-language="sh" data-index="41"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">$ docker run --rm -it --env AUTO_INDEX=true -p 443:443 -p 80:80 --name ft_server ft_server:v3 autoindex</span></span></span></code></pre>
 <p><span
@@ -680,9 +680,9 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">service php7.3-fpm start</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">service nginx start</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">if</span><span class="mtk1"> [ </span><span class="mtk4">$?</span><span class="mtk1"> </span><span class="mtk8">-eq</span><span class="mtk1"> 0 ]; </span><span class="mtk10">then</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">if</span><span class="mtk1"> [ </span><span class="mtk4">$?</span><span class="mtk1"> </span><span class="mtk8">-eq</span><span class="mtk1"> 0 ]; </span><span class="mtk9">then</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">	tail -f /var/log/nginx/access.log /var/log/nginx/error.log</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">fi</span></span></span></code></pre>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">fi</span></span></span></code></pre>
 <p>이제 dockerfile로 정리하여서 서비스를 실행해 본다.!</p>
 <pre class="grvsc-container one-dark-pro" data-language="sh" data-index="50"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">$ docker run --rm -it -p 443:443 -p 80:80 --name ft_server ft_server</span></span></span></code></pre>
 <p><code>https://localhost/wordpress</code> 로 접근을 해보면 아래와 같이 wordpress가 정상적으로 올라온 것을 볼 수 있다.</p>
@@ -847,7 +847,7 @@
   .one-dark-pro .mtk6 { color: #98C379; }
   .one-dark-pro .mtk8 { color: #56B6C2; }
   .one-dark-pro .mtk7 { color: #D19A66; }
-  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk9 { color: #C678DD; }
   .one-dark-pro .mtk4 { color: #E06C75; }
   .one-dark-pro .grvsc-line-highlighted::before {
     background-color: var(--grvsc-line-highlighted-background-color, rgba(255, 255, 255, 0.1));

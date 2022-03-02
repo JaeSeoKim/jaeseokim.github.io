@@ -72,15 +72,15 @@
       />
     </span></p>
 <p>아래의 코드에 주석을 달아 두었으니 한번 보시면서 이해하시면 될것 같습니다.</p>
-<pre class="grvsc-container one-dark-pro" data-language="python" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">from</span><span class="mtk1"> urllib </span><span class="mtk10 mtki">import</span><span class="mtk1"> request, parse, error</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">from</span><span class="mtk1"> bs4 </span><span class="mtk10 mtki">import</span><span class="mtk1"> BeautifulSoup</span></span></span>
+<pre class="grvsc-container one-dark-pro" data-language="python" data-index="0"><code class="grvsc-code"><span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">from</span><span class="mtk1"> urllib </span><span class="mtk9 mtki">import</span><span class="mtk1"> request, parse, error</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">from</span><span class="mtk1"> bs4 </span><span class="mtk9 mtki">import</span><span class="mtk1"> BeautifulSoup</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">url </span><span class="mtk8">=</span><span class="mtk1"> </span><span class="mtk6">&#39;https://www.daum.net/&#39;</span><span class="mtk1"> </span><span class="mtk5 mtki">#url 선언</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">response </span><span class="mtk8">=</span><span class="mtk1"> </span><span class="mtk6">&quot;&quot;</span><span class="mtk1"> </span><span class="mtk5 mtki">#전역 변수 선언</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">try</span><span class="mtk1">:</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">try</span><span class="mtk1">:</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    response </span><span class="mtk8">=</span><span class="mtk1"> request.</span><span class="mtk3">urlopen</span><span class="mtk1">(url) </span><span class="mtk5 mtki">#request로 url에 대한 응답값 가져옴</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">except</span><span class="mtk1">:</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">except</span><span class="mtk1">:</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk8">print</span><span class="mtk1">(</span><span class="mtk6">&quot;URL 오류&quot;</span><span class="mtk1">) </span><span class="mtk5 mtki">#try문을 이용하여 response를 못받아오면 안내 메세지 출력후 종료</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk8">exit</span><span class="mtk1">(</span><span class="mtk7">0</span><span class="mtk1">)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
@@ -98,7 +98,7 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">text_weather </span><span class="mtk8">=</span><span class="mtk1"> </span><span class="mtk8">dict</span><span class="mtk1">()</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk5 mtki">#dictionary 형태로 선언</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">for</span><span class="mtk1"> i </span><span class="mtk10">in</span><span class="mtk1"> </span><span class="mtk8">range</span><span class="mtk1">(</span><span class="mtk8">len</span><span class="mtk1">(weather)):</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">for</span><span class="mtk1"> i </span><span class="mtk9 mtki">in</span><span class="mtk1"> </span><span class="mtk8">range</span><span class="mtk1">(</span><span class="mtk8">len</span><span class="mtk1">(weather)):</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk5 mtki">#weater에서 하나씩 열어서 분리함</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    place </span><span class="mtk8">=</span><span class="mtk1"> weather[i].</span><span class="mtk3">find</span><span class="mtk1">(</span><span class="mtk6">&#39;span&#39;</span><span class="mtk1">, {</span><span class="mtk6">&#39;class&#39;</span><span class="mtk1">: </span><span class="mtk6">&#39;txt_part&#39;</span><span class="mtk1">})</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk5 mtki">#지역에 대한 정보를 분리</span></span></span>
@@ -109,14 +109,14 @@
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    text_weather[place.text] </span><span class="mtk8">=</span><span class="mtk1"> </span><span class="mtk6">&quot;지역 : </span><span class="mtk7">{}</span><span class="mtk8">\n</span><span class="mtk6">상태 : </span><span class="mtk7">{}</span><span class="mtk8">\n</span><span class="mtk6">온도 : </span><span class="mtk7">{}</span><span class="mtk8">\n</span><span class="mtk6">&quot;</span><span class="mtk1">.</span><span class="mtk3">format</span><span class="mtk1">(place.text, state.text, temperature.text)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk5 mtki">#dictionary 형태로 저장</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10">def</span><span class="mtk1"> </span><span class="mtk3">findWeather</span><span class="mtk1">(</span><span class="mtk7 mtki">place</span><span class="mtk1">): </span><span class="mtk5 mtki">#함수선언 매개변수를 받아 dictonary에서 검색해서 리턴해준다.</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk10 mtki">try</span><span class="mtk1"> :</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk10 mtki">return</span><span class="mtk1"> </span><span class="mtk6">&quot;날짜 : </span><span class="mtk7">{}</span><span class="mtk8">\n</span><span class="mtk7">{}</span><span class="mtk6">&quot;</span><span class="mtk1">.</span><span class="mtk3">format</span><span class="mtk1">(date_today.text, text_weather[place])</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk10 mtki">except</span><span class="mtk1">:</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9">def</span><span class="mtk1"> </span><span class="mtk3">findWeather</span><span class="mtk1">(</span><span class="mtk7 mtki">place</span><span class="mtk1">): </span><span class="mtk5 mtki">#함수선언 매개변수를 받아 dictonary에서 검색해서 리턴해준다.</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk9 mtki">try</span><span class="mtk1"> :</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk9 mtki">return</span><span class="mtk1"> </span><span class="mtk6">&quot;날짜 : </span><span class="mtk7">{}</span><span class="mtk8">\n</span><span class="mtk7">{}</span><span class="mtk6">&quot;</span><span class="mtk1">.</span><span class="mtk3">format</span><span class="mtk1">(date_today.text, text_weather[place])</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk9 mtki">except</span><span class="mtk1">:</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">           </span><span class="mtk5 mtki">#dictionary에 항목이 존재 안하면 출력</span></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk10 mtki">return</span><span class="mtk1"> </span><span class="mtk6">&quot;정상적인 도시를 입력하세요.&quot;</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">        </span><span class="mtk9 mtki">return</span><span class="mtk1"> </span><span class="mtk6">&quot;정상적인 도시를 입력하세요.&quot;</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"></span></span>
-<span class="grvsc-line"><span class="grvsc-source"><span class="mtk10 mtki">if</span><span class="mtk1"> </span><span class="mtk4">__name__</span><span class="mtk1"> </span><span class="mtk8">==</span><span class="mtk1"> </span><span class="mtk6">&#39;__main__&#39;</span><span class="mtk1">: </span><span class="mtk5 mtki">#메인 함수</span></span></span>
+<span class="grvsc-line"><span class="grvsc-source"><span class="mtk9 mtki">if</span><span class="mtk1"> </span><span class="mtk4">__name__</span><span class="mtk1"> </span><span class="mtk8">==</span><span class="mtk1"> </span><span class="mtk6">&#39;__main__&#39;</span><span class="mtk1">: </span><span class="mtk5 mtki">#메인 함수</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    place </span><span class="mtk8">=</span><span class="mtk1"> </span><span class="mtk8">input</span><span class="mtk1">(</span><span class="mtk6">&quot;도시를 입력해주세요 : &quot;</span><span class="mtk1">)</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk5 mtki">#도시를 입력받는다.</span></span></span>
 <span class="grvsc-line"><span class="grvsc-source"><span class="mtk1">    </span><span class="mtk8">print</span><span class="mtk1">(</span><span class="mtk3">findWeather</span><span class="mtk1">(place.</span><span class="mtk3">strip</span><span class="mtk1">()))</span></span></span>
@@ -218,7 +218,7 @@
     color: #abb2bf;
   }
   .one-dark-pro .mtki { font-style: italic; }
-  .one-dark-pro .mtk10 { color: #C678DD; }
+  .one-dark-pro .mtk9 { color: #C678DD; }
   .one-dark-pro .mtk1 { color: #ABB2BF; }
   .one-dark-pro .mtk8 { color: #56B6C2; }
   .one-dark-pro .mtk6 { color: #98C379; }
