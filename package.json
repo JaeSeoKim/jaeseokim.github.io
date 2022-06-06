@@ -36,7 +36,7 @@
     "install": "^0.13.0",
     "intersection-observer": "^0.11.0",
     "material-theme": "github:Binaryify/OneDark-Pro",
-    "npm": "^7.3.0",
+    "npm": "^8.11.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.13.7",
     "react": "^16.14.0",
