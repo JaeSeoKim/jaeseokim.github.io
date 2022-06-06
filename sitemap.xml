@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://jaeseokim.github.io/React/Framer-Motion의-AnimatePresence-동작-원리-분석하기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/log4j-취약점-Log4Shell-CVE-2021-44228/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Javascript/javascript_vs_typescript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Javascript/똑똑하게 Typescript 사용하기/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -42,9 +43,9 @@
 <url> <loc>https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-2편/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Python/Python-requests를-이용한-blind-injecthion-스크립트-제작-1편/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/42Seoul/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://jaeseokim.github.io/C/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Etc/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Javascript/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://jaeseokim.github.io/C/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Python/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/React/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://jaeseokim.github.io/Security/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
